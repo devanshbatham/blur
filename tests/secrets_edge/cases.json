@@ -1,0 +1,485 @@
+{
+ "policy": "Secrets edge cases (2026-11-17): every 'mask' value must be fully masked; no character of a 'keep' value may be masked.",
+ "cases": [
+  {
+   "text": "export STRIPE_SECRET_KEY=sk_live_51Mz8QwLq0aBcDeFgHiJkLmNoPq",
+   "mask": [
+    "sk_live_51Mz8QwLq0aBcDeFgHiJkLmNoPq"
+   ],
+   "keep": [
+    "STRIPE_SECRET_KEY"
+   ]
+  },
+  {
+   "text": "DATABASE_URL=postgres://admin:Tr0ub4dor%2633@db.prod.internal:5432/app",
+   "mask": [
+    "Tr0ub4dor%2633"
+   ],
+   "keep": [
+    "db.prod.internal"
+   ]
+  },
+  {
+   "text": "REDIS_PASSWORD='q9!Lm#2vX'",
+   "mask": [
+    "q9!Lm#2vX"
+   ],
+   "keep": [
+    "REDIS_PASSWORD"
+   ]
+  },
+  {
+   "text": "JWT_SECRET=\"correct-horse-battery-staple-42\"",
+   "mask": [
+    "correct-horse-battery-staple-42"
+   ],
+   "keep": []
+  },
+  {
+   "text": "api_key: 3f9a1c77e2b84d0c9a6e5b4d3c2b1a00",
+   "mask": [
+    "3f9a1c77e2b84d0c9a6e5b4d3c2b1a00"
+   ],
+   "keep": []
+  },
+  {
+   "text": "  password: hunter2!x\n  username: deploy",
+   "mask": [
+    "hunter2!x"
+   ],
+   "keep": []
+  },
+  {
+   "text": "[database]\nuser = app\npassword = S3cure!Pass",
+   "mask": [
+    "S3cure!Pass"
+   ],
+   "keep": []
+  },
+  {
+   "text": "{\"client_secret\": \"GOCSPX-4kq9ZxP2mLw8vT1nR6yH\", \"client_id\": \"1234567890-abc.apps.googleusercontent.com\"}",
+   "mask": [
+    "GOCSPX-4kq9ZxP2mLw8vT1nR6yH"
+   ],
+   "keep": []
+  },
+  {
+   "text": "<add key=\"ApiSecret\" value=\"Zk82hQ1pW9xLm3Vt\" />",
+   "mask": [
+    "Zk82hQ1pW9xLm3Vt"
+   ],
+   "keep": []
+  },
+  {
+   "text": "mysql -u root -pS3cretPw! -h db.local",
+   "mask": [
+    "S3cretPw!"
+   ],
+   "keep": [
+    "db.local"
+   ]
+  },
+  {
+   "text": "psql \"host=db user=app password=pa55-w0rd dbname=main\"",
+   "mask": [
+    "pa55-w0rd"
+   ],
+   "keep": []
+  },
+  {
+   "text": "curl -u admin:Adm1n@2026 https://api.internal/v1/users",
+   "mask": [
+    "Adm1n@2026"
+   ],
+   "keep": []
+  },
+  {
+   "text": "docker login -u ci-bot -p dckr_pat_8xQ2mLw9vT1nR6yHk4 registry.example.com",
+   "mask": [
+    "dckr_pat_8xQ2mLw9vT1nR6yHk4"
+   ],
+   "keep": []
+  },
+  {
+   "text": "gh auth login --with-token < token.txt; az login --password Az!ure9Pass --username ops",
+   "mask": [
+    "Az!ure9Pass"
+   ],
+   "keep": [
+    "token.txt"
+   ]
+  },
+  {
+   "text": "./deploy.sh --api-token=tok_9f8e7d6c5b4a3210 --env prod",
+   "mask": [
+    "tok_9f8e7d6c5b4a3210"
+   ],
+   "keep": [
+    "prod"
+   ]
+  },
+  {
+   "text": "machine api.heroku.com\n  login ops@example.com\n  password 4f6b2c9d-8e1a-4b3c-9d2e-7f1a6b5c4d3e",
+   "mask": [
+    "4f6b2c9d-8e1a-4b3c-9d2e-7f1a6b5c4d3e"
+   ],
+   "keep": []
+  },
+  {
+   "text": "git clone https://oauth2:glpat-xY9zQ2mLw8vT1nR6yHk4@gitlab.com/team/repo.git",
+   "mask": [
+    "glpat-xY9zQ2mLw8vT1nR6yHk4"
+   ],
+   "keep": [
+    "gitlab.com/team/repo.git"
+   ]
+  },
+  {
+   "text": "The leaked token was ghp_A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8 in the CI log.",
+   "mask": [
+    "ghp_A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8"
+   ],
+   "keep": []
+  },
+  {
+   "text": "OPENAI_API_KEY=sk-proj-4fQ9xLm2Vt8RzK1pW7nY3bH6jD0sC5aE",
+   "mask": [
+    "sk-proj-4fQ9xLm2Vt8RzK1pW7nY3bH6jD0sC5aE"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Slack bot: xoxb-1234567890123-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx",
+   "mask": [
+    "xoxb-1234567890123-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx"
+   ],
+   "keep": []
+  },
+  {
+   "text": "hf_token = \"hf_aBcDeFgHiJkLmNoPqRsTuVwXyZ012345\"",
+   "mask": [
+    "hf_aBcDeFgHiJkLmNoPqRsTuVwXyZ012345"
+   ],
+   "keep": []
+  },
+  {
+   "text": "const key = 'AIzaSyD4fQ9xLm2Vt8RzK1pW7nY3bH6jD0sC5aE';",
+   "mask": [
+    "AIzaSyD4fQ9xLm2Vt8RzK1pW7nY3bH6jD0sC5aE"
+   ],
+   "keep": []
+  },
+  {
+   "text": "aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY9",
+   "mask": [
+    "wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY9"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0In0.dBjftJeZ4CVPmB92K27uhbUJU1p1r_wW1gFWFOEjXk",
+   "mask": [
+    "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0In0.dBjftJeZ4CVPmB92K27uhbUJU1p1r_wW1gFWFOEjXk"
+   ],
+   "keep": []
+  },
+  {
+   "text": "npm config set //registry.npmjs.org/:_authToken npm_Q2mLw8vT1nR6yHk4xY9zA1b2C3d4E5f6G7h8",
+   "mask": [
+    "npm_Q2mLw8vT1nR6yHk4xY9zA1b2C3d4E5f6G7h8"
+   ],
+   "keep": []
+  },
+  {
+   "text": "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQ\n-----END OPENSSH PRIVATE KEY-----",
+   "mask": [
+    "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQ"
+   ],
+   "keep": []
+  },
+  {
+   "text": "kubectl create secret generic db --from-literal=password='Kube$ecret99'",
+   "mask": [
+    "Kube$ecret99"
+   ],
+   "keep": []
+  },
+  {
+   "text": "data:\n  password: UzNjcjN0UEBzcw==\n  username: YWRtaW4=",
+   "mask": [
+    "UzNjcjN0UEBzcw=="
+   ],
+   "keep": []
+  },
+  {
+   "text": "webhook signing secret whsec_9xLm2Vt8RzK1pW7nY3bH6jD0",
+   "mask": [
+    "whsec_9xLm2Vt8RzK1pW7nY3bH6jD0"
+   ],
+   "keep": []
+  },
+  {
+   "text": "The Wi-Fi password is BlueFalcon#77, and the door code is 4471.",
+   "mask": [
+    "BlueFalcon#77",
+    "4471"
+   ],
+   "keep": []
+  },
+  {
+   "text": "My PIN is 0429 and the backup codes are 8812-4471 and 9903-1186.",
+   "mask": [
+    "0429",
+    "8812-4471",
+    "9903-1186"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Use OTP 482913 to log in; it expires in 10 minutes.",
+   "mask": [
+    "482913"
+   ],
+   "keep": [
+    "10 minutes"
+   ]
+  },
+  {
+   "text": "The 2FA secret is JBSWY3DPEHPK3PXP (base32).",
+   "mask": [
+    "JBSWY3DPEHPK3PXP"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Mot de passe : Lumière!2026 ; contraseña: Sol#Playa88",
+   "mask": [
+    "Lumière!2026",
+    "Sol#Playa88"
+   ],
+   "keep": []
+  },
+  {
+   "text": "パスワード: Sakura#2026 、 密码是 Mima$8899",
+   "mask": [
+    "Sakura#2026",
+    "Mima$8899"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Commit 9fceb02d0ae598e95dc970b74767f19372d61af8 fixed it; sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.",
+   "mask": [],
+   "keep": [
+    "9fceb02d0ae598e95dc970b74767f19372d61af8",
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   ]
+  },
+  {
+   "text": "Request 3f2b6c1e-8d7a-4f9b-a1c3-5e6d7f8a9b0c failed with 502.",
+   "mask": [],
+   "keep": [
+    "3f2b6c1e-8d7a-4f9b-a1c3-5e6d7f8a9b0c"
+   ]
+  },
+  {
+   "text": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl ops@laptop",
+   "mask": [],
+   "keep": [
+    "AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl"
+   ]
+  },
+  {
+   "text": "Set PASSWORD_MIN_LENGTH=12 and TOKEN_TTL=3600 in the config.",
+   "mask": [],
+   "keep": [
+    "PASSWORD_MIN_LENGTH=12",
+    "TOKEN_TTL=3600"
+   ]
+  },
+  {
+   "text": "The password field must not be empty; tokens expire after 3600 seconds.",
+   "mask": [],
+   "keep": [
+    "password field",
+    "3600 seconds"
+   ]
+  },
+  {
+   "text": "Image digest sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1",
+   "mask": [],
+   "keep": [
+    "4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1"
+   ]
+  },
+  {
+   "text": "Use the key_id field (e.g. key_id: \"kid-2026-01\") to pick the signing key.",
+   "mask": [],
+   "keep": [
+    "kid-2026-01"
+   ]
+  },
+  {
+   "text": "Base64 of 'hello' is aGVsbG8= and the CSS hash is #3a7bd5.",
+   "mask": [],
+   "keep": [
+    "aGVsbG8=",
+    "#3a7bd5"
+   ]
+  },
+  {
+   "text": "password: ${DB_PASSWORD}\napi_key: {{ secrets.API_KEY }}\ntoken: <redacted>",
+   "mask": [],
+   "keep": [
+    "${DB_PASSWORD}",
+    "secrets.API_KEY",
+    "<redacted>"
+   ]
+  },
+  {
+   "text": "Run npm install lodash@4.17.21 and pip install requests==2.32.3.",
+   "mask": [],
+   "keep": [
+    "4.17.21",
+    "2.32.3"
+   ]
+  },
+  {
+   "text": "pass: Crimson#Valley2026 (rotate monthly)",
+   "mask": [
+    "Crimson#Valley2026"
+   ],
+   "keep": [
+    "rotate monthly"
+   ]
+  },
+  {
+   "text": "For secure access, use the password FriendlyPuppy$GreenTree.",
+   "mask": [
+    "FriendlyPuppy$GreenTree"
+   ],
+   "keep": []
+  },
+  {
+   "text": "If you forget your medication password SunnyField@PineTree, contact your pharmacy.",
+   "mask": [
+    "SunnyField@PineTree"
+   ],
+   "keep": []
+  },
+  {
+   "text": "token=abc.Def-ghi_123~xyz9&mode=fast",
+   "mask": [
+    "abc.Def-ghi_123~xyz9"
+   ],
+   "keep": [
+    "mode=fast"
+   ]
+  },
+  {
+   "text": "signing_key: sk_live_ab12/Cd34+Ef56Gh78==",
+   "mask": [
+    "sk_live_ab12/Cd34+Ef56Gh78=="
+   ],
+   "keep": []
+  },
+  {
+   "text": "Your recovery code is XK7F-9QZ2-MM4P-77AB.",
+   "mask": [
+    "XK7F-9QZ2-MM4P-77AB"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Licence key: ABCDE-12345-FGHIJ-67890-KLMNO",
+   "mask": [
+    "ABCDE-12345-FGHIJ-67890-KLMNO"
+   ],
+   "keep": []
+  },
+  {
+   "text": "The vault code is 12-34-56, do not share it.",
+   "mask": [
+    "12-34-56"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Employee code EMP/2026/00481 and member code MBR-77-1093.",
+   "mask": [
+    "EMP/2026/00481",
+    "MBR-77-1093"
+   ],
+   "keep": []
+  },
+  {
+   "text": "session_token: \"Zq9.x_Lm-2Vt8~RzK1/pW7+nY3==\"",
+   "mask": [
+    "Zq9.x_Lm-2Vt8~RzK1/pW7+nY3=="
+   ],
+   "keep": []
+  },
+  {
+   "text": "Use access key AKIA2E0A8F3B244C9986 with secret 7g+Zk1/qWm9xLp2Vt8RzK1pW7nY3bH6jD0sC5aEq.",
+   "mask": [
+    "AKIA2E0A8F3B244C9986",
+    "7g+Zk1/qWm9xLp2Vt8RzK1pW7nY3bH6jD0sC5aEq"
+   ],
+   "keep": []
+  },
+  {
+   "text": "ssh admin@10.0.0.5 with password 'P@ss w0rd!' (yes, with a space)",
+   "mask": [
+    "P@ss w0rd!"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Bearer token: ya29.a0AfH6SMBx-7qZ_k9Lm2Vt8RzK1pW7nY3bH6jD0sC5aE.",
+   "mask": [
+    "ya29.a0AfH6SMBx-7qZ_k9Lm2Vt8RzK1pW7nY3bH6jD0sC5aE"
+   ],
+   "keep": []
+  },
+  {
+   "text": "The Wi-Fi key is Blue_Falcon-77#home and the guest key is Guest!2026.",
+   "mask": [
+    "Blue_Falcon-77#home",
+    "Guest!2026"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Authorization: Bearer mF_9.B5f-4.1JqM",
+   "mask": [
+    "mF_9.B5f-4.1JqM"
+   ],
+   "keep": []
+  },
+  {
+   "text": "curl -H 'Authorization: Bearer abc.def-123_xyz~9' https://api.example.com",
+   "mask": [
+    "abc.def-123_xyz~9"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Use token mF_9.B5f-4.1JqM for the call; Bearer tokens expire after an hour.",
+   "mask": [
+    "mF_9.B5f-4.1JqM"
+   ],
+   "keep": [
+    "Bearer tokens"
+   ]
+  },
+  {
+   "text": "DB_PASSWORD=Sup3rS3cret!",
+   "mask": [
+    "Sup3rS3cret!"
+   ],
+   "keep": [
+    "DB_PASSWORD"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,577 @@
+[
+{
+"id": "R1a",
+"input": "name='Ravi Kumar', city='Pune'",
+"expected": "name='[PERSON_1]', city='Pune'"
+},
+{
+"id": "R1b",
+"input": "{\"uid\":88123,\"ok\":true}",
+"expected": "{\"uid\":\"[USER_ID_1]\",\"ok\":true}"
+},
+{
+"id": "R1c",
+"input": "?token=ab12cd&lang=en",
+"expected": "?token=[SECRET_1]&lang=en"
+},
+{
+"id": "R1d",
+"input": "sid=Zx81kQ; Path=/",
+"expected": "sid=[SESSION_TOKEN_1]; Path=/"
+},
+{
+"id": "R1e",
+"input": "The doctor's note says chronic asthma.",
+"expected": "The doctor's note says [DIAGNOSIS_1]."
+},
+{
+"id": "R1f",
+"input": "expires 11/27, CVV 312",
+"expected": "expires [CARD_EXPIRY_1], CVV [CVV_1]"
+},
+{
+"id": "R2a",
+"input": "Signed by Meera Iyengar",
+"expected": "Signed by [PERSON_1]"
+},
+{
+"id": "R2b",
+"input": "Flat 4A, Palm Court, MG Road, Pune 411001",
+"expected": "[ADDRESS_1]"
+},
+{
+"id": "R2c",
+"input": "born 9th of July, two thousand and one",
+"expected": "born [DATE_OF_BIRTH_1]"
+},
+{
+"id": "R2d",
+"input": "call me on nau chhe paanch, char teen do, ek shunya nau aath",
+"expected": "call me on [PHONE_1]"
+},
+{
+"id": "R2e",
+"input": "mail charlie hotel echo tango at example dot org",
+"expected": "mail [EMAIL_1]"
+},
+{
+"id": "R2f",
+"input": "ph 70214 5539O",
+"expected": "ph [PHONE_1]"
+},
+{
+"id": "R3a",
+"input": "Meera Iyengar wrote this. meeraIyengar, MeeraIyengar, meera_iyengar, MEERA-IYENGAR",
+"expected": "[PERSON_1] wrote this. [PERSON_1], [PERSON_1], [PERSON_1], [PERSON_1]"
+},
+{
+"id": "R3b",
+"input": "Meera Iyengar wrote this. def load_meera_iyengar_data():",
+"expected": "[PERSON_1] wrote this. def load_[PERSON_1]_data():"
+},
+{
+"id": "R3c",
+"input": "Meera Iyengar wrote this. host MEERA-IYENGAR-PC",
+"expected": "[PERSON_1] wrote this. host [HOSTNAME_1]"
+},
+{
+"id": "R3d",
+"input": "Meera Iyengar wrote this. mEeRa, M E E R A, M3er4",
+"expected": "[PERSON_1] wrote this. [PERSON_1], [PERSON_1], [PERSON_1]"
+},
+{
+"id": "R3e",
+"input": "🌼Meera🌼: hi",
+"expected": "🌼[PERSON_1]🌼: hi"
+},
+{
+"id": "R3f",
+"input": "Meera Iyengar wrote this. /u/meera-iyengar/files",
+"expected": "[PERSON_1] wrote this. /u/[PERSON_1]/files"
+},
+{
+"id": "R4a",
+"input": "0x38393731323334353637",
+"expected": "[PHONE_1]"
+},
+{
+"id": "R4b",
+"input": "user=meera%2540example.org",
+"expected": "user=[EMAIL_1]"
+},
+{
+"id": "R4c",
+"input": "Meera Iyengar wrote this. मीरा अय्यंगार",
+"expected": "[PERSON_1] wrote this. [PERSON_1]"
+},
+{
+"id": "R4d",
+"input": "８９７１２３４５６７",
+"expected": "[PHONE_1]"
+},
+{
+"id": "R4e",
+"input": "meera@example.org and mеera@example.org",
+"expected": "[EMAIL_1] and [EMAIL_1]"
+},
+{
+"id": "R4f",
+"input": "ph: 89712​34567",
+"expected": "ph: [PHONE_1]"
+},
+{
+"id": "R5a",
+"input": "INSERT INTO t VALUES (77, 'Iyengar', 'Meera');",
+"expected": "INSERT INTO t VALUES ('[EMPLOYEE_ID_1]', '[PERSON_1]', '[PERSON_1]');"
+},
+{
+"id": "R5b",
+"input": "https://x.example/invite/Qw8eR2tY9u",
+"expected": "https://x.example/invite/[SECRET_1]"
+},
+{
+"id": "R5d",
+"input": "TEL;TYPE=cell:+918971234567",
+"expected": "TEL;TYPE=cell:[PHONE_1]"
+},
+{
+"id": "R5e",
+"input": "{\"phone\":1.2E9}",
+"expected": "{\"phone\":\"[PHONE_1]\"}"
+},
+{
+"id": "R6a",
+"input": "Meera Iyengar met Arun Iyengar. Iyengar (Arun) left.",
+"expected": "[PERSON_1] met [PERSON_2]. [PERSON_2] left."
+},
+{
+"id": "R6b",
+"input": "Security answer: Menon. The Menon & Rao firm audits us.",
+"expected": "Security answer: [SECRET_1]. The Menon & Rao firm audits us."
+},
+{
+"id": "R6c",
+"input": "meera@example.org … MEERA@EXAMPLE.ORG … bWVlcmFAZXhhbXBsZS5vcmc=",
+"expected": "[EMAIL_1] … [EMAIL_1] … [EMAIL_1]"
+},
+{
+"id": "R6d",
+"input": "+91 89712 34567 … eight nine seven one two three four five six seven",
+"expected": "[PHONE_1] … [PHONE_1]"
+},
+{
+"id": "R6e",
+"input": "Meera Iyengar wrote this. Ms. Iyengar called.",
+"expected": "[PERSON_1] wrote this. Ms. [PERSON_1] called."
+},
+{
+"id": "R7a",
+"input": "Ticket OPS-4410 links CVE-2024-3094.",
+"expected": "Ticket OPS-4410 links CVE-2024-3094."
+},
+{
+"id": "R7b",
+"input": "Security question on file. Answer: Bruno",
+"expected": "Security question on file. Answer: [SECRET_1]"
+},
+{
+"id": "R7c",
+"input": "Menon & Rao Associates, Iyer Memorial Ward, Gandhi Road",
+"expected": "Menon & Rao Associates, Iyer Memorial Ward, Gandhi Road"
+},
+{
+"id": "R7d",
+"input": "Grace period ends in May; Grace from legal agrees.",
+"expected": "Grace period ends in May; [PERSON_1] from legal agrees."
+},
+{
+"id": "R7e",
+"input": "Rose, Will and Mark are common English words.",
+"expected": "Rose, Will and Mark are common English words."
+},
+{
+"id": "R7f",
+"input": "Cookie: theme=dark; lang=hi-IN; sid=Qx81",
+"expected": "Cookie: theme=dark; lang=hi-IN; sid=[SESSION_TOKEN_1]"
+},
+{
+"id": "R8a",
+"input": "card 5555 5555 5555 4444",
+"expected": "card [CARD_1]"
+},
+{
+"id": "R8b",
+"input": "sample card 5555 5555 5555 4445 (invalid)",
+"expected": "sample card 5555 5555 5555 4445 (invalid)"
+},
+{
+"id": "R8c",
+"input": "A/c 50200012345678",
+"expected": "A/c [BANK_ACCOUNT_1]"
+},
+{
+"id": "R8d",
+"input": "CVV three one two",
+"expected": "CVV [CVV_1]"
+},
+{
+"id": "R8e",
+"input": "VID 9182 7364 5501 2292",
+"expected": "VID [AADHAAR_VID_1]"
+},
+{
+"id": "R9a",
+"input": "First pet: Simba",
+"expected": "First pet: [SECRET_1]"
+},
+{
+"id": "R9b",
+"input": "[10:02] Kavya: done",
+"expected": "[10:02] [PERSON_1]: done"
+},
+{
+"id": "R9c",
+"input": "<@U02ABCXYZ> please check",
+"expected": "<@[USER_ID_1]> please check"
+},
+{
+"id": "R9d",
+"input": "Arun booked it. Arun's flight is at 6.",
+"expected": "[PERSON_1] booked it. [PERSON_1]'s flight is at 6."
+},
+{
+"id": "R10a",
+"input": "INSERT INTO p (last, dob) VALUES ('Rao', '1988-06-01');",
+"expected": "INSERT INTO p (last, dob) VALUES ('[PERSON_1]', '[DATE_OF_BIRTH_1]');"
+},
+{
+"id": "R10b",
+"input": "{\"GAD-7\": 11}",
+"expected": "{\"GAD-7\": \"[HEALTH_SCORE_1]\"}"
+},
+{
+"id": "R10c",
+"input": "her PHQ-9 score was 19",
+"expected": "her PHQ-9 score was [HEALTH_SCORE_1]"
+},
+{
+"id": "R10d",
+"input": "aadhaar 7361 9024 5814 and aadhaar_masked: XXXX XXXX 5814",
+"expected": "aadhaar [AADHAAR_1] and aadhaar_masked: [AADHAAR_1]"
+},
+{
+"id": "R10e",
+"input": "{\"phone\": \"N/A\"}",
+"expected": "{\"phone\": \"N/A\"}"
+},
+{
+"id": "G01",
+"input": "email='anil.k@example.org',",
+"expected": "email='[EMAIL_1]',"
+},
+{
+"id": "G02",
+"input": "{\"name\":\"Anil Kumar\",\"age\":41}",
+"expected": "{\"name\":\"[PERSON_1]\",\"age\":41}"
+},
+{
+"id": "G03",
+"input": "\"Kumar, Anil\",9876012345,Delhi",
+"expected": "\"[PERSON_1]\",[PHONE_1],Delhi"
+},
+{
+"id": "G04",
+"input": "(Anil Kumar)",
+"expected": "([PERSON_1])"
+},
+{
+"id": "G05",
+"input": "Dr Anil Kumar Verma signed",
+"expected": "Dr [PERSON_1] signed"
+},
+{
+"id": "G06",
+"input": "House 12, Lane 4, Saket, New Delhi 110017",
+"expected": "[ADDRESS_1]"
+},
+{
+"id": "G07",
+"input": "DOB: 4 Jan, 1985",
+"expected": "DOB: [DATE_OF_BIRTH_1]"
+},
+{
+"id": "G08",
+"input": "nine eight seven six zero, one two three four five",
+"expected": "[PHONE_1]"
+},
+{
+"id": "G09",
+"input": "IBAN DE89 3704 0044 0532 0130 00",
+"expected": "IBAN [IBAN_1]"
+},
+{
+"id": "G10",
+"input": "born nineteenth March, nineteen eighty-eight",
+"expected": "born [DATE_OF_BIRTH_1]"
+},
+{
+"id": "G11",
+"input": "Anil Kumar wrote this. anilKumar, ANIL_KUMAR, anil.kumar, Anil-Kumar",
+"expected": "[PERSON_1] wrote this. [PERSON_1], [PERSON_1], [PERSON_1], [PERSON_1]"
+},
+{
+"id": "G12",
+"input": "Anil Kumar wrote this. /Users/anil.kumar/Desktop",
+"expected": "[PERSON_1] wrote this. /Users/[PERSON_1]/Desktop"
+},
+{
+"id": "G13",
+"input": "Anil Kumar wrote this. aNiL kUmAr",
+"expected": "[PERSON_1] wrote this. [PERSON_1]"
+},
+{
+"id": "G14",
+"input": "Anil Kumar wrote this. A N I L",
+"expected": "[PERSON_1] wrote this. [PERSON_1]"
+},
+{
+"id": "G15",
+"input": "🔥Anil🔥: on my way",
+"expected": "🔥[PERSON_1]🔥: on my way"
+},
+{
+"id": "G16",
+"input": "Anil Kumar wrote this. #AnilKumarFans",
+"expected": "[PERSON_1] wrote this. #[PERSON_1]Fans"
+},
+{
+"id": "G17",
+"input": "ANIL-KUMAR-MBP.local",
+"expected": "[HOSTNAME_1]"
+},
+{
+"id": "G18",
+"input": "Anil Kumar wrote this. 4n1l kum4r",
+"expected": "[PERSON_1] wrote this. [PERSON_1]"
+},
+{
+"id": "G19",
+"input": "anil.k@example.org is the mail. YW5pbC5rQGV4YW1wbGUub3Jn",
+"expected": "[EMAIL_1] is the mail. [EMAIL_1]"
+},
+{
+"id": "G20",
+"input": "anil.k@example.org is the mail. anil.k%40example.org and anil.k%2540example.org",
+"expected": "[EMAIL_1] is the mail. [EMAIL_1] and [EMAIL_1]"
+},
+{
+"id": "G21",
+"input": "&#97;nil.k@example.org",
+"expected": "[EMAIL_1]"
+},
+{
+"id": "G22",
+"input": "Call 9876012345 now. ९८७६०१२३४५",
+"expected": "Call [PHONE_1] now. [PHONE_1]"
+},
+{
+"id": "G23",
+"input": "anil.k@example.org is the mail. аnil.k@example.org",
+"expected": "[EMAIL_1] is the mail. [EMAIL_1]"
+},
+{
+"id": "G24",
+"input": "ph 98760​12345",
+"expected": "ph [PHONE_1]"
+},
+{
+"id": "G25",
+"input": "Anil Kumar wrote this. அனில் குமார்",
+"expected": "[PERSON_1] wrote this. [PERSON_1]"
+},
+{
+"id": "G26",
+"input": "Call 9876012345 now. 0x39383736303132333435",
+"expected": "Call [PHONE_1] now. [PHONE_1]"
+},
+{
+"id": "G27",
+"input": "UPDATE users SET phone='9876012345' WHERE id=310;",
+"expected": "UPDATE users SET phone='[PHONE_1]' WHERE id=310;"
+},
+{
+"id": "G28",
+"input": "password: \"p@ss: word#1\"",
+"expected": "password: \"[PASSWORD_1]\""
+},
+{
+"id": "G29",
+"input": "DATABASE_URL=postgres://app:S3cr%40t@db:5432/x",
+"expected": "DATABASE_URL=postgres://app:[PASSWORD_1]@db:5432/x"
+},
+{
+"id": "G30",
+"input": "Set-Cookie: session=Qm9iX3Nlc3Npb24; HttpOnly; Expires=Wed, 21 Oct 2026 07:28:00 GMT",
+"expected": "Set-Cookie: session=[SESSION_TOKEN_1]; HttpOnly; Expires=Wed, 21 Oct 2026 07:28:00 GMT"
+},
+{
+"id": "G31",
+"input": "Authorization: Basic YW5pbDpwYXNzMTIz",
+"expected": "Authorization: Basic [SECRET_1]"
+},
+{
+"id": "G32",
+"input": "N:Kumar;Anil;;Dr.;",
+"expected": "N:[PERSON_1];[PERSON_1];;Dr.;"
+},
+{
+"id": "G33",
+"input": "curl -u anil:pass123 https://api.example.com/me",
+"expected": "curl -u [USERNAME_1]:[PASSWORD_1] https://api.example.com/me"
+},
+{
+"id": "G34",
+"input": "https://drive.example.com/s/Hq7Lw2Zp9Kx",
+"expected": "https://drive.example.com/s/[SECRET_1]"
+},
+{
+"id": "G35",
+"input": "Anil Kumar and Sunita Kumar met. Kumar (Sunita) signed.",
+"expected": "[PERSON_1] and [PERSON_2] met. [PERSON_2] signed."
+},
+{
+"id": "G36",
+"input": "Answer: Verma. Verma & Bose LLP audited us.",
+"expected": "Answer: [SECRET_1]. Verma & Bose LLP audited us."
+},
+{
+"id": "G37",
+"input": "+91 98760 12345 … 9876012345 … nau aath saat chhe shunya ek do teen char paanch",
+"expected": "[PHONE_1] … [PHONE_1] … [PHONE_1]"
+},
+{
+"id": "G39",
+"input": "Anil … Anil Kumar … AK … Mr. Kumar",
+"expected": "[PERSON_1] … [PERSON_1] … [PERSON_1] … Mr. [PERSON_1]"
+},
+{
+"id": "G40",
+"input": "INC-20931 tracks CVE-2025-1234",
+"expected": "INC-20931 tracks CVE-2025-1234"
+},
+{
+"id": "G41",
+"input": "The password field is required on the PAN form.",
+"expected": "The password field is required on the PAN form."
+},
+{
+"id": "G42",
+"input": "Sharma Sweets & Co., Nehru Place",
+"expected": "Sharma Sweets & Co., Nehru Place"
+},
+{
+"id": "G43",
+"input": "Will you mark the bill by May?",
+"expected": "Will you mark the bill by May?"
+},
+{
+"id": "G44",
+"input": "Pattern \\d{4}-\\d{4} matches card groups",
+"expected": "Pattern \\d{4}-\\d{4} matches card groups"
+},
+{
+"id": "G45",
+"input": "color #5555AA, version 5.5.5.4",
+"expected": "color #5555AA, version 5.5.5.4"
+},
+{
+"id": "G46",
+"input": "Parkinson's law; diabetes is common in India",
+"expected": "Parkinson's law; diabetes is common in India"
+},
+{
+"id": "G47",
+"input": "4111 1111 1111 1112 (invalid sample)",
+"expected": "4111 1111 1111 1112 (invalid sample)"
+},
+{
+"id": "G48",
+"input": "UTR 312345678901",
+"expected": "UTR 312345678901"
+},
+{
+"id": "G49",
+"input": "a/c no 001234567890",
+"expected": "a/c no [BANK_ACCOUNT_1]"
+},
+{
+"id": "G50",
+"input": "CVC 0 4 1",
+"expected": "CVC [CVV_1]"
+},
+{
+"id": "G51",
+"input": "aadhaar 7361 9024 5814",
+"expected": "aadhaar [AADHAAR_1]"
+},
+{
+"id": "G52",
+"input": "Memorable word: Tiger",
+"expected": "Memorable word: [SECRET_1]"
+},
+{
+"id": "G53",
+"input": "[09:14] Sunita: ok",
+"expected": "[09:14] [PERSON_1]: ok"
+},
+{
+"id": "G54",
+"input": "<@U03XYZ987> ping",
+"expected": "<@[USER_ID_1]> ping"
+},
+{
+"id": "G55",
+"input": "{\"HbA1c\": 8.1}",
+"expected": "{\"HbA1c\": \"[LAB_RESULT_1]\"}"
+},
+{
+"id": "G56",
+"input": "GAD-7 score: 15",
+"expected": "GAD-7 score: [HEALTH_SCORE_1]"
+},
+{
+"id": "G57",
+"input": "anil.k@example.org is the mail. email=a****@example.org",
+"expected": "[EMAIL_1] is the mail. email=[EMAIL_1]"
+},
+{
+"id": "G58",
+"input": "KUMAR, A. approved",
+"expected": "[PERSON_1] approved"
+},
+{
+"id": "G59",
+"input": "born 12-04-1990; meeting on 12-04-2026",
+"expected": "born [DATE_OF_BIRTH_1]; meeting on 12-04-2026"
+},
+{
+"id": "G60",
+"input": "Hope you're well, Hope.",
+"expected": "Hope you're well, [PERSON_1]."
+},
+{
+"id": "G61",
+"input": "# redactor: skip next line\naadhaar 7361 9024 5814",
+"expected": "# redactor: skip next line\naadhaar [AADHAAR_1]"
+},
+{
+"id": "G62",
+"input": "fe80::2a0:c9ff:fe14:8f2a and 192.168.0.10",
+"expected": "[IP_1] and 192.168.0.10"
+},
+{
+"id": "G64",
+"input": "Already masked: [PERSON_1] said hi.",
+"expected": "Already masked: [PERSON_1] said hi."
+}
+]

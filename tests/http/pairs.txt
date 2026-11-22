@@ -1,0 +1,608 @@
+HTTP REQUEST/RESPONSE TEST SET FOR PII AND SECRET MASKING
+20 pairs. All people, keys and tokens are fake: random strings, reserved example domains and test numbers.
+Network: client 203.0.113.57 (documentation range). Captured 16 Nov 2026.
+
+==============================================================================
+PAIR 01: Login with a form POST
+==============================================================================
+--- REQUEST ---
+POST /v1/auth/login HTTP/1.1
+Host: api.shopkart.example
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Origin: https://www.shopkart.example
+Referer: https://www.shopkart.example/login?next=%2Faccount%2Forders
+Cookie: csrftoken=RwMzzuVtYkwMJFrCfZ4U2EqkNk6sEr6f; theme=light; lang=en-IN; _ga=GA1.2.1849302174.1794000000
+X-Forwarded-For: 203.0.113.57, 10.12.0.4
+Content-Length: 103
+
+username=nkulkarni&password=Saffron%23Pune94&remember_me=on&csrf_token=RwMzzuVtYkwMJFrCfZ4U2EqkNk6sEr6f
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:01 GMT
+Content-Type: application/json
+Set-Cookie: sessionid=d40cca85f0f54f30445a3577e18a0a5a; Path=/; Secure; HttpOnly; SameSite=Lax; Max-Age=1209600
+Set-Cookie: csrftoken=iiRejeKx0gbVC3lrAmSJ2km14IKCzi2E; Path=/; Secure; SameSite=Lax
+X-Request-Id: 3378c19c-d584-40f1-aaec-544ad77bf397
+Cache-Control: no-store
+Content-Length: 556
+
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMTA0NDEiLCJuYW1lIjoiTmVoYSBLdWxrYXJuaSIsImVtYWlsIjoibmVoYS5rdWxrYXJuaUBtYWlsLmV4YW1wbGUuaW4iLCJwaG9uZSI6Iis5MTk4MjAwMzQ1MTciLCJyb2xlcyI6WyJjdXN0b21lciJdLCJpYXQiOjE3OTQ4MTU2NDAsImV4cCI6MTc5NDgxOTI0MH0.mW378D_Cn511CFUBWkNhBm2bd2AG2-B2TFu2aWo-C7V",
+  "refresh_token": "rt_QshIISj3bb5642ldGDinouxZjugnDD57Nb5srpS9wg1QlRRL",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "user": {
+    "id": "usr_10441",
+    "name": "Neha Kulkarni",
+    "email": "neha.kulkarni@mail.example.in"
+  }
+}
+
+==============================================================================
+PAIR 02: Fetch profile with a bearer token
+==============================================================================
+--- REQUEST ---
+GET /v1/me?include=addresses,kyc HTTP/1.1
+Host: api.shopkart.example
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMTA0NDEiLCJuYW1lIjoiTmVoYSBLdWxrYXJuaSIsImVtYWlsIjoibmVoYS5rdWxrYXJuaUBtYWlsLmV4YW1wbGUuaW4iLCJwaG9uZSI6Iis5MTk4MjAwMzQ1MTciLCJyb2xlcyI6WyJjdXN0b21lciJdLCJpYXQiOjE3OTQ4MTU2NDAsImV4cCI6MTc5NDgxOTI0MH0.mW378D_Cn511CFUBWkNhBm2bd2AG2-B2TFu2aWo-C7V
+Accept: application/json
+Cookie: sessionid=d40cca85f0f54f30445a3577e18a0a5a; lang=en-IN
+If-None-Match: W/"5f2c-9a1b7e"
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:02 GMT
+Content-Type: application/json; charset=utf-8
+ETag: W/"6a11-0c44fe"
+X-Request-Id: 68915e2e-d4a2-4243-a774-0af0dc481ee2
+Vary: Authorization, Accept-Encoding
+Content-Length: 575
+
+{
+  "id": "usr_10441",
+  "full_name": "Neha Kulkarni",
+  "email": "neha.kulkarni@mail.example.in",
+  "phone": "+919820034517",
+  "date_of_birth": "1994-03-18",
+  "pan": "BXKPK4410M",
+  "aadhaar_masked": "XXXX XXXX 3915",
+  "addresses": [
+    {
+      "label": "home",
+      "line1": "B-702, Sai Krupa Heights",
+      "line2": "Baner Road, near Balewadi Phata",
+      "city": "Pune",
+      "state": "MH",
+      "pin": "411045",
+      "geo": {
+        "lat": 18.559,
+        "lng": 73.7868
+      }
+    }
+  ],
+  "created_at": "2023-06-01T10:22:31Z",
+  "marketing_opt_in": false
+}
+
+==============================================================================
+PAIR 03: Admin export with Basic auth
+==============================================================================
+--- REQUEST ---
+GET /admin/export/customers.csv?since=2026-11-01&email=neha.kulkarni%40mail.example.in HTTP/1.1
+Host: admin.shopkart.example
+Authorization: Basic bWl5ZXI6S2F2ZXJpQDIwMjYh
+Accept: text/csv
+X-Real-IP: 198.51.100.23
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:03 GMT
+Content-Type: text/csv
+Content-Disposition: attachment; filename="customers_Neha_Kulkarni_2026-11.csv"
+Content-Length: 200
+
+id,name,email,phone,dob,card_last4
+usr_10441,"Kulkarni, Neha",neha.kulkarni@mail.example.in,+919820034517,18/03/1994,1111
+usr_20887,"Daniel O'Brien",dan.obrien@example.com,+14155550142,02/12/1987,4444
+
+==============================================================================
+PAIR 04: Payment API with secret key and card
+==============================================================================
+--- REQUEST ---
+POST /v1/charges HTTP/1.1
+Host: api.payments.example
+Authorization: Bearer sk_live_c2jDmt9qrnRBBtGaprBPhLER
+Idempotency-Key: 289e0082-c358-4452-a358-902ff3177e7e
+Content-Type: application/json
+Stripe-Version: 2026-10-01
+Content-Length: 295
+
+{
+  "amount": 249900,
+  "currency": "inr",
+  "source": {
+    "number": "4111111111111111",
+    "exp_month": 11,
+    "exp_year": 2029,
+    "cvc": "737",
+    "name": "Neha Kulkarni"
+  },
+  "description": "Order OD-90311",
+  "metadata": {
+    "customer_email": "neha.kulkarni@mail.example.in"
+  }
+}
+
+--- RESPONSE ---
+HTTP/1.1 402 Payment Required
+Date: Mon, 16 Nov 2026 09:14:04 GMT
+Content-Type: application/json
+Request-Id: req_61rztPeHmI1g6p
+Content-Length: 550
+
+{
+  "error": {
+    "type": "card_error",
+    "code": "card_declined",
+    "message": "Your card ending 1111 was declined. Contact neha.kulkarni@mail.example.in support if this persists.",
+    "charge": "ch_D96mjTwnxv9aLqmlCEVlv5L2",
+    "payment_method": {
+      "card": {
+        "brand": "visa",
+        "last4": "1111",
+        "fingerprint": "ug3oIaCfCh95aMwB"
+      },
+      "billing_details": {
+        "name": "Neha Kulkarni",
+        "phone": "+919820034517"
+      }
+    },
+    "publishable_key_used": "pk_live_W0CbvaQqrpxCCduFxFv3il5Q"
+  }
+}
+
+==============================================================================
+PAIR 05: OAuth code exchange
+==============================================================================
+--- REQUEST ---
+POST /oauth2/token HTTP/1.1
+Host: accounts.idp.example
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic c2hvcGthcnQtd2ViLWIwZTdhYjhkOmNzX1lvRDBoTjQ1MGl0REVGMzB1VTBQQkRlVnNTNTNmUDJrNzdSOVJGQVA=
+Content-Length: 334
+
+grant_type=authorization_code&code=4/0AGhTnrU_D4J1_pmHdNZ1INU9z4mgYake_BSDv2iFeuS0HOkJ9C1hnsSSIIpeU&redirect_uri=https%3A%2F%2Fwww.shopkart.example%2Fauth%2Fcallback&client_id=shopkart-web-b0e7ab8d&client_secret=cs_YoD0hN450itDEF30uU0PBDeVsS53fP2k77R9RFAP&code_verifier=xT0uRcm0EA6Gk8htj-wf0gZpc5RIpGuK0Q-Ye6U_amnabfIoGCo16wEn4XR2ayVc
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:05 GMT
+Content-Type: application/json
+Pragma: no-cache
+Content-Length: 784
+
+{
+  "access_token": "ya29.hocuiTQfnguix8PlCRAOT05nKfeOLvHNh_ZOCBRK6iIT6Y2YTIicpDiYmfb9atdsaANN-bWyc0N38GKP-FaFVf06Es8e9FhstPAjzlPKMFCakyxi-jUloQcf",
+  "expires_in": 3599,
+  "refresh_token": "1//0gx0OljgNdjCYpc1vYMJqVIvLQKt4CST4LBZWm6i6X89qyhxrrhbuaYuV8GEpAj08dNPu0DmtFQuOyDwYfFTRVBQaeIK",
+  "scope": "openid email profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmlkcC5leGFtcGxlIiwic3ViIjoiMTA4OTQzNzcxMjAwMzU1IiwiZW1haWwiOiJkYW4ub2JyaWVuQGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJEYW5pZWwgTydCcmllbiIsInBpY3R1cmUiOiJodHRwczovL2Nkbi5pZHAuZXhhbXBsZS91LzEwODk0Mzc3MTIwMDM1NS9waG90by5qcGciLCJnaXZlbl9uYW1lIjoiRGFuaWVsIiwiZmFtaWx5X25hbWUiOiJPJ0JyaWVuIn0.LCrR9QCrfLmncsIGv44Lgs_grN8GoVxR7cI6M38cVn8"
+}
+
+==============================================================================
+PAIR 06: Password reset link and redirect
+==============================================================================
+--- REQUEST ---
+GET /account/reset-password?token=rst_rEtL15PpQHvyVW89NfoMVvqCwFJESFNdy81H4bgG&email=dan.obrien%40example.com HTTP/1.1
+Host: www.shopkart.example
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+Referer: https://mail.example.com/inbox/msg/bb48ea359a444503?u=dobrien
+
+--- RESPONSE ---
+HTTP/1.1 302 Found
+Date: Mon, 16 Nov 2026 09:14:06 GMT
+Location: https://www.shopkart.example/account/new-password#token=rst_rEtL15PpQHvyVW89NfoMVvqCwFJESFNdy81H4bgG&uid=usr_20887
+Set-Cookie: reset_session=rBT9cPqeXRW1qPquO11CW7PTJfGfTzD3pzIQWvOz; Path=/account; Secure; HttpOnly; Max-Age=900
+Content-Length: 0
+
+==============================================================================
+PAIR 07: Password change that echoes the password
+==============================================================================
+--- REQUEST ---
+PUT /v1/me/password HTTP/1.1
+Host: api.shopkart.example
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMjA4ODciLCJlbWFpbCI6ImRhbi5vYnJpZW5AZXhhbXBsZS5jb20iLCJzY29wZSI6ImFjY291bnQ6d3JpdGUifQ.VdfnSjj3u-ymHGjyJQYVGxcWHfo93uif23EFW3Z8bjp
+Content-Type: application/json
+X-CSRF-Token: ioydFltEEWKipsbjQlBIz6OdyvSphM1S
+Content-Length: 132
+
+{
+  "current_password": "correct horse battery staple",
+  "new_password": "Galway!Bay1987",
+  "confirm_password": "Galway!Bay1987"
+}
+
+--- RESPONSE ---
+HTTP/1.1 422 Unprocessable Entity
+Date: Mon, 16 Nov 2026 09:14:07 GMT
+Content-Type: application/json
+Content-Length: 276
+
+{
+  "errors": [
+    {
+      "field": "new_password",
+      "message": "Password 'Galway!Bay1987' contains your birth year (1987)."
+    },
+    {
+      "field": "new_password",
+      "hint": "Avoid using your name (Daniel O'Brien) or email (dan.obrien@example.com)."
+    }
+  ]
+}
+
+==============================================================================
+PAIR 08: GraphQL mutation with an address
+==============================================================================
+--- REQUEST ---
+POST /graphql HTTP/1.1
+Host: api.shopkart.example
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMzAxMTIiLCJlbWFpbCI6Im1lZXJhLml5ZXJAY29ycC5leGFtcGxlLmluIiwibmFtZSI6Ik1lZXJhIEl5ZXIifQ.h5st32Cbm0SmlGd5wM9ClltNmDrh6zM5YwW-q-NyW3Z
+Content-Type: application/json
+Cookie: sessionid=308ead908dc5c7d5df063396f23e0635; ab_test=checkout_v2; currency=INR
+Content-Length: 498
+
+{
+  "operationName": "UpdateAddress",
+  "variables": {
+    "input": {
+      "recipient": "Meera Iyer",
+      "phone": "+91 98450 76231",
+      "line1": "No. 14, 3rd Main, 2nd Cross",
+      "line2": "Jayanagar 4th Block",
+      "city": "Bengaluru",
+      "pin": "560011",
+      "deliveryNote": "call Meera on nine eight four five zero, seven six two three one before 6pm"
+    }
+  },
+  "query": "mutation UpdateAddress($input: AddressInput!) { updateAddress(input: $input) { id recipient phone } }"
+}
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:08 GMT
+Content-Type: application/json
+Content-Length: 137
+
+{
+  "data": {
+    "updateAddress": {
+      "id": "addr_7781",
+      "recipient": "Meera Iyer",
+      "phone": "+919845076231"
+    }
+  }
+}
+
+==============================================================================
+PAIR 09: S3 upload signed with AWS SigV4
+==============================================================================
+--- REQUEST ---
+PUT /kyc-docs/usr_10441/aadhaar_front_Neha_Kulkarni.jpg HTTP/1.1
+Host: shopkart-kyc.s3.ap-south-1.amazonaws.com
+x-amz-date: 20261116T091409Z
+x-amz-content-sha256: b0423673071359e7ff62ec7f2766b1bfe8682ee426b8d6672f8aab0619ba7648
+x-amz-security-token: IQoJb3JpZ2luX2VjEOwl2hYy5FtBRYoBd3B5574YrPVbPk0zRxoLF+uKCTMnHzXo+bdQASar24clMzFx+6M2H5wOH+Ta0utBb
+Authorization: AWS4-HMAC-SHA256 Credential=AKIAIOSFODNN7EXAMPLE/20261116/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=6741a5bfd6d448e34e6ff404da55431a692ab5c0077eceda213f8f53539f4911
+x-amz-meta-uploaded-by: neha.kulkarni@mail.example.in
+x-amz-meta-aadhaar: 528174063915
+Content-Type: image/jpeg
+Content-Length: 35
+
+<binary JPEG data, 184 KB, omitted>
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:09 GMT
+ETag: "9dd4e461268c8034f5c8564e155c67a6"
+x-amz-request-id: E6XW9R0OZSFK5JP5
+x-amz-id-2: P6osypQSH27dz6UY/3EQs021cyLVcHZbNsD3QYUbUJ4TcfCWNkgkOVhJBg8a3X/KlVlWx4acLp5h
+x-amz-version-id: QNK0wt8rr2x7UFU5x2hEV.Xq9B6FwTYX
+
+==============================================================================
+PAIR 10: Presigned S3 download link
+==============================================================================
+--- REQUEST ---
+GET /kyc-docs/usr_10441/pan_card.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIOSFODNN7EXAMPLE%2F20261116%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20261116T091410Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=05bf159a7ed6853668b0aea41f5ceaa5674b11148414d8caf8cb6e81f350a4bc HTTP/1.1
+Host: shopkart-kyc.s3.ap-south-1.amazonaws.com
+User-Agent: okhttp/4.12.0
+
+--- RESPONSE ---
+HTTP/1.1 403 Forbidden
+Date: Mon, 16 Nov 2026 09:14:10 GMT
+Content-Type: application/xml
+Content-Length: 440
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>SignatureDoesNotMatch</Code><Message>The request signature we calculated does not match the signature you provided.</Message><AWSAccessKeyId>AKIAIOSFODNN7EXAMPLE</AWSAccessKeyId><StringToSign>AWS4-HMAC-SHA256
+20261116T091410Z
+20261116/ap-south-1/s3/aws4_request
+457cbb47b8473f88bde538325c456a9920597ecfe5127ec1a099205574ad60ca</StringToSign><RequestId>QG8AR47HVE80LXP8</RequestId></Error>
+
+==============================================================================
+PAIR 11: Incoming payment webhook with a signature header
+==============================================================================
+--- REQUEST ---
+POST /webhooks/payments HTTP/1.1
+Host: hooks.shopkart.example
+Content-Type: application/json
+Stripe-Signature: t=1794815650,v1=01ee8cefe06785df9b925437f3d08a74a6aabd1a338fe97f8b9f8dea2ee55036
+X-Webhook-Secret-Debug: whsec_8UWsBVith3aDWscr6V6vZudqCPFhZ9QQ
+Content-Length: 358
+
+{"id":"evt_YrA3kKmOU1SAmG7sF1F7mLHi","type":"customer.updated","data":{"object":{"id":"cus_bINrjTzHtXLsOC","email":"dan.obrien@example.com","name":"Daniel O'Brien","phone":"+14155550142","address":{"line1":"1455 Market St, Apt 9C","city":"San Francisco","state":"CA","postal_code":"94103","country":"US"},"metadata":{"ssn_last4":"6789","dob":"12/02/1987"}}}}
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:11 GMT
+Content-Type: text/plain
+Content-Length: 2
+
+ok
+
+==============================================================================
+PAIR 12: Outbound chat message with a bot token
+==============================================================================
+--- REQUEST ---
+POST /api/chat.postMessage HTTP/1.1
+Host: slack.com
+Authorization: Bearer xoxb-327294108321-3406183403926-KLt65Wjl5dyQyGMAcAGwupXa
+Content-Type: application/json; charset=utf-8
+Content-Length: 177
+
+{
+  "channel": "C07KYCALERTS",
+  "text": "KYC failed for Neha Kulkarni (neha.kulkarni@mail.example.in, PAN BXKPK4410M). Aadhaar on file: 5281 7406 3915. Ping <@U05NKULKARNI>."
+}
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:12 GMT
+Content-Type: application/json
+Content-Length: 149
+
+{
+  "ok": true,
+  "channel": "C07KYCALERTS",
+  "ts": "1794815652.004100",
+  "message": {
+    "bot_id": "B07JDU3GGVU",
+    "user": "U05BOTPPHBB"
+  }
+}
+
+==============================================================================
+PAIR 13: Legacy service with Digest auth through a proxy
+==============================================================================
+--- REQUEST ---
+GET /legacy/customer/10441 HTTP/1.1
+Host: legacy.shopkart.internal
+Proxy-Authorization: Basic cHJveHl1c2VyOlByMHh5IVBhc3M=
+Authorization: Digest username="miyer", realm="legacy", nonce="271961e13e801d340acc2f0be207cf56", uri="/legacy/customer/10441", response="c634be16b3dd1aa05a70944fe964c271", qop=auth, nc=00000001, cnonce="6df752f8f68c0188"
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:13 GMT
+Content-Type: application/xml
+Content-Length: 273
+
+<customer id="10441">
+  <name>Neha Kulkarni</name>
+  <email>neha.kulkarni@mail.example.in</email>
+  <mobile>098200 34517</mobile>
+  <dob>18-Mar-1994</dob>
+  <pan>BXKPK4410M</pan>
+  <notes>Customer said her mother's maiden name is Joshi. Prefers Marathi.</notes>
+</customer>
+
+==============================================================================
+PAIR 14: Identity document upload (multipart)
+==============================================================================
+--- REQUEST ---
+POST /v1/kyc/documents HTTP/1.1
+Host: api.shopkart.example
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMjA4ODciLCJlbWFpbCI6ImRhbi5vYnJpZW5AZXhhbXBsZS5jb20ifQ.Xoj0W9wag8TlTe0xkQtd2qvN0pHl9TNqFMbrhO5MuGJ
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary8JdnL6PEYaxTIMb6
+Content-Length: 429
+
+------WebKitFormBoundary8JdnL6PEYaxTIMb6
+Content-Disposition: form-data; name="full_name"
+
+Daniel O'Brien
+------WebKitFormBoundary8JdnL6PEYaxTIMb6
+Content-Disposition: form-data; name="ssn"
+
+512-34-8890
+------WebKitFormBoundary8JdnL6PEYaxTIMb6
+Content-Disposition: form-data; name="passport"; filename="Daniel_OBrien_passport_scan.png"
+Content-Type: image/png
+
+<binary PNG data omitted>
+------WebKitFormBoundary8JdnL6PEYaxTIMb6--
+
+--- RESPONSE ---
+HTTP/1.1 201 Created
+Date: Mon, 16 Nov 2026 09:14:14 GMT
+Content-Type: application/json
+Location: /v1/kyc/documents/doc_JQIBCJZqTP68
+Content-Length: 234
+
+{
+  "id": "doc_mpETUY6kV22o",
+  "status": "pending_review",
+  "extracted": {
+    "name": "DANIEL O BRIEN",
+    "passport_number": "X12345678",
+    "nationality": "IRL",
+    "mrz": "P<IRLOBRIEN<<DANIEL<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+  }
+}
+
+==============================================================================
+PAIR 15: Checkout page HTML with hidden fields
+==============================================================================
+--- REQUEST ---
+GET /checkout?cart=ct_f4dTbVrLsA HTTP/1.1
+Host: www.shopkart.example
+Cookie: sessionid=d40cca85f0f54f30445a3577e18a0a5a; cart_id=ct_BufkkVXaX0; consent=analytics:false; recently_viewed=SKU-4111-XL,SKU-2290-M
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:15 GMT
+Content-Type: text/html; charset=utf-8
+Content-Security-Policy: script-src 'self' 'nonce-kPuQEGvogleFef4zfKqQgS'
+Content-Length: 726
+
+<!doctype html>
+<html><body>
+<form method="post" action="/checkout/confirm">
+  <input type="hidden" name="csrfmiddlewaretoken" value="mqveSiw0J04rwrZkqX7QzHm3wF0LQblwdXDy1YBrmDzokAvhjC248nZeZLAEBZzC">
+  <input type="hidden" name="customer_email" value="neha.kulkarni@mail.example.in">
+  <input type="text" name="phone" value="098200 34517">
+  <p>Deliver to: Neha Kulkarni, B-702, Sai Krupa Heights, Baner Road, Pune 411045</p>
+  <!-- debug: payment gateway key sk_live_c2jDmt9qrnRBBtGaprBPhLER -->
+</form>
+<script>window.__CONFIG__ = {"mapsKey": "AIzaB2TqMjdT73qkCC61Rs7gc4nvQDFBxUZRMBs", "sentryDsn": "https://e1026440ef9d07967e0bb661a83014e8@o4504.ingest.sentry.example/45", "brandColor": "#E91E63"};</script>
+</body></html>
+
+==============================================================================
+PAIR 16: CORS preflight (no sensitive data)
+==============================================================================
+--- REQUEST ---
+OPTIONS /v1/cart/items HTTP/1.1
+Host: api.shopkart.example
+Origin: https://www.shopkart.example
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: authorization, content-type
+
+--- RESPONSE ---
+HTTP/1.1 204 No Content
+Date: Mon, 16 Nov 2026 09:14:16 GMT
+Access-Control-Allow-Origin: https://www.shopkart.example
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Authorization, Content-Type, X-CSRF-Token
+Access-Control-Max-Age: 86400
+X-Request-Id: 78bd8733-5866-46e3-afef-450a2e2cfd0c
+traceparent: 00-8b2ddbb192036c13d9271ce2c6685750-63c94fd1cda2f869-01
+
+==============================================================================
+PAIR 17: Expired token rejected
+==============================================================================
+--- REQUEST ---
+DELETE /v1/orders/OD-90311 HTTP/1.1
+Host: api.shopkart.example
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMzAxMTIiLCJlbWFpbCI6Im1lZXJhLml5ZXJAY29ycC5leGFtcGxlLmluIiwibmFtZSI6Ik1lZXJhIEl5ZXIiLCJleHAiOjE3MDAwMDAwMDB9.Z0k3ekL-UYlmOX_Cr0fjRjUzQwh2RQe89G8FqRS_6Pf
+X-Api-Key: sk_test_kOqVDQlaclsleN73JKKgQ3iv
+
+--- RESPONSE ---
+HTTP/1.1 401 Unauthorized
+Date: Mon, 16 Nov 2026 09:14:17 GMT
+WWW-Authenticate: Bearer realm="shopkart", error="invalid_token", error_description="The access token expired"
+Content-Type: application/json
+Content-Length: 361
+
+{
+  "error": "invalid_token",
+  "debug": {
+    "token_received": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMzAxMTIiLCJlbWFpbCI6Im1lZXJhLml5ZXJAY29ycC5leGFtcGxlLmluIiwibmFtZSI6Ik1lZXJhIEl5ZXIiLCJleHAiOjE3MDAwMDAwMDB9.Z0k3ekL-UYlmOX_Cr0fjRjUzQwh2RQe89G8FqRS_6Pf",
+    "user_hint": "meera.iyer@corp.example.in",
+    "ip": "2401:4900:1c80:3d2a::5"
+  }
+}
+
+==============================================================================
+PAIR 18: Internal service error that leaks a connection string
+==============================================================================
+--- REQUEST ---
+POST /internal/v1/reconcile HTTP/1.1
+Host: recon.shopkart.internal:8443
+X-Internal-Token: int_QzarSj95uI5rlHymHNOxG4vAPGvIBcZS3NtFH6pB
+Content-Type: application/json
+Content-Length: 39
+
+{"date": "2026-11-15", "dry_run": true}
+
+--- RESPONSE ---
+HTTP/1.1 500 Internal Server Error
+Date: Mon, 16 Nov 2026 09:14:18 GMT
+Content-Type: text/plain
+Content-Length: 488
+
+Traceback (most recent call last):
+  File "/srv/recon/db.py", line 31, in connect
+    engine = create_engine("mysql+pymysql://recon_svc:Mysql@Pune#2026@db-recon.internal:3306/ledger")
+sqlalchemy.exc.OperationalError: (2003, "Can't connect to MySQL server on 'db-recon.internal'")
+Environment: REDIS_URL=redis://:NfNWgggrdLiGMdwYlDqF@cache.internal:6379/2  GITHUB_TOKEN=ghp_wXBprTLBriyez1Q1EFEqYlTNiZ0vzy6DZAMd
+On-call: Meera Iyer (+91 98450 76231), backup: rohan.deshpande@corp.example.in
+
+==============================================================================
+PAIR 19: Mobile app sync with device identifiers
+==============================================================================
+--- REQUEST ---
+POST /v2/device/sync HTTP/1.1
+Host: m.shopkart.example
+User-Agent: ShopKart/8.4.1 (Android 15; Pixel 8; build 84100)
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMTA0NDEiLCJkZXZpY2UiOiJwaXhlbDgtbmVoYSJ9.w3WABfNsNZ-hCfjPYeA_8rpaP5MaPH3-ZpMPHVhOL_T
+X-Device-Id: 8f14e45f-ceea-467a-a1b2-3c4d5e6f7a8b
+X-Advertising-Id: 38400000-8cf0-41bd-b23e-10b96e40000d
+X-App-Version: 8.4.1
+Content-Type: application/json
+Content-Length: 305
+
+{
+  "imei": "490154203237518",
+  "wifi_ssid": "Kulkarni_Home_5G",
+  "bssid": "a4:2b:b0:7c:11:9e",
+  "location": {
+    "lat": 18.559,
+    "lng": 73.7868,
+    "accuracy_m": 12
+  },
+  "contacts_hash": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+  "battery": 81,
+  "os_version": "15"
+}
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:19 GMT
+Content-Type: application/json
+Content-Length: 237
+
+{
+  "synced": true,
+  "push_token": "fcm:7L2nfBKZqNDD4d8:HttuHLN9sOL4gj3Utn0gaWW22065OUv2Ici_byuTRczPoKcGfITEaldd1a_W4dOG2img:P8tSjwooi:bfU5laq:7-HcI17zG2wxKc3T8_86Lawxen1iXwwt1-Ar3DUNmL20_ppST",
+  "server_time": "2026-11-16T09:14:19Z"
+}
+
+==============================================================================
+PAIR 20: Logout, with a token in the query string
+==============================================================================
+--- REQUEST ---
+POST /v1/auth/logout?refresh_token=rt_QshIISj3bb5642ldGDinouxZjugnDD57Nb5srpS9wg1QlRRL HTTP/1.1
+Host: api.shopkart.example
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMTA0NDEiLCJuYW1lIjoiTmVoYSBLdWxrYXJuaSIsImVtYWlsIjoibmVoYS5rdWxrYXJuaUBtYWlsLmV4YW1wbGUuaW4iLCJwaG9uZSI6Iis5MTk4MjAwMzQ1MTciLCJyb2xlcyI6WyJjdXN0b21lciJdLCJpYXQiOjE3OTQ4MTU2NDAsImV4cCI6MTc5NDgxOTI0MH0.mW378D_Cn511CFUBWkNhBm2bd2AG2-B2TFu2aWo-C7V
+Cookie: sessionid=d40cca85f0f54f30445a3577e18a0a5a; csrftoken=RwMzzuVtYkwMJFrCfZ4U2EqkNk6sEr6f; theme=light
+
+--- RESPONSE ---
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2026 09:14:20 GMT
+Set-Cookie: sessionid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; HttpOnly
+Set-Cookie: csrftoken=; Path=/; Max-Age=0
+Clear-Site-Data: "cookies", "storage"
+Content-Type: application/json
+Content-Length: 75
+
+{"logged_out": true, "build": "2026.11.16-4f2a9c1", "region": "ap-south-1"}

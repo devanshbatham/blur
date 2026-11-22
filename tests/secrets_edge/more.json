@@ -1,0 +1,499 @@
+{
+ "policy": "More secrets (2026-11-17): synthetic values only; 'mask' fully masked, no character of 'keep' masked.",
+ "cases": [
+  {
+   "text": "git remote set-url origin https://x-access-token:ghp_u8jzPde0IgxLd6GncfBAepfJBd0Kh8oOOL8d@github.com/acme/api.git",
+   "mask": [
+    "ghp_u8jzPde0IgxLd6GncfBAepfJBd0Kh8oOOL8d"
+   ],
+   "keep": [
+    "github.com/acme/api.git"
+   ]
+  },
+  {
+   "text": "GITHUB_TOKEN: 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",
+   "mask": [
+    "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"
+   ],
+   "keep": [
+    "GITHUB_TOKEN"
+   ]
+  },
+  {
+   "text": "Use this GitLab token for the runner: glpat-ORS_6ilI8ihN5KXSc7Tv",
+   "mask": [
+    "glpat-ORS_6ilI8ihN5KXSc7Tv"
+   ],
+   "keep": []
+  },
+  {
+   "text": "slack_bot_token = \"xoxb-91703423667-1276842684656-9ojfljoQoaF1LlqsajAIxNKu\"",
+   "mask": [
+    "xoxb-91703423667-1276842684656-9ojfljoQoaF1LlqsajAIxNKu"
+   ],
+   "keep": [
+    "slack_bot_token"
+   ]
+  },
+  {
+   "text": "OPENAI_API_KEY=sk-proj-qg6YYZYn9ZhyiA4uoRgnatmUdjAWtGSU8po_799NksnRH9uc",
+   "mask": [
+    "sk-proj-qg6YYZYn9ZhyiA4uoRgnatmUdjAWtGSU8po_799NksnRH9uc"
+   ],
+   "keep": [
+    "OPENAI_API_KEY"
+   ]
+  },
+  {
+   "text": "export ANTHROPIC_API_KEY='sk-ant-api03-AUsdMlHUvTCQCyEZDz-TddJ8HyS5SUkCnD8zRA9a9SkpXz9w3QlY7Zkuvqdt7s8Stqcbnr3yBdGBLEPHAA'",
+   "mask": [
+    "sk-ant-api03-AUsdMlHUvTCQCyEZDz-TddJ8HyS5SUkCnD8zRA9a9SkpXz9w3QlY7Zkuvqdt7s8Stqcbnr3yBdGBLEPHAA"
+   ],
+   "keep": [
+    "ANTHROPIC_API_KEY"
+   ]
+  },
+  {
+   "text": "<script src=\"https://maps.googleapis.com/maps/api/js?key=AIza1qhT61qtc4xatws8phP9nhFyJfm5di4PzJ5&callback=init\"></script>",
+   "mask": [
+    "AIza1qhT61qtc4xatws8phP9nhFyJfm5di4PzJ5"
+   ],
+   "keep": [
+    "callback=init"
+   ]
+  },
+  {
+   "text": "sendgrid:\n  api_key: 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\n  from: noreply@acme.example",
+   "mask": [
+    "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",
+    "noreply@acme.example"
+   ],
+   "keep": []
+  },
+  {
+   "text": "//registry.npmjs.org/:_authToken=npm_frdZSlB5er8bOfZqfM2oeq3hDavJA76rNicH",
+   "mask": [
+    "npm_frdZSlB5er8bOfZqfM2oeq3hDavJA76rNicH"
+   ],
+   "keep": [
+    "registry.npmjs.org"
+   ]
+  },
+  {
+   "text": "huggingface-cli login --token hf_Tp8hkqdlm7tOtHWnsCGRlrwZbqcabUGJmG",
+   "mask": [
+    "hf_Tp8hkqdlm7tOtHWnsCGRlrwZbqcabUGJmG"
+   ],
+   "keep": [
+    "huggingface-cli login"
+   ]
+  },
+  {
+   "text": "echo dckr_pat_8F5n3-YNBDRzrZSgqbjG3uhkWKF | docker login -u acmebot --password-stdin",
+   "mask": [
+    "dckr_pat_8F5n3-YNBDRzrZSgqbjG3uhkWKF"
+   ],
+   "keep": []
+  },
+  {
+   "text": "TELEGRAM_BOT_TOKEN=4072247045:AAQPFeNBTxaQWk8JzFalHlsZfYcMMDktXP-",
+   "mask": [
+    "4072247045:AAQPFeNBTxaQWk8JzFalHlsZfYcMMDktXP-"
+   ],
+   "keep": []
+  },
+  {
+   "text": "vault login hvs.jsUNPjc01T5GOBUSZGi6HWGK",
+   "mask": [
+    "hvs.jsUNPjc01T5GOBUSZGi6HWGK"
+   ],
+   "keep": [
+    "vault login"
+   ]
+  },
+  {
+   "text": "headers: {\"X-Shopify-Access-Token\": \"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\"}",
+   "mask": [
+    "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"
+   ],
+   "keep": [
+    "X-Shopify-Access-Token"
+   ]
+  },
+  {
+   "text": "DD_API_KEY=91624a8940f1f836f99eee3692f09e2e\nDD_SITE=datadoghq.eu",
+   "mask": [
+    "91624a8940f1f836f99eee3692f09e2e"
+   ],
+   "keep": [
+    "datadoghq.eu"
+   ]
+  },
+  {
+   "text": "twilio api_key_sid=SK8c662248b483b7ffc050fec94dbca3a0 api_key_secret=uWv1zh87mTa5Vsqxezy3Lex7BWr2drgd",
+   "mask": [
+    "uWv1zh87mTa5Vsqxezy3Lex7BWr2drgd"
+   ],
+   "keep": []
+  },
+  {
+   "text": "DefaultEndpointsProtocol=https;AccountName=acmeprod;AccountKey=1QsO7jprBGumXxY9B4bZWOz648JJnUfd7UACNWiP3sFd67JikEAvstqVVPqzPptEJQzhkPkenG5ZFJoC6vWCBi==;EndpointSuffix=core.windows.net",
+   "mask": [
+    "1QsO7jprBGumXxY9B4bZWOz648JJnUfd7UACNWiP3sFd67JikEAvstqVVPqzPptEJQzhkPkenG5ZFJoC6vWCBi=="
+   ],
+   "keep": [
+    "core.windows.net"
+   ]
+  },
+  {
+   "text": "Stripe.api_key = 'sk_test_JmpflvJfupxqZKm4bV3AyAVH'  # test mode",
+   "mask": [
+    "sk_test_JmpflvJfupxqZKm4bV3AyAVH"
+   ],
+   "keep": []
+  },
+  {
+   "text": "[pypi]\n  username = __token__\n  password = pypi-AgEIcHlwaS5vcmcAWIRh-JUqBlIFXZ53Ncqe28_ajY75FnCttn6kfaqDeMqG3omjMyXHCabM6JO",
+   "mask": [
+    "pypi-AgEIcHlwaS5vcmcAWIRh-JUqBlIFXZ53Ncqe28_ajY75FnCttn6kfaqDeMqG3omjMyXHCabM6JO"
+   ],
+   "keep": [
+    "__token__"
+   ]
+  },
+  {
+   "text": "mongodb+srv://appuser:P14pEHpJpb9ATP@cluster0.ab12c.mongodb.net/prod?retryWrites=true",
+   "mask": [
+    "P14pEHpJpb9ATP"
+   ],
+   "keep": [
+    "cluster0.ab12c.mongodb.net"
+   ]
+  },
+  {
+   "text": "redis://:tdbmF4RPAfqoQB7x@cache.internal:6379/0",
+   "mask": [
+    "tdbmF4RPAfqoQB7x"
+   ],
+   "keep": [
+    "cache.internal:6379"
+   ]
+  },
+  {
+   "text": "jdbc:mysql://db.internal:3306/shop?user=shop&password=Pa55-oFcSvTAx&useSSL=true",
+   "mask": [
+    "Pa55-oFcSvTAx"
+   ],
+   "keep": [
+    "useSSL=true"
+   ]
+  },
+  {
+   "text": "Server=tcp:sql.acme.example,1433;Database=crm;User Id=crm_app;Password=RzmaZsV2GenF!;Encrypt=True;",
+   "mask": [
+    "RzmaZsV2GenF!"
+   ],
+   "keep": [
+    "Encrypt=True"
+   ]
+  },
+  {
+   "text": "amqp://guest:mtX0moDoqW4s@rabbit.internal:5672/",
+   "mask": [
+    "mtX0moDoqW4s"
+   ],
+   "keep": []
+  },
+  {
+   "text": "curl -u deploy:S3cure!g8NFN https://ci.acme.example/api/jobs",
+   "mask": [
+    "S3cure!g8NFN"
+   ],
+   "keep": [
+    "https://ci.acme.example/api/jobs"
+   ]
+  },
+  {
+   "text": "mysql -h db.internal -u root -p'l5oFA6Qd8Mj7zd' shop",
+   "mask": [
+    "l5oFA6Qd8Mj7zd"
+   ],
+   "keep": [
+    "db.internal"
+   ]
+  },
+  {
+   "text": "Authorization: Basic nbMjAdTdlzC5T4uUhf7kvmlP7HVDctQU==",
+   "mask": [
+    "nbMjAdTdlzC5T4uUhf7kvmlP7HVDctQU=="
+   ],
+   "keep": [
+    "Authorization"
+   ]
+  },
+  {
+   "text": "sshpass -p 'y1xvCkgafr#9' ssh admin@10.0.4.12",
+   "mask": [
+    "y1xvCkgafr#9"
+   ],
+   "keep": []
+  },
+  {
+   "text": "machine api.heroku.com\n  login ops@acme.example\n  password fwA94hJ9WnywX0t0ZB",
+   "mask": [
+    "fwA94hJ9WnywX0t0ZB"
+   ],
+   "keep": []
+  },
+  {
+   "text": "apiVersion: v1\nkind: Secret\ndata:\n  password: OXzcycDeZ6dqmVe5Mvxrv99N==\nstringData:\n  api-token: fdTEmxI6CmuxV5EbOApZ",
+   "mask": [
+    "fdTEmxI6CmuxV5EbOApZ"
+   ],
+   "keep": [
+    "kind: Secret"
+   ]
+  },
+  {
+   "text": "variable \"db_password\" {\n  default = \"cqVTSu7rtaUWM6ZO88eb0o\"\n  sensitive = true\n}",
+   "mask": [
+    "cqVTSu7rtaUWM6ZO88eb0o"
+   ],
+   "keep": [
+    "sensitive = true"
+   ]
+  },
+  {
+   "text": "services:\n  db:\n    environment:\n      POSTGRES_PASSWORD: gET9D9XyYq6B0Fi7\n      POSTGRES_USER: app",
+   "mask": [
+    "gET9D9XyYq6B0Fi7"
+   ],
+   "keep": [
+    "POSTGRES_USER: app"
+   ]
+  },
+  {
+   "text": "{\"auth\": {\"client_id\": \"web-app\", \"client_secret\": \"FlaZ7Vt0SXjMpu3uDxYYMfGm\"}}",
+   "mask": [
+    "FlaZ7Vt0SXjMpu3uDxYYMfGm"
+   ],
+   "keep": [
+    "web-app"
+   ]
+  },
+  {
+   "text": "spring.datasource.password=zWkpAePcEJIukB4geqNfngAFTC\nspring.datasource.url=jdbc:postgresql://db:5432/app",
+   "mask": [
+    "zWkpAePcEJIukB4geqNfngAFTC"
+   ],
+   "keep": [
+    "jdbc:postgresql://db:5432/app"
+   ]
+  },
+  {
+   "text": "<add key=\"ApiSecret\" value=\"loiADN5RpVI2XQWhX1ssrKrxqVqmCp\" />",
+   "mask": [
+    "loiADN5RpVI2XQWhX1ssrKrxqVqmCp"
+   ],
+   "keep": [
+    "ApiSecret"
+   ]
+  },
+  {
+   "text": "SECRET_KEY = 'lppjs46LmuezqpGHoPZg'\nDEBUG = False",
+   "mask": [
+    "lppjs46LmuezqpGHoPZg"
+   ],
+   "keep": [
+    "DEBUG = False"
+   ]
+  },
+  {
+   "text": "the wifi password is BlueMango#42 btw, network AcmeGuest",
+   "mask": [
+    "BlueMango#42"
+   ],
+   "keep": [
+    "AcmeGuest"
+   ]
+  },
+  {
+   "text": "my pw for the admin panel is hunter2!! dont share",
+   "mask": [
+    "hunter2!!"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Your verification code is 482913. It expires in 10 minutes.",
+   "mask": [
+    "482913"
+   ],
+   "keep": [
+    "10 minutes"
+   ]
+  },
+  {
+   "text": "New login PIN: 7731 (do not share)",
+   "mask": [
+    "7731"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Recovery codes:\n8f3k-29xm\nq7w2-lp0d\nz9vc-44hn",
+   "mask": [
+    "8f3k-29xm",
+    "q7w2-lp0d",
+    "z9vc-44hn"
+   ],
+   "keep": []
+  },
+  {
+   "text": "La contraseña del servidor es Lima2026$ y el usuario es root.",
+   "mask": [
+    "Lima2026$"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Das Passwort lautet Sommer!2026 – bitte ändern.",
+   "mask": [
+    "Sommer!2026"
+   ],
+   "keep": []
+  },
+  {
+   "text": "id_ed25519:\n-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW\nQyNTUxOQAAACDPDcgaE40o1C6xc4sohdmM0Lm7exG3lCMqXXQ8agO\n-----END OPENSSH PRIVATE KEY-----",
+   "mask": [
+    "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjE5MCIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc5OTk5OTk5OX0.SBeVRsfAGeAbP0VxNjAe-9i0mYtluYI0KN1gNT11cUz",
+   "mask": [
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjE5MCIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc5OTk5OTk5OX0.SBeVRsfAGeAbP0VxNjAe-9i0mYtluYI0KN1gNT11cUz"
+   ],
+   "keep": []
+  },
+  {
+   "text": "set-cookie: __Host-sid=zUzn8aB5kBh0fzK4xDXkiadJjPZ6zfKN7xVGkjws; Path=/; Secure; HttpOnly",
+   "mask": [
+    "zUzn8aB5kBh0fzK4xDXkiadJjPZ6zfKN7xVGkjws"
+   ],
+   "keep": [
+    "Path=/",
+    "HttpOnly"
+   ]
+  },
+  {
+   "text": "Merged 5523cf6 (full 5523cf6941fa1c257c6f561c5cb347611a3ce9d9) into main; build #4821 passed.",
+   "mask": [],
+   "keep": [
+    "5523cf6941fa1c257c6f561c5cb347611a3ce9d9",
+    "#4821"
+   ]
+  },
+  {
+   "text": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl ops@laptop",
+   "mask": [],
+   "keep": [
+    "AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl"
+   ]
+  },
+  {
+   "text": "<img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==\">",
+   "mask": [],
+   "keep": [
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk"
+   ]
+  },
+  {
+   "text": "API_KEY=${API_KEY}\nDB_PASSWORD=<your-password-here>\nTOKEN=changeme",
+   "mask": [],
+   "keep": [
+    "${API_KEY}",
+    "<your-password-here>"
+   ]
+  },
+  {
+   "text": "Request-Id: 7c9e6679-7425-40de-944b-e07fc1f90ae7, integrity sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC",
+   "mask": [],
+   "keep": [
+    "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+    "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+   ]
+  },
+  {
+   "text": "The password field must be at least 12 characters; tokens expire after 3600 seconds.",
+   "mask": [],
+   "keep": [
+    "12 characters",
+    "3600 seconds"
+   ]
+  },
+  {
+   "text": "pk_live_51HqLyjWDarjtT1zdp7dc is the publishable key used in the checkout page.",
+   "mask": [],
+   "keep": []
+  },
+  {
+   "text": "Set the color to #3a7bd5 and the font weight to 600; cache key is user-profile-v2.",
+   "mask": [],
+   "keep": [
+    "#3a7bd5",
+    "user-profile-v2"
+   ]
+  },
+  {
+   "text": "Base64 of 'hello' is aGVsbG8=; the SHA-256 of the file is 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08.",
+   "mask": [],
+   "keep": [
+    "aGVsbG8=",
+    "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+   ]
+  },
+  {
+   "text": "the pw is short, use a longer one",
+   "mask": [],
+   "keep": [
+    "short"
+   ]
+  },
+  {
+   "text": "pwd is /home/ops/app (current directory)",
+   "mask": [],
+   "keep": [
+    "/home/ops/app"
+   ]
+  },
+  {
+   "text": "The primary key is user_id and the sort key is created_at.",
+   "mask": [],
+   "keep": [
+    "user_id",
+    "created_at"
+   ]
+  },
+  {
+   "text": "resources:\n  limits: {cpu: \"500m\", memory: 512Mi}\n  requests: {cpu: 250m, memory: 2Gi}\ntimeout: 250ms, max upload 25MB",
+   "mask": [],
+   "keep": [
+    "500m",
+    "512Mi",
+    "250m",
+    "2Gi",
+    "250ms",
+    "25MB"
+   ]
+  },
+  {
+   "text": "headers:\n  Authorization: Bearer 7g+Zk1/qWm9xLp2Vt8RzK1pW7nY3bH6jD0sC5aEq",
+   "mask": [
+    "7g+Zk1/qWm9xLp2Vt8RzK1pW7nY3bH6jD0sC5aEq"
+   ],
+   "keep": []
+  }
+ ]
+}

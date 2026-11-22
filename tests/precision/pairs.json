@@ -1,0 +1,800 @@
+{
+ "policy": "Contrastive pairs (2026-11-17): the same kind of value in a context where it must be masked and one where it must be kept. Dates are always masked (owner policy). Each case lists values that must be fully masked and values of which no character may be masked.",
+ "cases": [
+  {
+   "text": "Our stack: Node.js 24.3.0, Python 3.14.1, PostgreSQL 17.2, Redis 7.4.1, and Kubernetes 1.34.0.",
+   "mask": [],
+   "keep": [
+    "Node.js 24.3.0",
+    "Python 3.14.1",
+    "PostgreSQL 17.2",
+    "Redis 7.4.1",
+    "Kubernetes 1.34.0"
+   ]
+  },
+  {
+   "text": "Upgrade to OpenSSL 3.0.13 before shipping; she lives at 14 Elm Street, Leeds LS2 8QJ.",
+   "mask": [
+    "14 Elm Street"
+   ],
+   "keep": [
+    "OpenSSL 3.0.13"
+   ]
+  },
+  {
+   "text": "Release atlas-v2.6.14 fixes the crash; tag v1.2.3 and build 2026.11.16-4f2a9c1 are public.",
+   "mask": [],
+   "keep": [
+    "atlas-v2.6.14",
+    "v1.2.3",
+    "2026.11.16-4f2a9c1"
+   ]
+  },
+  {
+   "text": "In the documentation examples we use 192.0.2.10, 198.51.100.42, 203.0.113.77 and 2001:db8::1.",
+   "mask": [],
+   "keep": [
+    "192.0.2.10",
+    "198.51.100.42",
+    "203.0.113.77",
+    "2001:db8::1"
+   ]
+  },
+  {
+   "text": "The customer last logged in from 203.0.113.42 at 09:14.",
+   "mask": [
+    "203.0.113.42"
+   ],
+   "keep": []
+  },
+  {
+   "text": "The service listens on 127.0.0.1:8080 and ::1; bind to 0.0.0.0 in containers.",
+   "mask": [],
+   "keep": [
+    "127.0.0.1",
+    "0.0.0.0"
+   ]
+  },
+  {
+   "text": "See CI-RUN-884291 and ISSUE-2026-1173 for the failing pipeline; PR-4410 has the fix.",
+   "mask": [],
+   "keep": [
+    "CI-RUN-884291",
+    "ISSUE-2026-1173",
+    "PR-4410"
+   ]
+  },
+  {
+   "text": "Employee ID EMP-GB-2026-048219 and customer account ACC-482109 are on the payroll file.",
+   "mask": [
+    "EMP-GB-2026-048219",
+    "ACC-482109"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Public issue reference: 482109. Customer account reference: 551203.",
+   "mask": [
+    "551203"
+   ],
+   "keep": [
+    "482109"
+   ]
+  },
+  {
+   "text": "For example, set AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE in your local profile.",
+   "mask": [],
+   "keep": [
+    "AKIAIOSFODNN7EXAMPLE"
+   ]
+  },
+  {
+   "text": "Replace PASSWORD_PLACEHOLDER and <YOUR_API_KEY> with real values; never commit sk_test_example_only.",
+   "mask": [],
+   "keep": [
+    "PASSWORD_PLACEHOLDER",
+    "YOUR_API_KEY",
+    "sk_test_example_only"
+   ]
+  },
+  {
+   "text": "The magic number 0xDEADBEEF marks freed memory; 0xCAFEBABE starts a class file.",
+   "mask": [],
+   "keep": [
+    "0xDEADBEEF",
+    "0xCAFEBABE"
+   ]
+  },
+  {
+   "text": "Production signing secret: a9f24c81d7e0b635e2c4.",
+   "mask": [
+    "a9f24c81d7e0b635e2c4"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Alice and Bob are fictional parties in this encryption tutorial; Eve listens in.",
+   "mask": [],
+   "keep": [
+    "Alice",
+    "Bob",
+    "Eve"
+   ]
+  },
+  {
+   "text": "Alice is a customer whose account is under review.",
+   "mask": [
+    "Alice"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Atlas is an internal project; Atlas Morgan is the customer who reported it.",
+   "mask": [
+    "Atlas Morgan"
+   ],
+   "keep": [
+    "Atlas is"
+   ]
+  },
+  {
+   "text": "The deployment runs in San Francisco and Frankfurt.",
+   "mask": [],
+   "keep": [
+    "San Francisco",
+    "Frankfurt"
+   ]
+  },
+  {
+   "text": "The admin password is Crimson#Valley2026 and must be rotated.",
+   "mask": [
+    "Crimson#Valley2026"
+   ],
+   "keep": []
+  },
+  {
+   "text": "DB_PASSWORD=Crimson#Valley2026",
+   "mask": [
+    "Crimson#Valley2026"
+   ],
+   "keep": []
+  },
+  {
+   "text": "postgres://app:Crimson#Valley2026@db.internal:5432/main",
+   "mask": [
+    "Crimson#Valley2026"
+   ],
+   "keep": []
+  },
+  {
+   "text": "The wallet recovery phrase is copper meadow falcon river lantern orbit.",
+   "mask": [
+    "copper meadow falcon river lantern orbit"
+   ],
+   "keep": []
+  },
+  {
+   "text": "an emergency recovery phrase consisting of the words copper meadow falcon river",
+   "mask": [
+    "copper meadow falcon river"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Set-Cookie: __Host-session=94b7e20d6a3f41c8a5e9d0172f6b83cc; Path=/; Secure",
+   "mask": [
+    "94b7e20d6a3f41c8a5e9d0172f6b83cc"
+   ],
+   "keep": [
+    "__Host-session",
+    "Path=/"
+   ]
+  },
+  {
+   "text": "Checksum of the public example file: a9f24c81d7e0b635e2c4 (sha256 truncated).",
+   "mask": [],
+   "keep": [
+    "a9f24c81d7e0b635e2c4"
+   ]
+  },
+  {
+   "text": "Search https://example.com/search?q=shoes&page=2 for more results.",
+   "mask": [],
+   "keep": [
+    "https://example.com/search?q=shoes&page=2"
+   ]
+  },
+  {
+   "text": "Reset here: https://accounts.example.org/reset?token=Q7m4Np9Rx2T6v8Lk5Hj3",
+   "mask": [
+    "Q7m4Np9Rx2T6v8Lk5Hj3"
+   ],
+   "keep": [
+    "https://accounts.example.org/reset?token="
+   ]
+  },
+  {
+   "text": "Deployment finished in 4.2 s on build 17.2 of the image.",
+   "mask": [],
+   "keep": [
+    "4.2 s",
+    "17.2"
+   ]
+  },
+  {
+   "text": "Contact Priya Raman at 14 Elm Street, Leeds LS2 8QJ or priya@example.org.",
+   "mask": [
+    "Priya Raman",
+    "14 Elm Street",
+    "priya@example.org"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Will you send the report? Will Turner approved it yesterday.",
+   "mask": [
+    "Will Turner"
+   ],
+   "keep": [
+    "Will you"
+   ]
+  },
+  {
+   "text": "We meet in May. May Chen will chair the session.",
+   "mask": [
+    "May Chen"
+   ],
+   "keep": [
+    "in May"
+   ]
+  },
+  {
+   "text": "Grace periods apply to late payments; Grace Okafor handles the appeals.",
+   "mask": [
+    "Grace Okafor"
+   ],
+   "keep": [
+    "Grace periods"
+   ]
+  },
+  {
+   "text": "Mark the ticket as done and ping Mark Osei about the release.",
+   "mask": [
+    "Mark Osei"
+   ],
+   "keep": [
+    "Mark the"
+   ]
+  },
+  {
+   "text": "Paris is lovely in spring. Paris Hilton was not at the meeting; Paris Sharma was.",
+   "mask": [
+    "Paris Sharma"
+   ],
+   "keep": [
+    "Paris is"
+   ]
+  },
+  {
+   "text": "Jordan borders Israel. Jordan Lee called from the airport.",
+   "mask": [
+    "Jordan Lee"
+   ],
+   "keep": [
+    "Jordan borders"
+   ]
+  },
+  {
+   "text": "The Victoria line was delayed, so Victoria Adeyemi took a taxi.",
+   "mask": [
+    "Victoria Adeyemi"
+   ],
+   "keep": [
+    "The Victoria line"
+   ]
+  },
+  {
+   "text": "Bill the client for 3 hours. Bill Novak signed the contract.",
+   "mask": [
+    "Bill Novak"
+   ],
+   "keep": [
+    "Bill the client"
+   ]
+  },
+  {
+   "text": "Chase Bank declined the card; Chase Morgan disputed it.",
+   "mask": [
+    "Chase Morgan"
+   ],
+   "keep": [
+    "Chase Bank"
+   ]
+  },
+  {
+   "text": "Hope this helps! Hope Kariuki will follow up.",
+   "mask": [
+    "Hope Kariuki"
+   ],
+   "keep": [
+    "Hope this"
+   ]
+  },
+  {
+   "text": "The invoice total is 4,250.00 USD and the year is 2026.",
+   "mask": [],
+   "keep": [
+    "4,250.00",
+    "2026"
+   ]
+  },
+  {
+   "text": "Call me on 020 7946 0958 after 5; room 402 is free.",
+   "mask": [
+    "020 7946 0958"
+   ],
+   "keep": [
+    "room 402"
+   ]
+  },
+  {
+   "text": "Her mobile is 07700 900123 and the PIN for the door is 4482.",
+   "mask": [
+    "07700 900123",
+    "4482"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Order total: 1299 items shipped from warehouse 12 to zone 4.",
+   "mask": [],
+   "keep": [
+    "1299",
+    "warehouse 12",
+    "zone 4"
+   ]
+  },
+  {
+   "text": "The function user.getName() returns the display name.",
+   "mask": [],
+   "keep": [
+    "user.getName"
+   ]
+  },
+  {
+   "text": "Follow @ravi_k on GitHub; decorators like @property and @dataclass are Python syntax.",
+   "mask": [
+    "ravi_k"
+   ],
+   "keep": [
+    "@property",
+    "@dataclass"
+   ]
+  },
+  {
+   "text": "Email ravi.k@gmail.com or see the docs at docs.python.org/3/library.",
+   "mask": [
+    "ravi.k@gmail.com"
+   ],
+   "keep": [
+    "docs.python.org"
+   ]
+  },
+  {
+   "text": "Set the timeout to 30 seconds and retry 3 times with backoff 1.5.",
+   "mask": [],
+   "keep": [
+    "30 seconds",
+    "3 times",
+    "1.5"
+   ]
+  },
+  {
+   "text": "Section 8.2 of the policy and clause 4(b) apply; see page 12.",
+   "mask": [],
+   "keep": [
+    "Section 8.2",
+    "clause 4(b)",
+    "page 12"
+   ]
+  },
+  {
+   "text": "The patient, Arjun Mehta (MRN 004-51-2290), was seen by Dr. Lewis.",
+   "mask": [
+    "Arjun Mehta",
+    "004-51-2290",
+    "Lewis"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Amazon shipped the parcel; Amazon Fernandes signed for it at the door.",
+   "mask": [
+    "Amazon Fernandes"
+   ],
+   "keep": [
+    "Amazon shipped"
+   ]
+  },
+  {
+   "text": "Apple released iOS 18.2 today. Contact: apple.lim@outlook.com",
+   "mask": [
+    "apple.lim@outlook.com"
+   ],
+   "keep": [
+    "Apple released",
+    "iOS 18.2"
+   ]
+  },
+  {
+   "text": "My username is sunshine and my password is sunshine99!",
+   "mask": [
+    "sunshine99!"
+   ],
+   "keep": []
+  },
+  {
+   "text": "The variable password_hash stores bcrypt output; never log the password field.",
+   "mask": [],
+   "keep": [
+    "password_hash",
+    "password field"
+   ]
+  },
+  {
+   "text": "PIN codes like 0000 or 1234 are rejected by the form.",
+   "mask": [],
+   "keep": [
+    "0000",
+    "1234"
+   ]
+  },
+  {
+   "text": "Lat 12.9719, long 77.6412 is the office; GPS of her home is 12.9352, 77.6245.",
+   "mask": [
+    "12.9352, 77.6245"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Build 4.2.1 deployed to 3 regions in 12 minutes.",
+   "mask": [],
+   "keep": [
+    "4.2.1",
+    "3 regions",
+    "12 minutes"
+   ]
+  },
+  {
+   "text": "Room 12, Block C, 4th Floor, Tower B, Prestige Park, Bengaluru 560103 is her home.",
+   "mask": [
+    "560103"
+   ],
+   "keep": []
+  },
+  {
+   "text": "- Platelets: 250 x 10^3/uL\n- White Blood Cells: 7.5 x 10^3/uL\n- Hemoglobin: 14.0 g/dL",
+   "mask": [],
+   "keep": [
+    "Platelets",
+    "250",
+    "10^3/uL",
+    "White Blood Cells",
+    "14.0 g/dL"
+   ]
+  },
+  {
+   "text": "Creatinine 0.9 mg/dL, eGFR >90 mL/min/1.73m2, sodium 140 mmol/L.",
+   "mask": [],
+   "keep": [
+    "0.9 mg/dL",
+    "mL/min/1.73m2",
+    "140 mmol/L"
+   ]
+  },
+  {
+   "text": "1. Weight: 68 kg\n2. Heart rate: 72 bpm\n3. Temperature: 37.2 °C",
+   "mask": [],
+   "keep": [
+    "Weight",
+    "68 kg",
+    "Heart rate",
+    "72 bpm",
+    "37.2"
+   ]
+  },
+  {
+   "text": "- Patient: Priya Sharma\n- MRN: 004-51-2290\n- Platelets: 250 x 10^3/uL",
+   "mask": [
+    "Priya Sharma",
+    "004-51-2290"
+   ],
+   "keep": [
+    "Platelets",
+    "250"
+   ]
+  },
+  {
+   "text": "Call the lab on 020 7946 0958; the sample needs 250 mL of saline.",
+   "mask": [
+    "020 7946 0958"
+   ],
+   "keep": [
+    "250 mL"
+   ]
+  },
+  {
+   "text": "Input: 220 V AC, 50 Hz; output 12 V DC, 2.5 A; power 30 W max.",
+   "mask": [],
+   "keep": [
+    "220 V",
+    "50 Hz",
+    "12 V",
+    "2.5 A",
+    "30 W"
+   ]
+  },
+  {
+   "text": "Intel Core i7-13700H, 3.5 GHz, 16 GB RAM, 512 GB SSD, 1920x1080 display, 65 Wh battery.",
+   "mask": [],
+   "keep": [
+    "3.5 GHz",
+    "16 GB",
+    "512 GB",
+    "1920x1080",
+    "65 Wh"
+   ]
+  },
+  {
+   "text": "Add 2 tbsp olive oil, 250 g flour and 1/2 cup milk; bake at 180 °C for 25 minutes.",
+   "mask": [],
+   "keep": [
+    "2 tbsp",
+    "250 g",
+    "1/2 cup",
+    "180",
+    "25 minutes"
+   ]
+  },
+  {
+   "text": "Take paracetamol 500 mg twice daily for 5 days; max 4 g per 24 hours.",
+   "mask": [],
+   "keep": [
+    "500 mg",
+    "5 days",
+    "4 g",
+    "24 hours"
+   ]
+  },
+  {
+   "text": "Revenue grew 12.5% to $4,250,000 in Q3; margin 18%, EPS $1.24.",
+   "mask": [],
+   "keep": [
+    "12.5%",
+    "$4,250,000",
+    "18%",
+    "$1.24"
+   ]
+  },
+  {
+   "text": "The effect was significant (p < 0.05, 95% CI 1.2–3.4, n = 312).",
+   "mask": [],
+   "keep": [
+    "0.05",
+    "95%",
+    "1.2–3.4",
+    "n = 312"
+   ]
+  },
+  {
+   "text": "Score: 3-1 at half time; final 4:2. Aspect ratio 16:9.",
+   "mask": [],
+   "keep": [
+    "3-1",
+    "4:2",
+    "16:9"
+   ]
+  },
+  {
+   "text": "BP 120/80 mmHg, pulse 72/min, SpO2 98%, temp 98.6 °F, RR 16/min.",
+   "mask": [],
+   "keep": [
+    "120/80",
+    "72/min",
+    "98%",
+    "98.6",
+    "16/min"
+   ]
+  },
+  {
+   "text": "| Test | Result | Range |\n| Hemoglobin | 14.2 g/dL | 13.5-17.5 |\n| Platelets | 250 x10^9/L | 150-400 |",
+   "mask": [],
+   "keep": [
+    "Hemoglobin",
+    "14.2 g/dL",
+    "13.5-17.5",
+    "Platelets",
+    "250",
+    "150-400"
+   ]
+  },
+  {
+   "text": "Glucose 5.4 mmol/L, HbA1c 6.1 %, cholesterol 4.8 mmol/L, LDL 2.9 mmol/L.",
+   "mask": [],
+   "keep": [
+    "5.4 mmol/L",
+    "6.1 %",
+    "4.8 mmol/L",
+    "2.9 mmol/L"
+   ]
+  },
+  {
+   "text": "Hämoglobin: 14,2 g/dl; Thrombozyten: 250 Tsd/µl",
+   "mask": [],
+   "keep": [
+    "Hämoglobin",
+    "14,2 g/dl",
+    "Thrombozyten",
+    "250"
+   ]
+  },
+  {
+   "text": "The tank holds 5000 L; flow rate 120 L/min; pressure 3.2 bar; pipe 50 mm.",
+   "mask": [],
+   "keep": [
+    "5000 L",
+    "120 L/min",
+    "3.2 bar",
+    "50 mm"
+   ]
+  },
+  {
+   "text": "Download speed 940 Mbps, latency 12 ms, 0.1% packet loss over 10,000 requests.",
+   "mask": [],
+   "keep": [
+    "940 Mbps",
+    "12 ms",
+    "0.1%",
+    "10,000"
+   ]
+  },
+  {
+   "text": "Patient Arjun Mehta, MRN 004-51-2290, phone 020 7946 0958: hemoglobin 13.1 g/dL, platelets 210 x 10^3/uL.",
+   "mask": [
+    "Arjun Mehta",
+    "004-51-2290",
+    "020 7946 0958"
+   ],
+   "keep": [
+    "13.1 g/dL",
+    "210"
+   ]
+  },
+  {
+   "text": "Order 3 units at 2499 each; call 9876543210 to confirm.",
+   "mask": [
+    "9876543210"
+   ],
+   "keep": [
+    "2499"
+   ]
+  },
+  {
+   "text": "Declan McKenzie, identified by the biometric identifier BIO-7498325610, applied for disability insurance. His SSN is 400-63-5490.",
+   "mask": [
+    "Declan McKenzie",
+    "BIO-7498325610",
+    "400-63-5490"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Sarah McDonald and Ana DeLuca met Tom MacKenzie and Erik VanDyke at the office.",
+   "mask": [
+    "Sarah McDonald",
+    "Ana DeLuca",
+    "Tom MacKenzie",
+    "Erik VanDyke"
+   ],
+   "keep": []
+  },
+  {
+   "text": "We signed with LuxeSpace Properties; the app runs on MacBook and iPhone, built with JavaScript and PostgreSQL.",
+   "mask": [],
+   "keep": [
+    "LuxeSpace",
+    "MacBook",
+    "iPhone",
+    "JavaScript",
+    "PostgreSQL"
+   ]
+  },
+  {
+   "text": "On 15 March 2024 a casualty incident occurred. The primary witness, Le Lee, a MAGA supporter, provided a detailed account.",
+   "mask": [
+    "Le Lee"
+   ],
+   "keep": [
+    "MAGA"
+   ]
+  },
+  {
+   "text": "The tenant Ana Ruiz said the rent was late; Tom Kwan, 34, of Leeds was injured; Bo Chen, the claimant, agreed.",
+   "mask": [
+    "Ana Ruiz",
+    "Tom Kwan",
+    "Bo Chen"
+   ],
+   "keep": [
+    "Leeds"
+   ]
+  },
+  {
+   "text": "The analysis revealed that while Sinhala is the primary language, there are variations in its usage across Sri Lanka.",
+   "mask": [],
+   "keep": [
+    "Sinhala",
+    "Sri Lanka"
+   ]
+  },
+  {
+   "text": "In the Central Province of Sri Lanka, in the city of Kandy, Sinhala is tied to Theravada Buddhism practiced by the majority.",
+   "mask": [],
+   "keep": [
+    "Central Province",
+    "Sri Lanka",
+    "Kandy",
+    "Sinhala",
+    "Theravada Buddhism"
+   ]
+  },
+  {
+   "text": "Acme Corp, a leading provider of software, opened an office in New York, the largest city; the client Portal is down.",
+   "mask": [],
+   "keep": [
+    "Acme Corp",
+    "New York",
+    "Portal"
+   ]
+  },
+  {
+   "text": "Jordan Smith called from Jordan, and Georgia Lee moved to Georgia.",
+   "mask": [
+    "Jordan Smith",
+    "Georgia Lee"
+   ],
+   "keep": []
+  },
+  {
+   "text": "This document certifies that Demarcus Cyprian, an engineering technologist or technician, is licensed with certificate license number WA-ENG-005342. Fax 985-801-7628.",
+   "mask": [
+    "Demarcus Cyprian",
+    "WA-ENG-005342",
+    "985-801-7628"
+   ],
+   "keep": [
+    "engineering technologist"
+   ]
+  },
+  {
+   "text": "Kofi Mensah, a software developer, joined Globex Labs, an early adopter, after Acme Corp, a leading provider, closed.",
+   "mask": [
+    "Kofi Mensah"
+   ],
+   "keep": [
+    "Globex Labs",
+    "Acme Corp"
+   ]
+  },
+  {
+   "text": "Contact support@example.com or noreply@github.com for help; logo@2x.png is an image.",
+   "mask": [
+    "support@example.com",
+    "noreply@github.com"
+   ],
+   "keep": [
+    "logo@2x.png"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,459 @@
+{
+ "policy": "Broad edge cases across domains (2026-11-17): 'mask' values fully masked, no character of 'keep' values masked.",
+ "cases": [
+  {
+   "text": "Invoice INV-2026-00417, dated 12 Nov 2026. Bill to: Ananya Rao, 42 Park Street, Kolkata 700016. Total due: ₹18,450.00 (GST 18%).",
+   "mask": [
+    "Ananya Rao",
+    "42 Park Street",
+    "700016",
+    "12 Nov 2026"
+   ],
+   "keep": [
+    "INV-2026-00417",
+    "₹18,450.00",
+    "18%"
+   ]
+  },
+  {
+   "text": "Statement for account ending 4821: opening balance $2,310.55, 14 transactions, closing balance $1,987.20.",
+   "mask": [],
+   "keep": [
+    "$2,310.55",
+    "14 transactions",
+    "$1,987.20"
+   ]
+  },
+  {
+   "text": "Transfer of €2,500 to IBAN DE89 3704 0044 0532 0130 00 (Max Weber), reference 'Rent November'.",
+   "mask": [
+    "DE89 3704 0044 0532 0130 00",
+    "Max Weber"
+   ],
+   "keep": [
+    "€2,500",
+    "Rent November"
+   ]
+  },
+  {
+   "text": "Card 4111 1111 1111 1111 exp 09/28 CVV 123 was charged $49.99 for order #A-7731.",
+   "mask": [
+    "4111 1111 1111 1111",
+    "123"
+   ],
+   "keep": [
+    "$49.99"
+   ]
+  },
+  {
+   "text": "Flight AI 302 from DEL to SFO departs 23:45 on 3 Dec, seat 32A, PNR K7XQ2M. Passenger: Rohan Mehta.",
+   "mask": [
+    "Rohan Mehta",
+    "3 Dec"
+   ],
+   "keep": [
+    "AI 302",
+    "DEL",
+    "SFO",
+    "23:45",
+    "32A"
+   ]
+  },
+  {
+   "text": "Hotel booking: 2 nights at Taj Mahal Palace, Mumbai, check-in 14:00, room 1204, confirmation 88213904.",
+   "mask": [],
+   "keep": [
+    "2 nights",
+    "Taj Mahal Palace",
+    "Mumbai",
+    "14:00"
+   ]
+  },
+  {
+   "text": "Train 12951 Rajdhani, coach B4, berth 33, departs Mumbai Central 16:35.",
+   "mask": [],
+   "keep": [
+    "12951",
+    "B4",
+    "berth 33",
+    "16:35"
+   ]
+  },
+  {
+   "text": "This Agreement is made between Acme Pvt Ltd and Kavita Nair (PAN ABCPN1234F), residing at 7 Lake View Road, Pune 411001.",
+   "mask": [
+    "Kavita Nair",
+    "ABCPN1234F",
+    "7 Lake View Road",
+    "411001"
+   ],
+   "keep": [
+    "Acme Pvt Ltd"
+   ]
+  },
+  {
+   "text": "Section 4.2: The Employee shall serve a notice period of 90 days. Clause 12(b) applies.",
+   "mask": [],
+   "keep": [
+    "Section 4.2",
+    "90 days",
+    "Clause 12(b)"
+   ]
+  },
+  {
+   "text": "Employee ID: E-10442 | Name: Sanjay Gupta | Grade: L4 | Salary: 18,00,000 INR p.a.",
+   "mask": [
+    "E-10442",
+    "Sanjay Gupta"
+   ],
+   "keep": [
+    "Grade: L4"
+   ]
+  },
+  {
+   "text": "Case No. 2025/CR/1182 before the High Court; next hearing on 20 Jan 2027 in Courtroom 5.",
+   "mask": [
+    "20 Jan 2027"
+   ],
+   "keep": [
+    "Courtroom 5"
+   ]
+  },
+  {
+   "text": "2026-11-17T09:12:44.311Z INFO  [worker-3] processed 1500 jobs in 4.2s (p95 120ms) host=ip-10-0-3-17",
+   "mask": [
+    "2026-11-17"
+   ],
+   "keep": [
+    "worker-3",
+    "1500 jobs",
+    "4.2s",
+    "120ms"
+   ]
+  },
+  {
+   "text": "ERROR 2026-11-17 10:01:02 user=priya.s@corp.example.org action=login status=401 ip=203.0.113.9",
+   "mask": [
+    "priya.s@corp.example.org",
+    "203.0.113.9",
+    "2026-11-17"
+   ],
+   "keep": [
+    "status=401",
+    "action=login",
+    "10:01:02"
+   ]
+  },
+  {
+   "text": "  File \"/app/services/billing.py\", line 214, in charge\n    raise PaymentError(code=402)",
+   "mask": [],
+   "keep": [
+    "billing.py",
+    "line 214",
+    "code=402"
+   ]
+  },
+  {
+   "text": "const MAX_RETRIES = 5; const TIMEOUT_MS = 30000; const API_VERSION = '2026-10-01';",
+   "mask": [],
+   "keep": [
+    "MAX_RETRIES = 5",
+    "TIMEOUT_MS = 30000"
+   ]
+  },
+  {
+   "text": "SELECT id, email FROM users WHERE created_at > '2026-01-01' LIMIT 100;",
+   "mask": [],
+   "keep": [
+    "LIMIT 100",
+    "users"
+   ]
+  },
+  {
+   "text": "git commit -m 'fix: handle null user' && git push origin feature/JIRA-4412",
+   "mask": [],
+   "keep": [
+    "JIRA-4412",
+    "feature/JIRA-4412"
+   ]
+  },
+  {
+   "text": "docker run -p 8080:80 -e NODE_ENV=production -v /data:/var/lib/app nginx:1.25",
+   "mask": [],
+   "keep": [
+    "8080:80",
+    "NODE_ENV=production",
+    "nginx:1.25"
+   ]
+  },
+  {
+   "text": "[10:42] Meera: can u send the otp? it's 4471 right\n[10:43] Arjun: no wait it's 9932",
+   "mask": [
+    "Meera",
+    "Arjun",
+    "4471",
+    "9932"
+   ],
+   "keep": [
+    "10:42",
+    "10:43"
+   ]
+  },
+  {
+   "text": "Follow us @AcmeSupport for updates! #ServiceOutage #Mumbai",
+   "mask": [],
+   "keep": [
+    "#ServiceOutage",
+    "#Mumbai"
+   ]
+  },
+  {
+   "text": "lol my number changed, new one is 98765 43210, old one 91234 56789 is dead",
+   "mask": [
+    "98765 43210",
+    "91234 56789"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Happy 30th birthday Neha!! 🎉 born on 5 March 1996 and still the youngest at heart",
+   "mask": [
+    "Neha",
+    "5 March 1996"
+   ],
+   "keep": [
+    "30th"
+   ]
+  },
+  {
+   "text": "| Name | Phone | City |\n|---|---|---|\n| Ravi Kumar | +91 99887 76655 | Chennai |\n| Lata Shah | +91 88776 65544 | Surat |",
+   "mask": [
+    "Ravi Kumar",
+    "+91 99887 76655",
+    "Lata Shah",
+    "+91 88776 65544"
+   ],
+   "keep": [
+    "Name",
+    "Phone",
+    "City"
+   ]
+  },
+  {
+   "text": "id,first_name,last_name,email,score\n101,Asha,Verma,asha.v@example.com,87\n102,Vikram,Joshi,vikram.j@example.com,92",
+   "mask": [
+    "Asha",
+    "Verma",
+    "asha.v@example.com",
+    "Vikram",
+    "Joshi",
+    "vikram.j@example.com"
+   ],
+   "keep": [
+    "first_name",
+    "score",
+    "87",
+    "92"
+   ]
+  },
+  {
+   "text": "Vehicle MH 12 AB 3456 (Honda City, 2019) registered to Deepak Patil; chassis MA3EWDE1S00123456.",
+   "mask": [
+    "MH 12 AB 3456",
+    "Deepak Patil",
+    "MA3EWDE1S00123456"
+   ],
+   "keep": [
+    "Honda City",
+    "2019"
+   ]
+  },
+  {
+   "text": "Student Aisha Khan, roll no. 23, class 10-B, scored 92/100 in Maths and 88% overall.",
+   "mask": [
+    "Aisha Khan",
+    "23"
+   ],
+   "keep": [
+    "10-B",
+    "92/100",
+    "88%"
+   ]
+  },
+  {
+   "text": "Appointment with Dr. Sunita Rao on 14 Dec at 11:30, OPD room 7, token 42. Bring Aadhaar 1234 5678 9012.",
+   "mask": [
+    "Sunita Rao",
+    "14 Dec",
+    "1234 5678 9012"
+   ],
+   "keep": [
+    "11:30",
+    "room 7"
+   ]
+  },
+  {
+   "text": "Version 2.0 of the policy replaces 1.9; effective from Q1 2027 across 12 regions.",
+   "mask": [],
+   "keep": [
+    "Version 2.0",
+    "1.9",
+    "12 regions"
+   ]
+  },
+  {
+   "text": "Room 101, Building 4, Tech Park — the meeting room, not anyone's home.",
+   "mask": [],
+   "keep": [
+    "the meeting room",
+    "not anyone's home"
+   ]
+  },
+  {
+   "text": "The year 1984 and the number 42 appear in the book; chapter 7, page 213.",
+   "mask": [],
+   "keep": [
+    "1984",
+    "42",
+    "chapter 7",
+    "page 213"
+   ]
+  },
+  {
+   "text": "Coordinates of the office: 12.9716° N, 77.5946° E. Her home: 12.9352, 77.6245.",
+   "mask": [
+    "12.9352, 77.6245"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Contact support@acme.example.com or call our toll-free line 1800 123 4567.",
+   "mask": [
+    "support@acme.example.com"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Ping me at ravi.kumar@gmail.com or on WhatsApp +91 98450 12345.",
+   "mask": [
+    "ravi.kumar@gmail.com",
+    "+91 98450 12345"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Le patient Jean Dupont, né le 12/03/1980, habite 15 rue de la Paix, 75002 Paris.",
+   "mask": [
+    "Jean Dupont",
+    "12/03/1980",
+    "15 rue de la Paix",
+    "75002"
+   ],
+   "keep": []
+  },
+  {
+   "text": "El cliente Carlos Ruiz (DNI 12345678Z) vive en Calle Mayor 5, Madrid.",
+   "mask": [
+    "Carlos Ruiz",
+    "12345678Z",
+    "Calle Mayor 5"
+   ],
+   "keep": []
+  },
+  {
+   "text": "田中太郎さんの電話番号は090-1234-5678です。",
+   "mask": [
+    "田中太郎",
+    "090-1234-5678"
+   ],
+   "keep": []
+  },
+  {
+   "text": "Temperature dropped to -12 °C; wind 45 km/h gusting 70 km/h; visibility 200 m.",
+   "mask": [],
+   "keep": [
+    "-12",
+    "45 km/h",
+    "70 km/h",
+    "200 m"
+   ]
+  },
+  {
+   "text": "SKU 88-4412-X, qty 3, unit price 1,299.00, HS code 8517.62.00.",
+   "mask": [],
+   "keep": [
+    "88-4412-X",
+    "qty 3",
+    "1,299.00",
+    "8517.62.00"
+   ]
+  },
+  {
+   "text": "Tracking number 1Z999AA10123456784 shipped via UPS to Ms. Fatima Sheikh.",
+   "mask": [
+    "Fatima Sheikh"
+   ],
+   "keep": [
+    "UPS"
+   ]
+  },
+  {
+   "text": "The investment with unique ID 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff9ca12291d860c1e6a36 was made by Teresa Gygi; customer ID 22CUST91327.",
+   "mask": [
+    "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff9ca12291d860c1e6a36",
+    "Teresa Gygi",
+    "22CUST91327"
+   ],
+   "keep": []
+  },
+  {
+   "text": "user id: 3f2a9c1b7e4d4a0f9b2c8e1d6a5f4b3c belongs to the account holder.",
+   "mask": [
+    "3f2a9c1b7e4d4a0f9b2c8e1d6a5f4b3c"
+   ],
+   "keep": []
+  },
+  {
+   "text": "commit 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a fixed it; sha256: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff9ca12291d860c1e6a36",
+   "mask": [],
+   "keep": [
+    "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a",
+    "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff9ca12291d860c1e6a36"
+   ]
+  },
+  {
+   "text": "trace id 4bf92f3577b34da6a3ce929d0e0e4736, request id 00f067aa0ba902b700f067aa0ba902b7",
+   "mask": [],
+   "keep": [
+    "4bf92f3577b34da6a3ce929d0e0e4736",
+    "00f067aa0ba902b700f067aa0ba902b7"
+   ]
+  },
+  {
+   "text": "The investor's account number is 745-3216598721; the account reference is CR-88213.",
+   "mask": [
+    "745-3216598721"
+   ],
+   "keep": []
+  },
+  {
+   "text": "The scope of work includes maintenance for the property located at 1067 Mallard Dr, Mandeville, LA. The client agrees to the schedule. The client's password, River45*, will be used for the portal.",
+   "mask": [
+    "1067 Mallard Dr, Mandeville, LA",
+    "River45*"
+   ],
+   "keep": [
+    "The client agrees to the schedule"
+   ]
+  },
+  {
+   "text": "Deliver to 22 Oak Ln, Austin, TX. Payment is due on receipt.",
+   "mask": [
+    "22 Oak Ln, Austin, TX"
+   ],
+   "keep": [
+    "Payment is due on receipt"
+   ]
+  }
+ ]
+}

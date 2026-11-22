@@ -1,0 +1,225 @@
+{
+ "policy": "Usernames and identifiers in URLs and paths (2026-11-17)",
+ "cases": [
+  {
+   "text": "Profile: https://github.com/priya-sharma91/dotfiles",
+   "mask": [
+    "priya-sharma91"
+   ],
+   "keep": [
+    "github.com",
+    "dotfiles"
+   ]
+  },
+  {
+   "text": "follow me https://twitter.com/rahul_v91 and https://x.com/rahul_v91/status/1790012345678901234",
+   "mask": [
+    "rahul_v91"
+   ],
+   "keep": [
+    "twitter.com"
+   ]
+  },
+  {
+   "text": "insta: https://www.instagram.com/neha.k.travels/",
+   "mask": [
+    "neha.k.travels"
+   ],
+   "keep": [
+    "instagram.com"
+   ]
+  },
+  {
+   "text": "https://www.linkedin.com/in/ananya-rao-4b2a1c97/ is my linkedin",
+   "mask": [
+    "ananya-rao-4b2a1c97"
+   ],
+   "keep": [
+    "linkedin.com"
+   ]
+  },
+  {
+   "text": "https://www.facebook.com/profile.php?id=100004567891234",
+   "mask": [
+    "100004567891234"
+   ],
+   "keep": [
+    "facebook.com"
+   ]
+  },
+  {
+   "text": "DM me on telegram t.me/arjun_dev_88 or https://reddit.com/user/throwaway_8812",
+   "mask": [
+    "arjun_dev_88",
+    "throwaway_8812"
+   ],
+   "keep": []
+  },
+  {
+   "text": "my channel youtube.com/@cookwithmeera and medium.com/@vikram.joshi",
+   "mask": [
+    "cookwithmeera",
+    "vikram.joshi"
+   ],
+   "keep": [
+    "youtube.com",
+    "medium.com"
+   ]
+  },
+  {
+   "text": "Book a slot: https://calendly.com/dr-anita-desai/30min",
+   "mask": [
+    "dr-anita-desai"
+   ],
+   "keep": [
+    "calendly.com",
+    "30min"
+   ]
+  },
+  {
+   "text": "https://shop.example.com/account/orders?user_id=88213&email=priya.s%40gmail.com&page=2",
+   "mask": [
+    "88213",
+    "priya.s%40gmail.com"
+   ],
+   "keep": [
+    "page=2",
+    "shop.example.com"
+   ]
+  },
+  {
+   "text": "GET https://api.example.com/v1/users/42918/profile HTTP/1.1",
+   "mask": [
+    "42918"
+   ],
+   "keep": [
+    "api.example.com",
+    "profile"
+   ]
+  },
+  {
+   "text": "https://portal.example-hospital.org/patients/MRN-0045121/records",
+   "mask": [
+    "MRN-0045121"
+   ],
+   "keep": [
+    "records"
+   ]
+  },
+  {
+   "text": "Reset link: https://example.com/reset?token=8fK2mQ7xLp3VbN8tRz1W&uid=5521",
+   "mask": [
+    "8fK2mQ7xLp3VbN8tRz1W",
+    "5521"
+   ],
+   "keep": [
+    "example.com/reset"
+   ]
+  },
+  {
+   "text": "Join https://zoom.us/j/85512345678?pwd=Xk9bT2LmQ7rV1sNp4ZwY",
+   "mask": [
+    "Xk9bT2LmQ7rV1sNp4ZwY"
+   ],
+   "keep": [
+    "zoom.us"
+   ]
+  },
+  {
+   "text": "open /home/priya.sharma/projects/app/config.yaml",
+   "mask": [
+    "priya.sharma"
+   ],
+   "keep": [
+    "projects/app/config.yaml"
+   ]
+  },
+  {
+   "text": "saved to C:\\Users\\rahul.verma\\Documents\\report.docx",
+   "mask": [
+    "rahul.verma"
+   ],
+   "keep": [
+    "Documents",
+    "report.docx"
+   ]
+  },
+  {
+   "text": "https://example.com/u/8f14e45f-ceea-467a-9575-8d5a2b6c1f0e/settings",
+   "mask": [
+    "8f14e45f-ceea-467a-9575-8d5a2b6c1f0e"
+   ],
+   "keep": [
+    "settings"
+   ]
+  },
+  {
+   "text": "https://app.example.com/invite?ref=priya_s&campaign=diwali2026",
+   "mask": [
+    "priya_s"
+   ],
+   "keep": [
+    "campaign=diwali2026"
+   ]
+  },
+  {
+   "text": "https://example.com/download?session_id=a91f3c7d2e8b4f60&file=report.pdf",
+   "mask": [
+    "a91f3c7d2e8b4f60"
+   ],
+   "keep": [
+    "file=report.pdf"
+   ]
+  },
+  {
+   "text": "Docs: https://docs.python.org/3/library/os.html and https://developer.mozilla.org/en-US/docs/Web/API",
+   "mask": [],
+   "keep": [
+    "docs.python.org/3/library/os.html",
+    "en-US/docs/Web/API"
+   ]
+  },
+  {
+   "text": "Buy it at https://www.amazon.in/dp/B0C7SV8Y3K or https://example.com/products/12345?color=blue",
+   "mask": [],
+   "keep": [
+    "B0C7SV8Y3K",
+    "products/12345",
+    "color=blue"
+   ]
+  },
+  {
+   "text": "GET /api/v2/orders/status?page=2&sort=desc&limit=50 returned 200",
+   "mask": [],
+   "keep": [
+    "/api/v2/orders/status",
+    "page=2",
+    "limit=50"
+   ]
+  },
+  {
+   "text": "<script src=\"https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js\"></script>",
+   "mask": [],
+   "keep": [
+    "react@18.3.1",
+    "react.production.min.js"
+   ]
+  },
+  {
+   "text": "See https://github.com/facebook/react/issues/28473 and https://en.wikipedia.org/wiki/Alan_Turing",
+   "mask": [],
+   "keep": [
+    "issues/28473",
+    "wiki/Alan_Turing"
+   ]
+  },
+  {
+   "text": "https://example.com/blog/2024/05/how-to-make-chai and https://example.com/category/recipes?sort=new",
+   "mask": [],
+   "keep": [
+    "how-to-make-chai",
+    "category/recipes"
+   ]
+  }
+ ]
+}

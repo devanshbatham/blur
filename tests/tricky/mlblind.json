@@ -1,0 +1,5307 @@
+[
+ {
+  "id": "mb-zh-01",
+  "lang": "zh",
+  "domain": "support_chat",
+  "text": "[14:02] 客服7号：您好，乐享商城售后，请问有什么可以帮您？\n[14:03] 顾客：你好，我上周买的空气净化器 AP-300 一直没到，订单号 LX20241109883271。收件人写的是我老婆周晓岚，电话 138 1724 6093。\n[14:04] 客服7号：好的亲，查到了，包裹在中转站滞留了。麻烦核对一下收货地址？\n[14:05] 顾客：上海市浦东新区张杨路1288弄7号302室。对了我自己号码是 021-5873 4419。\n[14:06] 客服7号：收到。为保障账户安全，请提供注册手机收到的验证码。\n[14:06] 顾客：472915\n[14:07] 客服7号：验证通过，郑先生。已为您申请补发，预计11月21日前送达，运费险 ¥12.00 自动理赔。如需开发票请发邮件到 fapiao@lexiang-mall.example.cn。\n[14:08] 顾客：行，发票抬头写我名字郑凯文就行，邮箱 kevin.zheng88@example.com",
+  "mask": [
+   [
+    "周晓岚",
+    0,
+    "PERSON"
+   ],
+   [
+    "138 1724 6093",
+    0,
+    "PHONE"
+   ],
+   [
+    "上海市浦东新区张杨路1288弄7号302室",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "021-5873 4419",
+    0,
+    "PHONE"
+   ],
+   [
+    "472915",
+    0,
+    "SECRET"
+   ],
+   [
+    "郑",
+    0,
+    "PERSON"
+   ],
+   [
+    "11月21日",
+    0,
+    "DATE"
+   ],
+   [
+    "郑凯文",
+    0,
+    "PERSON"
+   ],
+   [
+    "kevin.zheng88@example.com",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "乐享商城",
+    0
+   ],
+   [
+    "客服7号",
+    0
+   ],
+   [
+    "AP-300",
+    0
+   ],
+   [
+    "LX20241109883271",
+    0
+   ],
+   [
+    "老婆",
+    0
+   ],
+   [
+    "¥12.00",
+    0
+   ],
+   [
+    "fapiao@lexiang-mall.example.cn",
+    0
+   ],
+   [
+    "14:02",
+    0
+   ],
+   [
+    "运费险",
+    0
+   ],
+   [
+    "先生",
+    0
+   ],
+   [
+    "中转站",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-zh-02",
+  "lang": "zh",
+  "domain": "family_group_chat",
+  "text": "【相亲相爱一家人】\n林建华：这周六（11月21日）给奶奶过八十大寿，酒店订好了：杭州楼外楼孤山路店，晚上6点，包厢\"平湖秋月\"。\n秀芬：收到～我跟阿杰从绍兴开车过去，车牌浙D·7K592，酒店停车场要提前报车牌。\n林建华：@秀芬 好的。份子钱大家统一转我支付宝吧，账号 linjh1965@example.com。\n小雨：爸，我把奶奶新手机的锁屏密码改成0618了，她老记不住，大家别外传哈😂\n林建华：奶奶身份证号我存一下，订酒店要用：330102194611190027\n秀芬：小雨你周末有空帮奶奶把医保卡绑一下，卡在电视柜抽屉里。",
+  "mask": [
+   [
+    "林建华",
+    0,
+    "PERSON"
+   ],
+   [
+    "11月21日",
+    0,
+    "DATE"
+   ],
+   [
+    "秀芬",
+    0,
+    "PERSON"
+   ],
+   [
+    "阿杰",
+    0,
+    "PERSON"
+   ],
+   [
+    "浙D·7K592",
+    0,
+    "ID"
+   ],
+   [
+    "@秀芬",
+    0,
+    "USERNAME"
+   ],
+   [
+    "linjh1965@example.com",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "小雨",
+    0,
+    "PERSON"
+   ],
+   [
+    "0618",
+    0,
+    "SECRET"
+   ],
+   [
+    "330102194611190027",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "相亲相爱一家人",
+    0
+   ],
+   [
+    "奶奶",
+    0
+   ],
+   [
+    "八十大寿",
+    0
+   ],
+   [
+    "杭州",
+    0
+   ],
+   [
+    "楼外楼孤山路店",
+    0
+   ],
+   [
+    "晚上6点",
+    0
+   ],
+   [
+    "平湖秋月",
+    0
+   ],
+   [
+    "绍兴",
+    0
+   ],
+   [
+    "支付宝",
+    0
+   ],
+   [
+    "爸",
+    0
+   ],
+   [
+    "医保卡",
+    0
+   ],
+   [
+    "电视柜",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-zh-03",
+  "lang": "zh",
+  "domain": "dev_env_config",
+  "text": "# ===== 订单服务 生产环境配置（勿提交到 Git！）=====\n# 负责人：吴昊天（后端组），有问题企业微信找 wuhaotian_dev\nAPP_ENV=production\nAPP_VERSION=3.8.1\nDB_HOST=10.20.3.41\nDB_PORT=3306\nDB_USER=order_rw\nDB_PASSWORD=Qz7#mL2v!pRt9w\n# 支付回调密钥，2026年1月15日轮换过一次\nALIPAY_APP_ID=<填你的APPID>\nPAYMENT_SECRET=sk_live_FAKE8hT3kVb1QmZx7NcR\n# 2026-03-02 线上故障复盘：用户 18620457731 一分钟内收到 40 条验证码，客户端 IP 113.87.204.16，已加限流\nREDIS_URL=redis://:Rd!s_2026_ord@10.20.3.52:6379/0\nLOG_LEVEL=info\nERR_SMS_FLOOD=E50413",
+  "mask": [
+   [
+    "吴昊天",
+    0,
+    "PERSON"
+   ],
+   [
+    "wuhaotian_dev",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Qz7#mL2v!pRt9w",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026年1月15日",
+    0,
+    "DATE"
+   ],
+   [
+    "sk_live_FAKE8hT3kVb1QmZx7NcR",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026-03-02",
+    0,
+    "DATE"
+   ],
+   [
+    "18620457731",
+    0,
+    "PHONE"
+   ],
+   [
+    "113.87.204.16",
+    0,
+    "IP"
+   ],
+   [
+    "Rd!s_2026_ord",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "订单服务",
+    0
+   ],
+   [
+    "后端组",
+    0
+   ],
+   [
+    "production",
+    0
+   ],
+   [
+    "3.8.1",
+    0
+   ],
+   [
+    "10.20.3.41",
+    0
+   ],
+   [
+    "3306",
+    0
+   ],
+   [
+    "order_rw",
+    0
+   ],
+   [
+    "<填你的APPID>",
+    0
+   ],
+   [
+    "10.20.3.52",
+    0
+   ],
+   [
+    "6379",
+    0
+   ],
+   [
+    "E50413",
+    0
+   ],
+   [
+    "40 条",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-zh-04",
+  "lang": "zh",
+  "domain": "medical_letter",
+  "text": "尊敬的欧阳女士：\n您好！您于2026年10月28日在本中心完成的年度体检（套餐 TJ-B2，¥1,280）报告已出，体检号 HX2610280457，就诊卡号 0031876642。\n经主检医师钱立群复核，您的甲状腺超声提示结节（TI-RADS 3类），建议三个月内到内分泌科复查，无需过度紧张。\n电子报告可在\"锦城健康\"小程序查询，登录账号为您预留的手机号 186 0283 5517，初始查询密码为 870914，首次登录后请立即修改。\n如需纸质报告邮寄，请回复确认地址：成都市武侯区人民南路四段17号2栋1单元1102。\n咨询电话：028-8542 2114（工作日 8:30-17:00）。\n锦城健康管理中心 体检部\n2026年11月16日",
+  "mask": [
+   [
+    "欧阳",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026年10月28日",
+    0,
+    "DATE"
+   ],
+   [
+    "HX2610280457",
+    0,
+    "ID"
+   ],
+   [
+    "0031876642",
+    0,
+    "ID"
+   ],
+   [
+    "钱立群",
+    0,
+    "PERSON"
+   ],
+   [
+    "186 0283 5517",
+    0,
+    "PHONE"
+   ],
+   [
+    "870914",
+    0,
+    "SECRET"
+   ],
+   [
+    "成都市武侯区人民南路四段17号2栋1单元1102",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "2026年11月16日",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "女士",
+    0
+   ],
+   [
+    "TJ-B2",
+    0
+   ],
+   [
+    "¥1,280",
+    0
+   ],
+   [
+    "TI-RADS 3类",
+    0
+   ],
+   [
+    "三个月内",
+    0
+   ],
+   [
+    "内分泌科",
+    0
+   ],
+   [
+    "锦城健康管理中心",
+    0
+   ],
+   [
+    "主检医师",
+    0
+   ],
+   [
+    "028-8542 2114",
+    0
+   ],
+   [
+    "8:30-17:00",
+    0
+   ],
+   [
+    "体检部",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-zh-05",
+  "lang": "zh",
+  "domain": "delivery_sms",
+  "text": "【顺达速运】您好，运单 SD8820461937215 因收件地址门牌不详被退回网点。原收件人：贺明轩，地址：北京市朝阳区望京西园三区312号楼2单元501。派送员蒋师傅（手机 177-0118-4632）明天 9:00-12:00 再次派送，如需改址请直接回复。\n回复：改送公司吧，北京市海淀区中关村大街27号1906室，放前台就行。前台电话 010-6253 9900。楼下门禁密码是 #2580。电子面单发我邮箱 hemx_bj@example.net。\n【顺达速运】已为您改址，预计11月19日送达。请提供签收验证码以完成改址确认。\n回复：339104\n【顺达速运】改址成功，代收货款 ¥0.00。贺先生如有疑问请致电客服 400-000-5717，祝您生活愉快。",
+  "mask": [
+   [
+    "贺明轩",
+    0,
+    "PERSON"
+   ],
+   [
+    "北京市朝阳区望京西园三区312号楼2单元501",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "蒋",
+    0,
+    "PERSON"
+   ],
+   [
+    "177-0118-4632",
+    0,
+    "PHONE"
+   ],
+   [
+    "北京市海淀区中关村大街27号1906室",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "#2580",
+    0,
+    "SECRET"
+   ],
+   [
+    "hemx_bj@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "11月19日",
+    0,
+    "DATE"
+   ],
+   [
+    "339104",
+    0,
+    "SECRET"
+   ],
+   [
+    "贺",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "顺达速运",
+    0
+   ],
+   [
+    "SD8820461937215",
+    0
+   ],
+   [
+    "网点",
+    0
+   ],
+   [
+    "师傅",
+    0
+   ],
+   [
+    "9:00-12:00",
+    0
+   ],
+   [
+    "前台",
+    0
+   ],
+   [
+    "010-6253 9900",
+    0
+   ],
+   [
+    "¥0.00",
+    0
+   ],
+   [
+    "400-000-5717",
+    0
+   ],
+   [
+    "明天",
+    0
+   ],
+   [
+    "先生",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-zh-06",
+  "lang": "zh",
+  "domain": "rental_contract_form",
+  "text": "房屋租赁合同（摘要页）\n出租方（甲方）：沈国栋，身份证号 440106197812063318，联系电话 13802247561\n承租方（乙方）：Emily Carter（美国籍），护照号 P58204719，微信 emily_c_gz\n房屋地址：广州市天河区天河北路566号锦绣花园B座1203房\n租期：自2026年12月1日起至2027年11月30日止，共12个月。\n月租金：人民币6,800元，押二付一，押金13,600元，每月5号前转账。\n收款账户：中国工商银行广州天河支行，户名沈国栋，账号 6222 0236 0201 4477 815\n物业费4.5元/㎡·月由乙方承担；门禁卡2张，入户门密码 739461，交房时当面修改。\n居间方：家和地产，经纪人编号 JH-0217。",
+  "mask": [
+   [
+    "沈国栋",
+    0,
+    "PERSON"
+   ],
+   [
+    "440106197812063318",
+    0,
+    "ID"
+   ],
+   [
+    "13802247561",
+    0,
+    "PHONE"
+   ],
+   [
+    "Emily Carter",
+    0,
+    "PERSON"
+   ],
+   [
+    "P58204719",
+    0,
+    "ID"
+   ],
+   [
+    "emily_c_gz",
+    0,
+    "USERNAME"
+   ],
+   [
+    "广州市天河区天河北路566号锦绣花园B座1203房",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "2026年12月1日",
+    0,
+    "DATE"
+   ],
+   [
+    "2027年11月30日",
+    0,
+    "DATE"
+   ],
+   [
+    "6222 0236 0201 4477 815",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "739461",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "甲方",
+    0
+   ],
+   [
+    "乙方",
+    0
+   ],
+   [
+    "美国籍",
+    0
+   ],
+   [
+    "12个月",
+    0
+   ],
+   [
+    "人民币6,800元",
+    0
+   ],
+   [
+    "13,600元",
+    0
+   ],
+   [
+    "中国工商银行",
+    0
+   ],
+   [
+    "广州天河支行",
+    0
+   ],
+   [
+    "4.5元/㎡",
+    0
+   ],
+   [
+    "门禁卡2张",
+    0
+   ],
+   [
+    "家和地产",
+    0
+   ],
+   [
+    "JH-0217",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-fr-01",
+  "lang": "fr",
+  "domain": "work_email_signature",
+  "text": "Objet : Re: Accès VPN pour la nouvelle recrue\n\nBonjour Karim,\n\nComme convenu ce matin, Inès Vautrin rejoint l'équipe Data le lundi 7 décembre 2026. Son matricule est le E-20417 et elle sera rattachée au site de Lyon Part-Dieu.\nPeux-tu lui créer un compte VPN ? Identifiant proposé : ivautrin. Le mot de passe provisoire que je lui ai donné par téléphone est Hiv3r-Lyon!26, merci de forcer le changement à la première connexion.\nElle aura aussi besoin d'une licence Tableau Creator (70 €/mois, à imputer sur le centre de coût CC-410). Pour toute question RH, passe par rh@groupe-valmont.example.fr plutôt que par moi, je suis en séminaire jusqu'à jeudi.\n\nMerci d'avance,\n\nBien cordialement,\nMathilde Roussel-Achard\nResponsable recrutement – Groupe Valmont\nTél. : 04 72 18 55 90 (standard) · Portable : 06 41 27 83 09\nmathilde.roussel@groupe-valmont.example.fr",
+  "mask": [
+   [
+    "Karim",
+    0,
+    "PERSON"
+   ],
+   [
+    "Inès Vautrin",
+    0,
+    "PERSON"
+   ],
+   [
+    "7 décembre 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "E-20417",
+    0,
+    "ID"
+   ],
+   [
+    "ivautrin",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Hiv3r-Lyon!26",
+    0,
+    "SECRET"
+   ],
+   [
+    "Mathilde Roussel-Achard",
+    0,
+    "PERSON"
+   ],
+   [
+    "06 41 27 83 09",
+    0,
+    "PHONE"
+   ],
+   [
+    "mathilde.roussel@groupe-valmont.example.fr",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Data",
+    0
+   ],
+   [
+    "Lyon Part-Dieu",
+    0
+   ],
+   [
+    "VPN",
+    0
+   ],
+   [
+    "Tableau Creator",
+    0
+   ],
+   [
+    "70 €/mois",
+    0
+   ],
+   [
+    "CC-410",
+    0
+   ],
+   [
+    "rh@groupe-valmont.example.fr",
+    0
+   ],
+   [
+    "Responsable recrutement",
+    0
+   ],
+   [
+    "Groupe Valmont",
+    0
+   ],
+   [
+    "04 72 18 55 90",
+    0
+   ],
+   [
+    "jeudi",
+    0
+   ],
+   [
+    "lundi",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-fr-02",
+  "lang": "fr",
+  "domain": "government_letter",
+  "text": "Caisse primaire d'assurance maladie des Hauts-de-Seine\nService des prestations – Réf. dossier : PRE/2026/118-442\n\nMadame Sandrine Le Goff\n14 bis, rue des Glycines, 92160 Antony\n\nNanterre, le 12 novembre 2026\n\nMadame,\n\nNous accusons réception de l'avis d'arrêt de travail qui vous a été prescrit du 03/11/2026 au 21/11/2026 par le Dr Antoine Mercadier.\nAssurée : n° de sécurité sociale 2 79 08 92 002 117 46, née le 14/08/1979.\nVos indemnités journalières seront versées tous les 14 jours sur le compte FR76 1027 8060 3100 0204 7718 935 (BIC CMCIFR2A) déclaré dans votre espace ameli.\nPour toute question, appelez le 3646 (service gratuit + prix d'appel) en indiquant la référence ci-dessus. Nous ne vous demanderons jamais votre mot de passe par téléphone ou par courriel.\n\nVeuillez agréer, Madame, l'expression de nos salutations distinguées.\n\nLe responsable du service des prestations",
+  "mask": [
+   [
+    "Sandrine Le Goff",
+    0,
+    "PERSON"
+   ],
+   [
+    "14 bis, rue des Glycines, 92160 Antony",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "12 novembre 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "03/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "21/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Antoine Mercadier",
+    0,
+    "PERSON"
+   ],
+   [
+    "2 79 08 92 002 117 46",
+    0,
+    "ID"
+   ],
+   [
+    "14/08/1979",
+    0,
+    "DOB"
+   ],
+   [
+    "FR76 1027 8060 3100 0204 7718 935",
+    0,
+    "ACCOUNT"
+   ]
+  ],
+  "keep": [
+   [
+    "Caisse primaire d'assurance maladie des Hauts-de-Seine",
+    0
+   ],
+   [
+    "PRE/2026/118-442",
+    0
+   ],
+   [
+    "Nanterre",
+    0
+   ],
+   [
+    "Madame",
+    0
+   ],
+   [
+    "Dr",
+    0
+   ],
+   [
+    "14 jours",
+    0
+   ],
+   [
+    "BIC CMCIFR2A",
+    0
+   ],
+   [
+    "ameli",
+    0
+   ],
+   [
+    "3646",
+    0
+   ],
+   [
+    "Service des prestations",
+    0
+   ],
+   [
+    "indemnités journalières",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-fr-03",
+  "lang": "fr",
+  "domain": "friends_group_chat",
+  "text": "[18:42] Juju: les gens le week-end chez Bastien c'est confirmé !!\n[18:43] Bastien Morel: oui venez à partir de vendredi soir, l'adresse c'est 8 impasse des Tanneurs, 31000 Toulouse, digicode 4B172 puis 3e étage gauche\n[18:43] Léa: trop bien. t'as toujours le même wifi ?\n[18:44] Bastien Morel: non c'est Livebox-7A3F maintenant, mdp tartiflette2Cassoulet 😂\n[18:45] Juju: je fais le covoit, départ samedi 9h de Montpellier, 12 € par personne. ma plaque c'est FG-318-TZ si vous me cherchez sur le parking\n[18:46] Léa: je vous fais un Lydia pour les courses, mon num c'est le 07 63 40 18 27\n[18:47] Théo: ok et pour l'anniv de Léa le 29 novembre on garde la surprise hein 🤫 @Juju tu gères le gâteau ?\n[18:48] Juju: 👍 je passe commande à la Pâtisserie des Carmes",
+  "mask": [
+   [
+    "Juju",
+    0,
+    "PERSON"
+   ],
+   [
+    "Bastien",
+    0,
+    "PERSON"
+   ],
+   [
+    "Bastien Morel",
+    0,
+    "PERSON"
+   ],
+   [
+    "8 impasse des Tanneurs, 31000 Toulouse",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "4B172",
+    0,
+    "SECRET"
+   ],
+   [
+    "Léa",
+    0,
+    "PERSON"
+   ],
+   [
+    "tartiflette2Cassoulet",
+    0,
+    "SECRET"
+   ],
+   [
+    "FG-318-TZ",
+    0,
+    "ID"
+   ],
+   [
+    "07 63 40 18 27",
+    0,
+    "PHONE"
+   ],
+   [
+    "Théo",
+    0,
+    "PERSON"
+   ],
+   [
+    "29 novembre",
+    0,
+    "DOB"
+   ],
+   [
+    "@Juju",
+    0,
+    "USERNAME"
+   ]
+  ],
+  "keep": [
+   [
+    "vendredi soir",
+    0
+   ],
+   [
+    "3e étage gauche",
+    0
+   ],
+   [
+    "Livebox-7A3F",
+    0
+   ],
+   [
+    "covoit",
+    0
+   ],
+   [
+    "samedi 9h",
+    0
+   ],
+   [
+    "Montpellier",
+    0
+   ],
+   [
+    "12 €",
+    0
+   ],
+   [
+    "Lydia",
+    0
+   ],
+   [
+    "Pâtisserie des Carmes",
+    0
+   ],
+   [
+    "18:42",
+    0
+   ],
+   [
+    "anniv",
+    0
+   ],
+   [
+    "parking",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-fr-04",
+  "lang": "fr",
+  "domain": "school_notice",
+  "text": "École élémentaire Jules-Ferry – Montreuil\nCirculaire n° 2026-14 aux familles de CM1 B\n\nMadame, Monsieur,\nLa sortie au musée du Louvre-Lens aura lieu le jeudi 10 décembre 2026. Départ en car à 7 h 45 devant l'école, retour vers 18 h. Participation : 8,50 € par enfant (chèque à l'ordre de la coopérative scolaire).\nLes parents accompagnateurs inscrits sont Olivier Dantec, Mme Fatou Diallo-Brissac et M. Ngoc Tran.\nPour l'élève Noah Belkacem (INE 071234567AB), merci de nous retourner le PAI signé avant le 1er décembre 2026. Ses identifiants ENT ont été réinitialisés : noah.belkacem7 / mot de passe provisoire Kxv4-29pa.\nContact : ce.0931234x@ac-creteil.example.fr ou 01 48 70 22 15 (secrétariat, lundi et jeudi).\n\nLa directrice,\nHélène Garnier",
+  "mask": [
+   [
+    "10 décembre 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Olivier Dantec",
+    0,
+    "PERSON"
+   ],
+   [
+    "Fatou Diallo-Brissac",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ngoc Tran",
+    0,
+    "PERSON"
+   ],
+   [
+    "Noah Belkacem",
+    0,
+    "PERSON"
+   ],
+   [
+    "071234567AB",
+    0,
+    "ID"
+   ],
+   [
+    "1er décembre 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "noah.belkacem7",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Kxv4-29pa",
+    0,
+    "SECRET"
+   ],
+   [
+    "Hélène Garnier",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "École élémentaire Jules-Ferry",
+    0
+   ],
+   [
+    "Montreuil",
+    0
+   ],
+   [
+    "Circulaire n° 2026-14",
+    0
+   ],
+   [
+    "CM1 B",
+    0
+   ],
+   [
+    "Louvre-Lens",
+    0
+   ],
+   [
+    "7 h 45",
+    0
+   ],
+   [
+    "8,50 €",
+    0
+   ],
+   [
+    "PAI",
+    0
+   ],
+   [
+    "ENT",
+    0
+   ],
+   [
+    "ce.0931234x@ac-creteil.example.fr",
+    0
+   ],
+   [
+    "01 48 70 22 15",
+    0
+   ],
+   [
+    "La directrice",
+    0
+   ],
+   [
+    "Mme",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-fr-05",
+  "lang": "fr",
+  "domain": "dev_json_log",
+  "text": "// logs d'authentification – extrait du 2026-11-14, à purger après analyse (RGPD !)\n{\"ts\": \"2026-11-14T08:31:07Z\", \"level\": \"WARN\", \"svc\": \"auth-api\", \"version\": \"2.4.0\", \"event\": \"login_failed\", \"user\": \"c.fontaine\", \"email\": \"claire.fontaine@example.org\", \"ip\": \"81.56.203.144\", \"attempts\": 5, \"code\": \"AUTH_401\"}\n{\"ts\": \"2026-11-14T08:31:44Z\", \"level\": \"ERROR\", \"svc\": \"auth-api\", \"event\": \"password_in_payload\", \"user\": \"c.fontaine\", \"raw_pwd\": \"Mirabelle!1987\", \"note\": \"le front envoie le mot de passe en clair, voir ticket SEC-882\"}\n{\"ts\": \"2026-11-14T08:35:02Z\", \"level\": \"INFO\", \"svc\": \"billing\", \"event\": \"card_update\", \"customer_id\": \"CUS-0049217\", \"pan\": \"4973 0215 8842 6607\", \"holder\": \"Claire Fontaine\"}\n// TODO(Yann) : masquer le PAN côté billing, et révoquer la clé de test exposée ci-dessous\n// exemple de format attendu dans la doc : \"user\": \"prenom.nom\"\nSTRIPE_KEY=sk_test_FAKE51Hc9QwErTy0pLmN",
+  "mask": [
+   [
+    "2026-11-14",
+    0,
+    "DATE"
+   ],
+   [
+    "c.fontaine",
+    0,
+    "USERNAME"
+   ],
+   [
+    "claire.fontaine@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "81.56.203.144",
+    0,
+    "IP"
+   ],
+   [
+    "Mirabelle!1987",
+    0,
+    "SECRET"
+   ],
+   [
+    "CUS-0049217",
+    0,
+    "ID"
+   ],
+   [
+    "4973 0215 8842 6607",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Claire Fontaine",
+    0,
+    "PERSON"
+   ],
+   [
+    "Yann",
+    0,
+    "PERSON"
+   ],
+   [
+    "sk_test_FAKE51Hc9QwErTy0pLmN",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "WARN",
+    0
+   ],
+   [
+    "auth-api",
+    0
+   ],
+   [
+    "2.4.0",
+    0
+   ],
+   [
+    "login_failed",
+    0
+   ],
+   [
+    "AUTH_401",
+    0
+   ],
+   [
+    "SEC-882",
+    0
+   ],
+   [
+    "billing",
+    0
+   ],
+   [
+    "card_update",
+    0
+   ],
+   [
+    "prenom.nom",
+    0
+   ],
+   [
+    "STRIPE_KEY",
+    0
+   ],
+   [
+    "RGPD",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-fr-06",
+  "lang": "fr",
+  "domain": "ecommerce_support_chat",
+  "text": "Chat – Service client Maison Cerise\nConseiller (Rémi) : Bonjour, merci de votre patience. Je vois votre commande CMD-58821-FR du 2 novembre : un canapé « Oslo » 3 places à 899 €.\nClient : Oui, le transporteur Geodis devait passer hier mais personne ne m'a appelée. Je suis Yasmine Haddad, mon numéro c'est le +33 6 12 58 04 91.\nConseiller (Rémi) : Désolé pour ce contretemps. Pour vérifier votre identité, pouvez-vous me donner le code à 6 chiffres reçu par SMS ?\nClient : 804 117\nConseiller (Rémi) : Merci Mme Haddad. Je reprogramme la livraison au 4 rue Paul-Bert, appt 12, 69003 Lyon, créneau 8h-13h le samedi 21 novembre. Le geste commercial (49 €) sera remboursé sur la carte se terminant par 3307.\nClient : Parfait. Et vous pouvez changer l'e-mail du compte ? L'ancien, yasmine.h@example.net, ne marche plus. Mettez y.haddad.lyon@example.com.\nConseiller (Rémi) : C'est fait. Référence SAV : 2026-SAV-4471. Bonne journée !",
+  "mask": [
+   [
+    "Rémi",
+    0,
+    "PERSON"
+   ],
+   [
+    "2 novembre",
+    0,
+    "DATE"
+   ],
+   [
+    "Yasmine Haddad",
+    0,
+    "PERSON"
+   ],
+   [
+    "+33 6 12 58 04 91",
+    0,
+    "PHONE"
+   ],
+   [
+    "804 117",
+    0,
+    "SECRET"
+   ],
+   [
+    "Haddad",
+    0,
+    "PERSON"
+   ],
+   [
+    "4 rue Paul-Bert, appt 12, 69003 Lyon",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "21 novembre",
+    0,
+    "DATE"
+   ],
+   [
+    "yasmine.h@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "y.haddad.lyon@example.com",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Maison Cerise",
+    0
+   ],
+   [
+    "CMD-58821-FR",
+    0
+   ],
+   [
+    "Oslo",
+    0
+   ],
+   [
+    "899 €",
+    0
+   ],
+   [
+    "Geodis",
+    0
+   ],
+   [
+    "8h-13h",
+    0
+   ],
+   [
+    "49 €",
+    0
+   ],
+   [
+    "3307",
+    0
+   ],
+   [
+    "2026-SAV-4471",
+    0
+   ],
+   [
+    "Conseiller",
+    0
+   ],
+   [
+    "Mme",
+    0
+   ],
+   [
+    "hier",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-es-01",
+  "lang": "es",
+  "domain": "bank_letter",
+  "text": "Banco Mediterráneo Unido, S.A. · Oficina 0457\nValencia, 9 de noviembre de 2026\n\nSr. D. Jorge Albiol Ferrandis\nC/ Doctor Sumsi, 23, pta. 8, 46005 Valencia\n\nEstimado cliente:\nLe informamos de que el 7 de noviembre, a las 23:14, se intentó operar con su tarjeta 4548 8120 3376 1092 desde un dispositivo distinto del habitual (su acceso de siempre se realiza desde la IP 88.12.140.73). Por precaución la hemos bloqueado. Su cuenta ES47 0049 1500 0526 1834 7720 no se ha visto afectada.\nPara reactivarla, acuda a su oficina con su DNI 22567843M. Le adjuntamos un PIN provisional para la nueva tarjeta: 5829. Cámbielo en el primer uso.\nRecuerde: nunca le pediremos por teléfono su clave de firma ni el código que le llega por SMS.\nSu gestora, Nuria Campos, le atiende de lunes a viernes de 8:30 a 14:00 en el 963 51 27 40 (ext. 112) o en nuria.campos@bmu.example.es. Línea gratuita de bloqueo: 900 812 345.\n\nAtentamente,\nDepartamento de Seguridad",
+  "mask": [
+   [
+    "9 de noviembre de 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Jorge Albiol Ferrandis",
+    0,
+    "PERSON"
+   ],
+   [
+    "C/ Doctor Sumsi, 23, pta. 8, 46005 Valencia",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "7 de noviembre",
+    0,
+    "DATE"
+   ],
+   [
+    "4548 8120 3376 1092",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "88.12.140.73",
+    0,
+    "IP"
+   ],
+   [
+    "ES47 0049 1500 0526 1834 7720",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "22567843M",
+    0,
+    "ID"
+   ],
+   [
+    "5829",
+    0,
+    "SECRET"
+   ],
+   [
+    "Nuria Campos",
+    0,
+    "PERSON"
+   ],
+   [
+    "963 51 27 40 (ext. 112)",
+    0,
+    "PHONE"
+   ],
+   [
+    "nuria.campos@bmu.example.es",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Banco Mediterráneo Unido, S.A.",
+    0
+   ],
+   [
+    "Oficina 0457",
+    0
+   ],
+   [
+    "Sr. D.",
+    0
+   ],
+   [
+    "Estimado cliente",
+    0
+   ],
+   [
+    "23:14",
+    0
+   ],
+   [
+    "de lunes a viernes",
+    0
+   ],
+   [
+    "8:30 a 14:00",
+    0
+   ],
+   [
+    "900 812 345",
+    0
+   ],
+   [
+    "Departamento de Seguridad",
+    0
+   ],
+   [
+    "clave de firma",
+    0
+   ],
+   [
+    "SMS",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-es-02",
+  "lang": "es",
+  "domain": "family_whatsapp",
+  "text": "👨‍👩‍👧‍👦 Familia Ortega Ruiz\n[10:02] Mamá: Mijos, ya me dieron cita en el SAT para lo de la herencia de su abuelo: martes 24 de noviembre, 10:30, en la oficina de Av. Hidalgo.\n[10:04] Diego: ok ma. ¿necesitas mi CURP? es OERD940215HJCRZG07\n[10:05] Mamá: sí, y la de Fer también\n[10:07] Fernanda: OERF970730MJCRZN03. Ma, no mandes estas cosas por aquí 🙄\n[10:08] Mamá: ay hija, es un grupo privado. Diego, ¿la contraseña del portal que me pediste era Abuelo1952Tlaque?\n[10:10] Diego: sí ma. Y para el notario, la CLABE es 012 180 01527894630 2, a nombre de Diego Ortega Ruiz\n[10:11] Tío Beto: Los veo el martes, yo llevo la escritura de la casa de Calle Pino Suárez 418, Col. Centro, 44100 Guadalajara, Jal.\n[10:12] Fernanda: tío no se le olvide su INE jaja",
+  "mask": [
+   [
+    "Ortega Ruiz",
+    0,
+    "PERSON"
+   ],
+   [
+    "24 de noviembre",
+    0,
+    "DATE"
+   ],
+   [
+    "Diego",
+    0,
+    "PERSON"
+   ],
+   [
+    "OERD940215HJCRZG07",
+    0,
+    "ID"
+   ],
+   [
+    "Fer",
+    0,
+    "PERSON"
+   ],
+   [
+    "Fernanda",
+    0,
+    "PERSON"
+   ],
+   [
+    "OERF970730MJCRZN03",
+    0,
+    "ID"
+   ],
+   [
+    "Abuelo1952Tlaque",
+    0,
+    "SECRET"
+   ],
+   [
+    "012 180 01527894630 2",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Diego Ortega Ruiz",
+    0,
+    "PERSON"
+   ],
+   [
+    "Beto",
+    0,
+    "PERSON"
+   ],
+   [
+    "Calle Pino Suárez 418, Col. Centro, 44100 Guadalajara, Jal.",
+    0,
+    "ADDRESS"
+   ]
+  ],
+  "keep": [
+   [
+    "Familia",
+    0
+   ],
+   [
+    "Mamá",
+    0
+   ],
+   [
+    "Mijos",
+    0
+   ],
+   [
+    "SAT",
+    0
+   ],
+   [
+    "10:30",
+    0
+   ],
+   [
+    "Av. Hidalgo",
+    0
+   ],
+   [
+    "CURP",
+    0
+   ],
+   [
+    "hija",
+    0
+   ],
+   [
+    "notario",
+    0
+   ],
+   [
+    "CLABE",
+    0
+   ],
+   [
+    "Tío",
+    0
+   ],
+   [
+    "INE",
+    0
+   ],
+   [
+    "abuelo",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-es-03",
+  "lang": "es",
+  "domain": "hotel_guest_form",
+  "text": "PARTE DE ENTRADA DE VIAJEROS – Hostal Las Golondrinas ** (Granada)\nNº de parte: 2026/003318 · Habitación 12 (doble) · Tarifa: 68 €/noche, desayuno incluido\nFecha de entrada: 13/11/2026 · Fecha de salida: 16/11/2026\n\nViajero 1: GONZÁLEZ PEÑA, Lucía\nTipo de documento: NIE · Nº: Y3847291K · Nacionalidad: venezolana\nFecha de nacimiento: 22/05/1991\nDomicilio habitual: C/ Mayor 14, 3º B, 28013 Madrid\nTeléfono: +34 622 718 304 · Correo: lucia.gpena@example.com\n\nViajero 2: Tomás Ibarra Sáez\nTipo de documento: DNI · Nº: 51928374J · Nacionalidad: española\nFecha de nacimiento: 03/09/1988\nParentesco: cónyuge\n\nVehículo (parking privado, 12 €/día): matrícula 2156 KZT\nObservaciones: llegada tardía (sobre las 23:30). Se le envía por SMS el código de la puerta de la calle: 1904#. La recepción cierra a las 22:00.",
+  "mask": [
+   [
+    "13/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "16/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "GONZÁLEZ PEÑA, Lucía",
+    0,
+    "PERSON"
+   ],
+   [
+    "Y3847291K",
+    0,
+    "ID"
+   ],
+   [
+    "22/05/1991",
+    0,
+    "DOB"
+   ],
+   [
+    "C/ Mayor 14, 3º B, 28013 Madrid",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "+34 622 718 304",
+    0,
+    "PHONE"
+   ],
+   [
+    "lucia.gpena@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Tomás Ibarra Sáez",
+    0,
+    "PERSON"
+   ],
+   [
+    "51928374J",
+    0,
+    "ID"
+   ],
+   [
+    "03/09/1988",
+    0,
+    "DOB"
+   ],
+   [
+    "2156 KZT",
+    0,
+    "ID"
+   ],
+   [
+    "1904#",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "Hostal Las Golondrinas",
+    0
+   ],
+   [
+    "Granada",
+    0
+   ],
+   [
+    "2026/003318",
+    0
+   ],
+   [
+    "Habitación 12",
+    0
+   ],
+   [
+    "68 €/noche",
+    0
+   ],
+   [
+    "NIE",
+    0
+   ],
+   [
+    "venezolana",
+    0
+   ],
+   [
+    "DNI",
+    0
+   ],
+   [
+    "española",
+    0
+   ],
+   [
+    "cónyuge",
+    0
+   ],
+   [
+    "12 €/día",
+    0
+   ],
+   [
+    "23:30",
+    0
+   ],
+   [
+    "22:00",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-es-04",
+  "lang": "es",
+  "domain": "dev_sql_migration",
+  "text": "-- Migración 0042: normalizar teléfonos de clientes (autor: Pablo Ferrer, revisado por @mgarrido)\n-- OJO: no ejecutar en prod sin backup. Probado en staging el 2026-10-30.\nINSERT INTO clientes (nombre, email, telefono, nif, fecha_alta) VALUES\n ('Rocío Varela Lago', 'rocio.varela@example.org', '+34 698 204 517', '33498120T', '2025-06-14'),\n ('Andrés Quintana', 'aquintana@example.net', '611 30 88 42', 'X7712093B', '2026-01-08');\n-- Cliente de ejemplo de la documentación (NO es real): 'Juan Español', 'usuario@ejemplo.com', '600 000 000'\nUPDATE config SET valor = 'sk_live_FAKEa81Zx0Lq29VmTt' WHERE clave = 'pasarela_pago_key';\n-- contraseña del usuario de réplica: R3pl1ca_Sur!44 (cambiarla tras desplegar la v5.2)\n-- tiempo estimado: 4 min sobre 1,2 M de filas",
+  "mask": [
+   [
+    "Pablo Ferrer",
+    0,
+    "PERSON"
+   ],
+   [
+    "@mgarrido",
+    0,
+    "USERNAME"
+   ],
+   [
+    "2026-10-30",
+    0,
+    "DATE"
+   ],
+   [
+    "Rocío Varela Lago",
+    0,
+    "PERSON"
+   ],
+   [
+    "rocio.varela@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+34 698 204 517",
+    0,
+    "PHONE"
+   ],
+   [
+    "33498120T",
+    0,
+    "ID"
+   ],
+   [
+    "2025-06-14",
+    0,
+    "DATE"
+   ],
+   [
+    "Andrés Quintana",
+    0,
+    "PERSON"
+   ],
+   [
+    "aquintana@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "611 30 88 42",
+    0,
+    "PHONE"
+   ],
+   [
+    "X7712093B",
+    0,
+    "ID"
+   ],
+   [
+    "2026-01-08",
+    0,
+    "DATE"
+   ],
+   [
+    "sk_live_FAKEa81Zx0Lq29VmTt",
+    0,
+    "SECRET"
+   ],
+   [
+    "R3pl1ca_Sur!44",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "Migración 0042",
+    0
+   ],
+   [
+    "staging",
+    0
+   ],
+   [
+    "clientes",
+    0
+   ],
+   [
+    "fecha_alta",
+    0
+   ],
+   [
+    "Juan Español",
+    0
+   ],
+   [
+    "usuario@ejemplo.com",
+    0
+   ],
+   [
+    "600 000 000",
+    0
+   ],
+   [
+    "pasarela_pago_key",
+    0
+   ],
+   [
+    "v5.2",
+    0
+   ],
+   [
+    "4 min",
+    0
+   ],
+   [
+    "1,2 M",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-es-05",
+  "lang": "es",
+  "domain": "hr_notice",
+  "text": "COMUNICACIÓN INTERNA – Recursos Humanos, Logística Ebro S.L. (Zaragoza)\nAsunto: Cambio de turno y actualización de datos de nómina\n\nZaragoza, a 16 de noviembre de 2026\n\nA la atención de Marta Lasheras (n.º de empleada 00731, jefa de almacén, nave 3)\n\nLe confirmamos que, a partir de la nómina de diciembre, su salario se abonará en la nueva cuenta que nos facilitó, ES91 2085 5201 8303 3021 4417. Su número de afiliación a la Seguridad Social, 50/10293847/36, no cambia.\nTal y como acordó con su responsable, Iñaki Etxeberria, pasará al turno de tarde (14:00–22:00) desde el lunes 30 de noviembre de 2026.\nPara entrar en el portal del empleado (versión 3.1) use el usuario mlasheras y la contraseña temporal que le enviamos por SMS al 676 41 90 28: Tmp-5521-Nave. Deberá cambiarla en el primer acceso.\nCualquier duda: rrhh@logistica-ebro.example.es o extensión 2040.\n\nFdo.: Concepción Abad, técnica de RR. HH.",
+  "mask": [
+   [
+    "16 de noviembre de 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Marta Lasheras",
+    0,
+    "PERSON"
+   ],
+   [
+    "00731",
+    0,
+    "ID"
+   ],
+   [
+    "ES91 2085 5201 8303 3021 4417",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "50/10293847/36",
+    0,
+    "ID"
+   ],
+   [
+    "Iñaki Etxeberria",
+    0,
+    "PERSON"
+   ],
+   [
+    "30 de noviembre de 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "mlasheras",
+    0,
+    "USERNAME"
+   ],
+   [
+    "676 41 90 28",
+    0,
+    "PHONE"
+   ],
+   [
+    "Tmp-5521-Nave",
+    0,
+    "SECRET"
+   ],
+   [
+    "Concepción Abad",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "Recursos Humanos",
+    0
+   ],
+   [
+    "Logística Ebro S.L.",
+    0
+   ],
+   [
+    "Zaragoza",
+    0
+   ],
+   [
+    "jefa de almacén",
+    0
+   ],
+   [
+    "nave 3",
+    0
+   ],
+   [
+    "nómina de diciembre",
+    0
+   ],
+   [
+    "14:00–22:00",
+    0
+   ],
+   [
+    "versión 3.1",
+    0
+   ],
+   [
+    "rrhh@logistica-ebro.example.es",
+    0
+   ],
+   [
+    "extensión 2040",
+    0
+   ],
+   [
+    "técnica de RR. HH.",
+    0
+   ],
+   [
+    "turno de tarde",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-es-06",
+  "lang": "es",
+  "domain": "telecom_support_chat",
+  "text": "Chat soporte – Telcosur Argentina\nAgente Valentina: ¡Hola! Soy Valentina, ¿en qué te ayudo?\nCliente: hola, me cambiaron el chip sin que yo lo pida y ahora no me llegan los códigos del home banking. Mi línea es 11 5873-2049\nAgente Valentina: Entiendo, qué bronca. Para validar, ¿me pasás tu DNI y la fecha de nacimiento del titular?\nCliente: DNI 32.581.904, nací el 11/04/1987. El titular soy yo, Martín Gauna\nAgente Valentina: Gracias, Martín. Veo que el 14/11 se hizo un cambio de SIM en la sucursal de Av. Corrientes 3200 con otro documento. Ya lo bloqueamos.\nCliente: uff. el mail de contacto es martin.gauna@example.com y mi usuario de la app es mgauna_87\nAgente Valentina: Perfecto. Te mandé un PIN de desbloqueo: 2291. No lo compartas con nadie, ni siquiera con nosotros. Número de reclamo: REC-77104. Tu plan Full 30GB ($ 18.900/mes) sigue activo.",
+  "mask": [
+   [
+    "Valentina",
+    0,
+    "PERSON"
+   ],
+   [
+    "11 5873-2049",
+    0,
+    "PHONE"
+   ],
+   [
+    "32.581.904",
+    0,
+    "ID"
+   ],
+   [
+    "11/04/1987",
+    0,
+    "DOB"
+   ],
+   [
+    "Martín Gauna",
+    0,
+    "PERSON"
+   ],
+   [
+    "Martín",
+    0,
+    "PERSON"
+   ],
+   [
+    "14/11",
+    0,
+    "DATE"
+   ],
+   [
+    "martin.gauna@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "mgauna_87",
+    0,
+    "USERNAME"
+   ],
+   [
+    "2291",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "Telcosur Argentina",
+    0
+   ],
+   [
+    "Agente",
+    0
+   ],
+   [
+    "chip",
+    0
+   ],
+   [
+    "home banking",
+    0
+   ],
+   [
+    "titular",
+    0
+   ],
+   [
+    "SIM",
+    0
+   ],
+   [
+    "Av. Corrientes 3200",
+    0
+   ],
+   [
+    "REC-77104",
+    0
+   ],
+   [
+    "Full 30GB",
+    0
+   ],
+   [
+    "$ 18.900/mes",
+    0
+   ],
+   [
+    "Cliente",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-nl-01",
+  "lang": "nl",
+  "domain": "work_email_signature",
+  "text": "Onderwerp: Overdracht klantdossiers tijdens mijn verlof\n\nHoi Sanne,\n\nVanaf maandag ben ik met zwangerschapsverlof, t/m 11 december 2026. Joost neemt de accounts in Utrecht over, jij de rest. Even de belangrijkste dingen:\n- De Gouden Korenaar (Amersfoort): contactpersoon is Pieter-Jan de Vries, mobiel 06-41 88 27 03. Offerte OFF-2026-118 (€ 4.250 excl. btw) ligt nog bij hem.\n- Het wachtwoord van de gedeelde Exact-omgeving is gewijzigd in Graanzak#Wk47, staat ook in de kluis.\n- Klant K-00918-NL (mevr. Bos) belt soms over haar facturen; haar privénummer is 0318 54 77 21, maar bel liever via de centrale.\nIs er echt iets dringends, app me dan op 06 22 19 48 60 😉\n\nGroetjes,\nEsther Wijnands\nAccountmanager Noord-Oost | Verhoef Groothandel B.V.\nT 033 460 12 00 | e.wijnands@verhoef-groothandel.example.nl",
+  "mask": [
+   [
+    "Sanne",
+    0,
+    "PERSON"
+   ],
+   [
+    "11 december 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Joost",
+    0,
+    "PERSON"
+   ],
+   [
+    "Pieter-Jan de Vries",
+    0,
+    "PERSON"
+   ],
+   [
+    "06-41 88 27 03",
+    0,
+    "PHONE"
+   ],
+   [
+    "Graanzak#Wk47",
+    0,
+    "SECRET"
+   ],
+   [
+    "K-00918-NL",
+    0,
+    "ID"
+   ],
+   [
+    "Bos",
+    0,
+    "PERSON"
+   ],
+   [
+    "0318 54 77 21",
+    0,
+    "PHONE"
+   ],
+   [
+    "06 22 19 48 60",
+    0,
+    "PHONE"
+   ],
+   [
+    "Esther Wijnands",
+    0,
+    "PERSON"
+   ],
+   [
+    "e.wijnands@verhoef-groothandel.example.nl",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "zwangerschapsverlof",
+    0
+   ],
+   [
+    "Utrecht",
+    0
+   ],
+   [
+    "De Gouden Korenaar",
+    0
+   ],
+   [
+    "Amersfoort",
+    0
+   ],
+   [
+    "OFF-2026-118",
+    0
+   ],
+   [
+    "€ 4.250 excl. btw",
+    0
+   ],
+   [
+    "Exact",
+    0
+   ],
+   [
+    "mevr.",
+    0
+   ],
+   [
+    "Accountmanager Noord-Oost",
+    0
+   ],
+   [
+    "Verhoef Groothandel B.V.",
+    0
+   ],
+   [
+    "033 460 12 00",
+    0
+   ],
+   [
+    "maandag",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-nl-02",
+  "lang": "nl",
+  "domain": "municipality_letter",
+  "text": "Gemeente Zwolle\nAfdeling Burgerzaken\nPostbus 10007, 8000 GA Zwolle\n\nDhr. M.A. (Maarten) Kuipers\nThorbeckegracht 41-B, 8011 VM Zwolle\n\nDatum: 10 november 2026\nOns kenmerk: BZ/2026/40712\nOnderwerp: uw aanvraag rijbewijs\n\nGeachte heer Kuipers,\n\nOp 2 november 2026 heeft u een nieuw rijbewijs aangevraagd. Uw gegevens: geboren 19-03-1984 te Deventer, BSN 172840596. Het nieuwe rijbewijs heeft documentnummer 5401283917; uw oude rijbewijs (nummer 4928170365) is ongeldig verklaard.\nU kunt het nieuwe document ophalen vanaf maandag 16 november aan de balie in het Stadskantoor. Neem een geldig legitimatiebewijs mee en noem de afhaalcode 8831. De leges van € 46,10 zijn via iDEAL voldaan.\nVragen? Ter controle: we sturen een bevestiging naar maarten.kuipers84@example.net. Bel 14 038 of kijk op de website van de gemeente.\n\nMet vriendelijke groet,\nnamens burgemeester en wethouders,\n\nJ. Hofstede\nteamleider Burgerzaken",
+  "mask": [
+   [
+    "M.A. (Maarten) Kuipers",
+    0,
+    "PERSON"
+   ],
+   [
+    "Thorbeckegracht 41-B, 8011 VM Zwolle",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "10 november 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Kuipers",
+    0,
+    "PERSON"
+   ],
+   [
+    "2 november 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "19-03-1984",
+    0,
+    "DOB"
+   ],
+   [
+    "172840596",
+    0,
+    "ID"
+   ],
+   [
+    "5401283917",
+    0,
+    "ID"
+   ],
+   [
+    "4928170365",
+    0,
+    "ID"
+   ],
+   [
+    "16 november",
+    0,
+    "DATE"
+   ],
+   [
+    "8831",
+    0,
+    "SECRET"
+   ],
+   [
+    "J. Hofstede",
+    0,
+    "PERSON"
+   ],
+   [
+    "maarten.kuipers84@example.net",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Gemeente Zwolle",
+    0
+   ],
+   [
+    "Afdeling Burgerzaken",
+    0
+   ],
+   [
+    "Postbus 10007, 8000 GA Zwolle",
+    0
+   ],
+   [
+    "Dhr.",
+    0
+   ],
+   [
+    "BZ/2026/40712",
+    0
+   ],
+   [
+    "heer",
+    0
+   ],
+   [
+    "Deventer",
+    0
+   ],
+   [
+    "Stadskantoor",
+    0
+   ],
+   [
+    "€ 46,10",
+    0
+   ],
+   [
+    "iDEAL",
+    0
+   ],
+   [
+    "14 038",
+    0
+   ],
+   [
+    "teamleider Burgerzaken",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-nl-03",
+  "lang": "nl",
+  "domain": "housemates_group_app",
+  "text": "🏠 Huize Brakke Grond\n[21:03] Floor: jongens de huisbaas komt dinsdag 24 november langs voor de cv-ketel. wie is er thuis?\n[21:05] Daan: ik niet, tentamen. @floor_vd kun jij?\n[21:05] Floor: ja prima. ik heb zijn nummer: 06 31 72 90 44 (Henk Brouwer)\n[21:06] Daan: stuur je hem ook even mijn mail? daan.kok@example.org\n[21:07] Yusuf: btw nieuwe wifi: netwerk Brakke5G, ww kaasstengel-17\n[21:08] Daan: en wie heeft de Tikkie voor de boodschappen nog niet betaald 👀 €23,40 pp\n[21:09] Yusuf: sorry! maak ik zo over. Floor jouw rekening was NL62 INGB 0007 3418 52 toch?\n[21:10] Floor: ja, t.n.v. F. van Dijk\n[21:12] Mirthe: ik ben jarig op 2 december dus taart is verplicht 🎂 en de code van de fietsenstalling is nog steeds 0417 hè",
+  "mask": [
+   [
+    "Floor",
+    0,
+    "PERSON"
+   ],
+   [
+    "24 november",
+    0,
+    "DATE"
+   ],
+   [
+    "Daan",
+    0,
+    "PERSON"
+   ],
+   [
+    "@floor_vd",
+    0,
+    "USERNAME"
+   ],
+   [
+    "06 31 72 90 44",
+    0,
+    "PHONE"
+   ],
+   [
+    "Henk Brouwer",
+    0,
+    "PERSON"
+   ],
+   [
+    "Yusuf",
+    0,
+    "PERSON"
+   ],
+   [
+    "daan.kok@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "kaasstengel-17",
+    0,
+    "SECRET"
+   ],
+   [
+    "NL62 INGB 0007 3418 52",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "F. van Dijk",
+    0,
+    "PERSON"
+   ],
+   [
+    "Mirthe",
+    0,
+    "PERSON"
+   ],
+   [
+    "2 december",
+    0,
+    "DOB"
+   ],
+   [
+    "0417",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "Huize Brakke Grond",
+    0
+   ],
+   [
+    "huisbaas",
+    0
+   ],
+   [
+    "dinsdag",
+    0
+   ],
+   [
+    "cv-ketel",
+    0
+   ],
+   [
+    "tentamen",
+    0
+   ],
+   [
+    "Brakke5G",
+    0
+   ],
+   [
+    "Tikkie",
+    0
+   ],
+   [
+    "€23,40 pp",
+    0
+   ],
+   [
+    "21:03",
+    0
+   ],
+   [
+    "fietsenstalling",
+    0
+   ],
+   [
+    "taart",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-nl-04",
+  "lang": "nl",
+  "domain": "dev_compose_config",
+  "text": "# docker-compose.override.yml – ALLEEN lokaal gebruiken, nooit naar main pushen\n# Beheerder: Wouter Smit (Slack: @wsmit), laatst bijgewerkt 2026-11-09\nservices:\n  api:\n    image: registry.example.nl/klantportaal-api:4.7.2\n    environment:\n      DATABASE_URL: postgres://portaal_app:Tulp3n!Delft@db:5432/portaal\n      MOLLIE_API_KEY: live_FAKEk2Jx8Qm0RtYvPz4WnL\n      # testgebruiker voor e2e, gebruik NIET meer de echte gegevens van Lotte!\n      E2E_USER_EMAIL: test.gebruiker@example.com\n      E2E_USER_BSN: \"000000000\"\n# incident INC-3318: klantgegevens in debuglog beland, regel hieronder ter illustratie\n# 2026-11-08 14:02:11 DEBUG lookup bsn=284719503 naam=\"Lotte Verbeek\" tel=+31 6 4419 2087 ip=84.29.117.6",
+  "mask": [
+   [
+    "Wouter Smit",
+    0,
+    "PERSON"
+   ],
+   [
+    "@wsmit",
+    0,
+    "USERNAME"
+   ],
+   [
+    "2026-11-09",
+    0,
+    "DATE"
+   ],
+   [
+    "Tulp3n!Delft",
+    0,
+    "SECRET"
+   ],
+   [
+    "live_FAKEk2Jx8Qm0RtYvPz4WnL",
+    0,
+    "SECRET"
+   ],
+   [
+    "Lotte",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-11-08",
+    0,
+    "DATE"
+   ],
+   [
+    "284719503",
+    0,
+    "ID"
+   ],
+   [
+    "Lotte Verbeek",
+    0,
+    "PERSON"
+   ],
+   [
+    "+31 6 4419 2087",
+    0,
+    "PHONE"
+   ],
+   [
+    "84.29.117.6",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "docker-compose.override.yml",
+    0
+   ],
+   [
+    "main",
+    0
+   ],
+   [
+    "registry.example.nl/klantportaal-api:4.7.2",
+    0
+   ],
+   [
+    "portaal_app",
+    0
+   ],
+   [
+    "db:5432",
+    0
+   ],
+   [
+    "MOLLIE_API_KEY",
+    0
+   ],
+   [
+    "test.gebruiker@example.com",
+    0
+   ],
+   [
+    "000000000",
+    0
+   ],
+   [
+    "INC-3318",
+    0
+   ],
+   [
+    "14:02:11",
+    0
+   ],
+   [
+    "DEBUG",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-nl-05",
+  "lang": "nl",
+  "domain": "parcel_delivery",
+  "text": "Dag Ruben,\n\nJe pakket (track & trace 3SNPL71048823) van Fietshuis De Ketting komt morgen, donderdag 19 november, tussen 14:10 en 16:40.\nAfleveradres: Kortrijksesteenweg 212 bus 3, 9000 Gent\nOntvanger: Ruben Vermeulen, gsm +32 478 61 20 93\n\nNiet thuis? Dan mag het bij je buren afgegeven worden (mevrouw Claes), zoals je zelf aangaf.\nGaat het toch naar een SnelPost-punt, dan heb je deze persoonlijke ophaalcode nodig: 5528 41.\nBetaald: € 129,99 met Bancontact (kaart eindigend op 7712).\n\nVragen? Bel 078 15 22 00 of mail klantendienst@snelpost.example.be en vermeld je klantnummer SP-BE-2209177.\nTot morgen!\nHet SnelPost-team",
+  "mask": [
+   [
+    "Ruben",
+    0,
+    "PERSON"
+   ],
+   [
+    "19 november",
+    0,
+    "DATE"
+   ],
+   [
+    "Kortrijksesteenweg 212 bus 3, 9000 Gent",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Ruben Vermeulen",
+    0,
+    "PERSON"
+   ],
+   [
+    "+32 478 61 20 93",
+    0,
+    "PHONE"
+   ],
+   [
+    "Claes",
+    0,
+    "PERSON"
+   ],
+   [
+    "5528 41",
+    0,
+    "SECRET"
+   ],
+   [
+    "SP-BE-2209177",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "3SNPL71048823",
+    0
+   ],
+   [
+    "Fietshuis De Ketting",
+    0
+   ],
+   [
+    "morgen",
+    0
+   ],
+   [
+    "donderdag",
+    0
+   ],
+   [
+    "14:10",
+    0
+   ],
+   [
+    "16:40",
+    0
+   ],
+   [
+    "mevrouw",
+    0
+   ],
+   [
+    "SnelPost-punt",
+    0
+   ],
+   [
+    "€ 129,99",
+    0
+   ],
+   [
+    "Bancontact",
+    0
+   ],
+   [
+    "7712",
+    0
+   ],
+   [
+    "078 15 22 00",
+    0
+   ],
+   [
+    "klantendienst@snelpost.example.be",
+    0
+   ],
+   [
+    "SnelPost-team",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-nl-06",
+  "lang": "nl",
+  "domain": "gp_referral_letter",
+  "text": "Huisartsenpraktijk De Linde – Leusden\nVERWIJSBRIEF\nAan: polikliniek Dermatologie, Ziekenhuis Oosterlicht\n\nBetreft: mevr. Anouk Hendriksen-Bakker, geb. 07-02-1962\nBSN 318204755 · patiëntnummer 0044127\nAdres: Lindenlaan 8, 3832 BK Leusden · tel. 033 494 18 26\nVerzekering: Zilveren Kruis, polisnummer 210487335\n\nGeachte collega,\n\nGraag verwijs ik bovengenoemde patiënte in verband met een sinds maart groeiende, onregelmatig gepigmenteerde laesie op de rug (ca. 7 mm). Familieanamnese: moeder melanoom (2011). Medicatie: metoprolol 50 mg 1dd. Geen allergieën bekend.\nPatiënte heeft voorkeur voor een afspraak na 1 december 2026 i.v.m. vakantie.\nVoor overleg ben ik bereikbaar via de terugbellijn 033 494 00 10 (alleen voor zorgverleners).\n\nMet collegiale groet,\nH.J. (Hans) Overbeek, huisarts",
+  "mask": [
+   [
+    "Anouk Hendriksen-Bakker",
+    0,
+    "PERSON"
+   ],
+   [
+    "07-02-1962",
+    0,
+    "DOB"
+   ],
+   [
+    "318204755",
+    0,
+    "ID"
+   ],
+   [
+    "0044127",
+    0,
+    "ID"
+   ],
+   [
+    "Lindenlaan 8, 3832 BK Leusden",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "033 494 18 26",
+    0,
+    "PHONE"
+   ],
+   [
+    "210487335",
+    0,
+    "ID"
+   ],
+   [
+    "1 december 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "H.J. (Hans) Overbeek",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "Huisartsenpraktijk De Linde",
+    0
+   ],
+   [
+    "polikliniek Dermatologie",
+    0
+   ],
+   [
+    "Ziekenhuis Oosterlicht",
+    0
+   ],
+   [
+    "mevr.",
+    0
+   ],
+   [
+    "Zilveren Kruis",
+    0
+   ],
+   [
+    "7 mm",
+    0
+   ],
+   [
+    "moeder",
+    0
+   ],
+   [
+    "2011",
+    0
+   ],
+   [
+    "metoprolol 50 mg",
+    0
+   ],
+   [
+    "033 494 00 10",
+    0
+   ],
+   [
+    "huisarts",
+    0
+   ],
+   [
+    "maart",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-pt-01",
+  "lang": "pt",
+  "domain": "bank_pix_support_chat",
+  "text": "Atendimento – Banco Jacarandá (chat no app)\n[09:15] Cliente: oi, fiz um Pix errado no dia 16/11, R$ 1.850,00, pra chave errada\n[09:16] Atendente Priscila: Bom dia! Sinto muito pelo transtorno. Pode me confirmar seu CPF e a chave de destino?\n[09:17] Cliente: meu CPF é 418.207.993-05. Mandei pra chave celular (21) 98714-3302, era pra ser do meu cunhado Rafael Teixeira mas troquei um dígito\n[09:18] Atendente Priscila: Entendi, Sr. Wellington. O recebedor é Gilmar S. Prado, agência 0001, conta 48821-7, aqui do Banco Jacarandá (código 412).\n[09:19] Atendente Priscila: Abri o MED (Mecanismo Especial de Devolução), protocolo 2026111700451. Prazo de análise: até 7 dias úteis.\n[09:20] Cliente: e se devolverem, cai onde? minha chave aleatória é 7f3c9e21-5b0a-4d8e-a6f2-91c04e7b3d18\n[09:21] Atendente Priscila: Cai nessa chave mesmo. O comprovante do MED vai pro e-mail wellington.r.alves@example.com. Ah, por segurança nunca informe sua senha de 4 dígitos nem o código do token.\n[09:21] Cliente: ah tá, eu ia mandar, é 8040 kkkk\n[09:22] Atendente Priscila: 😅 Por favor, troque agora no app. Central 24h: 0800 724 0101.",
+  "mask": [
+   [
+    "16/11",
+    0,
+    "DATE"
+   ],
+   [
+    "Priscila",
+    0,
+    "PERSON"
+   ],
+   [
+    "418.207.993-05",
+    0,
+    "ID"
+   ],
+   [
+    "(21) 98714-3302",
+    0,
+    "PHONE"
+   ],
+   [
+    "Rafael Teixeira",
+    0,
+    "PERSON"
+   ],
+   [
+    "Wellington",
+    0,
+    "PERSON"
+   ],
+   [
+    "Gilmar S. Prado",
+    0,
+    "PERSON"
+   ],
+   [
+    "48821-7",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "7f3c9e21-5b0a-4d8e-a6f2-91c04e7b3d18",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "8040",
+    0,
+    "SECRET"
+   ],
+   [
+    "wellington.r.alves@example.com",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Banco Jacarandá",
+    0
+   ],
+   [
+    "R$ 1.850,00",
+    0
+   ],
+   [
+    "cunhado",
+    0
+   ],
+   [
+    "Sr.",
+    0
+   ],
+   [
+    "agência 0001",
+    0
+   ],
+   [
+    "código 412",
+    0
+   ],
+   [
+    "MED",
+    0
+   ],
+   [
+    "protocolo 2026111700451",
+    0
+   ],
+   [
+    "7 dias úteis",
+    0
+   ],
+   [
+    "0800 724 0101",
+    0
+   ],
+   [
+    "09:15",
+    0
+   ],
+   [
+    "Pix",
+    0
+   ],
+   [
+    "Atendente",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-pt-02",
+  "lang": "pt",
+  "domain": "tax_office_letter_pt",
+  "text": "Autoridade Tributária e Aduaneira\nServiço de Finanças de Braga-1 · Ofício n.º 3201/2026\n\nExma. Senhora\nD. Maria da Graça Pinto Lobo\nRua do Souto, 118, 2.º Esq., 4700-329 Braga\n\nBraga, 6 de novembro de 2026\n\nAssunto: IMI 2026 – prédio urbano, artigo 4512, fração C\nNIF: 214 908 336 · Cartão de Cidadão n.º 12873409 7 ZX2\n\nFica V. Ex.ª notificada de que se encontra por pagar a 2.ª prestação do IMI, no valor de 312,48 €, cujo prazo terminou a 31 de agosto de 2026. Pode pagar por Multibanco (Entidade 10095, Referência 182 004 517) ou no Portal das Finanças.\nConforme o seu pedido de 28/10/2026, segue a nova senha de acesso ao Portal: Rk82vbQm3. Por segurança, altere-a no primeiro acesso. Confirmamos ainda o contacto telefónico indicado, 912 447 083.\nA AT nunca lhe pedirá a senha por email ou SMS.\n\nO Chefe de Finanças,\nRui Manuel Castanheira",
+  "mask": [
+   [
+    "Maria da Graça Pinto Lobo",
+    0,
+    "PERSON"
+   ],
+   [
+    "Rua do Souto, 118, 2.º Esq., 4700-329 Braga",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "6 de novembro de 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "214 908 336",
+    0,
+    "ID"
+   ],
+   [
+    "12873409 7 ZX2",
+    0,
+    "ID"
+   ],
+   [
+    "31 de agosto de 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "28/10/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Rk82vbQm3",
+    0,
+    "SECRET"
+   ],
+   [
+    "912 447 083",
+    0,
+    "PHONE"
+   ],
+   [
+    "Rui Manuel Castanheira",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "Autoridade Tributária e Aduaneira",
+    0
+   ],
+   [
+    "Serviço de Finanças de Braga-1",
+    0
+   ],
+   [
+    "Ofício n.º 3201/2026",
+    0
+   ],
+   [
+    "Exma. Senhora",
+    0
+   ],
+   [
+    "IMI 2026",
+    0
+   ],
+   [
+    "artigo 4512",
+    0
+   ],
+   [
+    "fração C",
+    0
+   ],
+   [
+    "312,48 €",
+    0
+   ],
+   [
+    "Entidade 10095",
+    0
+   ],
+   [
+    "Referência 182 004 517",
+    0
+   ],
+   [
+    "Portal das Finanças",
+    0
+   ],
+   [
+    "Chefe de Finanças",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-pt-03",
+  "lang": "pt",
+  "domain": "friends_whatsapp_br",
+  "text": "Grupo: Churras do Sábado 🍖\n[19:20] Thiago Brandão: galera, churrasco confirmado sábado 28/11 lá em casa! Rua das Araucárias, 455, casa 2, Água Verde, Curitiba - PR, 80240-210\n[19:21] Bia: bora!! quanto é por pessoa?\n[19:22] Thiago Brandão: R$ 60 com bebida. manda o pix pra minha chave: thiago.brandao.pix@example.com\n[19:23] Juninho: eu levo a caixinha de som. Thi, a senha do portão ainda é 1357*?\n[19:24] Thiago Brandão: mudou, agora é 2468#\n[19:25] Bia: alguém me dá carona? meu carro tá na revisão\n[19:26] Carla Mendes: eu passo aí, Bia. é o Onix prata, placa RFX4G27\n[19:27] Juninho: @Carla Mendes salva meu número tbm (41) 99632-1870\n[19:30] Thiago Brandão: e lembrando que dia 30/11 é aniversário da Bia!! 🎉",
+  "mask": [
+   [
+    "Thiago Brandão",
+    0,
+    "PERSON"
+   ],
+   [
+    "28/11",
+    0,
+    "DATE"
+   ],
+   [
+    "Rua das Araucárias, 455, casa 2, Água Verde, Curitiba - PR, 80240-210",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Bia",
+    0,
+    "PERSON"
+   ],
+   [
+    "thiago.brandao.pix@example.com",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Juninho",
+    0,
+    "PERSON"
+   ],
+   [
+    "Thi",
+    0,
+    "PERSON"
+   ],
+   [
+    "1357*",
+    0,
+    "SECRET"
+   ],
+   [
+    "2468#",
+    0,
+    "SECRET"
+   ],
+   [
+    "Carla Mendes",
+    0,
+    "PERSON"
+   ],
+   [
+    "RFX4G27",
+    0,
+    "ID"
+   ],
+   [
+    "@Carla Mendes",
+    0,
+    "USERNAME"
+   ],
+   [
+    "(41) 99632-1870",
+    0,
+    "PHONE"
+   ],
+   [
+    "30/11",
+    0,
+    "DOB"
+   ]
+  ],
+  "keep": [
+   [
+    "Churras do Sábado",
+    0
+   ],
+   [
+    "galera",
+    0
+   ],
+   [
+    "lá em casa",
+    0
+   ],
+   [
+    "R$ 60",
+    0
+   ],
+   [
+    "caixinha de som",
+    0
+   ],
+   [
+    "portão",
+    0
+   ],
+   [
+    "carona",
+    0
+   ],
+   [
+    "revisão",
+    0
+   ],
+   [
+    "Onix prata",
+    0
+   ],
+   [
+    "19:20",
+    0
+   ],
+   [
+    "aniversário",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-pt-04",
+  "lang": "pt",
+  "domain": "dev_stacktrace_log",
+  "text": "2026-11-12 03:14:55,201 ERROR [faturacao-worker v1.9.4] Falha ao emitir fatura FT 2026/18832\nTraceback (most recent call last):\n  File \"/srv/app/faturacao/emitir.py\", line 211, in emitir\n    cliente = obter_cliente(nif=\"259 384 107\")\nValueError: NIF inválido para a cliente Joana Ribeiro Matos (id_cliente=PT-C-30188)\n# dados de contexto – APAGAR antes de colar no ticket!\n#   morada: Av. da República, 50, 7.º Dto, 1050-196 Lisboa\n#   telemóvel: +351 936 120 457\n#   email: joana.rmatos@example.org\n#   IBAN para reembolso: PT50 0033 0000 4537 8129 0410 5\n# credencial do webservice (variável AT_WS_PASSWORD) = Fatur@2026!ws  <- não devia estar no log\n# reportado por @nuno.carvalho no canal #faturacao-alertas em 12/11/2026, ver também JIRA FAT-219",
+  "mask": [
+   [
+    "2026-11-12",
+    0,
+    "DATE"
+   ],
+   [
+    "259 384 107",
+    0,
+    "ID"
+   ],
+   [
+    "Joana Ribeiro Matos",
+    0,
+    "PERSON"
+   ],
+   [
+    "PT-C-30188",
+    0,
+    "ID"
+   ],
+   [
+    "Av. da República, 50, 7.º Dto, 1050-196 Lisboa",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "+351 936 120 457",
+    0,
+    "PHONE"
+   ],
+   [
+    "joana.rmatos@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "PT50 0033 0000 4537 8129 0410 5",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Fatur@2026!ws",
+    0,
+    "SECRET"
+   ],
+   [
+    "@nuno.carvalho",
+    0,
+    "USERNAME"
+   ],
+   [
+    "12/11/2026",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "03:14:55,201",
+    0
+   ],
+   [
+    "ERROR",
+    0
+   ],
+   [
+    "faturacao-worker",
+    0
+   ],
+   [
+    "v1.9.4",
+    0
+   ],
+   [
+    "FT 2026/18832",
+    0
+   ],
+   [
+    "/srv/app/faturacao/emitir.py",
+    0
+   ],
+   [
+    "line 211",
+    0
+   ],
+   [
+    "ValueError",
+    0
+   ],
+   [
+    "AT_WS_PASSWORD",
+    0
+   ],
+   [
+    "#faturacao-alertas",
+    0
+   ],
+   [
+    "FAT-219",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-pt-05",
+  "lang": "pt",
+  "domain": "school_notice_pt",
+  "text": "Agrupamento de Escolas do Vale do Lis – Escola Básica de Marrazes, Leiria\nAviso aos Encarregados de Educação do 7.º B\n\nInforma-se que a reunião intercalar se realizará no dia 25 de novembro de 2026, às 18h30, na sala 14, com a diretora de turma, professora Sofia Antunes.\nAlunos com faltas injustificadas acima do limite: Tomás Sequeira (n.º 12, processo 20419) e Leonor Faria (n.º 18, processo 20447). O encarregado de educação do Tomás, Sr. Afonso Sequeira, pediu a alteração do contacto para 961 238 554, o que já foi feito.\nNa plataforma Inovar, o utilizador é o número de processo; a palavra-passe provisória para novos EE é Lis#2026ee.\nA visita de estudo ao Oceanário (12 €) deve ser paga até 4 de dezembro, por MB WAY ou na secretaria.\nContactos: secretaria@aevl.example.pt · 244 830 120\n\nA Diretora,\nGraça Pimentel",
+  "mask": [
+   [
+    "25 de novembro de 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Sofia Antunes",
+    0,
+    "PERSON"
+   ],
+   [
+    "Tomás Sequeira",
+    0,
+    "PERSON"
+   ],
+   [
+    "20419",
+    0,
+    "ID"
+   ],
+   [
+    "Leonor Faria",
+    0,
+    "PERSON"
+   ],
+   [
+    "20447",
+    0,
+    "ID"
+   ],
+   [
+    "Tomás",
+    0,
+    "PERSON"
+   ],
+   [
+    "Afonso Sequeira",
+    0,
+    "PERSON"
+   ],
+   [
+    "961 238 554",
+    0,
+    "PHONE"
+   ],
+   [
+    "Lis#2026ee",
+    0,
+    "SECRET"
+   ],
+   [
+    "4 de dezembro",
+    0,
+    "DATE"
+   ],
+   [
+    "Graça Pimentel",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "Agrupamento de Escolas do Vale do Lis",
+    0
+   ],
+   [
+    "Escola Básica de Marrazes",
+    0
+   ],
+   [
+    "Leiria",
+    0
+   ],
+   [
+    "Encarregados de Educação",
+    0
+   ],
+   [
+    "7.º B",
+    0
+   ],
+   [
+    "18h30",
+    0
+   ],
+   [
+    "sala 14",
+    0
+   ],
+   [
+    "diretora de turma",
+    0
+   ],
+   [
+    "Inovar",
+    0
+   ],
+   [
+    "Oceanário",
+    0
+   ],
+   [
+    "12 €",
+    0
+   ],
+   [
+    "MB WAY",
+    0
+   ],
+   [
+    "secretaria@aevl.example.pt",
+    0
+   ],
+   [
+    "244 830 120",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-pt-06",
+  "lang": "pt",
+  "domain": "ecommerce_delivery_br",
+  "text": "Olá, Patrícia! 📦\nSeu pedido #RX-3381904772 (Air fryer Mondial 4L – R$ 349,90) saiu para entrega hoje, 17/11, com a Rota Express.\n\nEndereço de entrega: Av. Sete de Setembro, 1720, apto 803, Vitória, Salvador - BA, 40080-001\nDestinatária: Patrícia Nogueira Santana – CPF 073.552.618-40 (obrigatório para a nota fiscal)\nCódigo de confirmação para o entregador: 5 8 2 1 (só informe na hora da entrega)\nEntregador: Edvaldo, moto placa PJK3D71. Se você não estiver, ele liga para o (71) 99104-5528.\n\nO comprovante foi enviado para paty.santana@example.net.\nRastreio: RE884210375BR · Dúvidas: ajuda@rotaexpress.example.com.br ou 4003-1180 (capitais).",
+  "mask": [
+   [
+    "Patrícia",
+    0,
+    "PERSON"
+   ],
+   [
+    "17/11",
+    0,
+    "DATE"
+   ],
+   [
+    "Av. Sete de Setembro, 1720, apto 803, Vitória, Salvador - BA, 40080-001",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Patrícia Nogueira Santana",
+    0,
+    "PERSON"
+   ],
+   [
+    "073.552.618-40",
+    0,
+    "ID"
+   ],
+   [
+    "5 8 2 1",
+    0,
+    "SECRET"
+   ],
+   [
+    "Edvaldo",
+    0,
+    "PERSON"
+   ],
+   [
+    "PJK3D71",
+    0,
+    "ID"
+   ],
+   [
+    "(71) 99104-5528",
+    0,
+    "PHONE"
+   ],
+   [
+    "paty.santana@example.net",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "#RX-3381904772",
+    0
+   ],
+   [
+    "Air fryer",
+    0
+   ],
+   [
+    "Mondial",
+    0
+   ],
+   [
+    "4L",
+    0
+   ],
+   [
+    "R$ 349,90",
+    0
+   ],
+   [
+    "hoje",
+    0
+   ],
+   [
+    "Rota Express",
+    0
+   ],
+   [
+    "nota fiscal",
+    0
+   ],
+   [
+    "RE884210375BR",
+    0
+   ],
+   [
+    "ajuda@rotaexpress.example.com.br",
+    0
+   ],
+   [
+    "4003-1180",
+    0
+   ],
+   [
+    "Destinatária",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ja-01",
+  "lang": "ja",
+  "domain": "work_email_signature",
+  "text": "件名：【共有】基幹システム移行作業について\n\n各位\n\nお疲れ様です。情報システム部の松浦です。\n来週の基幹システム移行（v8.2 → v9.0）について共有します。\n\n・作業日：2026年11月28日（土）9:00〜18:00\n・担当：松浦、小野寺さん、株式会社アオバ技研の河合様\n・作業用共有アカウント：it-migr01 ／ パスワード：Aob@-Mig2611\n　※作業終了後ただちに無効化します。\n・緊急連絡先：小野寺さん携帯 090-4417-2386\n\nなお、経理部の佐々木恵美さんから「移行中も伝票番号 DN-2611-0045 以降の入力が必要」との連絡がありました。対応を検討中です。\n\n――――――――――――\n松浦 拓真（Takuma Matsuura）\n株式会社ミナト物産 情報システム部 課長\nTEL：03-5412-7700（代表）／内線 2315\nMail：t.matsuura@minato-bussan.example.jp",
+  "mask": [
+   [
+    "松浦",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026年11月28日",
+    0,
+    "DATE"
+   ],
+   [
+    "小野寺",
+    0,
+    "PERSON"
+   ],
+   [
+    "河合",
+    0,
+    "PERSON"
+   ],
+   [
+    "it-migr01",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Aob@-Mig2611",
+    0,
+    "SECRET"
+   ],
+   [
+    "090-4417-2386",
+    0,
+    "PHONE"
+   ],
+   [
+    "佐々木恵美",
+    0,
+    "PERSON"
+   ],
+   [
+    "松浦 拓真",
+    0,
+    "PERSON"
+   ],
+   [
+    "Takuma Matsuura",
+    0,
+    "PERSON"
+   ],
+   [
+    "t.matsuura@minato-bussan.example.jp",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "各位",
+    0
+   ],
+   [
+    "情報システム部",
+    0
+   ],
+   [
+    "v8.2",
+    0
+   ],
+   [
+    "v9.0",
+    0
+   ],
+   [
+    "9:00〜18:00",
+    0
+   ],
+   [
+    "株式会社アオバ技研",
+    0
+   ],
+   [
+    "様",
+    0
+   ],
+   [
+    "経理部",
+    0
+   ],
+   [
+    "DN-2611-0045",
+    0
+   ],
+   [
+    "株式会社ミナト物産",
+    0
+   ],
+   [
+    "課長",
+    0
+   ],
+   [
+    "03-5412-7700",
+    0
+   ],
+   [
+    "内線 2315",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ja-02",
+  "lang": "ja",
+  "domain": "clinic_appointment_letter",
+  "text": "医療法人社団 桜和会 さくら台クリニック\n検査予約のご案内\n\n石黒 美佐子 様\n（診察券番号：00287415　生年月日：昭和52年4月9日）\n\n先日ご相談いただいた胃カメラ（上部消化管内視鏡検査）の予約が確定しましたのでお知らせします。\n日時：令和8年12月3日（木）午前8時30分\n※前日21時以降は絶食してください。\n当日は保険証（被保険者番号 06-138824）またはマイナンバーカードをお持ちください。\nWeb問診のログインID：sakura-28741（初期パスワード：mk4Q-ty7W）\n前日にご登録の携帯番号（080-2271-9634）へ確認SMSをお送りします。\n検査結果は 〒183-0022 東京都府中市宮西町3-15-2 コーポ宮西203 へ郵送いたします。\nご都合が悪い場合は前日17時までに 042-311-5080 へご連絡ください。\n担当医：内科 長谷川",
+  "mask": [
+   [
+    "石黒 美佐子",
+    0,
+    "PERSON"
+   ],
+   [
+    "00287415",
+    0,
+    "ID"
+   ],
+   [
+    "昭和52年4月9日",
+    0,
+    "DOB"
+   ],
+   [
+    "令和8年12月3日",
+    0,
+    "DATE"
+   ],
+   [
+    "06-138824",
+    0,
+    "ID"
+   ],
+   [
+    "sakura-28741",
+    0,
+    "USERNAME"
+   ],
+   [
+    "mk4Q-ty7W",
+    0,
+    "SECRET"
+   ],
+   [
+    "080-2271-9634",
+    0,
+    "PHONE"
+   ],
+   [
+    "〒183-0022 東京都府中市宮西町3-15-2 コーポ宮西203",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "長谷川",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "医療法人社団 桜和会",
+    0
+   ],
+   [
+    "さくら台クリニック",
+    0
+   ],
+   [
+    "様",
+    0
+   ],
+   [
+    "胃カメラ",
+    0
+   ],
+   [
+    "午前8時30分",
+    0
+   ],
+   [
+    "21時",
+    0
+   ],
+   [
+    "マイナンバーカード",
+    0
+   ],
+   [
+    "Web問診",
+    0
+   ],
+   [
+    "17時",
+    0
+   ],
+   [
+    "042-311-5080",
+    0
+   ],
+   [
+    "内科",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ja-03",
+  "lang": "ja",
+  "domain": "line_group_chat",
+  "text": "［LINE］ゼミ同期🍻\nゆか：来月の同期会、12/19(土)で決定〜！場所は新宿の「炉端 かがり火」、19時から。\nけんた：了解！幹事ありがと。会費4,500円でOK？\nゆか：うん、PayPayで送ってね。私のID → yuka_0412_pp\nしょうへい：俺ちょっと遅れるかも。何かあったら 070-3328-1956 に電話して\nゆか：あと、まりちゃんが渡辺くんと結婚したんだって🎉 みんなで寄せ書き送ろうよ\nまり：わーありがとう😭 新住所は 〒980-0811 宮城県仙台市青葉区一番町2-7-15 ブランシェ一番町405 です！\nけんた：ところでゼミの共有Googleドライブのパス、誰か覚えてる？\nしょうへい：たしか hirose-zemi2019! だった気がする",
+  "mask": [
+   [
+    "ゆか",
+    0,
+    "PERSON"
+   ],
+   [
+    "12/19",
+    0,
+    "DATE"
+   ],
+   [
+    "けんた",
+    0,
+    "PERSON"
+   ],
+   [
+    "yuka_0412_pp",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "しょうへい",
+    0,
+    "PERSON"
+   ],
+   [
+    "070-3328-1956",
+    0,
+    "PHONE"
+   ],
+   [
+    "まり",
+    0,
+    "PERSON"
+   ],
+   [
+    "渡辺",
+    0,
+    "PERSON"
+   ],
+   [
+    "〒980-0811 宮城県仙台市青葉区一番町2-7-15 ブランシェ一番町405",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "hirose-zemi2019!",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "ゼミ同期",
+    0
+   ],
+   [
+    "同期会",
+    0
+   ],
+   [
+    "新宿",
+    0
+   ],
+   [
+    "炉端 かがり火",
+    0
+   ],
+   [
+    "19時",
+    0
+   ],
+   [
+    "幹事",
+    0
+   ],
+   [
+    "4,500円",
+    0
+   ],
+   [
+    "PayPay",
+    0
+   ],
+   [
+    "ちゃん",
+    0
+   ],
+   [
+    "くん",
+    0
+   ],
+   [
+    "寄せ書き",
+    0
+   ],
+   [
+    "Googleドライブ",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ja-04",
+  "lang": "ja",
+  "domain": "dev_env_incident_note",
+  "text": "# 本番用 .env（Slackに貼らないこと！）\n# 作成：2026/10/02 鈴木（@suzuki-infra）\nNODE_ENV=production\nDB_URL=mysql://shop_app:Sh0p!Kyoto#88@10.0.4.12:3306/ec_prod\nLINE_CHANNEL_SECRET=FAKEc93b1e0a7d4f2b6e8a1c5d9f0e3b7a2\n# テスト用ダミー会員（実在しない）：山田太郎 / 090-0000-0000\nTEST_MEMBER_NAME=山田太郎\n# 2026/11/05 障害メモ：会員番号 M-0071824（中村 由香里さん）の決済が二重計上。\n#   お客様端末のIP 126.71.208.45 から同一リクエストが2回。エラーコード PAY-E409。\n#   返金は経理の高木さんに依頼済み。\nSTRIPE_SECRET_KEY=sk_live_FAKE7Yq2Rn5Lp8Tw3Zs6Vx",
+  "mask": [
+   [
+    "2026/10/02",
+    0,
+    "DATE"
+   ],
+   [
+    "鈴木",
+    0,
+    "PERSON"
+   ],
+   [
+    "@suzuki-infra",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Sh0p!Kyoto#88",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEc93b1e0a7d4f2b6e8a1c5d9f0e3b7a2",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026/11/05",
+    0,
+    "DATE"
+   ],
+   [
+    "M-0071824",
+    0,
+    "ID"
+   ],
+   [
+    "中村 由香里",
+    0,
+    "PERSON"
+   ],
+   [
+    "126.71.208.45",
+    0,
+    "IP"
+   ],
+   [
+    "高木",
+    0,
+    "PERSON"
+   ],
+   [
+    "sk_live_FAKE7Yq2Rn5Lp8Tw3Zs6Vx",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "production",
+    0
+   ],
+   [
+    "shop_app",
+    0
+   ],
+   [
+    "10.0.4.12:3306",
+    0
+   ],
+   [
+    "ec_prod",
+    0
+   ],
+   [
+    "山田太郎",
+    0
+   ],
+   [
+    "090-0000-0000",
+    0
+   ],
+   [
+    "PAY-E409",
+    0
+   ],
+   [
+    "経理",
+    0
+   ],
+   [
+    "さん",
+    0
+   ],
+   [
+    "2回",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ja-05",
+  "lang": "ja",
+  "domain": "city_hall_notice",
+  "text": "令和8年11月10日\n\n〒330-0062 埼玉県さいたま市浦和区仲町1-9-3 グリーンハイツ仲町102\n森本 健一 様\n\nさいたま市浦和区役所 支援課\n児童手当 現況確認のお願い\n\n標記について、下記のとおり書類のご提出をお願いします。\n受給者：森本 健一（個人番号 3816 2074 5591）\n対象児童：森本 陽菜（平成30年6月21日生）\n振込先口座：武蔵野みらい銀行 浦和支店 普通 4418207\n日中の連絡先（申請書記載）：080-6631-4072\n提出期限：令和8年12月11日\n提出方法：窓口、郵送、またはマイナポータル（電子申請）\n※区役所から電話で暗証番号やパスワードをお尋ねすることはありません。\n問合せ：支援課 児童手当係 048-555-0172（受付 8:30〜17:15、土日祝を除く）",
+  "mask": [
+   [
+    "令和8年11月10日",
+    0,
+    "DATE"
+   ],
+   [
+    "〒330-0062 埼玉県さいたま市浦和区仲町1-9-3 グリーンハイツ仲町102",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "森本 健一",
+    0,
+    "PERSON"
+   ],
+   [
+    "3816 2074 5591",
+    0,
+    "ID"
+   ],
+   [
+    "森本 陽菜",
+    0,
+    "PERSON"
+   ],
+   [
+    "平成30年6月21日",
+    0,
+    "DOB"
+   ],
+   [
+    "4418207",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "080-6631-4072",
+    0,
+    "PHONE"
+   ],
+   [
+    "令和8年12月11日",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "様",
+    0
+   ],
+   [
+    "さいたま市浦和区役所",
+    0
+   ],
+   [
+    "支援課",
+    0
+   ],
+   [
+    "児童手当",
+    0
+   ],
+   [
+    "武蔵野みらい銀行",
+    0
+   ],
+   [
+    "浦和支店",
+    0
+   ],
+   [
+    "普通",
+    0
+   ],
+   [
+    "マイナポータル",
+    0
+   ],
+   [
+    "児童手当係",
+    0
+   ],
+   [
+    "048-555-0172",
+    0
+   ],
+   [
+    "8:30〜17:15",
+    0
+   ],
+   [
+    "土日祝",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ja-06",
+  "lang": "ja",
+  "domain": "ecommerce_support_email",
+  "text": "件名：Re:【注文番号 KF-2611-08812】お届け先変更のお願い\n\n廣瀬 祐二 様\n\nいつもクロフネストアをご利用いただきありがとうございます。カスタマーサポートの今井です。\nお届け先を下記のとおり変更いたしました。\n〒530-0001 大阪府大阪市北区梅田3-4-11 梅田レジデンス1508号\nお受取人：廣瀬 沙織 様（奥様）\n電話：06-6342-7718\nお届け予定：2026年11月20日（金）18時〜20時\n商品：電気ケトル KT-90 × 1　税込5,980円\n\nなお、メールに記載のカード番号（4980 1102 6633 9174）は安全のため記録から削除しました。今後はご記載なさらないでください。\n確認メールは y.hirose@example.net 宛に送信済みです。次回はお客様番号 C-00492217 をお伝えください。\n――\nsupport@kurofune-store.example.jp ／ 0120-38-6262（平日10時〜18時）",
+  "mask": [
+   [
+    "廣瀬 祐二",
+    0,
+    "PERSON"
+   ],
+   [
+    "今井",
+    0,
+    "PERSON"
+   ],
+   [
+    "〒530-0001 大阪府大阪市北区梅田3-4-11 梅田レジデンス1508号",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "廣瀬 沙織",
+    0,
+    "PERSON"
+   ],
+   [
+    "06-6342-7718",
+    0,
+    "PHONE"
+   ],
+   [
+    "2026年11月20日",
+    0,
+    "DATE"
+   ],
+   [
+    "4980 1102 6633 9174",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "y.hirose@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "C-00492217",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "KF-2611-08812",
+    0
+   ],
+   [
+    "クロフネストア",
+    0
+   ],
+   [
+    "カスタマーサポート",
+    0
+   ],
+   [
+    "奥様",
+    0
+   ],
+   [
+    "18時〜20時",
+    0
+   ],
+   [
+    "KT-90",
+    0
+   ],
+   [
+    "税込5,980円",
+    0
+   ],
+   [
+    "support@kurofune-store.example.jp",
+    0
+   ],
+   [
+    "0120-38-6262",
+    0
+   ],
+   [
+    "平日10時〜18時",
+    0
+   ],
+   [
+    "様",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ko-01",
+  "lang": "ko",
+  "domain": "kakao_group_chat",
+  "text": "[동창회 총무방]\n[오후 8:12] 박지훈: 다들 12월 12일 송년회 참석 여부 알려줘~ 장소는 강남역 '한우마을' 2층 룸, 저녁 7시\n[오후 8:13] 은지: 나 참석! 회비 얼마야?\n[오후 8:14] 박지훈: 1인 5만원. 카카오뱅크 3333-07-8821964 로 보내줘\n[오후 8:15] 최성민: 나 늦을 듯ㅠ 연락 안 되면 010-8823-4170 으로 해\n[오후 8:16] 은지: 근데 지훈아 정우 결혼한대!! 청첩장 주소 묻던데\n[오후 8:17] 이정우: ㅋㅋ 소문 빠르네 서울특별시 마포구 월드컵북로 402, 상암한빛아파트 105동 1203호 로 보내주면 돼\n[오후 8:18] 박지훈: @최성민 너 카톡 아이디 바꿨어?\n[오후 8:19] 최성민: 응 이제 sm_choi_1988 이야. 정우야 모청 보내게 메일 줘\n[오후 8:20] 이정우: jw.lee.wed@example.com",
+  "mask": [
+   [
+    "박지훈",
+    0,
+    "PERSON"
+   ],
+   [
+    "12월 12일",
+    0,
+    "DATE"
+   ],
+   [
+    "은지",
+    0,
+    "PERSON"
+   ],
+   [
+    "3333-07-8821964",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "최성민",
+    0,
+    "PERSON"
+   ],
+   [
+    "010-8823-4170",
+    0,
+    "PHONE"
+   ],
+   [
+    "지훈",
+    0,
+    "PERSON"
+   ],
+   [
+    "정우",
+    0,
+    "PERSON"
+   ],
+   [
+    "이정우",
+    0,
+    "PERSON"
+   ],
+   [
+    "서울특별시 마포구 월드컵북로 402, 상암한빛아파트 105동 1203호",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "@최성민",
+    0,
+    "USERNAME"
+   ],
+   [
+    "sm_choi_1988",
+    0,
+    "USERNAME"
+   ],
+   [
+    "jw.lee.wed@example.com",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "동창회 총무방",
+    0
+   ],
+   [
+    "오후 8:12",
+    0
+   ],
+   [
+    "송년회",
+    0
+   ],
+   [
+    "강남역",
+    0
+   ],
+   [
+    "한우마을",
+    0
+   ],
+   [
+    "2층 룸",
+    0
+   ],
+   [
+    "저녁 7시",
+    0
+   ],
+   [
+    "회비",
+    0
+   ],
+   [
+    "1인 5만원",
+    0
+   ],
+   [
+    "카카오뱅크",
+    0
+   ],
+   [
+    "청첩장",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ko-02",
+  "lang": "ko",
+  "domain": "parcel_sms",
+  "text": "[Web발신]\n[한빛택배] 고객님의 상품이 배송 출발했습니다.\n■ 받는분: 윤서연 님\n■ 운송장번호: 6408-2291-5537\n■ 배송지: 경기도 성남시 분당구 정자일로 95, 그린빌 302동 1704호\n■ 배송예정: 2026년 11월 18일(수) 14~16시\n■ 배송기사: 강태호 기사님 (010-3391-0582)\n■ 공동현관 비밀번호(고객 요청사항): #1704*0915\n■ 해외직구 상품으로 개인통관고유부호 P170043215882 확인 완료\n부재 시 경비실에 맡겨드립니다. 배송조회: hanbit-parcel.example.co.kr/t/64082291\n고객센터 1644-7782\n\n[회신] 기사님 문 앞에 놔주세요~ 혹시 연락 안 되면 남편 번호 010-7720-4418 로 주셔도 돼요",
+  "mask": [
+   [
+    "윤서연",
+    0,
+    "PERSON"
+   ],
+   [
+    "경기도 성남시 분당구 정자일로 95, 그린빌 302동 1704호",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "2026년 11월 18일",
+    0,
+    "DATE"
+   ],
+   [
+    "강태호",
+    0,
+    "PERSON"
+   ],
+   [
+    "010-3391-0582",
+    0,
+    "PHONE"
+   ],
+   [
+    "#1704*0915",
+    0,
+    "SECRET"
+   ],
+   [
+    "P170043215882",
+    0,
+    "ID"
+   ],
+   [
+    "010-7720-4418",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "Web발신",
+    0
+   ],
+   [
+    "한빛택배",
+    0
+   ],
+   [
+    "고객님",
+    0
+   ],
+   [
+    "6408-2291-5537",
+    0
+   ],
+   [
+    "14~16시",
+    0
+   ],
+   [
+    "기사님",
+    0
+   ],
+   [
+    "해외직구",
+    0
+   ],
+   [
+    "경비실",
+    0
+   ],
+   [
+    "hanbit-parcel.example.co.kr/t/64082291",
+    0
+   ],
+   [
+    "1644-7782",
+    0
+   ],
+   [
+    "남편",
+    0
+   ],
+   [
+    "님",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ko-03",
+  "lang": "ko",
+  "domain": "work_email_signature",
+  "text": "제목: [협조요청] 2026 하반기 성과평가 시스템 계정 발급\n\n인사팀 한소희 매니저님께,\n\n안녕하세요, 개발2팀 오준석입니다.\n이번 달 입사한 신규 인원 2명의 평가 시스템(HR-Eval v2.3) 계정 발급을 요청드립니다.\n\n1) 정다은 / 사번 E2026-0418 / 입사일 2026년 11월 2일\n2) Rahul Mehta / 사번 E2026-0421 / 외국인등록번호 920817-5123456\n\n임시 비밀번호는 두 분 모두 Welcome!2611 로 설정해 주시고, 최초 로그인 시 변경되도록 부탁드립니다.\n문의는 내선 4127 또는 휴대폰 010-2284-6619 로 주시면 됩니다.\n\n감사합니다.\n오준석 드림\n\n개발2팀 | 선임연구원\n(주)누리소프트 | 대표전화 02-2108-5500\njs.oh@nurisoft.example.co.kr",
+  "mask": [
+   [
+    "한소희",
+    0,
+    "PERSON"
+   ],
+   [
+    "오준석",
+    0,
+    "PERSON"
+   ],
+   [
+    "정다은",
+    0,
+    "PERSON"
+   ],
+   [
+    "E2026-0418",
+    0,
+    "ID"
+   ],
+   [
+    "2026년 11월 2일",
+    0,
+    "DATE"
+   ],
+   [
+    "Rahul Mehta",
+    0,
+    "PERSON"
+   ],
+   [
+    "E2026-0421",
+    0,
+    "ID"
+   ],
+   [
+    "920817-5123456",
+    0,
+    "ID"
+   ],
+   [
+    "Welcome!2611",
+    0,
+    "SECRET"
+   ],
+   [
+    "010-2284-6619",
+    0,
+    "PHONE"
+   ],
+   [
+    "js.oh@nurisoft.example.co.kr",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "협조요청",
+    0
+   ],
+   [
+    "2026 하반기",
+    0
+   ],
+   [
+    "인사팀",
+    0
+   ],
+   [
+    "매니저님",
+    0
+   ],
+   [
+    "개발2팀",
+    0
+   ],
+   [
+    "2명",
+    0
+   ],
+   [
+    "HR-Eval v2.3",
+    0
+   ],
+   [
+    "내선 4127",
+    0
+   ],
+   [
+    "드림",
+    0
+   ],
+   [
+    "선임연구원",
+    0
+   ],
+   [
+    "(주)누리소프트",
+    0
+   ],
+   [
+    "02-2108-5500",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ko-04",
+  "lang": "ko",
+  "domain": "dev_jsonc_config",
+  "text": "// config/prod.jsonc 운영 설정 (외부 공유 금지)\n// 작성: 2026-09-14 김하늘 (@haneul.k)\n{\n \"service\": \"payment-gateway\",\n \"db\": {\"host\": \"10.12.0.8\", \"user\": \"pg_admin\", \"password\": \"Gk2#vRm9!pLq\"},\n \"pgSecretKey\": \"live_sk_FAKEz8XcV4bN1mQ7\",\n // CS 재현용 — 2026-11-03 추가. 실제 고객 정보라 커밋 전 삭제!\n \"debug\": {\"name\": \"배수아\", \"tel\": \"010-5517-2093\", \"rrn\": \"950302-2678143\",\n  \"card\": \"9410-6123-4407-8815\", \"ip\": \"211.36.142.77\"},\n \"sampleUser\": \"홍길동\" // 예시 이름\n}",
+  "mask": [
+   [
+    "2026-09-14",
+    0,
+    "DATE"
+   ],
+   [
+    "김하늘",
+    0,
+    "PERSON"
+   ],
+   [
+    "@haneul.k",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Gk2#vRm9!pLq",
+    0,
+    "SECRET"
+   ],
+   [
+    "live_sk_FAKEz8XcV4bN1mQ7",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026-11-03",
+    0,
+    "DATE"
+   ],
+   [
+    "배수아",
+    0,
+    "PERSON"
+   ],
+   [
+    "010-5517-2093",
+    0,
+    "PHONE"
+   ],
+   [
+    "950302-2678143",
+    0,
+    "ID"
+   ],
+   [
+    "9410-6123-4407-8815",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "211.36.142.77",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "config/prod.jsonc",
+    0
+   ],
+   [
+    "payment-gateway",
+    0
+   ],
+   [
+    "10.12.0.8",
+    0
+   ],
+   [
+    "pg_admin",
+    0
+   ],
+   [
+    "CS",
+    0
+   ],
+   [
+    "외부 공유 금지",
+    0
+   ],
+   [
+    "예시 이름",
+    0
+   ],
+   [
+    "홍길동",
+    0
+   ],
+   [
+    "운영 설정",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ko-05",
+  "lang": "ko",
+  "domain": "bank_notice",
+  "text": "[누리은행] 금융거래 정보 변경 안내\n\n장미경 고객님께,\n2026년 11월 13일 15:42, 고객님의 모바일뱅킹에서 아래 정보가 변경되었습니다.\n- 변경 항목: 등록 휴대폰 번호, 보안 질문 답변\n- 휴대폰 번호: 010-4425-7781 → 010-9036-1247\n- 보안 질문('어머니 고향') 답변: 안동\n- 알림 이메일: mk.jang68@example.com\n- 대상 계좌: 누리 자유입출금통장 1002-417-889201\n- 접속 기기 IP: 175.223.18.94\n- 본인 확인 정보: 생년월일 1968년 5월 27일\n\n본인이 변경하지 않으셨다면 즉시 고객센터 1599-8000(24시간)으로 신고해 주시기 바랍니다.\n※ 누리은행은 어떠한 경우에도 OTP 번호, 보안카드 번호, 계좌 비밀번호를 묻지 않습니다.\n담당: 강남중앙지점 PB 팀장 신동혁",
+  "mask": [
+   [
+    "장미경",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026년 11월 13일",
+    0,
+    "DATE"
+   ],
+   [
+    "010-4425-7781",
+    0,
+    "PHONE"
+   ],
+   [
+    "010-9036-1247",
+    0,
+    "PHONE"
+   ],
+   [
+    "안동",
+    0,
+    "SECRET"
+   ],
+   [
+    "mk.jang68@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "1002-417-889201",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "175.223.18.94",
+    0,
+    "IP"
+   ],
+   [
+    "1968년 5월 27일",
+    0,
+    "DOB"
+   ],
+   [
+    "신동혁",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "누리은행",
+    0
+   ],
+   [
+    "고객님",
+    0
+   ],
+   [
+    "15:42",
+    0
+   ],
+   [
+    "모바일뱅킹",
+    0
+   ],
+   [
+    "어머니 고향",
+    0
+   ],
+   [
+    "누리 자유입출금통장",
+    0
+   ],
+   [
+    "1599-8000",
+    0
+   ],
+   [
+    "24시간",
+    0
+   ],
+   [
+    "OTP",
+    0
+   ],
+   [
+    "보안카드",
+    0
+   ],
+   [
+    "강남중앙지점",
+    0
+   ],
+   [
+    "PB 팀장",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ko-06",
+  "lang": "ko",
+  "domain": "school_newsletter",
+  "text": "가정통신문 제2026-87호\n한별초등학교 2학년 3반 학부모님께\n\n12월 4일(금) 현장체험학습(국립과천과학관) 안내\n- 출발: 오전 8시 50분 학교 정문 / 귀교: 오후 2시 30분\n- 참가비 15,000원은 12월 1일 스쿨뱅킹으로 자동 출금됩니다.\n- 보호자 동의서는 11월 27일까지 제출해 주세요.\n\n알레르기 확인이 필요한 학생: 임하준(땅콩), 서윤아(유제품)\n서윤아 학생 어머님(김선영 님)께서 요청하신 대로 도시락은 따로 준비합니다.\n임하준 학생의 e학습터 계정이 초기화되었습니다. 아이디 hbes2-0312 / 임시 비밀번호 star!8823\n보호자 임재성 님 비상연락처(010-6612-8890)도 업데이트했습니다.\n담임 연락은 개인번호 대신 하이클래스 앱을 이용해 주세요.\n문의: 행정실 02-951-4300\n\n담임교사 노은영",
+  "mask": [
+   [
+    "12월 4일",
+    0,
+    "DATE"
+   ],
+   [
+    "12월 1일",
+    0,
+    "DATE"
+   ],
+   [
+    "11월 27일",
+    0,
+    "DATE"
+   ],
+   [
+    "임하준",
+    0,
+    "PERSON"
+   ],
+   [
+    "서윤아",
+    0,
+    "PERSON"
+   ],
+   [
+    "김선영",
+    0,
+    "PERSON"
+   ],
+   [
+    "hbes2-0312",
+    0,
+    "USERNAME"
+   ],
+   [
+    "star!8823",
+    0,
+    "SECRET"
+   ],
+   [
+    "임재성",
+    0,
+    "PERSON"
+   ],
+   [
+    "010-6612-8890",
+    0,
+    "PHONE"
+   ],
+   [
+    "노은영",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "가정통신문 제2026-87호",
+    0
+   ],
+   [
+    "한별초등학교",
+    0
+   ],
+   [
+    "2학년 3반",
+    0
+   ],
+   [
+    "학부모님",
+    0
+   ],
+   [
+    "국립과천과학관",
+    0
+   ],
+   [
+    "오전 8시 50분",
+    0
+   ],
+   [
+    "15,000원",
+    0
+   ],
+   [
+    "스쿨뱅킹",
+    0
+   ],
+   [
+    "땅콩",
+    0
+   ],
+   [
+    "어머님",
+    0
+   ],
+   [
+    "e학습터",
+    0
+   ],
+   [
+    "하이클래스",
+    0
+   ],
+   [
+    "02-951-4300",
+    0
+   ],
+   [
+    "담임교사",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ru-01",
+  "lang": "ru",
+  "domain": "family_telegram_chat",
+  "text": "Группа «Семья 🏡»\nМама: Дети, напоминаю: в субботу 5 декабря отмечаем юбилей папы, 60 лет. Собираемся в кафе «Самовар» на Ленина, в 18:00.\nОля: Мам, я переведу на подарок. Скинь номер карты Серёжи, он же собирает?\nСерёжа: 2202 2036 1188 4519, Сбер. Или по номеру +7 916 284-33-70 через СБП.\nМама: Серёженька, а Вера Николаевна приедет? Ей надо открытку отправить, адрес: г. Тула, ул. Металлистов, д. 17, кв. 42.\nОля: Кстати, папе надо продлить ОСАГО, машина А417МК71. И в телеге я теперь @olya_krasnova, старый ник удалила.\nСерёжа: Ок. Пароль от госуслуг папы у меня записан, но сюда писать не буду 😅\nМама: Правильно. А код домофона у нас новый — 71#4589, запомните.",
+  "mask": [
+   [
+    "5 декабря",
+    0,
+    "DATE"
+   ],
+   [
+    "Оля",
+    0,
+    "PERSON"
+   ],
+   [
+    "Серёжи",
+    0,
+    "PERSON"
+   ],
+   [
+    "Серёжа",
+    0,
+    "PERSON"
+   ],
+   [
+    "2202 2036 1188 4519",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "+7 916 284-33-70",
+    0,
+    "PHONE"
+   ],
+   [
+    "Серёженька",
+    0,
+    "PERSON"
+   ],
+   [
+    "Вера Николаевна",
+    0,
+    "PERSON"
+   ],
+   [
+    "г. Тула, ул. Металлистов, д. 17, кв. 42",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "А417МК71",
+    0,
+    "ID"
+   ],
+   [
+    "@olya_krasnova",
+    0,
+    "USERNAME"
+   ],
+   [
+    "71#4589",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "Семья",
+    0
+   ],
+   [
+    "Мама",
+    0
+   ],
+   [
+    "папы",
+    0
+   ],
+   [
+    "60 лет",
+    0
+   ],
+   [
+    "кафе «Самовар»",
+    0
+   ],
+   [
+    "на Ленина",
+    0
+   ],
+   [
+    "18:00",
+    0
+   ],
+   [
+    "Мам",
+    0
+   ],
+   [
+    "Сбер",
+    0
+   ],
+   [
+    "СБП",
+    0
+   ],
+   [
+    "ОСАГО",
+    0
+   ],
+   [
+    "госуслуг",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ru-02",
+  "lang": "ru",
+  "domain": "tax_notice",
+  "text": "Межрайонная ИФНС России № 46 по г. Москве\nНалоговое уведомление № 98321547 от 14.08.2026\n\nКому: Кудрявцевой Анне Сергеевне\nИНН 772814503962 · СНИЛС 148-302-776 52\nПаспорт: серия 45 21 № 604118\nАдрес: 125212, г. Москва, Ленинградское ш., д. 58, корп. 3, кв. 117\n\nТранспортный налог за 2025 год: автомобиль KIA RIO (123 л.с.), гос. рег. знак Х305ТР799. Сумма к уплате: 4 812 руб.\nСрок уплаты — не позднее 1 декабря 2026 г.\nКопия направлена на адрес электронной почты anna.kudryavtseva@example.net. Уведомление также размещено в личном кабинете налогоплательщика. Для первого входа используйте логин — ваш ИНН и временный пароль 7hQ2mX9p (действует 30 дней).\nСотрудники ФНС никогда не запрашивают пароль по телефону.\nКонтакт-центр ФНС России: 8-800-222-22-22.",
+  "mask": [
+   [
+    "14.08.2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Кудрявцевой Анне Сергеевне",
+    0,
+    "PERSON"
+   ],
+   [
+    "772814503962",
+    0,
+    "ID"
+   ],
+   [
+    "148-302-776 52",
+    0,
+    "ID"
+   ],
+   [
+    "45 21 № 604118",
+    0,
+    "ID"
+   ],
+   [
+    "125212, г. Москва, Ленинградское ш., д. 58, корп. 3, кв. 117",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Х305ТР799",
+    0,
+    "ID"
+   ],
+   [
+    "1 декабря 2026 г.",
+    0,
+    "DATE"
+   ],
+   [
+    "7hQ2mX9p",
+    0,
+    "SECRET"
+   ],
+   [
+    "anna.kudryavtseva@example.net",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Межрайонная ИФНС России № 46 по г. Москве",
+    0
+   ],
+   [
+    "Налоговое уведомление № 98321547",
+    0
+   ],
+   [
+    "Транспортный налог",
+    0
+   ],
+   [
+    "2025 год",
+    0
+   ],
+   [
+    "KIA RIO",
+    0
+   ],
+   [
+    "123 л.с.",
+    0
+   ],
+   [
+    "4 812 руб.",
+    0
+   ],
+   [
+    "личном кабинете налогоплательщика",
+    0
+   ],
+   [
+    "30 дней",
+    0
+   ],
+   [
+    "8-800-222-22-22",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ru-03",
+  "lang": "ru",
+  "domain": "hr_order",
+  "text": "ООО «СеверСтройМонтаж»\nПРИКАЗ № 214-к\nг. Екатеринбург, 16.11.2026\nО предоставлении отпуска по уходу за ребёнком\n\nПРИКАЗЫВАЮ:\n1. Предоставить Габдуллиной Ирине Рустамовне, инженеру-сметчику отдела ПТО (табельный № 00582), отпуск по уходу за ребёнком до достижения им возраста полутора лет с 24.11.2026 по 03.05.2028.\n2. Основание: заявление Габдуллиной И. Р. от 12.11.2026; свидетельство о рождении ребёнка (Габдуллин Тимур Айдарович, 03.11.2026 г. р.) серии IV-АИ № 712405.\n3. Ежемесячное пособие перечислять на счёт № 40817810816540029913 в Уральском банке ПАО «Сбербанк», БИК 046577674.\n4. Контроль исполнения возложить на начальника отдела кадров Л. В. Пахомову.\n\nГенеральный директор __________ А. Н. Зуев\nС приказом ознакомлена: __________ И. Р. Габдуллина",
+  "mask": [
+   [
+    "16.11.2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Габдуллиной Ирине Рустамовне",
+    0,
+    "PERSON"
+   ],
+   [
+    "00582",
+    0,
+    "ID"
+   ],
+   [
+    "24.11.2026",
+    0,
+    "DATE"
+   ],
+   [
+    "03.05.2028",
+    0,
+    "DATE"
+   ],
+   [
+    "Габдуллиной И. Р.",
+    0,
+    "PERSON"
+   ],
+   [
+    "12.11.2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Габдуллин Тимур Айдарович",
+    0,
+    "PERSON"
+   ],
+   [
+    "03.11.2026",
+    0,
+    "DOB"
+   ],
+   [
+    "IV-АИ № 712405",
+    0,
+    "ID"
+   ],
+   [
+    "40817810816540029913",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Л. В. Пахомову",
+    0,
+    "PERSON"
+   ],
+   [
+    "А. Н. Зуев",
+    0,
+    "PERSON"
+   ],
+   [
+    "И. Р. Габдуллина",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "ООО «СеверСтройМонтаж»",
+    0
+   ],
+   [
+    "ПРИКАЗ № 214-к",
+    0
+   ],
+   [
+    "г. Екатеринбург",
+    0
+   ],
+   [
+    "инженеру-сметчику",
+    0
+   ],
+   [
+    "отдела ПТО",
+    0
+   ],
+   [
+    "полутора лет",
+    0
+   ],
+   [
+    "Уральском банке",
+    0
+   ],
+   [
+    "ПАО «Сбербанк»",
+    0
+   ],
+   [
+    "БИК 046577674",
+    0
+   ],
+   [
+    "отдела кадров",
+    0
+   ],
+   [
+    "Генеральный директор",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ru-04",
+  "lang": "ru",
+  "domain": "dev_env_log",
+  "text": "# .env для стенда stage-2 — НЕ коммитить (уже один раз утекло, см. инцидент SEC-1207)\n# ответственный: Дмитрий Кожевников, tg: @dkozhevnikov\nPOSTGRES_USER=crm_svc\nPOSTGRES_PASSWORD=Vk9!zP2q_Lm7\nYANDEX_CLOUD_API_KEY=AQVN_FAKE3kz8Xm1Rq5Tw0Yb7Lc2\nTELEGRAM_BOT_TOKEN=7000000000:FAKEAAH3xQ9mZpL2vR8tYcK1bN5\n# строка из лога от 2026-11-11, жалоба клиента (удалить после разбора):\n# [ERROR] crm-api 3.2.1 SMS не доставлено: phone=+7 (903) 418-27-61 client_id=CL-0094418 fio=\"Мельникова Дарья Олеговна\" ip=95.31.204.118 code=SMS_TIMEOUT\n# пример формата телефона для валидатора (не реальный): +7 (XXX) XXX-XX-XX\n# таймаут шлюза поднят до 15 с",
+  "mask": [
+   [
+    "Дмитрий Кожевников",
+    0,
+    "PERSON"
+   ],
+   [
+    "@dkozhevnikov",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Vk9!zP2q_Lm7",
+    0,
+    "SECRET"
+   ],
+   [
+    "AQVN_FAKE3kz8Xm1Rq5Tw0Yb7Lc2",
+    0,
+    "SECRET"
+   ],
+   [
+    "7000000000:FAKEAAH3xQ9mZpL2vR8tYcK1bN5",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026-11-11",
+    0,
+    "DATE"
+   ],
+   [
+    "+7 (903) 418-27-61",
+    0,
+    "PHONE"
+   ],
+   [
+    "CL-0094418",
+    0,
+    "ID"
+   ],
+   [
+    "Мельникова Дарья Олеговна",
+    0,
+    "PERSON"
+   ],
+   [
+    "95.31.204.118",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "stage-2",
+    0
+   ],
+   [
+    "SEC-1207",
+    0
+   ],
+   [
+    "crm_svc",
+    0
+   ],
+   [
+    "POSTGRES_PASSWORD",
+    0
+   ],
+   [
+    "ERROR",
+    0
+   ],
+   [
+    "crm-api",
+    0
+   ],
+   [
+    "3.2.1",
+    0
+   ],
+   [
+    "SMS_TIMEOUT",
+    0
+   ],
+   [
+    "+7 (XXX) XXX-XX-XX",
+    0
+   ],
+   [
+    "15 с",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ru-05",
+  "lang": "ru",
+  "domain": "bank_support_chat",
+  "text": "Чат поддержки — Банк «Ладога»\nСотрудник Алина: Здравствуйте! Чем могу помочь?\nКлиент: Здравствуйте. Мне позвонили «из службы безопасности» и попросили продиктовать код из СМС. Я продиктовала: 538 207. Теперь не могу зайти в приложение.\nСотрудник Алина: Понимаю, сейчас разберёмся. Назовите, пожалуйста, ФИО и дату рождения.\nКлиент: Белоусова Галина Петровна, 19.07.1958.\nСотрудник Алина: Галина Петровна, вижу: 16 ноября в 21:47 был вход с нового устройства и перевод 85 000 ₽ на карту 5536 9140 2287 0613 (получатель Рустам Х.). Доступ мы заблокировали, ваш счёт 40817810500001428361 сейчас в безопасности.\nКлиент: Господи… Звонили с номера 8 (499) 302-17-45.\nСотрудник Алина: Сохраните его для заявления в полицию. Я создала обращение № 2611-77310. Подойдите с паспортом в отделение на ул. Гороховой, 12. Горячая линия: 8 800 700-41-41.",
+  "mask": [
+   [
+    "Алина",
+    0,
+    "PERSON"
+   ],
+   [
+    "538 207",
+    0,
+    "SECRET"
+   ],
+   [
+    "Белоусова Галина Петровна",
+    0,
+    "PERSON"
+   ],
+   [
+    "19.07.1958",
+    0,
+    "DOB"
+   ],
+   [
+    "Галина Петровна",
+    0,
+    "PERSON"
+   ],
+   [
+    "16 ноября",
+    0,
+    "DATE"
+   ],
+   [
+    "5536 9140 2287 0613",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Рустам Х.",
+    0,
+    "PERSON"
+   ],
+   [
+    "40817810500001428361",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "8 (499) 302-17-45",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "Банк «Ладога»",
+    0
+   ],
+   [
+    "Сотрудник",
+    0
+   ],
+   [
+    "Клиент",
+    0
+   ],
+   [
+    "службы безопасности",
+    0
+   ],
+   [
+    "СМС",
+    0
+   ],
+   [
+    "21:47",
+    0
+   ],
+   [
+    "85 000 ₽",
+    0
+   ],
+   [
+    "обращение № 2611-77310",
+    0
+   ],
+   [
+    "ул. Гороховой, 12",
+    0
+   ],
+   [
+    "8 800 700-41-41",
+    0
+   ],
+   [
+    "полицию",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "mb-ru-06",
+  "lang": "ru",
+  "domain": "marketplace_delivery",
+  "text": "Здравствуйте, Константин!\nВаш заказ № 48211-0937 (робот-пылесос Polaris PVCR 3200, 21 990 ₽) прибыл в пункт выдачи МаркетПлюс: г. Новосибирск, ул. Кирова, 44.\nКод получения: 7731 — назовите его сотруднику пункта. Срок хранения — до 24 ноября включительно.\nПолучатель: Ершов Константин Андреевич, тел. +7 913 552-08-14. Если заказ заберёт другой человек (например, Ершова Н. В.), укажите это в приложении.\nПокупка оплачена картой •••• 4471, чек отправлен на k.ershov@example.org.\n\nХолодильник по заказу № 48211-0938 привезёт курьер Азамат 27.11.2026 с 10:00 до 14:00 по адресу: 630099, г. Новосибирск, ул. Советская, д. 37, кв. 9. Курьер позвонит заранее; его номер для связи: 8 962 117-40-33.\nСпасибо, что выбираете МаркетПлюс!",
+  "mask": [
+   [
+    "Константин",
+    0,
+    "PERSON"
+   ],
+   [
+    "7731",
+    0,
+    "SECRET"
+   ],
+   [
+    "24 ноября",
+    0,
+    "DATE"
+   ],
+   [
+    "Ершов Константин Андреевич",
+    0,
+    "PERSON"
+   ],
+   [
+    "+7 913 552-08-14",
+    0,
+    "PHONE"
+   ],
+   [
+    "Ершова Н. В.",
+    0,
+    "PERSON"
+   ],
+   [
+    "k.ershov@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Азамат",
+    0,
+    "PERSON"
+   ],
+   [
+    "27.11.2026",
+    0,
+    "DATE"
+   ],
+   [
+    "630099, г. Новосибирск, ул. Советская, д. 37, кв. 9",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "8 962 117-40-33",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "№ 48211-0937",
+    0
+   ],
+   [
+    "Polaris PVCR 3200",
+    0
+   ],
+   [
+    "21 990 ₽",
+    0
+   ],
+   [
+    "пункт выдачи",
+    0
+   ],
+   [
+    "МаркетПлюс",
+    0
+   ],
+   [
+    "ул. Кирова, 44",
+    0
+   ],
+   [
+    "4471",
+    0
+   ],
+   [
+    "Холодильник",
+    0
+   ],
+   [
+    "№ 48211-0938",
+    0
+   ],
+   [
+    "с 10:00 до 14:00",
+    0
+   ],
+   [
+    "курьер",
+    0
+   ]
+  ]
+ }
+]

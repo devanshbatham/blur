@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="preload" href="model.bin" as="fetch" crossorigin>
+<link rel="preload" href="info.json" as="fetch" crossorigin>
+<link rel="modulepreload" href="worker.js">
+<link rel="modulepreload" href="engine.js">
+<title>blur</title>
+<style>
+:root{
+  --bg:#ffffff;--bg2:#fafafa;--fg:#171717;--muted:#737373;--faint:#a3a3a3;--line:#ebebeb;--line2:#e0e0e0;--hover:#f5f5f5;
+  --chip:#f2f2f2;--chipfg:#404040;--accent:#171717;--accentfg:#ffffff;--ring:rgba(0,0,0,.08);
+  --sans:"Geist","Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SF Mono",SFMono-Regular,"JetBrains Mono",Menlo,Consolas,monospace;
+  --h:220;
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0a0a0a;--bg2:#0f0f0f;--fg:#ededed;--muted:#a1a1a1;--faint:#6b6b6b;--line:#1f1f1f;--line2:#2a2a2a;--hover:#161616;
+  --chip:#1c1c1c;--chipfg:#d4d4d4;--accent:#ededed;--accentfg:#0a0a0a;--ring:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 var(--sans);-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto;text-rendering:optimizeLegibility;font-kerning:normal;display:flex;flex-direction:column}
+button{font:inherit;color:inherit}
+header{display:flex;align-items:center;gap:10px;height:56px;padding:0 20px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:-.01em}
+.brand i{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 210deg,var(--fg),var(--faint),var(--fg));display:block}
+.sp{flex:1}
+.badge{font:12px/1 var(--mono);color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 10px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.badge.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#22c55e;margin-right:7px;vertical-align:1px}
+.badge.wait::before{background:var(--faint)}
+.icon{display:inline-grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:8px;background:var(--bg);cursor:pointer;color:var(--muted);transition:background .15s,color .15s,border-color .15s}
+.icon:hover{background:var(--hover);color:var(--fg);border-color:var(--line2)}
+.icon:focus-visible,.seg button:focus-visible,.btn:focus-visible{outline:none;box-shadow:0 0 0 3px var(--ring)}
+.icon svg{width:16px;height:16px}
+main{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0}
+.pane{position:relative;display:flex;flex-direction:column;min-height:0}
+.pane+.pane{border-left:1px solid var(--line);background:var(--bg2)}
+.bar{display:flex;align-items:center;gap:8px;height:48px;padding:0 16px 0 20px}
+.bar .t{font-size:14px;color:var(--muted)}
+textarea,.out{flex:1;min-height:0;margin:0;padding:4px 20px 28px;border:0;background:transparent;color:var(--fg);font:16px/1.8 var(--sans);overflow:auto;white-space:pre-wrap;word-wrap:break-word}
+textarea{resize:none;outline:none}
+textarea::placeholder{color:var(--faint)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:2px;background:var(--bg)}
+.seg button{border:0;background:transparent;padding:3px 10px;border-radius:6px;font-size:12px;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--hover);color:var(--fg);box-shadow:0 0 0 1px var(--line2)}
+.btn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--accentfg);font-size:13px;font-weight:500;cursor:pointer;transition:opacity .15s}
+.btn:hover{opacity:.88}
+.btn svg{width:14px;height:14px}
+.chip{display:inline-flex;align-items:center;gap:6px;vertical-align:-3px;padding:3px 8px 3px 6px;margin:1px 0;border-radius:4px;
+  font:600 14px/1.25 var(--mono);white-space:nowrap;cursor:default;
+  color:hsl(var(--h) var(--cs) var(--cl));background:hsl(var(--h) var(--bs) var(--bl));border:1px solid hsl(var(--h) var(--es) var(--el));
+  transition:background-color .12s,border-color .12s}
+.chip:hover{border-color:hsl(var(--h) var(--es) calc(var(--el) - 14%))}
+.chip svg{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:root{--cs:70%;--cl:34%;--bs:90%;--bl:95%;--es:70%;--el:82%}
+:root[data-theme="dark"]{--cs:85%;--cl:74%;--bs:45%;--bl:14%;--es:50%;--el:28%}
+.hl{border-radius:4px;padding:0 2px;background:hsl(var(--h) 85% 55% / .14);box-shadow:inset 0 -1.5px 0 hsl(var(--h) 70% 50% / .7);cursor:default}
+[data-l="private_person"]{--h:258}[data-l="private_address"]{--h:145}[data-l="private_email"]{--h:205}[data-l="private_phone"]{--h:24}
+[data-l="private_date"]{--h:42}[data-l="private_url"]{--h:188}[data-l="account_number"]{--h:330}[data-l="personal_id"]{--h:0}
+[data-l="secret"]{--h:292}[data-l="online_identifier"]{--h:170}
+#tip{position:fixed;z-index:10;max-width:360px;padding:6px 10px;border-radius:6px;background:var(--fg);color:var(--bg);font:500 14px/1.45 var(--sans);pointer-events:none;opacity:0;transition:opacity .12s;word-break:break-word}
+#tip.on{opacity:1}
+@media (max-width:760px){
+  main{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+  .pane+.pane{border-left:0;border-top:1px solid var(--line)}
+  header{padding:0 16px}.bar{padding:0 12px 0 16px}textarea,.out{padding:4px 16px 24px}
+  .badge.hide-sm{display:none}
+}
+</style>
+<script>try{const t=localStorage.getItem("pii-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header>
+  <div class="brand"><i></i>blur</div>
+  <span class="sp"></span>
+  <span class="badge hide-sm" id="size">–</span>
+  <span class="badge live wait" id="ms">loading</span>
+  <button class="icon" id="prev" aria-label="Previous example" title="Previous example (←)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+  <button class="icon" id="rand" aria-label="Random example" title="Random example (R)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/></svg></button>
+  <button class="icon" id="next" aria-label="Next example" title="Next example (→)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+  <button class="icon" id="theme" aria-label="Switch theme" title="Switch theme (T)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+</header>
+<main>
+  <section class="pane">
+    <div class="bar"><span class="t">Input</span><span class="sp"></span>
+      <button class="icon" id="clear" aria-label="Clear" title="Clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <textarea id="src" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Text to mask" placeholder="Paste text"></textarea>
+  </section>
+  <section class="pane">
+    <div class="bar"><span class="t">Output</span><span class="sp"></span>
+      <div class="seg" role="group" aria-label="View">
+        <button id="vMasked" aria-pressed="true">Masked</button><button id="vFound" aria-pressed="false">Highlight</button>
+      </div>
+      <button class="btn" id="copy" title="Copy masked text (C)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span id="copyTxt">Copy</span></button>
+    </div>
+    <div class="out" id="out" aria-live="polite"></div>
+  </section>
+</main>
+<div id="tip" role="tooltip"></div>
+<script type="module">
+import { loadModel } from "./engine.js";
+import * as PP from "./postprocess.js";
+
+const $ = id => document.getElementById(id);
+const KEEP = PP.KEEP_LABELS || new Set();
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmtBytes = b => b >= 1e6 ? (b / 1e6).toFixed(2) + " MB" : Math.round(b / 1000) + " KB";
+const fmtMs = ms => ms < 10 ? ms.toFixed(1) + " ms" : ms < 1000 ? Math.round(ms) + " ms" : (ms / 1000).toFixed(2) + " s";
+
+let model = null, modelStamp = null, modelBuf = null, stamp = null, view = "masked";
+let cur = { text: "", masked: [], maskedText: "" };
+
+// ---------- masking: the shipped pipeline (detect once, then the numbered placeholders)
+async function ensureModel() {
+  if (!model || modelStamp !== stamp) { model = await loadModel(modelBuf.slice(0)); modelStamp = stamp; }
+  return model;
+}
+function analyse(text, found) {
+  const all = found || PP.detect(model, text);
+  const health = !!(PP.OPTIONS && PP.OPTIONS.health);
+  const m = PP.numberedMask(text, all.filter(s => !KEEP.has(s.label) && (health || s.label !== "HEALTH")));
+  return { text, masked: m.spans.slice().sort((a, b) => a.start - b.start), maskedText: m.text };
+}
+const labelKey = s => (s.tag10 || "[personal_id]").slice(1, -1);
+// one icon per label (24x24 line icons)
+const ICON = {
+  private_person: '<circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>',
+  private_address: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+  private_email: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+  private_phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>',
+  private_date: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+  private_url: '<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/>',
+  account_number: '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/>',
+  personal_id: '<rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16a3 3 0 0 1 6 0M14 9h5M14 13h4"/>',
+  secret: '<circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/>',
+  online_identifier: '<circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/>',
+};
+const icon = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k] || ICON.personal_id}</svg>`;
+// text with an empty anchor at every line start, so the two panes can be lined up line by line when scrolled
+function anchored(t, a, b) {
+  let html = "", p = a;
+  for (let n = t.indexOf("\n", a); n >= 0 && n < b; n = t.indexOf("\n", n + 1)) {
+    html += esc(t.slice(p, n + 1)) + `<i class="a" data-o="${n + 1}"></i>`; p = n + 1;
+  }
+  return html + esc(t.slice(p, b));
+}
+function render() {
+  const t = cur.text;
+  let html = "", p = 0;
+  for (const s of cur.masked) {
+    if (s.start < p) continue;
+    html += anchored(t, p, s.start);
+    const orig = t.slice(s.start, s.end), key = labelKey(s), ph = s.shown || s.tag10;
+    const attrs = `data-l="${key}" data-mask="${esc(ph)}" data-orig="${esc(orig)}"`;
+    html += view === "masked" ? `<span class="chip" ${attrs}>${icon(key)}${esc(ph.slice(1, -1))}</span>` : `<span class="hl" ${attrs}>${esc(orig)}</span>`;
+    p = s.end;
+  }
+  $("out").innerHTML = html + anchored(t, p, t.length);
+  anchorsDirty = true;
+  hideTip();
+}
+
+// ---------- live masking in Web Workers; long texts are cut at paragraph breaks and run in parallel
+const LIVE_MAX = Math.max(1, Math.min(8, (navigator.hardwareConcurrency || 4) - 1));
+// Pieces are cut only at blank lines and are at least MINP characters, which leaves the findings unchanged
+// (the context rules look a few lines around a value). Results are cached per piece, so an edit re-runs only
+// the paragraph group it touches and pasting a known text is instant.
+const MINP = 2000, MAXP = 12000, CACHE_MAX = 400;
+const cache = new Map();
+function cached(key) { const v = cache.get(key); if (v) { cache.delete(key); cache.set(key, v); } return v; }
+function remember(key, spans) { cache.set(key, spans); if (cache.size > CACHE_MAX) cache.delete(cache.keys().next().value); }
+let live = [], liveStamp = null, liveBroken = false, liveStarting = null, runSeq = 0, queue = [];
+function startLive() {
+  if (liveBroken || typeof Worker === "undefined") return Promise.resolve(false);
+  if (live.length && liveStamp === stamp) return Promise.resolve(true);
+  if (liveStarting) return liveStarting;
+  live.forEach(x => x.w.terminate()); live = []; queue = [];
+  const mine = stamp;
+  let pending = LIVE_MAX, first = true;
+  // resolves as soon as one worker is ready; the others join the pool as they finish loading
+  liveStarting = new Promise(resolve => {
+    const gone = () => { if (--pending === 0 && first) { liveBroken = true; liveStarting = null; console.warn("workers unavailable, masking on the main thread"); resolve(false); } };
+    for (let k = 0; k < LIVE_MAX; k++) {
+      let w;
+      try { w = new Worker(new URL("worker.js", document.baseURI), { type: "module" }); } catch (e) { gone(); continue; }
+      const slot = { w, job: null }, to = setTimeout(() => { w.terminate(); gone(); }, 20000);
+      w.onerror = e => {
+        clearTimeout(to); live = live.filter(x => x !== slot); w.terminate();
+        if (slot.job) { slot.job.fail(new Error("worker failed")); slot.job = null; }
+        gone();
+      };
+      w.onmessage = e => {
+        if (e.data.type === "ready") {
+          clearTimeout(to);
+          if (stamp !== mine) { w.terminate(); return; }
+          live.push(slot); liveStamp = mine;
+          if (first) { first = false; liveStarting = null; resolve(true); }
+          pump(); return;
+        }
+        if (e.data.type !== "spans") return;
+        const job = slot.job; slot.job = null;
+        if (job) e.data.error ? job.fail(new Error(e.data.error)) : job.done(e.data.spans);
+        pump();
+      };
+      w.postMessage({ type: "load", buf: modelBuf.slice(0) });
+    }
+  });
+  return liveStarting;
+}
+function pump() {
+  for (const slot of live) {
+    if (slot.job) continue;
+    const job = queue.shift();
+    if (!job) return;
+    slot.job = job;
+    slot.w.postMessage({ type: "spans", id: job.id, run: job.run, text: job.text });
+  }
+}
+function pieces(text) {
+  const n = text.length;
+  if (n <= MINP * 2) return [[0, n]];
+  const out = [];
+  let a = 0;
+  while (a < n) {
+    if (n - a <= MINP * 1.5) { out.push([a, n]); break; }
+    const c = text.indexOf("\n\n", a + MINP);
+    let b;
+    if (c >= 0 && c + 2 <= a + MAXP) b = c + 2;
+    else {
+      b = Math.min(n, a + MAXP);
+      if (b < n) {
+        let cut = text.lastIndexOf("\n", b);
+        if (cut <= a + MAXP / 2) cut = text.lastIndexOf(" ", b);
+        if (cut > a) b = cut + 1;
+      }
+    }
+    out.push([a, b]); a = b;
+  }
+  return out;
+}
+async function analyseLive(text, run) {
+  if (!(await startLive())) { await ensureModel(); return analyse(text); }
+  queue = queue.filter(j => { if (j.run !== run) { j.fail(new Error("superseded")); return false; } return true; });
+  const parts = pieces(text), key = stamp + "\u0000";
+  const results = await Promise.all(parts.map(([a, b], id) => {
+    const piece = text.slice(a, b), hit = cached(key + piece);
+    if (hit) return hit;
+    return new Promise((done, fail) => { queue.push({ id, run, text: piece, done: spans => { remember(key + piece, spans); done(spans); }, fail }); pump(); });
+  }));
+  const found = [];
+  results.forEach((spans, k) => { const off = parts[k][0]; for (const s of spans) found.push({ ...s, start: s.start + off, end: s.end + off }); });
+  return analyse(text, found);
+}
+let timer = 0, lastMs = 0;
+async function runNow() {
+  clearTimeout(timer);
+  const text = $("src").value;
+  if (!modelBuf) return;
+  if (!text) { cur = { text: "", masked: [], maskedText: "" }; render(); return; }
+  const t0 = performance.now(), run = ++runSeq;
+  let res;
+  try { res = await analyseLive(text, run); }
+  catch (e) {
+    if (run !== runSeq || e.message === "superseded") return;
+    try { await ensureModel(); res = analyse(text); } catch (e2) { console.error(e2); return; }
+  }
+  if (run !== runSeq) return;
+  cur = res; lastMs = performance.now() - t0;
+  $("ms").textContent = fmtMs(lastMs); $("ms").classList.remove("wait");
+  render();
+}
+const schedule = () => { clearTimeout(timer); timer = setTimeout(runNow, lastMs < 30 ? 0 : Math.min(300, lastMs * 0.6)); };
+
+// ---------- model (reloaded when a newer build is published)
+let refreshing = false, isStatic = false;
+async function refreshModel(first) {
+  if (refreshing) return;
+  refreshing = true;
+  try {
+    const bufP = first ? fetch("model.bin").then(r => r.arrayBuffer()) : null;
+    const i = await (await fetch("info.json")).json();
+    isStatic = !!i.static;
+    if (i.stamp !== stamp && i.bytes) {
+      const buf = await (bufP || fetch("model.bin?" + i.stamp).then(r => r.arrayBuffer()));
+      modelBuf = buf; stamp = i.stamp;
+      $("size").textContent = fmtBytes(i.bytes);
+      runNow();
+    }
+  } catch (e) { console.warn(e); }
+  finally { refreshing = false; }
+}
+
+// ---------- view, tooltip, copy
+function setView(v) {
+  view = v;
+  $("vMasked").setAttribute("aria-pressed", String(v === "masked"));
+  $("vFound").setAttribute("aria-pressed", String(v === "found"));
+  render();
+}
+$("vMasked").onclick = () => setView("masked");
+$("vFound").onclick = () => setView("found");
+const tip = $("tip");
+let tipFor = null;
+function showTip(el) {
+  const body = view === "masked" ? el.dataset.orig : el.dataset.mask;
+  tip.textContent = body.length > 240 ? body.slice(0, 240) + "…" : body;
+  tipFor = el;
+  const r = el.getClientRects()[0] || el.getBoundingClientRect();
+  tip.style.left = "0px"; tip.style.top = "0px";
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + "px";
+  tip.style.top = (r.top - h - 8 < 8 ? r.bottom + 8 : r.top - h - 8) + "px";
+  tip.classList.add("on");
+}
+function hideTip() { tip.classList.remove("on"); tipFor = null; }
+const tipTarget = e => e.target.closest ? e.target.closest(".chip,.hl") : null;
+$("out").addEventListener("mouseover", e => { const el = tipTarget(e); el ? showTip(el) : hideTip(); });
+$("out").addEventListener("mouseleave", hideTip);
+$("out").addEventListener("click", e => { const el = tipTarget(e); el && tipFor !== el ? showTip(el) : hideTip(); });
+$("out").addEventListener("scroll", hideTip, { passive: true });
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text).catch(() => legacyCopy(text));
+  return legacyCopy(text);
+}
+function legacyCopy(text) {
+  const ta = document.createElement("textarea");
+  ta.value = text; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+  document.body.appendChild(ta); ta.select();
+  let ok = false;
+  try { ok = document.execCommand("copy"); } catch (e) { /* reported below */ }
+  ta.remove();
+  return ok ? Promise.resolve() : Promise.reject(new Error("copy failed"));
+}
+let copyTimer = 0;
+async function doCopy() {
+  if ($("src").value !== cur.text) await runNow();
+  let msg = "Copied";
+  if (!cur.text) msg = "Empty";
+  else { try { await copyText(cur.maskedText); } catch (e) { msg = "Failed"; } }
+  $("copyTxt").textContent = msg;
+  clearTimeout(copyTimer);
+  copyTimer = setTimeout(() => $("copyTxt").textContent = "Copy", 1400);
+}
+$("copy").onclick = doCopy;
+// a selection copied out of the output pane is copied masked, whatever the view shows
+function selectionMasked() {
+  const sel = getSelection();
+  if (!sel.rangeCount || sel.isCollapsed) return null;
+  const range = sel.getRangeAt(0), anc = range.commonAncestorContainer, el = anc.nodeType === 1 ? anc : anc.parentElement;
+  const inside = el && el.closest("[data-mask]");
+  if (inside && $("out").contains(inside)) return inside.dataset.mask;
+  const div = document.createElement("div");
+  div.appendChild(range.cloneContents());
+  div.querySelectorAll("[data-mask]").forEach(m => { m.textContent = m.dataset.mask; });
+  return div.textContent;
+}
+for (const type of ["copy", "cut"]) $("out").addEventListener(type, e => {
+  const text = selectionMasked();
+  if (text === null) return;
+  e.clipboardData.setData("text/plain", text); e.preventDefault();
+});
+
+// ---------- examples
+let EX = [], pos = -1, exReady = null;
+const loadExamples = () => exReady || (exReady = fetch("examples.json").then(r => r.json()).then(x => { EX = x; }).catch(e => { exReady = null; throw e; }));
+function show(p) {
+  if (!EX.length) return;
+  pos = ((p % EX.length) + EX.length) % EX.length;
+  $("src").value = EX[pos].text; $("src").scrollTop = 0; $("out").scrollTop = 0;
+  runNow();
+}
+const step = async d => { await loadExamples(); show(pos < 0 ? (d > 0 ? 0 : -1) : pos + d); };
+const random = async () => { await loadExamples(); show(Math.floor(Math.random() * EX.length)); };
+$("next").onclick = () => step(1);
+$("prev").onclick = () => step(-1);
+$("rand").onclick = random;
+
+// ---------- editor, panes scroll together
+$("src").addEventListener("input", schedule);
+$("clear").onclick = () => { $("src").value = ""; pos = -1; runNow(); $("src").focus(); };
+// The panes scroll together line by line: a hidden copy of the input (same width and font as the textarea) gives
+// the height of every input line start, the anchors in the output give the same line starts there, and a scroll
+// position is mapped between the two by interpolating between neighbouring anchors. Chips wrap differently from
+// the text they replace, so a plain percentage drifts apart on long documents.
+let syncing = false, anchorsDirty = true, srcY = [0], outY = [0];
+const mirror = document.createElement("div");
+mirror.setAttribute("aria-hidden", "true");
+mirror.style.cssText = "position:absolute;left:-99999px;top:0;visibility:hidden;box-sizing:border-box;overflow:hidden";
+document.body.appendChild(mirror);
+function buildAnchors() {
+  const src = $("src"), out = $("out"), cs = getComputedStyle(src);
+  for (const k of ["font", "padding", "whiteSpace", "wordWrap", "overflowWrap", "letterSpacing", "tabSize"]) mirror.style[k] = cs[k];
+  mirror.style.width = src.clientWidth + "px";
+  mirror.innerHTML = anchored(cur.text, 0, cur.text.length) + " ";
+  const inSrc = new Map();
+  const mtop = mirror.getBoundingClientRect().top;
+  for (const el of mirror.getElementsByClassName("a")) inSrc.set(+el.dataset.o, el.getBoundingClientRect().top - mtop);
+  srcY = [0]; outY = [0];
+  const top = out.getBoundingClientRect().top - out.scrollTop;
+  for (const el of out.getElementsByClassName("a")) {
+    const y = inSrc.get(+el.dataset.o);
+    if (y === undefined) continue;
+    const oy = el.getBoundingClientRect().top - top;
+    if (y >= srcY[srcY.length - 1] && oy >= outY[outY.length - 1]) { srcY.push(y); outY.push(oy); }
+  }
+  srcY.push(Math.max(src.scrollHeight, srcY[srcY.length - 1] + 1)); outY.push(Math.max(out.scrollHeight, outY[outY.length - 1] + 1));
+  mirror.textContent = "";
+  anchorsDirty = false;
+}
+function mapY(y, A, B) {
+  let lo = 0, hi = A.length - 1;
+  while (lo < hi - 1) { const m = (lo + hi) >> 1; if (A[m] <= y) lo = m; else hi = m; }
+  const span = A[hi] - A[lo];
+  return B[lo] + (span > 0 ? (y - A[lo]) / span : 0) * (B[hi] - B[lo]);
+}
+function sync(a, b) {
+  a.addEventListener("scroll", () => {
+    if (syncing) { syncing = false; return; }
+    if (b.scrollHeight <= b.clientHeight) return;
+    if (anchorsDirty) buildAnchors();
+    const [A, B] = a.id === "src" ? [srcY, outY] : [outY, srcY];
+    const y = Math.round(Math.max(0, Math.min(b.scrollHeight - b.clientHeight, mapY(a.scrollTop, A, B))));
+    if (Math.abs(b.scrollTop - y) > 1) { syncing = true; b.scrollTop = y; }
+  }, { passive: true });
+}
+addEventListener("resize", () => { anchorsDirty = true; });
+sync($("src"), $("out")); sync($("out"), $("src"));
+
+// ---------- theme, keyboard
+const effTheme = () => document.documentElement.dataset.theme || "light";   // light by default; the toggle switches
+function toggleTheme() {
+  const t = effTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem("pii-theme", t); } catch (e) { /* private mode */ }
+}
+$("theme").onclick = toggleTheme;
+document.addEventListener("keydown", e => {
+  const el = e.target, typing = el.tagName === "TEXTAREA" || el.tagName === "INPUT";
+  if (e.key === "Escape") { if (typing) el.blur(); hideTip(); return; }
+  if (typing || e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  const act = { ArrowRight: () => step(1), ArrowLeft: () => step(-1), r: random, e: () => $("src").focus(),
+    h: () => setView(view === "masked" ? "found" : "masked"), c: doCopy, t: toggleTheme }[k];
+  if (!act || (k === "c" && !getSelection().isCollapsed)) return;
+  e.preventDefault(); act();
+});
+
+// ---------- start
+$("src").value = `Hi team,
+
+Please update the record for Priya Raman (born 14 March 1989). She moved to 221 Harbour View Road, Flat 4B, Bristol BS1 5TR last week.
+Reach her on +44 7700 900123 or priya.raman@example.org.
+
+Payroll: IBAN GB29 NWBK 6016 1331 9268 19, card 4111 1111 1111 1111.
+Passport number K8829104. Staging key: sk_live_4eC39HqLyjWDarjtT1zdp7dcQ9aX2b
+
+username: priya_r89
+password: Tr0ub4dor&3x!
+Last login from 203.0.113.42.`;
+await refreshModel(true);
+if (!isStatic) setInterval(refreshModel, 10000);   // the live dev server rebuilds the model; a static site never changes
+loadExamples().catch(e => console.warn(e));
+</script>
+</body>
+</html>

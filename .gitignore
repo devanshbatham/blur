@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.pytest_cache/
+.DS_Store
+
+# raw datasets and build leftovers
+/data/
+*.jsonl
+*.parquet
+*.npz
+*.pkl
+web/model.bin
+
+# written by the test runners
+tests/guide_last.json
+
+# local files that must never be committed
+.env
+.env.*
+*.pem
+*.key
+.release-scan.txt
+site/
+dist/

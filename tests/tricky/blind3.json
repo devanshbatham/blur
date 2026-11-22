@@ -1,0 +1,5872 @@
+[
+ {
+  "id": "b3-01",
+  "domain": "support_chat",
+  "text": "[10:02] agent_riya: Thanks for contacting Lumora Broadband. May I have your name and account email?\n[10:03] guest: hi its kavya here, kavya raghunathan. email is kavya.r91@example.com\n[10:03] guest: router is the Lumora Hub 6, model LH6-AX3000, blinking red since Sunday\n[10:04] agent_riya: Thanks Kavya. I see customer ID CUST-4418207 and ticket TKT-90211. Is 98450 11276 still the best number?\n[10:05] guest: no thats my husband's, Anirudh. mine is +91 99020 55318. pls dont call the landline\n[10:06] agent_riya: Noted. For verification, please share the 6-digit code we just sent.\n[10:06] guest: 482 913\n[10:07] agent_riya: Verified. The Hub's MAC is 3C:5A:B4:9E:21:7F and it last synced from 49.207.58.113 at 02:14. Firmware 2.8.1 fixes error E-1042.\n[10:08] guest: ok. btw my wifi password is still the one I set last year, mango#Tree77, should I change it?\n[10:09] agent_riya: Yes, please change it. If the light stays red call our helpline 1800-555-0190 or write to care@lumora.example.com. A technician, Mr. Felix D'Souza, can visit Thursday between 2 and 4 pm; visit fee is ₹299.",
+  "mask": [
+   [
+    "agent_riya",
+    0,
+    "USERNAME"
+   ],
+   [
+    "kavya raghunathan",
+    0,
+    "PERSON"
+   ],
+   [
+    "kavya",
+    0,
+    "PERSON"
+   ],
+   [
+    "Kavya",
+    0,
+    "PERSON"
+   ],
+   [
+    "kavya.r91@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "CUST-4418207",
+    0,
+    "ID"
+   ],
+   [
+    "98450 11276",
+    0,
+    "PHONE"
+   ],
+   [
+    "Anirudh",
+    0,
+    "PERSON"
+   ],
+   [
+    "+91 99020 55318",
+    0,
+    "PHONE"
+   ],
+   [
+    "482 913",
+    0,
+    "SECRET"
+   ],
+   [
+    "3C:5A:B4:9E:21:7F",
+    0,
+    "ID"
+   ],
+   [
+    "49.207.58.113",
+    0,
+    "IP"
+   ],
+   [
+    "mango#Tree77",
+    0,
+    "SECRET"
+   ],
+   [
+    "Felix D'Souza",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "Lumora Broadband",
+    0
+   ],
+   [
+    "May I have",
+    0
+   ],
+   [
+    "Lumora Hub 6",
+    0
+   ],
+   [
+    "LH6-AX3000",
+    0
+   ],
+   [
+    "Sunday",
+    0
+   ],
+   [
+    "TKT-90211",
+    0
+   ],
+   [
+    "02:14",
+    0
+   ],
+   [
+    "2.8.1",
+    0
+   ],
+   [
+    "E-1042",
+    0
+   ],
+   [
+    "1800-555-0190",
+    0
+   ],
+   [
+    "care@lumora.example.com",
+    0
+   ],
+   [
+    "Thursday",
+    0
+   ],
+   [
+    "₹299",
+    0
+   ],
+   [
+    "landline",
+    0
+   ],
+   [
+    "6-digit code",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-02",
+  "domain": "support_ticket",
+  "text": "Ticket #SR-774120 | Priority: P2 | Product: Tessel Thermostat T3 (firmware 5.0.12)\nReported by: Oluwaseun Adebayo <seun.adebayo@example.org>\nOpened: 03/09/2026 08:41\n\nCustomer says the thermostat dropped off Wi-Fi after the last update. He goes by Seun on calls. Device serial TS3-00918-KQ, registered to 27 Alder Crescent, Flat 4, Leeds LS6 2QT. Mobile 07700 900 412; do not use the office line 0113 496 0000, that is his employer's switchboard (Brightwell Logistics).\n\nNotes from Mark: asked Adebayo to factory reset. He read me the pairing PIN off the sticker, 7731-0926, and his app login is seun_ade. Security answer on file (first pet) is Biscuit-the-2nd. Set to pending until the replacement ships; RMA-55102, courier tracking JD0002 1849 7733.\n\nFollow-up due 12 Sept 2026. If he calls back, his wife Temitope is authorised on the account. Refund ceiling £85.00. Do not reply from personal mail; use help@tessel.example.com.",
+  "mask": [
+   [
+    "Oluwaseun Adebayo",
+    0,
+    "PERSON"
+   ],
+   [
+    "seun.adebayo@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "03/09/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Seun",
+    0,
+    "PERSON"
+   ],
+   [
+    "TS3-00918-KQ",
+    0,
+    "ID"
+   ],
+   [
+    "27 Alder Crescent, Flat 4, Leeds LS6 2QT",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "07700 900 412",
+    0,
+    "PHONE"
+   ],
+   [
+    "Mark",
+    0,
+    "PERSON"
+   ],
+   [
+    "Adebayo",
+    0,
+    "PERSON"
+   ],
+   [
+    "7731-0926",
+    0,
+    "SECRET"
+   ],
+   [
+    "seun_ade",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Biscuit-the-2nd",
+    0,
+    "SECRET"
+   ],
+   [
+    "12 Sept 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Temitope",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "#SR-774120",
+    0
+   ],
+   [
+    "P2",
+    0
+   ],
+   [
+    "Tessel Thermostat T3",
+    0
+   ],
+   [
+    "5.0.12",
+    0
+   ],
+   [
+    "08:41",
+    0
+   ],
+   [
+    "Wi-Fi",
+    0
+   ],
+   [
+    "0113 496 0000",
+    0
+   ],
+   [
+    "Brightwell Logistics",
+    0
+   ],
+   [
+    "RMA-55102",
+    0
+   ],
+   [
+    "JD0002 1849 7733",
+    0
+   ],
+   [
+    "£85.00",
+    0
+   ],
+   [
+    "help@tessel.example.com",
+    0
+   ],
+   [
+    "factory reset",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-03",
+  "domain": "hr_email",
+  "text": "Subject: Offer and onboarding – Senior Data Analyst (Req R-2291)\n\nDear Ms. Hope Lindqvist,\n\nWe hope you had a pleasant weekend. On behalf of Corvane Analytics I am pleased to confirm your offer, grade L5, with a start date of 4 January 2027. Your employee number will be E-108834 and your manager is Tomasz, whom you met in the panel (Tomasz Wieczorek, Director of Insights).\n\nBefore 18 December 2026 please upload: passport (you mentioned no. PK4471902), proof of address for 9 Juniper Lane, Reading RG1 4AB, and bank details for payroll – sort code 20-45-77 is fine to quote, account 60418822. Your date of birth on file is 22.07.1991; correct us if wrong.\n\nTemporary portal login: hlindqvist / first-time password Welcome-Otter-5521 (expires in 48 hours). Questions go to people-ops@corvane.example.com or the HR desk on 0800 555 0134; my direct line is 020 7946 0321.\n\nKind regards,\nBill Ferreira\nTalent Partner, Corvane Analytics\nP.S. Grace period for relocation claims is 90 days; bill them through Concur.",
+  "mask": [
+   [
+    "Hope Lindqvist",
+    0,
+    "PERSON"
+   ],
+   [
+    "4 January 2027",
+    0,
+    "DATE"
+   ],
+   [
+    "E-108834",
+    0,
+    "ID"
+   ],
+   [
+    "Tomasz",
+    0,
+    "PERSON"
+   ],
+   [
+    "Tomasz Wieczorek",
+    0,
+    "PERSON"
+   ],
+   [
+    "18 December 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "PK4471902",
+    0,
+    "ID"
+   ],
+   [
+    "9 Juniper Lane, Reading RG1 4AB",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "60418822",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "22.07.1991",
+    0,
+    "DOB"
+   ],
+   [
+    "hlindqvist",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Welcome-Otter-5521",
+    0,
+    "SECRET"
+   ],
+   [
+    "020 7946 0321",
+    0,
+    "PHONE"
+   ],
+   [
+    "Bill Ferreira",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "R-2291",
+    0
+   ],
+   [
+    "We hope",
+    0
+   ],
+   [
+    "Corvane Analytics",
+    0
+   ],
+   [
+    "L5",
+    0
+   ],
+   [
+    "Senior Data Analyst",
+    0
+   ],
+   [
+    "Director of Insights",
+    0
+   ],
+   [
+    "20-45-77",
+    0
+   ],
+   [
+    "48 hours",
+    0
+   ],
+   [
+    "people-ops@corvane.example.com",
+    0
+   ],
+   [
+    "0800 555 0134",
+    0
+   ],
+   [
+    "Talent Partner",
+    0
+   ],
+   [
+    "Grace period",
+    0
+   ],
+   [
+    "90 days",
+    0
+   ],
+   [
+    "bill them",
+    0
+   ],
+   [
+    "Concur",
+    0
+   ],
+   [
+    "weekend",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-04",
+  "domain": "recruiting_email",
+  "text": "From: Nadia Rahmani <nadia@talentforge.example.net>\nTo: hiring-panel@quillstack.example.com\nDate: Tue, 10 Nov 2026 16:22\n\nPanel, shortlist for the Staff SRE role (JOB-3381), three candidates:\n\n1) Dong-hyun Baek – 9 yrs, currently at a fintech in Seoul. Reach him on +82 10-5550-2291 or baek.dh@example.com. GitHub: dhbaek-ops. Notice period 60 days.\n2) Jasmine Okafor – ex-Google, strong on Kubernetes 1.30 and Terraform. jasmine.okafor.sre@example.org, cell (415) 555-0178. She can only interview after 11/23/2026. LinkedIn handle /in/jas-okafor.\n3) R. Venkataraghavan (prefers \"Venkat\") – based in Austin, needs H-1B transfer; passport Z8842190 on the form. venkat_r@example.net.\n\nComp expectations: $210k–$245k base. Baek asked that we not contact his current employer. Jasmine's referee is Dr. Ines Carvalho at MIT, 617-555-0143.\n\nScorecards live in Greenhouse; the Zoom passcode for Friday's debrief is 9T4-kelp-62.\n\nNadia",
+  "mask": [
+   [
+    "Nadia Rahmani",
+    0,
+    "PERSON"
+   ],
+   [
+    "nadia@talentforge.example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "10 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Dong-hyun Baek",
+    0,
+    "PERSON"
+   ],
+   [
+    "+82 10-5550-2291",
+    0,
+    "PHONE"
+   ],
+   [
+    "baek.dh@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "dhbaek-ops",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Jasmine Okafor",
+    0,
+    "PERSON"
+   ],
+   [
+    "jasmine.okafor.sre@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "(415) 555-0178",
+    0,
+    "PHONE"
+   ],
+   [
+    "11/23/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "jas-okafor",
+    0,
+    "USERNAME"
+   ],
+   [
+    "R. Venkataraghavan",
+    0,
+    "PERSON"
+   ],
+   [
+    "Venkat",
+    0,
+    "PERSON"
+   ],
+   [
+    "Z8842190",
+    0,
+    "ID"
+   ],
+   [
+    "venkat_r@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Baek",
+    0,
+    "PERSON"
+   ],
+   [
+    "Jasmine",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ines Carvalho",
+    0,
+    "PERSON"
+   ],
+   [
+    "617-555-0143",
+    0,
+    "PHONE"
+   ],
+   [
+    "9T4-kelp-62",
+    0,
+    "SECRET"
+   ],
+   [
+    "Nadia",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "hiring-panel@quillstack.example.com",
+    0
+   ],
+   [
+    "Tue",
+    0
+   ],
+   [
+    "16:22",
+    0
+   ],
+   [
+    "Staff SRE",
+    0
+   ],
+   [
+    "JOB-3381",
+    0
+   ],
+   [
+    "Seoul",
+    0
+   ],
+   [
+    "60 days",
+    0
+   ],
+   [
+    "Google",
+    0
+   ],
+   [
+    "Kubernetes 1.30",
+    0
+   ],
+   [
+    "Terraform",
+    0
+   ],
+   [
+    "Austin",
+    0
+   ],
+   [
+    "H-1B",
+    0
+   ],
+   [
+    "$210k–$245k",
+    0
+   ],
+   [
+    "MIT",
+    0
+   ],
+   [
+    "Greenhouse",
+    0
+   ],
+   [
+    "Zoom",
+    0
+   ],
+   [
+    "Friday",
+    0
+   ],
+   [
+    "9 yrs",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-05",
+  "domain": "medical_note",
+  "text": "OUTPATIENT NOTE – Cardiology, St. Brendan's Hospital\nPatient: MWANGI, Esther Njeri    MRN: 00482719    DOB: 14-Feb-1968\nSeen: 09 Nov 2026, 11:30, Clinic 4B    Consultant: Dr P. Halvorsen\n\nEsther attends with her daughter Wanjiru for review of atrial fibrillation. She remains on apixaban 5 mg twice daily and bisoprolol 2.5 mg. BP 138/84, HR 72 irregular, weight 81 kg. ECG shows AF, rate controlled. Echo from 2024 showed EF 55%. No bleeding. HbA1c 6.9%.\n\nPlan: continue anticoagulation; refer for 24-hour Holter; review in 3 months. Mrs Mwangi asked that letters go to her new address, 16 Baobab Close, Westlands, Nairobi 00800, and that results be texted to 0722 555 019 rather than the old landline. Next of kin: Wanjiru Mwangi, wanjiru.m@example.com. Insurance member no. NHF-7730-22815-K.\n\nGP copy to Dr. Achieng Otieno, Riverside Medical Centre (reception 020 555 0100). Dictated by Halvorsen, typed 10/11/2026.",
+  "mask": [
+   [
+    "MWANGI, Esther Njeri",
+    0,
+    "PERSON"
+   ],
+   [
+    "00482719",
+    0,
+    "ID"
+   ],
+   [
+    "14-Feb-1968",
+    0,
+    "DOB"
+   ],
+   [
+    "09 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "P. Halvorsen",
+    0,
+    "PERSON"
+   ],
+   [
+    "Esther",
+    0,
+    "PERSON"
+   ],
+   [
+    "Wanjiru",
+    0,
+    "PERSON"
+   ],
+   [
+    "Mwangi",
+    0,
+    "PERSON"
+   ],
+   [
+    "16 Baobab Close, Westlands, Nairobi 00800",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "0722 555 019",
+    0,
+    "PHONE"
+   ],
+   [
+    "Wanjiru Mwangi",
+    0,
+    "PERSON"
+   ],
+   [
+    "wanjiru.m@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "NHF-7730-22815-K",
+    0,
+    "ID"
+   ],
+   [
+    "Achieng Otieno",
+    0,
+    "PERSON"
+   ],
+   [
+    "Halvorsen",
+    0,
+    "PERSON"
+   ],
+   [
+    "10/11/2026",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "Cardiology",
+    0
+   ],
+   [
+    "St. Brendan's Hospital",
+    0
+   ],
+   [
+    "11:30",
+    0
+   ],
+   [
+    "Clinic 4B",
+    0
+   ],
+   [
+    "atrial fibrillation",
+    0
+   ],
+   [
+    "apixaban 5 mg",
+    0
+   ],
+   [
+    "bisoprolol 2.5 mg",
+    0
+   ],
+   [
+    "138/84",
+    0
+   ],
+   [
+    "HR 72",
+    0
+   ],
+   [
+    "81 kg",
+    0
+   ],
+   [
+    "2024",
+    0
+   ],
+   [
+    "55%",
+    0
+   ],
+   [
+    "6.9%",
+    0
+   ],
+   [
+    "24-hour Holter",
+    0
+   ],
+   [
+    "3 months",
+    0
+   ],
+   [
+    "Riverside Medical Centre",
+    0
+   ],
+   [
+    "020 555 0100",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-06",
+  "domain": "medical_appointment",
+  "text": "Reminder from Northgate Family Dental: Hi Rosa, this confirms your son Mateo's appointment with Dr. Aleksandra Nowak on Wednesday 2 December 2026 at 3:45 PM (hygiene + 2 bitewing X-rays, code D0272). Please arrive 10 minutes early.\n\nWe have Mateo Jiménez-Ortega, born 5/19/2015, patient no. P-663104, insured under Rosa Jiménez, policy holder ID 8840-221-907. If the co-pay card ending 4471 has changed, update it in the portal. Your portal username is rosaj_ortega; we never ask for your password by text.\n\nAllergies on file: amoxicillin, latex. He was prescribed fluoride varnish at the last visit.\n\nTo reschedule, reply C or call the front desk at (503) 555-0111. After hours, Dr. Nowak's emergency pager is 503-555-0186. Directions: we are in the Rose Quarter, opposite the Moda Center; park in Lot B. We will send the receipt to rosa.jimenez@example.net; emails from reminders@northgatedental.example.com are automated, please do not reply to them.",
+  "mask": [
+   [
+    "Rosa",
+    0,
+    "PERSON"
+   ],
+   [
+    "Mateo",
+    0,
+    "PERSON"
+   ],
+   [
+    "Aleksandra Nowak",
+    0,
+    "PERSON"
+   ],
+   [
+    "2 December 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Mateo Jiménez-Ortega",
+    0,
+    "PERSON"
+   ],
+   [
+    "5/19/2015",
+    0,
+    "DOB"
+   ],
+   [
+    "P-663104",
+    0,
+    "ID"
+   ],
+   [
+    "Rosa Jiménez",
+    0,
+    "PERSON"
+   ],
+   [
+    "8840-221-907",
+    0,
+    "ID"
+   ],
+   [
+    "rosaj_ortega",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Nowak",
+    0,
+    "PERSON"
+   ],
+   [
+    "503-555-0186",
+    0,
+    "PHONE"
+   ],
+   [
+    "rosa.jimenez@example.net",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Northgate Family Dental",
+    0
+   ],
+   [
+    "Wednesday",
+    0
+   ],
+   [
+    "3:45 PM",
+    0
+   ],
+   [
+    "D0272",
+    0
+   ],
+   [
+    "10 minutes",
+    0
+   ],
+   [
+    "4471",
+    0
+   ],
+   [
+    "amoxicillin",
+    0
+   ],
+   [
+    "latex",
+    0
+   ],
+   [
+    "fluoride varnish",
+    0
+   ],
+   [
+    "(503) 555-0111",
+    0
+   ],
+   [
+    "Rose Quarter",
+    0
+   ],
+   [
+    "Moda Center",
+    0
+   ],
+   [
+    "Lot B",
+    0
+   ],
+   [
+    "reminders@northgatedental.example.com",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-07",
+  "domain": "bank_sms",
+  "text": "HDFX Bank: Rs 12,499.00 debited from A/c 50100288417736 on 07-11-26 to VPA sunita.kulkarni@okhdfx (UPI Ref 631144907752). Avl bal Rs 48,210.55. Not you? Call 1800 555 0142.\n\nHDFX Bank: OTP for txn of INR 3,250.00 at BIGBASKIT is 904417. Valid 10 mins. Do not share with anyone.\n\nDear PRAKASH KULKARNI, your Credit Card 4587 2210 9934 6071 statement is ready. Total due Rs 27,860; min due Rs 1,393; pay by 25/11/2026. IFSC for NEFT payments: HDFX0001882.\n\nMsg from Prakash to Sunita (WhatsApp): sunita, paid the school fees from my account, ref above. Also sent 5k to Ajit on his GPay id 9822055147@ybl – he said his SBI account is 30291177465, use that if UPI fails. netbanking id is pkulkarni74 and I changed the login pin to 7 7 3 1 9, dont save it in notes this time. Raju mama's birthday is 3rd Dec, remind me.",
+  "mask": [
+   [
+    "50100288417736",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "07-11-26",
+    0,
+    "DATE"
+   ],
+   [
+    "sunita.kulkarni@okhdfx",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "904417",
+    0,
+    "SECRET"
+   ],
+   [
+    "PRAKASH KULKARNI",
+    0,
+    "PERSON"
+   ],
+   [
+    "4587 2210 9934 6071",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "25/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Prakash",
+    0,
+    "PERSON"
+   ],
+   [
+    "Sunita",
+    0,
+    "PERSON"
+   ],
+   [
+    "sunita",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ajit",
+    0,
+    "PERSON"
+   ],
+   [
+    "9822055147@ybl",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "30291177465",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "pkulkarni74",
+    0,
+    "USERNAME"
+   ],
+   [
+    "7 7 3 1 9",
+    0,
+    "SECRET"
+   ],
+   [
+    "Raju",
+    0,
+    "PERSON"
+   ],
+   [
+    "3rd Dec",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "HDFX Bank",
+    0
+   ],
+   [
+    "Rs 12,499.00",
+    0
+   ],
+   [
+    "631144907752",
+    0
+   ],
+   [
+    "Rs 48,210.55",
+    0
+   ],
+   [
+    "1800 555 0142",
+    0
+   ],
+   [
+    "INR 3,250.00",
+    0
+   ],
+   [
+    "BIGBASKIT",
+    0
+   ],
+   [
+    "10 mins",
+    0
+   ],
+   [
+    "Rs 27,860",
+    0
+   ],
+   [
+    "Rs 1,393",
+    0
+   ],
+   [
+    "HDFX0001882",
+    0
+   ],
+   [
+    "NEFT",
+    0
+   ],
+   [
+    "WhatsApp",
+    0
+   ],
+   [
+    "GPay",
+    0
+   ],
+   [
+    "SBI",
+    0
+   ],
+   [
+    "5k",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-08",
+  "domain": "payment_dispute",
+  "text": "Subject: Chargeback CB-2026-118834 – duplicate charge on my card\n\nHello Disputes Team,\n\nMy name is Thandiwe Mokoena and I hold a Meridian Gold card. On 28 October 2026 I was charged twice by Kestrel Outdoor (merchant ID 4471-MX-0082) for the same order, KO-558210: R 2,349.00 at 14:02 and again at 14:03. Authorisation codes 08817A and 08819C.\n\nCard number is 5274 6610 0392 8815 — and no, I will not email the CVV again; your agent Pieter already took it over the phone (it's 6 0 2, for the record of what he asked). The refund should go back to the card, or failing that to my cheque account 62 8841 0937 5 at Meridian, branch code 250655.\n\nI am reachable on 082 555 0164 during office hours or at thandi.mokoena@example.com. My ID number is 8803150284086. Postal: 41 Protea Avenue, Melville, Johannesburg 2092.\n\nYour acknowledgement mail from disputes@meridianbank.example.com promised an answer within 10 business days; that lapsed on the 13th of November.\n\nRegards,\nT. Mokoena",
+  "mask": [
+   [
+    "Thandiwe Mokoena",
+    0,
+    "PERSON"
+   ],
+   [
+    "28 October 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "5274 6610 0392 8815",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Pieter",
+    0,
+    "PERSON"
+   ],
+   [
+    "6 0 2",
+    0,
+    "SECRET"
+   ],
+   [
+    "62 8841 0937 5",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "082 555 0164",
+    0,
+    "PHONE"
+   ],
+   [
+    "thandi.mokoena@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "8803150284086",
+    0,
+    "ID"
+   ],
+   [
+    "41 Protea Avenue, Melville, Johannesburg 2092",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "13th of November",
+    0,
+    "DATE"
+   ],
+   [
+    "T. Mokoena",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "CB-2026-118834",
+    0
+   ],
+   [
+    "Disputes Team",
+    0
+   ],
+   [
+    "Meridian Gold",
+    0
+   ],
+   [
+    "Kestrel Outdoor",
+    0
+   ],
+   [
+    "4471-MX-0082",
+    0
+   ],
+   [
+    "KO-558210",
+    0
+   ],
+   [
+    "R 2,349.00",
+    0
+   ],
+   [
+    "14:02",
+    0
+   ],
+   [
+    "14:03",
+    0
+   ],
+   [
+    "08817A",
+    0
+   ],
+   [
+    "08819C",
+    0
+   ],
+   [
+    "250655",
+    0
+   ],
+   [
+    "disputes@meridianbank.example.com",
+    0
+   ],
+   [
+    "10 business days",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-09",
+  "domain": "travel_booking",
+  "text": "Your trip is confirmed — Booking reference QX7M2P\n\nLead traveller: MR CALLUM FRASER-NGUYEN\nAdditional: MS LINH FRASER-NGUYEN, MSTR THEO FRASER-NGUYEN (child, born 11 Aug 2019)\n\nFlight AZ 417, Edinburgh (EDI) → Florence (FLR), Sat 19 Dec 2026, dep 06:55, arr 10:20, seats 14A 14B 14C. Return AZ 418 on 02 Jan 2027.\n\nPassport details held: 533908172 (Callum), C4F2K8811 (Linh). Frequent flyer: Skyward Blue 00 7741 2206.\n\nHotel: Hotel Santa Chiara, Florence — 14 nights, confirmation HTL-992817, total €1,964.00 paid with Visa ending 3306. The hotel's concierge, Beatrice, will arrange the airport transfer; WhatsApp her on +39 320 555 0387.\n\nContact on booking: callum.fn@example.com, mobile +44 7700 900863. Home address for the invoice: 3/2 Thistle Wynd, Stirling FK8 1QQ.\n\nNeed help? Call us on 0800 555 0199 (24h) or manage your booking with PIN 4418 at trips.example.com.",
+  "mask": [
+   [
+    "CALLUM FRASER-NGUYEN",
+    0,
+    "PERSON"
+   ],
+   [
+    "LINH FRASER-NGUYEN",
+    0,
+    "PERSON"
+   ],
+   [
+    "THEO FRASER-NGUYEN",
+    0,
+    "PERSON"
+   ],
+   [
+    "11 Aug 2019",
+    0,
+    "DOB"
+   ],
+   [
+    "19 Dec 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "02 Jan 2027",
+    0,
+    "DATE"
+   ],
+   [
+    "533908172",
+    0,
+    "ID"
+   ],
+   [
+    "Callum",
+    0,
+    "PERSON"
+   ],
+   [
+    "C4F2K8811",
+    0,
+    "ID"
+   ],
+   [
+    "Linh",
+    0,
+    "PERSON"
+   ],
+   [
+    "00 7741 2206",
+    0,
+    "ID"
+   ],
+   [
+    "Beatrice",
+    0,
+    "PERSON"
+   ],
+   [
+    "+39 320 555 0387",
+    0,
+    "PHONE"
+   ],
+   [
+    "callum.fn@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+44 7700 900863",
+    0,
+    "PHONE"
+   ],
+   [
+    "3/2 Thistle Wynd, Stirling FK8 1QQ",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "4418",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "QX7M2P",
+    0
+   ],
+   [
+    "AZ 417",
+    0
+   ],
+   [
+    "Edinburgh",
+    0
+   ],
+   [
+    "EDI",
+    0
+   ],
+   [
+    "Florence",
+    0
+   ],
+   [
+    "FLR",
+    0
+   ],
+   [
+    "Sat",
+    0
+   ],
+   [
+    "06:55",
+    0
+   ],
+   [
+    "10:20",
+    0
+   ],
+   [
+    "14A",
+    0
+   ],
+   [
+    "AZ 418",
+    0
+   ],
+   [
+    "Skyward Blue",
+    0
+   ],
+   [
+    "Hotel Santa Chiara",
+    0
+   ],
+   [
+    "14 nights",
+    0
+   ],
+   [
+    "HTL-992817",
+    0
+   ],
+   [
+    "€1,964.00",
+    0
+   ],
+   [
+    "Visa",
+    0
+   ],
+   [
+    "3306",
+    0
+   ],
+   [
+    "0800 555 0199",
+    0
+   ],
+   [
+    "trips.example.com",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-10",
+  "domain": "travel_email",
+  "text": "Subject: Fwd: Umrah package – documents pending\n\nSalaam Yusuf bhai,\n\nForwarding what the agent at Al Noor Travels sent. They still need scans for Ammi and for you. Names must match the passports exactly:\n\n1. Fatima Zahra Siddiqui (فاطمة الزهراء صديقي) – passport N4471820, issued Lucknow, DOB 03/04/1957\n2. Mohammed Yusuf Siddiqui – passport T9920417, expires 2031\n3. myself, Ayesha – already submitted\n\nGroup departs Delhi on 14 Jan 2027 by Saudia SV 761, returns 29 Jan 2027. Hotel in Makkah is the Swissôtel, 650 m from the Haram; Madinah hotel TBC. Package cost ₹1,85,000 per person, GST extra; I paid the advance of ₹50,000 by NEFT to their current account (invoice ANT/26-27/0418).\n\nThe agent, Mr. Imtiaz, said to WhatsApp documents to 98390 55 142 and not the office number 0522-555-0170. Meningitis vaccine certificates are mandatory; Ammi's diabetes medicines need a prescription letter.\n\nAyesha\nayesha.siddiqui@example.com | 2nd floor, 118/4 Hazratganj Lane, Kanpur 208001",
+  "mask": [
+   [
+    "Yusuf",
+    0,
+    "PERSON"
+   ],
+   [
+    "Fatima Zahra Siddiqui",
+    0,
+    "PERSON"
+   ],
+   [
+    "فاطمة الزهراء صديقي",
+    0,
+    "PERSON"
+   ],
+   [
+    "N4471820",
+    0,
+    "ID"
+   ],
+   [
+    "03/04/1957",
+    0,
+    "DOB"
+   ],
+   [
+    "Mohammed Yusuf Siddiqui",
+    0,
+    "PERSON"
+   ],
+   [
+    "T9920417",
+    0,
+    "ID"
+   ],
+   [
+    "Ayesha",
+    0,
+    "PERSON"
+   ],
+   [
+    "14 Jan 2027",
+    0,
+    "DATE"
+   ],
+   [
+    "29 Jan 2027",
+    0,
+    "DATE"
+   ],
+   [
+    "Imtiaz",
+    0,
+    "PERSON"
+   ],
+   [
+    "98390 55 142",
+    0,
+    "PHONE"
+   ],
+   [
+    "ayesha.siddiqui@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2nd floor, 118/4 Hazratganj Lane, Kanpur 208001",
+    0,
+    "ADDRESS"
+   ]
+  ],
+  "keep": [
+   [
+    "Umrah",
+    0
+   ],
+   [
+    "Al Noor Travels",
+    0
+   ],
+   [
+    "Lucknow",
+    0
+   ],
+   [
+    "2031",
+    0
+   ],
+   [
+    "Delhi",
+    0
+   ],
+   [
+    "Saudia",
+    0
+   ],
+   [
+    "SV 761",
+    0
+   ],
+   [
+    "Makkah",
+    0
+   ],
+   [
+    "Swissôtel",
+    0
+   ],
+   [
+    "650 m",
+    0
+   ],
+   [
+    "Haram",
+    0
+   ],
+   [
+    "Madinah",
+    0
+   ],
+   [
+    "₹1,85,000",
+    0
+   ],
+   [
+    "₹50,000",
+    0
+   ],
+   [
+    "NEFT",
+    0
+   ],
+   [
+    "ANT/26-27/0418",
+    0
+   ],
+   [
+    "0522-555-0170",
+    0
+   ],
+   [
+    "GST",
+    0
+   ],
+   [
+    "Meningitis vaccine",
+    0
+   ],
+   [
+    "diabetes medicines",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-11",
+  "domain": "school_notice",
+  "text": "GREENFIELD PUBLIC SCHOOL — Circular No. 47/2026-27\nTo the parents of Class VII-B\n\nDear Parents,\n\nThe annual science exhibition will be held on Saturday, 28th November 2026, from 9:30 am to 1 pm in the Raman Block (named after Sir C. V. Raman). Class teacher Mrs. Shalini Bhattacharya will coordinate; project groups are below.\n\nGroup 1 – Aarav Malhotra, Zoya Fernandes, Ishaan: model of a water purifier\nGroup 2 – Meher Gill and Kabir: Arduino Uno weather station\n\nParents volunteering for the canteen stall may contact the PTA secretary, Mr. Rohan Sebastian, on 99870 55 310 or rohan.sebastian@example.org. Bus route 6 children will be dropped by 2 pm; the driver, Balwinder ji, can be reached on 98110 55 274.\n\nFee reminder: Term 2 fees of ₹18,400 are due by 05-12-2026. Pay through the parent portal (login is the admission number, e.g. Aarav's is GPS/2021/0388) or by cheque favouring Greenfield Public School. Office: 011-5550-0126, office@greenfieldschool.example.org.\n\nPrincipal\nDr. (Mrs.) Vasundhara Rao",
+  "mask": [
+   [
+    "28th November 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Shalini Bhattacharya",
+    0,
+    "PERSON"
+   ],
+   [
+    "Aarav Malhotra",
+    0,
+    "PERSON"
+   ],
+   [
+    "Zoya Fernandes",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ishaan",
+    0,
+    "PERSON"
+   ],
+   [
+    "Meher Gill",
+    0,
+    "PERSON"
+   ],
+   [
+    "Kabir",
+    0,
+    "PERSON"
+   ],
+   [
+    "Rohan Sebastian",
+    0,
+    "PERSON"
+   ],
+   [
+    "99870 55 310",
+    0,
+    "PHONE"
+   ],
+   [
+    "rohan.sebastian@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Balwinder",
+    0,
+    "PERSON"
+   ],
+   [
+    "98110 55 274",
+    0,
+    "PHONE"
+   ],
+   [
+    "05-12-2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Aarav",
+    0,
+    "PERSON"
+   ],
+   [
+    "GPS/2021/0388",
+    0,
+    "ID"
+   ],
+   [
+    "Vasundhara Rao",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "GREENFIELD PUBLIC SCHOOL",
+    0
+   ],
+   [
+    "47/2026-27",
+    0
+   ],
+   [
+    "Class VII-B",
+    0
+   ],
+   [
+    "Saturday",
+    0
+   ],
+   [
+    "9:30 am",
+    0
+   ],
+   [
+    "1 pm",
+    0
+   ],
+   [
+    "Raman Block",
+    0
+   ],
+   [
+    "Sir C. V. Raman",
+    0
+   ],
+   [
+    "Arduino Uno",
+    0
+   ],
+   [
+    "route 6",
+    0
+   ],
+   [
+    "2 pm",
+    0
+   ],
+   [
+    "Term 2",
+    0
+   ],
+   [
+    "₹18,400",
+    0
+   ],
+   [
+    "Greenfield Public School",
+    0
+   ],
+   [
+    "011-5550-0126",
+    0
+   ],
+   [
+    "office@greenfieldschool.example.org",
+    0
+   ],
+   [
+    "PTA secretary",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-12",
+  "domain": "school_email",
+  "text": "Hi Ms. Abernathy,\n\nThis is Dawn — Dawn Kowalczyk, mother of Will in your 4th period Algebra II. Will will be out Monday through Wednesday next week (11/23–11/25) for a tonsillectomy at Mercy Children's. His student ID is 20417733 if the attendance office needs it.\n\nCould you send the missed work to his school account, wkowalczyk28@students.lakeview.example.org, and cc me at dawn.k@example.com? He says the Chapter 6 test is on December 4th; may he take it the following week instead? His 504 plan already allows extended time.\n\nAlso, his lab partner Hunter mentioned that the class moved to room C-214. Will wrote the new room on a sticky note, but he wrote his own Canvas password on the same note (Tr0mbone$Solo19), so please ignore that if he shows you, and I'll make him change it.\n\nMy cell is 262.555.0149; his dad, Greg, is on 262-555-0171. The main office number we have, (262) 555-0100, always goes to voicemail.\n\nThank you,\nDawn",
+  "mask": [
+   [
+    "Abernathy",
+    0,
+    "PERSON"
+   ],
+   [
+    "Dawn",
+    0,
+    "PERSON"
+   ],
+   [
+    "Dawn Kowalczyk",
+    0,
+    "PERSON"
+   ],
+   [
+    "Will",
+    0,
+    "PERSON"
+   ],
+   [
+    "11/23–11/25",
+    0,
+    "DATE"
+   ],
+   [
+    "20417733",
+    0,
+    "ID"
+   ],
+   [
+    "wkowalczyk28@students.lakeview.example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "dawn.k@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "December 4th",
+    0,
+    "DATE"
+   ],
+   [
+    "Hunter",
+    0,
+    "PERSON"
+   ],
+   [
+    "Tr0mbone$Solo19",
+    0,
+    "SECRET"
+   ],
+   [
+    "262.555.0149",
+    0,
+    "PHONE"
+   ],
+   [
+    "Greg",
+    0,
+    "PERSON"
+   ],
+   [
+    "262-555-0171",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "4th period",
+    0
+   ],
+   [
+    "Algebra II",
+    0
+   ],
+   [
+    "will be out",
+    0
+   ],
+   [
+    "Monday",
+    0
+   ],
+   [
+    "Wednesday",
+    0
+   ],
+   [
+    "tonsillectomy",
+    0
+   ],
+   [
+    "Mercy Children's",
+    0
+   ],
+   [
+    "Chapter 6",
+    0
+   ],
+   [
+    "may he take",
+    0
+   ],
+   [
+    "504 plan",
+    0
+   ],
+   [
+    "extended time",
+    0
+   ],
+   [
+    "C-214",
+    0
+   ],
+   [
+    "Canvas",
+    0
+   ],
+   [
+    "(262) 555-0100",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-13",
+  "domain": "legal_case_note",
+  "text": "MATTER NOTE — privileged & confidential\nFile: LIT/2026/0417 — Harrowgate Tenants' Assoc. v. Pellham Estates Ltd\nPrepared by: A. Okonkwo-Reyes, associate\n\nCall with client representative Margaret \"Peggy\" Sandoval on 6 November 2026 (47 min). Peggy confirmed she has lived at Flat 12, Harrowgate Court, 88 Canal Street, Manchester M1 3HE since 2011 and that the landlord's agent, a Mr Desmond Achterberg, entered without notice on three occasions. She has photographs timestamped 2026-09-14 and a voicemail from his mobile, 07700 900 771.\n\nWitnesses: (1) the neighbour, Li Wei (李伟), speaks Mandarin, interpreter needed; (2) the caretaker, known only as \"Big Stan\".\n\nSandoval's National Insurance number NH 62 81 04 C is required for the legal aid form CW1; she will send it with her bank statement (acct ending 2290). Opposing solicitors: Farrow & Birch LLP, ref FB/DA/7781, general enquiries 0161 555 0123.\n\nClaim under s.11 Landlord and Tenant Act 1985; hearing listed at Manchester County Court, 19 January 2027, 10:00. Quantum estimate £14,500.\n\nSend the draft witness statement to peggy.sandoval@example.net.",
+  "mask": [
+   [
+    "A. Okonkwo-Reyes",
+    0,
+    "PERSON"
+   ],
+   [
+    "Margaret \"Peggy\" Sandoval",
+    0,
+    "PERSON"
+   ],
+   [
+    "Peggy",
+    0,
+    "PERSON"
+   ],
+   [
+    "Sandoval",
+    0,
+    "PERSON"
+   ],
+   [
+    "6 November 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Flat 12, Harrowgate Court, 88 Canal Street, Manchester M1 3HE",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Desmond Achterberg",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-09-14",
+    0,
+    "DATE"
+   ],
+   [
+    "07700 900 771",
+    0,
+    "PHONE"
+   ],
+   [
+    "Li Wei",
+    0,
+    "PERSON"
+   ],
+   [
+    "李伟",
+    0,
+    "PERSON"
+   ],
+   [
+    "Big Stan",
+    0,
+    "PERSON"
+   ],
+   [
+    "NH 62 81 04 C",
+    0,
+    "ID"
+   ],
+   [
+    "19 January 2027",
+    0,
+    "DATE"
+   ],
+   [
+    "peggy.sandoval@example.net",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "LIT/2026/0417",
+    0
+   ],
+   [
+    "Harrowgate Tenants' Assoc.",
+    0
+   ],
+   [
+    "Pellham Estates Ltd",
+    0
+   ],
+   [
+    "47 min",
+    0
+   ],
+   [
+    "2011",
+    0
+   ],
+   [
+    "Mandarin",
+    0
+   ],
+   [
+    "CW1",
+    0
+   ],
+   [
+    "2290",
+    0
+   ],
+   [
+    "Farrow & Birch LLP",
+    0
+   ],
+   [
+    "FB/DA/7781",
+    0
+   ],
+   [
+    "0161 555 0123",
+    0
+   ],
+   [
+    "s.11",
+    0
+   ],
+   [
+    "Landlord and Tenant Act 1985",
+    0
+   ],
+   [
+    "Manchester County Court",
+    0
+   ],
+   [
+    "10:00",
+    0
+   ],
+   [
+    "£14,500",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-14",
+  "domain": "legal_affidavit",
+  "text": "BEFORE THE DISTRICT CONSUMER DISPUTES REDRESSAL COMMISSION, PUNE\nConsumer Complaint No. CC/412/2026\n\nAFFIDAVIT\n\nI, Shri Vinayak Dattatray Joshi (विनायक दत्तात्रय जोशी), aged 58 years, son of late Dattatray Joshi, residing at B-204, Sahyadri Heights, Paud Road, Kothrud, Pune 411038, do hereby solemnly affirm:\n\n1. That I purchased a Voltaro Inverter AC, model VX-18K5, from the opposite party, Shree Electronics, vide invoice SE/2025-26/09871 dated 12/04/2025 for Rs. 46,990/-.\n2. That the compressor failed within the warranty of 5 years; service request SRN 88201764 was closed without repair, and the national consumer helpline 1800-555-0162 could not assist.\n3. That my Aadhaar number is 4821 7730 9916 and PAN is BKLPJ4471D, copies annexed as Annexure C.\n4. That refund may be credited to my savings account 0417 1020 0058 831 with Bank of Maharashtra, IFSC MAHB0000417.\n\nMy advocate is Adv. Sneha Pawar; my own mobile is 94220 55 631 and email vinayak.joshi.pune@example.com.\n\nSolemnly affirmed on this 9th day of November, 2026.\n\nDeponent\n(V. D. Joshi)",
+  "mask": [
+   [
+    "Vinayak Dattatray Joshi",
+    0,
+    "PERSON"
+   ],
+   [
+    "विनायक दत्तात्रय जोशी",
+    0,
+    "PERSON"
+   ],
+   [
+    "Dattatray Joshi",
+    0,
+    "PERSON"
+   ],
+   [
+    "B-204, Sahyadri Heights, Paud Road, Kothrud, Pune 411038",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "12/04/2025",
+    0,
+    "DATE"
+   ],
+   [
+    "4821 7730 9916",
+    0,
+    "ID"
+   ],
+   [
+    "BKLPJ4471D",
+    0,
+    "ID"
+   ],
+   [
+    "0417 1020 0058 831",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Sneha Pawar",
+    0,
+    "PERSON"
+   ],
+   [
+    "94220 55 631",
+    0,
+    "PHONE"
+   ],
+   [
+    "vinayak.joshi.pune@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "9th day of November, 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "V. D. Joshi",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "PUNE",
+    0
+   ],
+   [
+    "CC/412/2026",
+    0
+   ],
+   [
+    "58 years",
+    0
+   ],
+   [
+    "Voltaro Inverter AC",
+    0
+   ],
+   [
+    "VX-18K5",
+    0
+   ],
+   [
+    "Shree Electronics",
+    0
+   ],
+   [
+    "SE/2025-26/09871",
+    0
+   ],
+   [
+    "Rs. 46,990/-",
+    0
+   ],
+   [
+    "5 years",
+    0
+   ],
+   [
+    "SRN 88201764",
+    0
+   ],
+   [
+    "1800-555-0162",
+    0
+   ],
+   [
+    "Annexure C",
+    0
+   ],
+   [
+    "Bank of Maharashtra",
+    0
+   ],
+   [
+    "MAHB0000417",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-15",
+  "domain": "ecommerce_order",
+  "text": "Order Confirmation — thank you, Bartholomew!\n\nOrder #114-7730218-55 placed Nov 12, 2026 at 9:17 PM from IP 73.158.44.209\nSold by: Juniper & Jack Home (a brand of Example Retail Inc.)\n\nItems\n1 × \"The Eleanor\" 3-seat sofa, Oat Linen — SKU JJ-ELN-3S-OAT — $1,249.00\n2 × Hugo side table, walnut — SKU JJ-HGO-ST-WAL — $178.00\nShipping (white glove): $99.00   Tax: $125.91   Total: $1,651.91\nGift note: \"Happy housewarming, love from Aunt Mireille and Uncle Sven\"\n\nShip to:\nBartholomew \"Bart\" Achebe-Lindgren\nc/o Odalys Marrero (building super, will sign)\n2218 W. Sycamore Street, Apt 5C, Milwaukee, WI 53205\nDelivery phone: 414-555-0127 — delivery instructions: gate code 5512#\n\nPaid with Mastercard ending in 9082.\nEstimated delivery: Dec 3 – Dec 9, 2026. Carrier: NorthStar Freight, tracking NSF0048821773US.\n\nYour account: bart.achebe@example.com (member since 2019, Rewards no. 6009 4471 2283).\nQuestions? orders@juniperandjack.example.com or 1-888-555-0155, Mon–Fri 8–6 CT. Returns within 30 days with RA number.",
+  "mask": [
+   [
+    "Bartholomew",
+    0,
+    "PERSON"
+   ],
+   [
+    "Nov 12, 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "73.158.44.209",
+    0,
+    "IP"
+   ],
+   [
+    "Mireille",
+    0,
+    "PERSON"
+   ],
+   [
+    "Sven",
+    0,
+    "PERSON"
+   ],
+   [
+    "Bartholomew \"Bart\" Achebe-Lindgren",
+    0,
+    "PERSON"
+   ],
+   [
+    "Odalys Marrero",
+    0,
+    "PERSON"
+   ],
+   [
+    "2218 W. Sycamore Street, Apt 5C, Milwaukee, WI 53205",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "414-555-0127",
+    0,
+    "PHONE"
+   ],
+   [
+    "5512#",
+    0,
+    "SECRET"
+   ],
+   [
+    "Dec 3 – Dec 9, 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "bart.achebe@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "6009 4471 2283",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "#114-7730218-55",
+    0
+   ],
+   [
+    "9:17 PM",
+    0
+   ],
+   [
+    "Juniper & Jack Home",
+    0
+   ],
+   [
+    "Example Retail Inc.",
+    0
+   ],
+   [
+    "The Eleanor",
+    0
+   ],
+   [
+    "Hugo side table",
+    0
+   ],
+   [
+    "JJ-ELN-3S-OAT",
+    0
+   ],
+   [
+    "JJ-HGO-ST-WAL",
+    0
+   ],
+   [
+    "$1,249.00",
+    0
+   ],
+   [
+    "$1,651.91",
+    0
+   ],
+   [
+    "Mastercard",
+    0
+   ],
+   [
+    "9082",
+    0
+   ],
+   [
+    "NorthStar Freight",
+    0
+   ],
+   [
+    "NSF0048821773US",
+    0
+   ],
+   [
+    "2019",
+    0
+   ],
+   [
+    "orders@juniperandjack.example.com",
+    0
+   ],
+   [
+    "1-888-555-0155",
+    0
+   ],
+   [
+    "30 days",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-16",
+  "domain": "ecommerce_return",
+  "text": "Return request RTN-208841 for order PO-66190-B\n\nHi, I'm writing on behalf of my mum, Mrs Gwendolyn Pryce, who doesn't do email. She ordered the \"Henry Turbo\" cordless vac (model HT-220, £189.99, basically a budget Dyson) and a pack of Olivia Rose hand cream on the 2nd of November; the vac arrived with a cracked bin on 5 Nov.\n\nCollection address is hers, not mine: Ty Gwyn, 6 Heol-y-Bryn, Aberystwyth SY23 1LL. Courier can ring her on 01970 555 018 — she's slow to the door, so let it ring. My number, if hers isn't answered, is 07700 900 264 (Owain).\n\nShe paid by debit card, and the refund needs to go to the same account: Lloyds, sort code 30-98-12, account number 4418 2207. She also had a £10 voucher, code WELCOME10, which I assume is lost.\n\nHer online account is under gwen.pryce1949@example.com; I had to reset it for her yesterday and the new password is Daffodil-Tea-Cosy-6, in case your agent needs to cancel the Subscribe & Save from her side.\n\nThanks,\nOwain Pryce\n(son; owain@prycejoinery.example.net)",
+  "mask": [
+   [
+    "Gwendolyn Pryce",
+    0,
+    "PERSON"
+   ],
+   [
+    "2nd of November",
+    0,
+    "DATE"
+   ],
+   [
+    "5 Nov",
+    0,
+    "DATE"
+   ],
+   [
+    "Ty Gwyn, 6 Heol-y-Bryn, Aberystwyth SY23 1LL",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "01970 555 018",
+    0,
+    "PHONE"
+   ],
+   [
+    "07700 900 264",
+    0,
+    "PHONE"
+   ],
+   [
+    "Owain",
+    0,
+    "PERSON"
+   ],
+   [
+    "4418 2207",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "gwen.pryce1949@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Daffodil-Tea-Cosy-6",
+    0,
+    "SECRET"
+   ],
+   [
+    "Owain Pryce",
+    0,
+    "PERSON"
+   ],
+   [
+    "owain@prycejoinery.example.net",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "RTN-208841",
+    0
+   ],
+   [
+    "PO-66190-B",
+    0
+   ],
+   [
+    "Henry Turbo",
+    0
+   ],
+   [
+    "HT-220",
+    0
+   ],
+   [
+    "£189.99",
+    0
+   ],
+   [
+    "Dyson",
+    0
+   ],
+   [
+    "Olivia Rose hand cream",
+    0
+   ],
+   [
+    "Lloyds",
+    0
+   ],
+   [
+    "30-98-12",
+    0
+   ],
+   [
+    "£10",
+    0
+   ],
+   [
+    "WELCOME10",
+    0
+   ],
+   [
+    "Subscribe & Save",
+    0
+   ],
+   [
+    "debit card",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-17",
+  "domain": "dev_env",
+  "text": "# .env.production — DO NOT COMMIT (last edited by priyank.s on 2026-10-30)\n# OWNER=Priyank Shah, payments platform team\nAPP_ENV=production\nAPP_PORT=8443\nAPP_VERSION=3.14.2\nLOG_LEVEL=warn\nDATABASE_URL=postgres://billing_svc:Qv7!nRz2pLx9@db-prod-02.internal.example.com:5432/billing\nREDIS_URL=redis://10.0.4.17:6379/0\nJWT_SECRET=b7f1c09e5a2d4e88a6c3f0d1927be4a15c6d7e8f\nSTRIPE_SECRET_KEY=sk_live_FAKE51Nx0notRealKey9aQ2wZ7uYt\nSTRIPE_PUBLISHABLE_KEY=pk_live_51NxFAKEpublishable00example\nSIGNING_KEY=\"-----BEGIN PRIVATE KEY-----\\nMIIEvFAKEfakeBodyQw8ZxLr2TnY6vKb0pSm5dHcJ7\\n-----END PRIVATE KEY-----\"\nSENTRY_DSN=https://sentry.example.com/4\nSMTP_HOST=smtp.example.com\nSMTP_USER=noreply@example.com\nSMTP_PASSWORD=${SMTP_PASSWORD}\nAWS_REGION=eu-west-1\nAWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_ID\nAWS_SECRET_ACCESS_KEY=changeme\nADMIN_ALERT_EMAIL=priyank.shah@example.com\nONCALL_PHONE_PRIYANK=+1-646-555-0192\nBASIC_AUTH=lena.fischer:Wintergarten_88\nFEATURE_FLAGS=new_checkout,dark_mode\nBUILD_SHA=9f2c1e7a4b0d\n# rotate after Lena leaves; her personal token below still works\nDEPLOY_TOKEN=dpl_8Hq2ZsW4vKx0Lr6TnY3b",
+  "mask": [
+   [
+    "priyank.s",
+    0,
+    "USERNAME"
+   ],
+   [
+    "2026-10-30",
+    0,
+    "DATE"
+   ],
+   [
+    "Priyank Shah",
+    0,
+    "PERSON"
+   ],
+   [
+    "Qv7!nRz2pLx9",
+    0,
+    "SECRET"
+   ],
+   [
+    "b7f1c09e5a2d4e88a6c3f0d1927be4a15c6d7e8f",
+    0,
+    "SECRET"
+   ],
+   [
+    "sk_live_FAKE51Nx0notRealKey9aQ2wZ7uYt",
+    0,
+    "SECRET"
+   ],
+   [
+    "MIIEvFAKEfakeBodyQw8ZxLr2TnY6vKb0pSm5dHcJ7",
+    0,
+    "SECRET"
+   ],
+   [
+    "priyank.shah@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+1-646-555-0192",
+    0,
+    "PHONE"
+   ],
+   [
+    "lena.fischer",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Wintergarten_88",
+    0,
+    "SECRET"
+   ],
+   [
+    "Lena",
+    0,
+    "PERSON"
+   ],
+   [
+    "dpl_8Hq2ZsW4vKx0Lr6TnY3b",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "8443",
+    0
+   ],
+   [
+    "3.14.2",
+    0
+   ],
+   [
+    "10.0.4.17",
+    0
+   ],
+   [
+    "pk_live_51NxFAKEpublishable00example",
+    0
+   ],
+   [
+    "https://sentry.example.com/4",
+    0
+   ],
+   [
+    "smtp.example.com",
+    0
+   ],
+   [
+    "noreply@example.com",
+    0
+   ],
+   [
+    "${SMTP_PASSWORD}",
+    0
+   ],
+   [
+    "eu-west-1",
+    0
+   ],
+   [
+    "YOUR_ACCESS_KEY_ID",
+    0
+   ],
+   [
+    "changeme",
+    0
+   ],
+   [
+    "new_checkout,dark_mode",
+    0
+   ],
+   [
+    "9f2c1e7a4b0d",
+    0
+   ],
+   [
+    "LOG_LEVEL=warn",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-18",
+  "domain": "dev_yaml",
+  "text": "# docker-compose.override.yml — staging, maintained by @marguerite-d (ask her or Tunde before changing)\nversion: \"3.9\"\nservices:\n  api:\n    image: registry.example.com/ledger/api:2.7.0-rc3\n    ports: [\"127.0.0.1:8080:8080\"]\n    environment:\n      DB_HOST: pg-staging.internal\n      DB_USER: ledger_app\n      DB_PASSWORD: \"hT9$kkW2-vineyard\"\n      MONGO_URI: \"mongodb://reports:Pl4tyPus_Rain@172.16.8.21:27017/reports?authSource=admin\"\n      SESSION_KEY: \"<generate-with-openssl>\"\n      OAUTH_CLIENT_ID: \"ledger-web-staging\"\n      OAUTH_CLIENT_SECRET: \"3f8a1c5e-OQ7w-xN2b-Zr6t-00dKp9LmVa41\"\n      ADMIN_BOOTSTRAP: \"tbakare:Sup3r-Okra-Stew\"\n      ALERT_SMS: \"+234 803 555 0147\"   # Tunde's own phone\n      SUPPORT_EMAIL: support@example.com\n      TEST_USER_EMAIL: tunde.bakare+staging@example.org\n      TEST_USER_PASSWORD: \"example-password-123\"   # documented example, not a real account\n      TRACE_SAMPLE_ID: 6b1f0c1e-2a4d-4c7b-9e11-5d3a8f0b7c22\n  worker:\n    image: registry.example.com/ledger/worker:2.7.0-rc3\n    extra_hosts: [\"metrics:192.168.40.5\"]\n    healthcheck: {interval: 30s, retries: 5}\n# TODO(marguerite): Tunde's laptop 86.14.203.77 is whitelisted until 20 Nov; remove after.",
+  "mask": [
+   [
+    "@marguerite-d",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Tunde",
+    0,
+    "PERSON"
+   ],
+   [
+    "hT9$kkW2-vineyard",
+    0,
+    "SECRET"
+   ],
+   [
+    "Pl4tyPus_Rain",
+    0,
+    "SECRET"
+   ],
+   [
+    "3f8a1c5e-OQ7w-xN2b-Zr6t-00dKp9LmVa41",
+    0,
+    "SECRET"
+   ],
+   [
+    "tbakare",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Sup3r-Okra-Stew",
+    0,
+    "SECRET"
+   ],
+   [
+    "+234 803 555 0147",
+    0,
+    "PHONE"
+   ],
+   [
+    "tunde.bakare+staging@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "marguerite",
+    0,
+    "PERSON"
+   ],
+   [
+    "86.14.203.77",
+    0,
+    "IP"
+   ],
+   [
+    "20 Nov",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "3.9",
+    0
+   ],
+   [
+    "registry.example.com/ledger/api:2.7.0-rc3",
+    0
+   ],
+   [
+    "127.0.0.1:8080:8080",
+    0
+   ],
+   [
+    "pg-staging.internal",
+    0
+   ],
+   [
+    "ledger_app",
+    0
+   ],
+   [
+    "<generate-with-openssl>",
+    0
+   ],
+   [
+    "ledger-web-staging",
+    0
+   ],
+   [
+    "support@example.com",
+    0
+   ],
+   [
+    "example-password-123",
+    0
+   ],
+   [
+    "6b1f0c1e-2a4d-4c7b-9e11-5d3a8f0b7c22",
+    0
+   ],
+   [
+    "192.168.40.5",
+    0
+   ],
+   [
+    "30s",
+    0
+   ],
+   [
+    "registry.example.com/ledger/worker:2.7.0-rc3",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-19",
+  "domain": "dev_json",
+  "text": "{\"ts\": \"2026-11-03T17:42:09Z\", \"level\": \"error\", \"service\": \"kyc-gateway\", \"version\": \"1.18.4\",\n \"trace_id\": \"c0a8012e-7b3d-4f19-8a55-1e2d3c4b5a69\",\n \"http\": {\"method\": \"POST\", \"path\": \"/v2/applicants\", \"status\": 422, \"latency_ms\": 187},\n \"request\": {\n   \"applicant\": {\"first_name\": \"Søren\", \"last_name\": \"Østergaard\", \"dob\": \"1986-03-27\", \"nationality\": \"Danish\",\n                 \"national_id\": \"270386-4417\", \"email\": \"soren.ostergaard@example.com\", \"phone\": \"+45 20 55 01 83\",\n                 \"address\": {\"line1\": \"Nørrebrogade 214, 3. tv\", \"city\": \"København N\", \"postcode\": \"2200\"},\n                 \"iban\": \"DK50 0040 0440 1162 43\"},\n   \"device\": {\"ip\": \"87.61.142.9\", \"user_agent\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 18_1)\", \"imei\": \"35 693803 564380 9\"},\n   \"auth\": {\"api_key\": \"kgw_live_Xr82LmQp0Vt6ZsA1nB4y\", \"idempotency_key\": \"idem-7f3a91c2\"}},\n \"error\": {\"code\": \"ERR_DOC_MISMATCH\",\n           \"message\": \"Name on document reads 'OESTERGAARD SOEREN'; expected match with applicant\",\n           \"doc_number\": \"210044718\"},\n \"reviewer\": \"m.haddad\",\n \"callback\": \"https://hooks.example.net/kyc?token=9d2f7c1ab64e40f3\"}",
+  "mask": [
+   [
+    "2026-11-03",
+    0,
+    "DATE"
+   ],
+   [
+    "Søren",
+    0,
+    "PERSON"
+   ],
+   [
+    "Østergaard",
+    0,
+    "PERSON"
+   ],
+   [
+    "1986-03-27",
+    0,
+    "DOB"
+   ],
+   [
+    "270386-4417",
+    0,
+    "ID"
+   ],
+   [
+    "soren.ostergaard@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+45 20 55 01 83",
+    0,
+    "PHONE"
+   ],
+   [
+    "Nørrebrogade 214, 3. tv",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "DK50 0040 0440 1162 43",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "87.61.142.9",
+    0,
+    "IP"
+   ],
+   [
+    "35 693803 564380 9",
+    0,
+    "ID"
+   ],
+   [
+    "kgw_live_Xr82LmQp0Vt6ZsA1nB4y",
+    0,
+    "SECRET"
+   ],
+   [
+    "OESTERGAARD SOEREN",
+    0,
+    "PERSON"
+   ],
+   [
+    "210044718",
+    0,
+    "ID"
+   ],
+   [
+    "m.haddad",
+    0,
+    "USERNAME"
+   ],
+   [
+    "9d2f7c1ab64e40f3",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "17:42:09",
+    0
+   ],
+   [
+    "kyc-gateway",
+    0
+   ],
+   [
+    "1.18.4",
+    0
+   ],
+   [
+    "c0a8012e-7b3d-4f19-8a55-1e2d3c4b5a69",
+    0
+   ],
+   [
+    "/v2/applicants",
+    0
+   ],
+   [
+    "422",
+    0
+   ],
+   [
+    "187",
+    0
+   ],
+   [
+    "Danish",
+    0
+   ],
+   [
+    "Mozilla/5.0",
+    0
+   ],
+   [
+    "iPhone OS 18_1",
+    0
+   ],
+   [
+    "idem-7f3a91c2",
+    0
+   ],
+   [
+    "ERR_DOC_MISMATCH",
+    0
+   ],
+   [
+    "hooks.example.net",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-20",
+  "domain": "dev_sql",
+  "text": "-- migration 0042_backfill_customers.sql (author: Ngozi, reviewed by r.castellanos, PR #1893)\n-- NOTE: rows below are real pilot customers copied from prod on 2026-08-19; scrub before merging!\nBEGIN;\nINSERT INTO customers (full_name, email, phone, tax_id, plan, created_at) VALUES\n  ('Henrietta Vasquez-Bloom', 'hvbloom@example.com', '+1 720 555 0158', '521-48-7730', 'pro', '2025-02-11 09:14:55'),\n  ('Abdulrahman Al-Farsi', 'a.alfarsi@example.org', '+968 9255 0142', NULL, 'team', '2025-03-02 18:40:01'),\n  ('Екатерина Соколова', 'e.sokolova@example.net', '+7 916 555 01 37', NULL, 'team', '2025-03-02 18:40:07'),\n  ('Acme Test Account', 'test@example.com', '000-000-0000', '000-00-0000', 'free', NULL);\nUPDATE payment_methods SET iban = 'GB29 EXMP 6016 1331 9268 19', bic = 'EXMPGB2L' WHERE email = 'hvbloom@example.com';\n-- quick check, run as the read-only role:\n--   psql \"host=pg-ro.internal port=5432 dbname=crm user=readonly password=R3ad0nly-Pelican!\" -c \"SELECT count(*) FROM customers WHERE plan <> 'free';\"\nSELECT full_name FROM customers WHERE plan = 'team' LIMIT 20;\nCOMMIT;\n-- rollback: DELETE FROM customers WHERE plan IN ('pro','team');  -- 3 rows, ~4 ms",
+  "mask": [
+   [
+    "Ngozi",
+    0,
+    "PERSON"
+   ],
+   [
+    "r.castellanos",
+    0,
+    "USERNAME"
+   ],
+   [
+    "2026-08-19",
+    0,
+    "DATE"
+   ],
+   [
+    "Henrietta Vasquez-Bloom",
+    0,
+    "PERSON"
+   ],
+   [
+    "hvbloom@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+1 720 555 0158",
+    0,
+    "PHONE"
+   ],
+   [
+    "521-48-7730",
+    0,
+    "ID"
+   ],
+   [
+    "2025-02-11",
+    0,
+    "DATE"
+   ],
+   [
+    "Abdulrahman Al-Farsi",
+    0,
+    "PERSON"
+   ],
+   [
+    "a.alfarsi@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+968 9255 0142",
+    0,
+    "PHONE"
+   ],
+   [
+    "2025-03-02",
+    0,
+    "DATE"
+   ],
+   [
+    "Екатерина Соколова",
+    0,
+    "PERSON"
+   ],
+   [
+    "e.sokolova@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+7 916 555 01 37",
+    0,
+    "PHONE"
+   ],
+   [
+    "GB29 EXMP 6016 1331 9268 19",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "R3ad0nly-Pelican!",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "0042_backfill_customers.sql",
+    0
+   ],
+   [
+    "PR #1893",
+    0
+   ],
+   [
+    "09:14:55",
+    0
+   ],
+   [
+    "18:40:01",
+    0
+   ],
+   [
+    "Acme Test Account",
+    0
+   ],
+   [
+    "test@example.com",
+    0
+   ],
+   [
+    "000-000-0000",
+    0
+   ],
+   [
+    "000-00-0000",
+    0
+   ],
+   [
+    "EXMPGB2L",
+    0
+   ],
+   [
+    "pg-ro.internal",
+    0
+   ],
+   [
+    "5432",
+    0
+   ],
+   [
+    "readonly",
+    0
+   ],
+   [
+    "4 ms",
+    0
+   ],
+   [
+    "LIMIT 20",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-21",
+  "domain": "dev_csv",
+  "text": "# export: loyalty_members_q3.csv — generated 01/10/2026 by cron (job id 7f4e2), 6 rows, delimiter \";\"\nmember_id;name;email;mobile;dob;city;tier;last_order;points;card_last4\nLM-0048817;Chiara Benedetti;chiara.benedetti@example.com;+39 347 555 0126;1990-12-05;Bologna;Gold;ORD-771204;4120;7731\nLM-0048818;Kwame Asante-Boateng;kwame.ab@example.net;+233 24 555 0191;23/06/1984;Accra;Silver;ORD-771377;980;0456\nLM-0048819;Ελένη Παπαδοπούλου;eleni.p@example.org;+30 694 555 0173;1979-01-30;Thessaloniki;Gold;ORD-770015;6644;2219\nLM-0048820;Paris Whitlock;pwhitlock@example.com;(312) 555-0104;July 4, 1995;Austin;Bronze;ORD-772950;150;9034\nLM-0048821;\"O'Leary, Siobhán\";siobhan.oleary@example.org;087 555 0139;11.09.1988;Cork;Silver;ORD-769902;2210;1187\nLM-TEST;TEST USER;qa-bot@example.com;N/A;N/A;Nowhere;Bronze;ORD-000000;0;0000\n# contact for corrections: data-steward@example.com",
+  "mask": [
+   [
+    "01/10/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "LM-0048817",
+    0,
+    "ID"
+   ],
+   [
+    "Chiara Benedetti",
+    0,
+    "PERSON"
+   ],
+   [
+    "chiara.benedetti@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+39 347 555 0126",
+    0,
+    "PHONE"
+   ],
+   [
+    "1990-12-05",
+    0,
+    "DOB"
+   ],
+   [
+    "LM-0048818",
+    0,
+    "ID"
+   ],
+   [
+    "Kwame Asante-Boateng",
+    0,
+    "PERSON"
+   ],
+   [
+    "kwame.ab@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+233 24 555 0191",
+    0,
+    "PHONE"
+   ],
+   [
+    "23/06/1984",
+    0,
+    "DOB"
+   ],
+   [
+    "LM-0048819",
+    0,
+    "ID"
+   ],
+   [
+    "Ελένη Παπαδοπούλου",
+    0,
+    "PERSON"
+   ],
+   [
+    "eleni.p@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+30 694 555 0173",
+    0,
+    "PHONE"
+   ],
+   [
+    "1979-01-30",
+    0,
+    "DOB"
+   ],
+   [
+    "LM-0048820",
+    0,
+    "ID"
+   ],
+   [
+    "Paris Whitlock",
+    0,
+    "PERSON"
+   ],
+   [
+    "pwhitlock@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "(312) 555-0104",
+    0,
+    "PHONE"
+   ],
+   [
+    "July 4, 1995",
+    0,
+    "DOB"
+   ],
+   [
+    "LM-0048821",
+    0,
+    "ID"
+   ],
+   [
+    "O'Leary, Siobhán",
+    0,
+    "PERSON"
+   ],
+   [
+    "siobhan.oleary@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "087 555 0139",
+    0,
+    "PHONE"
+   ],
+   [
+    "11.09.1988",
+    0,
+    "DOB"
+   ]
+  ],
+  "keep": [
+   [
+    "loyalty_members_q3.csv",
+    0
+   ],
+   [
+    "7f4e2",
+    0
+   ],
+   [
+    "Bologna",
+    0
+   ],
+   [
+    "Accra",
+    0
+   ],
+   [
+    "Thessaloniki",
+    0
+   ],
+   [
+    "Austin",
+    0
+   ],
+   [
+    "Cork",
+    0
+   ],
+   [
+    "Gold",
+    0
+   ],
+   [
+    "Silver",
+    0
+   ],
+   [
+    "ORD-771204",
+    0
+   ],
+   [
+    "ORD-771377",
+    0
+   ],
+   [
+    "ORD-772950",
+    0
+   ],
+   [
+    "7731",
+    0
+   ],
+   [
+    "LM-TEST",
+    0
+   ],
+   [
+    "TEST USER",
+    0
+   ],
+   [
+    "qa-bot@example.com",
+    0
+   ],
+   [
+    "data-steward@example.com",
+    0
+   ],
+   [
+    "Nowhere",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-22",
+  "domain": "stack_trace",
+  "text": "2026-11-09 03:12:44,871 ERROR [worker-7] com.example.payroll.PayslipJob - Failed to render payslip for employee EMP-204418 (Radhika Menon)\njava.lang.IllegalStateException: Bank account 918020044771305 failed checksum for IFSC UTIB0002211\n    at com.example.payroll.bank.AccountValidator.validate(AccountValidator.java:88)\n    at com.example.payroll.PayslipJob.run(PayslipJob.java:142)\n    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\nCaused by: java.sql.SQLException: Access denied for user 'payroll_rw'@'10.20.1.14' (using password: YES)\n    at com.mysql.cj.jdbc.ConnectionImpl.connect(ConnectionImpl.java:455)\n2026-11-09 03:12:44,902 WARN  [worker-7] c.e.p.Notifier - notify manager=jthomas@example.com cc=payroll-help@example.com subject=\"Payslip failed: R. Menon, PAN AYZPM8821Q\"\n2026-11-09 03:12:45,010 DEBUG [worker-7] c.e.p.HttpClient - POST https://hr-api.example.com/v3/notify Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYXlyb2xsIn0.FAKEsigQ2x7Lm0pZr4 status=401 req_id=4e1d9a70-33c2-4b8f-a1d7-92f0c6b5e811\n2026-11-09 03:12:45,011 INFO  [worker-7] c.e.p.Audit - last successful login for rmenon from 103.21.164.88 at 21:47; JVM 17.0.9, heap 512MB, exit code 137",
+  "mask": [
+   [
+    "2026-11-09",
+    0,
+    "DATE"
+   ],
+   [
+    "EMP-204418",
+    0,
+    "ID"
+   ],
+   [
+    "Radhika Menon",
+    0,
+    "PERSON"
+   ],
+   [
+    "918020044771305",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "jthomas@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "R. Menon",
+    0,
+    "PERSON"
+   ],
+   [
+    "AYZPM8821Q",
+    0,
+    "ID"
+   ],
+   [
+    "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYXlyb2xsIn0.FAKEsigQ2x7Lm0pZr4",
+    0,
+    "SECRET"
+   ],
+   [
+    "rmenon",
+    0,
+    "USERNAME"
+   ],
+   [
+    "103.21.164.88",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "03:12:44,871",
+    0
+   ],
+   [
+    "worker-7",
+    0
+   ],
+   [
+    "IllegalStateException",
+    0
+   ],
+   [
+    "UTIB0002211",
+    0
+   ],
+   [
+    "AccountValidator.java:88",
+    0
+   ],
+   [
+    "PayslipJob.java:142",
+    0
+   ],
+   [
+    "ThreadPoolExecutor",
+    0
+   ],
+   [
+    "payroll_rw",
+    0
+   ],
+   [
+    "10.20.1.14",
+    0
+   ],
+   [
+    "payroll-help@example.com",
+    0
+   ],
+   [
+    "https://hr-api.example.com/v3/notify",
+    0
+   ],
+   [
+    "401",
+    0
+   ],
+   [
+    "4e1d9a70-33c2-4b8f-a1d7-92f0c6b5e811",
+    0
+   ],
+   [
+    "21:47",
+    0
+   ],
+   [
+    "17.0.9",
+    0
+   ],
+   [
+    "512MB",
+    0
+   ],
+   [
+    "137",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-23",
+  "domain": "ci_output",
+  "text": "Run #8841 · workflow \"deploy-staging\" · triggered by push from paloma-m (Paloma Marín) · commit 4c9e1ab7f02d\n[00:00:03] Runner ubuntu-22.04 (2 vCPU, 7 GB) · node v20.11.1 · npm 10.2.4\n[00:00:41] ✓ lint   ✓ unit (412 passed, 3 skipped)   ✗ e2e (1 failed)\n[00:01:12] e2e › checkout › pays with saved card\n           Error: expected \"Thanks, Ravi!\" but received \"Thanks, undefined!\"\n           fixture user: ravi.teja.k@example.com / pw: Chutney&Dosa#42   <-- real account, Ravi please stop using yours in fixtures\n[00:01:13] env dump (masked): NPM_TOKEN=*** GH_TOKEN=*** SLACK_WEBHOOK=***\n[00:01:13] env dump (UNMASKED, debug=true): NPM_TOKEN=npm_FAKE7hQ2xLr9ZsW4vKb0TnY3cD6e SLACK_WEBHOOK=https://hooks.slack.example.com/services/T00FAKE00/B00FAKE00/xk29QmLw80ZpRt\n[00:01:14] sha256 of bundle.js: 9b74c98a7bac770ffc029102a200c5de8f1e2a3b4c5d6e7f8091a2b3c4d5e6f7\n[00:01:15] uploading artifact to s3://ci-artifacts-example/8841/ (14.2 MB)\n[00:01:20] deploy skipped. Notify: #team-payments, @hyun.woo; on-call this week is Hyun-woo (his own cell is +82 10-5550-7716)\n[00:01:20] exit code 1 · duration 80s · retry 1 of 3 · see https://ci.example.com/runs/8841",
+  "mask": [
+   [
+    "paloma-m",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Paloma Marín",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ravi",
+    0,
+    "PERSON"
+   ],
+   [
+    "ravi.teja.k@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Chutney&Dosa#42",
+    0,
+    "SECRET"
+   ],
+   [
+    "npm_FAKE7hQ2xLr9ZsW4vKb0TnY3cD6e",
+    0,
+    "SECRET"
+   ],
+   [
+    "T00FAKE00/B00FAKE00/xk29QmLw80ZpRt",
+    0,
+    "SECRET"
+   ],
+   [
+    "@hyun.woo",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Hyun-woo",
+    0,
+    "PERSON"
+   ],
+   [
+    "+82 10-5550-7716",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "#8841",
+    0
+   ],
+   [
+    "deploy-staging",
+    0
+   ],
+   [
+    "4c9e1ab7f02d",
+    0
+   ],
+   [
+    "ubuntu-22.04",
+    0
+   ],
+   [
+    "v20.11.1",
+    0
+   ],
+   [
+    "10.2.4",
+    0
+   ],
+   [
+    "412 passed",
+    0
+   ],
+   [
+    "***",
+    0
+   ],
+   [
+    "undefined",
+    0
+   ],
+   [
+    "9b74c98a7bac770ffc029102a200c5de8f1e2a3b4c5d6e7f8091a2b3c4d5e6f7",
+    0
+   ],
+   [
+    "s3://ci-artifacts-example/8841/",
+    0
+   ],
+   [
+    "14.2 MB",
+    0
+   ],
+   [
+    "#team-payments",
+    0
+   ],
+   [
+    "80s",
+    0
+   ],
+   [
+    "https://ci.example.com/runs/8841",
+    0
+   ],
+   [
+    "[00:01:12]",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-24",
+  "domain": "git_commit",
+  "text": "commit a94f3c1e7b22d05f8e6c4b19d7a30f5e2c8b6d41\nAuthor: Bogdan Iliescu <bogdan.iliescu@example.com>\nDate:   Thu Nov 5 23:58:12 2026 +0200\n\n    fix(auth): stop logging full session cookies (SEC-771)\n\n    Reported by Mai (mai.tran-nguyen@example.org) after she found her own\n    cookie in Kibana. Repro: log in as any user, grep for \"sid=\".\n    Example of what leaked for handle @maitn:\n      sid=s%3Aq8Zr2LwX0vT4nKb6.yH1mPc9dEa3fGj5 ; csrf=Jk72-xpQ-0041\n    Both are invalidated now.\n\n    Also removes the hard-coded fallback admin password (\"hunter2-but-longer\")\n    that Grigore added in 7a1f9c2 during the 2.3.0 freeze, and replaces the\n    README sample with ADMIN_PASSWORD=<your-password-here>.\n\n    Tested on staging-eu-1 (10.8.0.12) with Node 20 and Postgres 15.4.\n    Co-authored-by: Mai Tran-Nguyen <mai.tran-nguyen@example.org>\n    Signed-off-by: Bogdan Iliescu <bogdan.iliescu@example.com>\n    Refs: #2291, #2304   Reviewed-by: g.popa",
+  "mask": [
+   [
+    "Bogdan Iliescu",
+    0,
+    "PERSON"
+   ],
+   [
+    "bogdan.iliescu@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Nov 5",
+    0,
+    "DATE"
+   ],
+   [
+    "Mai",
+    0,
+    "PERSON"
+   ],
+   [
+    "mai.tran-nguyen@example.org",
+    0,
+    "EMAIL"
+   ],
+   [
+    "@maitn",
+    0,
+    "USERNAME"
+   ],
+   [
+    "s%3Aq8Zr2LwX0vT4nKb6.yH1mPc9dEa3fGj5",
+    0,
+    "SECRET"
+   ],
+   [
+    "Jk72-xpQ-0041",
+    0,
+    "SECRET"
+   ],
+   [
+    "hunter2-but-longer",
+    0,
+    "SECRET"
+   ],
+   [
+    "Grigore",
+    0,
+    "PERSON"
+   ],
+   [
+    "Mai Tran-Nguyen",
+    0,
+    "PERSON"
+   ],
+   [
+    "g.popa",
+    0,
+    "USERNAME"
+   ]
+  ],
+  "keep": [
+   [
+    "a94f3c1e7b22d05f8e6c4b19d7a30f5e2c8b6d41",
+    0
+   ],
+   [
+    "Thu",
+    0
+   ],
+   [
+    "23:58:12",
+    0
+   ],
+   [
+    "+0200",
+    0
+   ],
+   [
+    "SEC-771",
+    0
+   ],
+   [
+    "Kibana",
+    0
+   ],
+   [
+    "7a1f9c2",
+    0
+   ],
+   [
+    "2.3.0",
+    0
+   ],
+   [
+    "<your-password-here>",
+    0
+   ],
+   [
+    "staging-eu-1",
+    0
+   ],
+   [
+    "10.8.0.12",
+    0
+   ],
+   [
+    "Node 20",
+    0
+   ],
+   [
+    "Postgres 15.4",
+    0
+   ],
+   [
+    "#2291",
+    0
+   ],
+   [
+    "#2304",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-25",
+  "domain": "devops_incident_chat",
+  "text": "#inc-4471-checkout-latency\n[14:02] dmitri: paging @anneke — p99 on checkout-api is 4.8s, started right after deploy #2291\n[14:03] anneke: on it. which region?\n[14:03] dmitri: ap-south-1 only. pods checkout-api-7d9f6c5b8-x2klq and -m8rtz are crashlooping, exit 137\n[14:05] anneke: OOM. limits are 512Mi. rolling back to v4.31.0\n[14:06] Farid H.: fyi a customer already complained, Mrs. Leung from Kowloon Bakery, she called my cell not the hotline. her number is 9155 0173 if we need to follow up, ticket KB-HK-00921\n[14:07] dmitri: farid pls don't paste customer details here :(\n[14:09] anneke: rollback blocked, ArgoCD wants a token. anyone?\n[14:10] Farid H.: use mine for now: argo-tok-5Qz8LmX2vR7nKb0TyW4c. also the break-glass grafana login is admin / Tulip-Canal-1987\n[14:11] dmitri: 🤦 rotate both after. bastion is 10.12.0.5, jump as your own user (anneke.devries)\n[14:19] anneke: rolled back. p99 back to 310ms. error rate 0.02%\n[14:20] dmitri: thanks. postmortem doc PM-2026-031, owner Dmitri Volkov, due Friday. I'll tell Sandeep in the 4pm sync. status page updates go via status@example.com",
+  "mask": [
+   [
+    "dmitri",
+    0,
+    "PERSON"
+   ],
+   [
+    "@anneke",
+    0,
+    "USERNAME"
+   ],
+   [
+    "anneke",
+    0,
+    "PERSON"
+   ],
+   [
+    "Farid H.",
+    0,
+    "PERSON"
+   ],
+   [
+    "Leung",
+    0,
+    "PERSON"
+   ],
+   [
+    "9155 0173",
+    0,
+    "PHONE"
+   ],
+   [
+    "farid",
+    0,
+    "PERSON"
+   ],
+   [
+    "argo-tok-5Qz8LmX2vR7nKb0TyW4c",
+    0,
+    "SECRET"
+   ],
+   [
+    "Tulip-Canal-1987",
+    0,
+    "SECRET"
+   ],
+   [
+    "anneke.devries",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Dmitri Volkov",
+    0,
+    "PERSON"
+   ],
+   [
+    "Sandeep",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "#inc-4471-checkout-latency",
+    0
+   ],
+   [
+    "[14:02]",
+    0
+   ],
+   [
+    "4.8s",
+    0
+   ],
+   [
+    "#2291",
+    0
+   ],
+   [
+    "ap-south-1",
+    0
+   ],
+   [
+    "checkout-api-7d9f6c5b8-x2klq",
+    0
+   ],
+   [
+    "137",
+    0
+   ],
+   [
+    "512Mi",
+    0
+   ],
+   [
+    "v4.31.0",
+    0
+   ],
+   [
+    "Kowloon Bakery",
+    0
+   ],
+   [
+    "KB-HK-00921",
+    0
+   ],
+   [
+    "ArgoCD",
+    0
+   ],
+   [
+    "grafana",
+    0
+   ],
+   [
+    "10.12.0.5",
+    0
+   ],
+   [
+    "310ms",
+    0
+   ],
+   [
+    "0.02%",
+    0
+   ],
+   [
+    "PM-2026-031",
+    0
+   ],
+   [
+    "Friday",
+    0
+   ],
+   [
+    "4pm",
+    0
+   ],
+   [
+    "status@example.com",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-26",
+  "domain": "devops_handoff_email",
+  "text": "Subject: On-call handoff, week 47\n\nHey Yetunde,\n\nHanding over the pager. Things you should know:\n\n• The cert for api.example.com expires in 9 days; renewal is automated but watch CERT-118. Fingerprint SHA256:Zk3vQ9x0L7mT2nRb8YwP4cHd6JsEa1Fg5UoIt0XyMzA if you want to verify.\n• Vault was resealed on Tuesday. The unseal quorum is me, Lars and Chidi. For the record the root token was regenerated and is hvs.FAKEq7Lm2Xr9ZsW4vKb0TnY3cD6eH8 until Chidi revokes it tomorrow.\n• The staging deploy key has no prefix, it's just w3Rk8ZpQ0nXb5TsL2vYc7HdJ4mGa — paste it into the DEPLOY_KEY field.\n• The vendor's support line is 1-800-555-0163, contract no. ENT-20418. Our account manager there is Rebecca Stroud, direct +1 (628) 555-0145, rstroud@vendor.example.net. Don't confuse her with the Rebecca cluster (rebecca-01..06), which is just Cassandra.\n• db-replica-3 (10.30.2.44) lags by ~40s under load; ignore alert DB-LAG-2 unless it exceeds 5 min.\n• If the datacenter door code is needed: 2580# — yes, really, I've complained.\n• Public SSH key for the new bastion: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAKEpublicKeyBody0000000000000000000000000 ops@bastion\n\nI'm out from 23 Nov to 27 Nov; emergencies only on 0176 555 01 482.\n\nCheers,\nMatthias Öhlund",
+  "mask": [
+   [
+    "Yetunde",
+    0,
+    "PERSON"
+   ],
+   [
+    "Lars",
+    0,
+    "PERSON"
+   ],
+   [
+    "Chidi",
+    0,
+    "PERSON"
+   ],
+   [
+    "hvs.FAKEq7Lm2Xr9ZsW4vKb0TnY3cD6eH8",
+    0,
+    "SECRET"
+   ],
+   [
+    "w3Rk8ZpQ0nXb5TsL2vYc7HdJ4mGa",
+    0,
+    "SECRET"
+   ],
+   [
+    "Rebecca Stroud",
+    0,
+    "PERSON"
+   ],
+   [
+    "+1 (628) 555-0145",
+    0,
+    "PHONE"
+   ],
+   [
+    "rstroud@vendor.example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2580#",
+    0,
+    "SECRET"
+   ],
+   [
+    "23 Nov",
+    0,
+    "DATE"
+   ],
+   [
+    "27 Nov",
+    0,
+    "DATE"
+   ],
+   [
+    "0176 555 01 482",
+    0,
+    "PHONE"
+   ],
+   [
+    "Matthias Öhlund",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "week 47",
+    0
+   ],
+   [
+    "api.example.com",
+    0
+   ],
+   [
+    "9 days",
+    0
+   ],
+   [
+    "CERT-118",
+    0
+   ],
+   [
+    "SHA256:Zk3vQ9x0L7mT2nRb8YwP4cHd6JsEa1Fg5UoIt0XyMzA",
+    0
+   ],
+   [
+    "Vault",
+    0
+   ],
+   [
+    "Tuesday",
+    0
+   ],
+   [
+    "DEPLOY_KEY",
+    0
+   ],
+   [
+    "1-800-555-0163",
+    0
+   ],
+   [
+    "ENT-20418",
+    0
+   ],
+   [
+    "Rebecca cluster",
+    0
+   ],
+   [
+    "rebecca-01..06",
+    0
+   ],
+   [
+    "Cassandra",
+    0
+   ],
+   [
+    "db-replica-3",
+    0
+   ],
+   [
+    "10.30.2.44",
+    0
+   ],
+   [
+    "40s",
+    0
+   ],
+   [
+    "DB-LAG-2",
+    0
+   ],
+   [
+    "5 min",
+    0
+   ],
+   [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAKEpublicKeyBody0000000000000000000000000 ops@bastion",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-27",
+  "domain": "family_chat_hinglish",
+  "text": "Mummy: beta Chintu, flight kitne baje ki hai? papa pooch rahe hain\nNikhil: 6:40 am ki hai Mummy, IndiGo 6E 2135, Bengaluru se. PNR hai R7KQ2M\nMummy: aur Sonal aa rahi hai na tere saath?\nNikhil: haan, sonal ka ticket alag se hai. uska Aadhaar maanga tha airline ne, 7104 2288 5593 daal diya\nPapa: Nikhil, Sharma uncle ko 2000 rs bhej dena, unka number 9414055287 hai, PhonePe pe. kal Sharma ji ki beti Guddi ki sagai hai\nNikhil: ok papa. waise aapka net banking ka password maine change kar diya hai, naya hai Jaipur@Pink2026, kahin likh lena par kisi ko batana mat\nPapa: thik hai. aur wo LIC policy number 884120773 ka premium?\nNikhil: 14 Nov ko bhar diya tha, ₹23,450. receipt aapko email kar di – om.prakash.mathur52@example.com pe\nMummy: Dadi ki dawai lete aana, Telma 40 aur Glycomet. Dr. Bhargava ne bola hai BP 150/95 hai\nSonal Bhabhi: namaste mummy ji 🙏 hum log 21 Nov ko pahunchenge, ghar ka address cab wale ko kya bataun?\nMummy: C-41, Shanti Path, Tilak Nagar, Jaipur 302004. gate pe Ramu kaka milega",
+  "mask": [
+   [
+    "Chintu",
+    0,
+    "PERSON"
+   ],
+   [
+    "Nikhil",
+    0,
+    "PERSON"
+   ],
+   [
+    "Sonal",
+    0,
+    "PERSON"
+   ],
+   [
+    "sonal",
+    0,
+    "PERSON"
+   ],
+   [
+    "7104 2288 5593",
+    0,
+    "ID"
+   ],
+   [
+    "Sharma",
+    0,
+    "PERSON"
+   ],
+   [
+    "9414055287",
+    0,
+    "PHONE"
+   ],
+   [
+    "Guddi",
+    0,
+    "PERSON"
+   ],
+   [
+    "Jaipur@Pink2026",
+    0,
+    "SECRET"
+   ],
+   [
+    "884120773",
+    0,
+    "ID"
+   ],
+   [
+    "14 Nov",
+    0,
+    "DATE"
+   ],
+   [
+    "om.prakash.mathur52@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Bhargava",
+    0,
+    "PERSON"
+   ],
+   [
+    "21 Nov",
+    0,
+    "DATE"
+   ],
+   [
+    "C-41, Shanti Path, Tilak Nagar, Jaipur 302004",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Ramu",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "6:40 am",
+    0
+   ],
+   [
+    "IndiGo",
+    0
+   ],
+   [
+    "6E 2135",
+    0
+   ],
+   [
+    "Bengaluru",
+    0
+   ],
+   [
+    "R7KQ2M",
+    0
+   ],
+   [
+    "2000 rs",
+    0
+   ],
+   [
+    "PhonePe",
+    0
+   ],
+   [
+    "sagai",
+    0
+   ],
+   [
+    "LIC",
+    0
+   ],
+   [
+    "₹23,450",
+    0
+   ],
+   [
+    "Telma 40",
+    0
+   ],
+   [
+    "Glycomet",
+    0
+   ],
+   [
+    "150/95",
+    0
+   ],
+   [
+    "namaste",
+    0
+   ],
+   [
+    "beta",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-28",
+  "domain": "friends_chat_hinglish",
+  "text": "[Hostel Gang 🏏]\ntanmay: bhai log Saturday ko Goa plan pakka?\nPooja: haan!! but meri train 28/11 ki hai, Mandovi Express, coach S4\ntanmay: Pooja tu Jerry ko bol de, wo abhi tak paise nahi diya\njerry_dsilva: arre de dunga yaar. Tanmay tera UPI kya hai?\ntanmay: tanmay.kale@oksbi ... ya phir 88790 55 164 pe GPay kar\njerry_dsilva: done, 3500 bheja. screenshot dekh, txn id T2611281904417. ya crypto me le le 😂 mera wallet 0x7F3a9C2e41B8d05E6f1A4c7D9b20E8f5A3c6D1b4\nPooja: guys hostel ka wifi phir se down. kisi ke paas warden sir ka number hai?\nAditi Rao: Deshpande sir ka 020 5550 0188 hai (hostel office), personal wala 97640 55 921. unhe mat bolna maine diya 😅\nAditi Rao: aur library portal ka login chahiye to mera use kar lo – roll no 21BCE1047, pwd aditi@lib#07\njerry_dsilva: lol aditi security ki maa behen\ntanmay: btw Rahul Dravid ka interview dekha kya kal? legend\nPooja: Jerry tu pehle Amazon wala refund dekh, order 408-2219377-5501. aur mera charger wapas kar, Anker 65W wala\njerry_dsilva: kal dunga pakka. room 214 aa jana 9 baje ke baad\nPooja: ok. Monday ko DBMS ka quiz hai, Prof. Kulkarni ne bola syllabus unit 3 tak",
+  "mask": [
+   [
+    "tanmay",
+    0,
+    "PERSON"
+   ],
+   [
+    "Pooja",
+    0,
+    "PERSON"
+   ],
+   [
+    "28/11",
+    0,
+    "DATE"
+   ],
+   [
+    "Jerry",
+    0,
+    "PERSON"
+   ],
+   [
+    "jerry_dsilva",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Tanmay",
+    0,
+    "PERSON"
+   ],
+   [
+    "tanmay.kale@oksbi",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "88790 55 164",
+    0,
+    "PHONE"
+   ],
+   [
+    "0x7F3a9C2e41B8d05E6f1A4c7D9b20E8f5A3c6D1b4",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Aditi Rao",
+    0,
+    "PERSON"
+   ],
+   [
+    "Deshpande",
+    0,
+    "PERSON"
+   ],
+   [
+    "97640 55 921",
+    0,
+    "PHONE"
+   ],
+   [
+    "21BCE1047",
+    0,
+    "ID"
+   ],
+   [
+    "aditi@lib#07",
+    0,
+    "SECRET"
+   ],
+   [
+    "aditi",
+    0,
+    "PERSON"
+   ],
+   [
+    "Kulkarni",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "Saturday",
+    0
+   ],
+   [
+    "Goa",
+    0
+   ],
+   [
+    "Mandovi Express",
+    0
+   ],
+   [
+    "coach S4",
+    0
+   ],
+   [
+    "GPay",
+    0
+   ],
+   [
+    "3500",
+    0
+   ],
+   [
+    "T2611281904417",
+    0
+   ],
+   [
+    "020 5550 0188",
+    0
+   ],
+   [
+    "Rahul Dravid",
+    0
+   ],
+   [
+    "Amazon",
+    0
+   ],
+   [
+    "408-2219377-5501",
+    0
+   ],
+   [
+    "Anker 65W",
+    0
+   ],
+   [
+    "room 214",
+    0
+   ],
+   [
+    "9 baje",
+    0
+   ],
+   [
+    "Monday",
+    0
+   ],
+   [
+    "DBMS",
+    0
+   ],
+   [
+    "unit 3",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-29",
+  "domain": "family_chat_spanish",
+  "text": "Grupo «Familia Ortiz-Belmonte»\nAbuela Remedios: Niños, el domingo comemos en casa. Traed postre.\nLucía: Vale abuela. ¿Viene también el tío Paco?\nAbuela Remedios: Sí, y trae a su novia, una tal Mercedes, muy simpática por lo visto.\nÍñigo: jajaja. Yo llego tarde, salgo de Valencia a las 12:30 en el AVE 05123.\nLucía: Íñigo, ¿me pasas tu Bizum? Te debo 45 € de la cena.\nÍñigo: mi móvil de siempre, 612 55 01 47. O por transferencia: ES76 2100 0418 4502 0005 1332\nAbuela Remedios: Lucía hija, el médico me ha cambiado la cita al 3 de diciembre de 2026 a las 9:15 en el Hospital La Paz. Necesito que me acompañes. Mi tarjeta sanitaria es BBBB 571203 916 014.\nLucía: Claro. Te recojo en Calle de la Esperanza 14, 3.º B, 28012 Madrid, ¿no? ¿O sigues en casa de Dolores?\nAbuela Remedios: En mi casa. Y apunta el PIN del portal nuevo, que se me olvida: 4 8 1 5.\nTío Paco: Buenas. Mi correo nuevo es francisco.belmonte@example.com, el de Telefónica ya no va. Cumplo los 60 el 14/02, por cierto, id ahorrando.\nÍñigo: Felicidades adelantadas, tío. Nos vemos el domingo.",
+  "mask": [
+   [
+    "Ortiz-Belmonte",
+    0,
+    "PERSON"
+   ],
+   [
+    "Remedios",
+    0,
+    "PERSON"
+   ],
+   [
+    "Lucía",
+    0,
+    "PERSON"
+   ],
+   [
+    "Paco",
+    0,
+    "PERSON"
+   ],
+   [
+    "Mercedes",
+    0,
+    "PERSON"
+   ],
+   [
+    "Íñigo",
+    0,
+    "PERSON"
+   ],
+   [
+    "612 55 01 47",
+    0,
+    "PHONE"
+   ],
+   [
+    "ES76 2100 0418 4502 0005 1332",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "3 de diciembre de 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "BBBB 571203 916 014",
+    0,
+    "ID"
+   ],
+   [
+    "Calle de la Esperanza 14, 3.º B, 28012 Madrid",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Dolores",
+    0,
+    "PERSON"
+   ],
+   [
+    "4 8 1 5",
+    0,
+    "SECRET"
+   ],
+   [
+    "francisco.belmonte@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "14/02",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "domingo",
+    0
+   ],
+   [
+    "postre",
+    0
+   ],
+   [
+    "Valencia",
+    0
+   ],
+   [
+    "12:30",
+    0
+   ],
+   [
+    "AVE 05123",
+    0
+   ],
+   [
+    "Bizum",
+    0
+   ],
+   [
+    "45 €",
+    0
+   ],
+   [
+    "9:15",
+    0
+   ],
+   [
+    "Hospital La Paz",
+    0
+   ],
+   [
+    "Telefónica",
+    0
+   ],
+   [
+    "los 60",
+    0
+   ],
+   [
+    "Felicidades",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-30",
+  "domain": "flatshare_chat_german",
+  "text": "WG-Gruppe „Kastanienallee“\nJonas: Moin zusammen, die Nebenkostenabrechnung ist da: 1.284,60 € Nachzahlung, also 321,15 € pro Nase. Bitte bis Freitag überweisen.\nMiriam: Uff. An wen? An dich oder direkt an Frau Schlüter?\nJonas: An mich, IBAN DE27 1203 0000 1052 7741 96, Verwendungszweck „NK 2025“.\nKemal: Mach ich heute Abend. Übrigens, der Techniker von Vodafone kommt am 24.11.2026 zwischen 8 und 12 Uhr, Auftragsnummer 7730044182. Wer ist da?\nMiriam: Ich, hab Homeoffice. Er soll bei Yılmaz/Bergmann klingeln. Meine Nummer für ihn: 0151 555 01 936.\nKemal: Top. Das neue WLAN-Passwort hab ich schon gesetzt: Kastanie!Kaffee#4. Der Router heißt weiterhin FRITZ!Box 7590.\nJonas: Müller von nebenan hat sich wieder über die Musik beschwert, also der Herr Müller, nicht die Mühle 😄\nLotte Bergmann: Sorry, das war ich. Übrigens bin ich vom 1. bis 6. Dezember bei meinen Eltern. Post bitte nachschicken: Am Stadtgarten 27, 45276 Essen. Und falls das Paket von Zalando kommt (Sendungsnummer 00340434161094042557), bitte annehmen.\nKemal: Klar. Schick mir mal deine Mail für die Abrechnung.\nLotte Bergmann: lotte.bergmann@example.org – und Kemal, du schuldest mir noch 20 € vom Bäcker.",
+  "mask": [
+   [
+    "Jonas",
+    0,
+    "PERSON"
+   ],
+   [
+    "Miriam",
+    0,
+    "PERSON"
+   ],
+   [
+    "Schlüter",
+    0,
+    "PERSON"
+   ],
+   [
+    "DE27 1203 0000 1052 7741 96",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Kemal",
+    0,
+    "PERSON"
+   ],
+   [
+    "24.11.2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Yılmaz",
+    0,
+    "PERSON"
+   ],
+   [
+    "Bergmann",
+    0,
+    "PERSON"
+   ],
+   [
+    "0151 555 01 936",
+    0,
+    "PHONE"
+   ],
+   [
+    "Kastanie!Kaffee#4",
+    0,
+    "SECRET"
+   ],
+   [
+    "Müller",
+    0,
+    "PERSON"
+   ],
+   [
+    "Lotte Bergmann",
+    0,
+    "PERSON"
+   ],
+   [
+    "1. bis 6. Dezember",
+    0,
+    "DATE"
+   ],
+   [
+    "Am Stadtgarten 27, 45276 Essen",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "lotte.bergmann@example.org",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Moin",
+    0
+   ],
+   [
+    "1.284,60 €",
+    0
+   ],
+   [
+    "321,15 €",
+    0
+   ],
+   [
+    "Freitag",
+    0
+   ],
+   [
+    "NK 2025",
+    0
+   ],
+   [
+    "Vodafone",
+    0
+   ],
+   [
+    "8 und 12 Uhr",
+    0
+   ],
+   [
+    "7730044182",
+    0
+   ],
+   [
+    "Homeoffice",
+    0
+   ],
+   [
+    "FRITZ!Box 7590",
+    0
+   ],
+   [
+    "Mühle",
+    0
+   ],
+   [
+    "Zalando",
+    0
+   ],
+   [
+    "00340434161094042557",
+    0
+   ],
+   [
+    "20 €",
+    0
+   ],
+   [
+    "Bäcker",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-31",
+  "domain": "carpool_chat_french",
+  "text": "Groupe « Covoiturage Annecy »\nClémence : Coucou ! Je pars vendredi à 17h45 de la Part-Dieu, il reste 2 places. 12 € par personne.\nBaptiste : Je prends ! Tu peux passer me prendre devant chez moi ? 8 bis rue des Tanneurs, 69009 Lyon, interphone « Lemoine ».\nClémence : Ça marche Baptiste. Mon numéro au cas où : 06 55 50 14 72. La voiture est une Clio grise, immatriculée GH-482-KZ.\nRose : Moi aussi svp ! Je suis la coloc de Pierre, il m'a donné ton contact. Je paie par Lydia ou virement ?\nClémence : Virement si tu veux : FR76 3000 4008 2700 0104 5593 172, au nom de Clémence Fauré-Dubois.\nRose : Parfait. Petite question : on peut s'arrêter à la pharmacie ? Je dois récupérer mon traitement, Ventoline et Lévothyrox.\nBaptiste : Au fait Clémence, j'ai retrouvé ta carte de fidélité Décathlon dans ma veste, numéro 2090 4418 7730 1. Et ton badge de bureau, avec le code 7193 écrit au dos… pas très prudent !\nClémence : Oups, merci. Garde-les jusqu'à vendredi.\nPierre : Salut tout le monde, c'est Pierrot. Rose n'a plus de batterie, écrivez-moi : pierre.marchetti@example.net ou @pierrot_mrc sur Insta. On rentre dimanche 29 novembre, n'est-ce pas ?",
+  "mask": [
+   [
+    "Clémence",
+    0,
+    "PERSON"
+   ],
+   [
+    "Baptiste",
+    0,
+    "PERSON"
+   ],
+   [
+    "8 bis rue des Tanneurs, 69009 Lyon",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Lemoine",
+    0,
+    "PERSON"
+   ],
+   [
+    "06 55 50 14 72",
+    0,
+    "PHONE"
+   ],
+   [
+    "GH-482-KZ",
+    0,
+    "ID"
+   ],
+   [
+    "Rose",
+    0,
+    "PERSON"
+   ],
+   [
+    "Pierre",
+    0,
+    "PERSON"
+   ],
+   [
+    "FR76 3000 4008 2700 0104 5593 172",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "Clémence Fauré-Dubois",
+    0,
+    "PERSON"
+   ],
+   [
+    "2090 4418 7730 1",
+    0,
+    "ID"
+   ],
+   [
+    "7193",
+    0,
+    "SECRET"
+   ],
+   [
+    "Pierrot",
+    0,
+    "PERSON"
+   ],
+   [
+    "pierre.marchetti@example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "@pierrot_mrc",
+    0,
+    "USERNAME"
+   ],
+   [
+    "29 novembre",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "Annecy",
+    0
+   ],
+   [
+    "Coucou",
+    0
+   ],
+   [
+    "vendredi",
+    0
+   ],
+   [
+    "17h45",
+    0
+   ],
+   [
+    "Part-Dieu",
+    0
+   ],
+   [
+    "2 places",
+    0
+   ],
+   [
+    "12 €",
+    0
+   ],
+   [
+    "Clio",
+    0
+   ],
+   [
+    "Lydia",
+    0
+   ],
+   [
+    "pharmacie",
+    0
+   ],
+   [
+    "Ventoline",
+    0
+   ],
+   [
+    "Lévothyrox",
+    0
+   ],
+   [
+    "Décathlon",
+    0
+   ],
+   [
+    "Insta",
+    0
+   ],
+   [
+    "dimanche",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-32",
+  "domain": "forum_post",
+  "text": "Title: Locked out of my Synology after power cut — tried everything (DS920+, DSM 7.2.1)\n\nPosted by tin_can_sailor » Sun 08 Nov 2026 22:14\n\nLong-time lurker. After Friday's outage my NAS boots but the admin account rejects my password. I KNOW it's right because I typed it from my password manager: it was Barnacle-Quay-73! (yes I'll change it, don't @ me). 2FA codes are rejected too and my recovery codes (first one: 8841-2207-KQPX) say invalid.\n\nWhat I've tried: reset button for 4 seconds (network reset only), Synology Assistant finds it at 192.168.1.50, port 5001, but the default admin/blank login doesn't work. SSH on port 22 refuses.\n\n@Marlowe_NAS suggested in another thread that DSM-update 69057 breaks time sync, so OTP drifts. Could be: the clock shows 1 Jan 2000.\n\nIf a mod needs to verify ownership, serial is 2180SBR4GZ117 and the QuickConnect ID is vandenberg-attic. Synology support (ticket #3391820) just sent the standard KB article. My real name's Joost if anyone from support is reading, Joost van den Berg, and the registered email is joost.vdberg@example.com.\n\nEdit: user Grace_Hopper_fan says Mode 2 reset wipes config but keeps data. Will try tomorrow. May the bits be with me.",
+  "mask": [
+   [
+    "tin_can_sailor",
+    0,
+    "USERNAME"
+   ],
+   [
+    "08 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Barnacle-Quay-73!",
+    0,
+    "SECRET"
+   ],
+   [
+    "8841-2207-KQPX",
+    0,
+    "SECRET"
+   ],
+   [
+    "@Marlowe_NAS",
+    0,
+    "USERNAME"
+   ],
+   [
+    "1 Jan 2000",
+    0,
+    "DATE"
+   ],
+   [
+    "2180SBR4GZ117",
+    0,
+    "ID"
+   ],
+   [
+    "vandenberg-attic",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Joost",
+    0,
+    "PERSON"
+   ],
+   [
+    "Joost van den Berg",
+    0,
+    "PERSON"
+   ],
+   [
+    "joost.vdberg@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Grace_Hopper_fan",
+    0,
+    "USERNAME"
+   ]
+  ],
+  "keep": [
+   [
+    "Synology",
+    0
+   ],
+   [
+    "DS920+",
+    0
+   ],
+   [
+    "DSM 7.2.1",
+    0
+   ],
+   [
+    "Sun",
+    0
+   ],
+   [
+    "22:14",
+    0
+   ],
+   [
+    "Friday",
+    0
+   ],
+   [
+    "4 seconds",
+    0
+   ],
+   [
+    "192.168.1.50",
+    0
+   ],
+   [
+    "5001",
+    0
+   ],
+   [
+    "admin/blank",
+    0
+   ],
+   [
+    "port 22",
+    0
+   ],
+   [
+    "69057",
+    0
+   ],
+   [
+    "#3391820",
+    0
+   ],
+   [
+    "Mode 2",
+    0
+   ],
+   [
+    "Will try",
+    0
+   ],
+   [
+    "May the bits",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-33",
+  "domain": "forum_post",
+  "text": "r/germany_expats — \"Anmeldung done, but tax ID letter went to the wrong flat?\"\n\nu/saffron_and_rain wrote:\nMoved to Hamburg this autumn for a job at Airbus. Did my Anmeldung at the Bezirksamt on 2 Oct 2026. Three weeks later a neighbour — lovely old man called Herr Petersen — knocked with my letter from the Bundeszentralamt für Steuern, already opened. So he has now seen my Steuer-ID (42 918 730 556) and my full name, Anoushka Sengupta-Whyte. Is that a problem?\n\nAlso the letter spelled my name \"Anuschka Sengupta White\" and my birthday as 17.08.1993 instead of 18.08.1993. HR needs the ID by month end. My payroll contact (Stefanie in HR, s.brandt@airbus-hr.example.com) says I should call the Finanzamt, but the 0800 number, 0800 555 0177, has a 40-minute queue.\n\nu/karl_der_kleine replied:\nNot a big problem, the Steuer-ID alone is useless. Fix the spelling at the Bürgeramt, bring your passport. Not Karl Marx-level bureaucracy, promise. Appointment slots open at 7:00.\n\nu/saffron_and_rain:\nThanks! For anyone who wants to compare notes, I'm on Signal as anoushka.sw or +49 1520 555 0166. Rent is €1,150 warm for 48 m², if that helps newcomers.",
+  "mask": [
+   [
+    "u/saffron_and_rain",
+    0,
+    "USERNAME"
+   ],
+   [
+    "2 Oct 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Petersen",
+    0,
+    "PERSON"
+   ],
+   [
+    "42 918 730 556",
+    0,
+    "ID"
+   ],
+   [
+    "Anoushka Sengupta-Whyte",
+    0,
+    "PERSON"
+   ],
+   [
+    "Anuschka Sengupta White",
+    0,
+    "PERSON"
+   ],
+   [
+    "17.08.1993",
+    0,
+    "DOB"
+   ],
+   [
+    "18.08.1993",
+    0,
+    "DOB"
+   ],
+   [
+    "Stefanie",
+    0,
+    "PERSON"
+   ],
+   [
+    "s.brandt@airbus-hr.example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "u/karl_der_kleine",
+    0,
+    "USERNAME"
+   ],
+   [
+    "anoushka.sw",
+    0,
+    "USERNAME"
+   ],
+   [
+    "+49 1520 555 0166",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "r/germany_expats",
+    0
+   ],
+   [
+    "Hamburg",
+    0
+   ],
+   [
+    "Airbus",
+    0
+   ],
+   [
+    "Anmeldung",
+    0
+   ],
+   [
+    "Bezirksamt",
+    0
+   ],
+   [
+    "Three weeks",
+    0
+   ],
+   [
+    "Bundeszentralamt für Steuern",
+    0
+   ],
+   [
+    "Finanzamt",
+    0
+   ],
+   [
+    "0800 555 0177",
+    0
+   ],
+   [
+    "40-minute",
+    0
+   ],
+   [
+    "Bürgeramt",
+    0
+   ],
+   [
+    "Karl Marx",
+    0
+   ],
+   [
+    "7:00",
+    0
+   ],
+   [
+    "Signal",
+    0
+   ],
+   [
+    "€1,150",
+    0
+   ],
+   [
+    "48 m²",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-34",
+  "domain": "call_transcript",
+  "text": "[Call recording transcript — Solara Energy customer care, queue: billing, duration 06:12]\n\nAGENT: Thank you for calling Solara Energy, you're speaking with Desiree. Who do I have the pleasure of speaking with?\nCALLER: Yeah hi, this is Earl. Earl Jankowski. J-A-N-K-O-W-S-K-I.\nAGENT: Thanks, Mr. Jankowski. Can I get the phone number on the account?\nCALLER: Sure, it's four one two, five five five, oh one three eight.\nAGENT: And to verify, your date of birth and your account PIN?\nCALLER: March ninth, nineteen fifty-nine. PIN is seven seven two zero.\nAGENT: Perfect. I see the account, number ending 5521, service address 908 Mill Run Road, Pittsburgh.\nCALLER: That's my mother's place, Dorothy's. The bill should come to me, at 77 Larkspur Court, Unit 3, Cranberry Township, PA 16066.\nAGENT: Got it. Your balance is two hundred fourteen dollars and sixty cents, due on the twentieth of November.\nCALLER: Can I pay now? Card is a Visa, four four eight five, two two one zero, nine nine three one, six six four seven. Security code three one nine.\nAGENT: Thank you. Confirmation number is S as in Sierra, 4-4-1-9-0-2. A receipt will go to earl dot jankowski at example dot com.\nCALLER: Appreciate it, Desiree. Is the eight hundred number, 1-800-555-0121, open on Sundays?\nAGENT: Seven days, 8 to 8 Eastern.",
+  "mask": [
+   [
+    "Desiree",
+    0,
+    "PERSON"
+   ],
+   [
+    "Earl",
+    0,
+    "PERSON"
+   ],
+   [
+    "Earl Jankowski",
+    0,
+    "PERSON"
+   ],
+   [
+    "J-A-N-K-O-W-S-K-I",
+    0,
+    "PERSON"
+   ],
+   [
+    "Jankowski",
+    0,
+    "PERSON"
+   ],
+   [
+    "four one two, five five five, oh one three eight",
+    0,
+    "PHONE"
+   ],
+   [
+    "March ninth, nineteen fifty-nine",
+    0,
+    "DOB"
+   ],
+   [
+    "seven seven two zero",
+    0,
+    "SECRET"
+   ],
+   [
+    "908 Mill Run Road, Pittsburgh",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Dorothy",
+    0,
+    "PERSON"
+   ],
+   [
+    "77 Larkspur Court, Unit 3, Cranberry Township, PA 16066",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "twentieth of November",
+    0,
+    "DATE"
+   ],
+   [
+    "four four eight five, two two one zero, nine nine three one, six six four seven",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "three one nine",
+    0,
+    "SECRET"
+   ],
+   [
+    "earl dot jankowski at example dot com",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Solara Energy",
+    0
+   ],
+   [
+    "billing",
+    0
+   ],
+   [
+    "06:12",
+    0
+   ],
+   [
+    "5521",
+    0
+   ],
+   [
+    "two hundred fourteen dollars and sixty cents",
+    0
+   ],
+   [
+    "Visa",
+    0
+   ],
+   [
+    "Sierra",
+    0
+   ],
+   [
+    "4-4-1-9-0-2",
+    0
+   ],
+   [
+    "1-800-555-0121",
+    0
+   ],
+   [
+    "Sundays",
+    0
+   ],
+   [
+    "Seven days",
+    0
+   ],
+   [
+    "8 to 8 Eastern",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-35",
+  "domain": "call_transcript",
+  "text": "Transcript (auto-generated, may contain errors) — outbound verification call, Kaveri Co-operative Bank, ref CALL-88120\n\nAgent: Good afternoon, am I speaking to Mr. Subramaniam?\nCustomer: Yes, Subramaniam speaking. Venkatesh Subramaniam.\nAgent: Sir, I am Lakshmi Priya from the fraud monitoring cell, my employee code is KCB-E-3391. We noticed a transaction of rupees forty-nine thousand nine hundred on your Visa Platinum debit card at 2:10 a.m. Did you authorise it?\nCustomer: No, no. I was sleeping. My son Karthik uses the card sometimes, but he is in Coimbatore.\nAgent: We will block it. For verification, please tell me your registered mobile number and date of birth.\nCustomer: Nine eight four double zero, five five, triple one. Born fifth June nineteen fifty-seven.\nAgent: And your customer ID?\nCustomer: It is K C B, then seven seven four one zero two nine.\nAgent: Thank you. Sir, please never share your OTP or PIN, even with bank staff.\nCustomer: But one fellow called in the morning, said he was Rajan from head office, and I told him the OTP, it was double five, three, eight, one, nine.\nAgent: That was not us, sir. I am raising dispute DSP-2026-04417. A new card will be sent to your address, shall I confirm? Old number 14, new number 27, Second Cross Street, Mylapore, Chennai.\nCustomer: Correct. Also update my email, it is v underscore subbu fifty-seven at example dot org.\nAgent: Done. Our official helpline is 1800 555 0108. I will call again on Monday.",
+  "mask": [
+   [
+    "Subramaniam",
+    0,
+    "PERSON"
+   ],
+   [
+    "Venkatesh Subramaniam",
+    0,
+    "PERSON"
+   ],
+   [
+    "Lakshmi Priya",
+    0,
+    "PERSON"
+   ],
+   [
+    "KCB-E-3391",
+    0,
+    "ID"
+   ],
+   [
+    "Karthik",
+    0,
+    "PERSON"
+   ],
+   [
+    "Nine eight four double zero, five five, triple one",
+    0,
+    "PHONE"
+   ],
+   [
+    "fifth June nineteen fifty-seven",
+    0,
+    "DOB"
+   ],
+   [
+    "K C B, then seven seven four one zero two nine",
+    0,
+    "ID"
+   ],
+   [
+    "Rajan",
+    0,
+    "PERSON"
+   ],
+   [
+    "double five, three, eight, one, nine",
+    0,
+    "SECRET"
+   ],
+   [
+    "Old number 14, new number 27, Second Cross Street, Mylapore, Chennai",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "v underscore subbu fifty-seven at example dot org",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Kaveri Co-operative Bank",
+    0
+   ],
+   [
+    "CALL-88120",
+    0
+   ],
+   [
+    "fraud monitoring cell",
+    0
+   ],
+   [
+    "rupees forty-nine thousand nine hundred",
+    0
+   ],
+   [
+    "Visa Platinum",
+    0
+   ],
+   [
+    "2:10 a.m.",
+    0
+   ],
+   [
+    "Coimbatore",
+    0
+   ],
+   [
+    "head office",
+    0
+   ],
+   [
+    "DSP-2026-04417",
+    0
+   ],
+   [
+    "1800 555 0108",
+    0
+   ],
+   [
+    "Monday",
+    0
+   ],
+   [
+    "Good afternoon",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-36",
+  "domain": "scanned_form_ocr",
+  "text": "APPL1CATION FOR NEW PASSP0RT — Form PP-1 (Rev. 7)   [scan pg 1 of 3]\n\n1. SURNAME:  HARGREAVES-OYELARAN        2. GIVEN NAMES:  IMOGEN ADAEZE\n3. DATE 0F BIRTH (DD/MM/YYYY):  O9 / 11 / 1987     4. PLACE OF BIRTH:  BRISTOL\n5. SEX: F    6. HEIGHT: 168 cm    7. EYE COL0UR: BROWN\n8. CURRENT ADDRESS:  FLAT 2 , 19 QUARRY HILL RD , BATH  BA2 4LX\n9. DAYTIME TEL:  O7700 9OO 518       10. EMAIL:  imogen.h.oyelaran @ example . com\n11. PREVIOUS PASSPORT N0.:  5O2 884 l17      ISSUED: 14 MAR 2014   EXPIRED: 14 MAR 2024\n12. NATIONAL INSURANCE N0.:  NP 48 27 19 B\n13. MOTHER'S MAIDEN NAME:  NWOSU\n14. COUNTERSIGNATORY:  DR. T. PEMBERTON-SHAW , OCCUPATION: GP , KNOWN APPLICANT FOR 6 YRS\n     TEL: 01225 555 O14     PASSPORT N0.: 533 901 77Z\n15. FEE PAID:  £88.50   RECEIPT N0.: RC-0041772   METHOD: CARD (****  ****  ****  6603)\n\nDECLARATION — I declare that the information given is true.   SIGNED:  I. Hargreaves-Oyelaran     DATE:  2l Oct 2026\nFOR OFFICE USE ONLY:  BATCH 7B / OPERATOR 114 / CHECKED ✓ / REF PP1-2026-BA-009182",
+  "mask": [
+   [
+    "HARGREAVES-OYELARAN",
+    0,
+    "PERSON"
+   ],
+   [
+    "IMOGEN ADAEZE",
+    0,
+    "PERSON"
+   ],
+   [
+    "O9 / 11 / 1987",
+    0,
+    "DOB"
+   ],
+   [
+    "FLAT 2 , 19 QUARRY HILL RD , BATH  BA2 4LX",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "O7700 9OO 518",
+    0,
+    "PHONE"
+   ],
+   [
+    "imogen.h.oyelaran @ example . com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "5O2 884 l17",
+    0,
+    "ID"
+   ],
+   [
+    "14 MAR 2014",
+    0,
+    "DATE"
+   ],
+   [
+    "14 MAR 2024",
+    0,
+    "DATE"
+   ],
+   [
+    "NP 48 27 19 B",
+    0,
+    "ID"
+   ],
+   [
+    "NWOSU",
+    0,
+    "PERSON"
+   ],
+   [
+    "T. PEMBERTON-SHAW",
+    0,
+    "PERSON"
+   ],
+   [
+    "01225 555 O14",
+    0,
+    "PHONE"
+   ],
+   [
+    "533 901 77Z",
+    0,
+    "ID"
+   ],
+   [
+    "I. Hargreaves-Oyelaran",
+    0,
+    "PERSON"
+   ],
+   [
+    "2l Oct 2026",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "PASSP0RT",
+    0
+   ],
+   [
+    "PP-1",
+    0
+   ],
+   [
+    "Rev. 7",
+    0
+   ],
+   [
+    "pg 1 of 3",
+    0
+   ],
+   [
+    "BRISTOL",
+    0
+   ],
+   [
+    "168 cm",
+    0
+   ],
+   [
+    "BROWN",
+    0
+   ],
+   [
+    "OCCUPATION: GP",
+    0
+   ],
+   [
+    "6 YRS",
+    0
+   ],
+   [
+    "£88.50",
+    0
+   ],
+   [
+    "RC-0041772",
+    0
+   ],
+   [
+    "6603",
+    0
+   ],
+   [
+    "BATCH 7B",
+    0
+   ],
+   [
+    "OPERATOR 114",
+    0
+   ],
+   [
+    "PP1-2026-BA-009182",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-37",
+  "domain": "hospital_form_ocr",
+  "text": "SRI MEENAKSHI MULTISPECIALITY HOSPITAL , MADURAI          ADMISSION SLIP (copy 2)\nUHID : SMH/26/118204        IP No : IP-44190        Ward : 3rd Flr , Rm 312-B\nPatient Name : Thiru. க. முருகேசன்  ( K. MURUGESAN )     Age/Sex : 67 / M\nFather / Spouse : Tmt. VALLIAMMAI M.\nAddress : No. 5/118 , Vadakku Masi St , Madurai - 625 OO1      Ph : 9443O 55 827\nDate of Admn : 11-11-2O26   Time : 22:35       Admitting Dr : Dr. S. Anbarasan MD (Gen Med)\nProvisional Dx : Acute inferior wall MI , T2DM , HTN        Allergy : NKDA\nRx on admn : Inj. Heparin 5000 IU , T. Ecosprin 150 mg , T. Atorvastatin 80 mg\nInsurance : Star Health , Policy No P/700002/01/2026/004417 , TPA ID card no. 88 2041 7739\nID proof : Aadhaar  XXXX XXXX 3318   /  Voter ID  TNB2291047\nAttender : Selvi ( daughter ) , 98421 55 O63 ,  selvi.murugesan@example.com\nAdvance paid : Rs 25,OOO/- by UPI ( murugesan.k@okaxis ) , receipt R-009812\nBilling desk extn 214 ; hospital main line O452-555-0100 ; ambulance 108",
+  "mask": [
+   [
+    "SMH/26/118204",
+    0,
+    "ID"
+   ],
+   [
+    "IP-44190",
+    0,
+    "ID"
+   ],
+   [
+    "க. முருகேசன்",
+    0,
+    "PERSON"
+   ],
+   [
+    "K. MURUGESAN",
+    0,
+    "PERSON"
+   ],
+   [
+    "VALLIAMMAI M.",
+    0,
+    "PERSON"
+   ],
+   [
+    "No. 5/118 , Vadakku Masi St , Madurai - 625 OO1",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "9443O 55 827",
+    0,
+    "PHONE"
+   ],
+   [
+    "11-11-2O26",
+    0,
+    "DATE"
+   ],
+   [
+    "S. Anbarasan",
+    0,
+    "PERSON"
+   ],
+   [
+    "P/700002/01/2026/004417",
+    0,
+    "ID"
+   ],
+   [
+    "88 2041 7739",
+    0,
+    "ID"
+   ],
+   [
+    "TNB2291047",
+    0,
+    "ID"
+   ],
+   [
+    "Selvi",
+    0,
+    "PERSON"
+   ],
+   [
+    "98421 55 O63",
+    0,
+    "PHONE"
+   ],
+   [
+    "selvi.murugesan@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "murugesan.k@okaxis",
+    0,
+    "ACCOUNT"
+   ]
+  ],
+  "keep": [
+   [
+    "SRI MEENAKSHI MULTISPECIALITY HOSPITAL",
+    0
+   ],
+   [
+    "MADURAI",
+    0
+   ],
+   [
+    "Rm 312-B",
+    0
+   ],
+   [
+    "67 / M",
+    0
+   ],
+   [
+    "22:35",
+    0
+   ],
+   [
+    "Acute inferior wall MI",
+    0
+   ],
+   [
+    "T2DM",
+    0
+   ],
+   [
+    "NKDA",
+    0
+   ],
+   [
+    "Heparin 5000 IU",
+    0
+   ],
+   [
+    "Ecosprin 150 mg",
+    0
+   ],
+   [
+    "Atorvastatin 80 mg",
+    0
+   ],
+   [
+    "Star Health",
+    0
+   ],
+   [
+    "XXXX XXXX 3318",
+    0
+   ],
+   [
+    "Rs 25,OOO/-",
+    0
+   ],
+   [
+    "R-009812",
+    0
+   ],
+   [
+    "extn 214",
+    0
+   ],
+   [
+    "O452-555-0100",
+    0
+   ],
+   [
+    "ambulance 108",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-38",
+  "domain": "forwarded_email_signature",
+  "text": "---------- Forwarded message ----------\nFrom: Ingrid Solheim-Baptiste <ingrid.sb@fjordline-arch.example.com>\nDate: Mon, 2 Nov 2026 at 08:07\nSubject: Fwd: RE: Keys + alarm for the Bergen site\nTo: Mark Oduya <mark@oduya-contracting.example.net>\n\nHi Mr Oduya — see below from Hans. Mark the east door as out of use until the lock is replaced. Alarm code is unchanged (it's 30 71 94, disarm within 30 seconds).\n\nIngrid Solheim-Baptiste | Senior Architect, Fjordline Arkitekter AS\nM +47 412 55 018 | T +47 55 55 01 00 (switchboard) | www.fjordline-arch.example.com\nOrg.nr 987 654 321 MVA\n\n> On Fri, 30 Oct 2026, Hans-Petter Aune wrote:\n> Ingrid, the site keys are with the caretaker, Mrs. Dahl. Her son Bjørn can open up on Saturday if you text him first: 928 55 014. Deliveries from Würth (order 4500218834) arrive Tuesday; the driver should ask for me.\n> Site wifi: network \"FJL-Site-Guest\", password is on the whiteboard but for the record it's nordlys-2026-kaffe.\n> --\n> Hans-Petter Aune, Site Manager\n> hpa@fjordline-arch.example.com · mobile 913 55 027\n> Sent from my iPhone",
+  "mask": [
+   [
+    "Ingrid Solheim-Baptiste",
+    0,
+    "PERSON"
+   ],
+   [
+    "ingrid.sb@fjordline-arch.example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Mark Oduya",
+    0,
+    "PERSON"
+   ],
+   [
+    "mark@oduya-contracting.example.net",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Oduya",
+    0,
+    "PERSON"
+   ],
+   [
+    "Hans",
+    0,
+    "PERSON"
+   ],
+   [
+    "30 71 94",
+    0,
+    "SECRET"
+   ],
+   [
+    "+47 412 55 018",
+    0,
+    "PHONE"
+   ],
+   [
+    "30 Oct 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Hans-Petter Aune",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ingrid",
+    0,
+    "PERSON"
+   ],
+   [
+    "Dahl",
+    0,
+    "PERSON"
+   ],
+   [
+    "Bjørn",
+    0,
+    "PERSON"
+   ],
+   [
+    "928 55 014",
+    0,
+    "PHONE"
+   ],
+   [
+    "nordlys-2026-kaffe",
+    0,
+    "SECRET"
+   ],
+   [
+    "hpa@fjordline-arch.example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "913 55 027",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "Mon",
+    0
+   ],
+   [
+    "08:07",
+    0
+   ],
+   [
+    "Bergen",
+    0
+   ],
+   [
+    "Mark the east door",
+    0
+   ],
+   [
+    "30 seconds",
+    0
+   ],
+   [
+    "Senior Architect",
+    0
+   ],
+   [
+    "Fjordline Arkitekter AS",
+    0
+   ],
+   [
+    "+47 55 55 01 00",
+    0
+   ],
+   [
+    "www.fjordline-arch.example.com",
+    0
+   ],
+   [
+    "987 654 321",
+    0
+   ],
+   [
+    "Fri",
+    0
+   ],
+   [
+    "Saturday",
+    0
+   ],
+   [
+    "Würth",
+    0
+   ],
+   [
+    "4500218834",
+    0
+   ],
+   [
+    "Tuesday",
+    0
+   ],
+   [
+    "FJL-Site-Guest",
+    0
+   ],
+   [
+    "Site Manager",
+    0
+   ],
+   [
+    "iPhone",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-39",
+  "domain": "spreadsheet_paste",
+  "text": "Sheet: Q4_field_team_expenses (pasted from Excel, tabs became spaces)\n\nEmp ID    Name                 Region      Mobile            Claim Ref    Amount     Paid To (A/C, sort code)   Approved By   Paid On\nFT-0192   Laila Haddad-Stone   Leeds       07700 900 145     EXP-22104    £412.80    4092 7731 (20-11-04)       J. Abara      06/11/2026\nFT-0207   Björn Åkesson        Aberdeen    07700 900 388     EXP-22105    £96.15     7718 0042 (83-21-17)       J. Abara      06/11/2026\nFT-0233   Chanel Okoro         Chester     07700 900 902     EXP-22109    £1,204.00  0356 6190 (40-02-55)       S. Whitcombe  pending\nFT-0241   Hamish MacRae        Hamilton    07700 900 671     EXP-22111    £58.40     6621 4875 (09-01-28)       J. Abara      09/11/2026\nTOTAL                                                                     £1,771.35\n\nNotes:\n- Ms Okoro's claim includes the Chanel counter display install at Harvey Nichols; needs a second sign-off from Jide (Abara) because it is over £1,000.\n- Hamish was in Hamilton, Ontario, not Hamilton, Scotland — mileage rate 45p does not apply.\n- Björn lost his fuel card; the replacement card PIN (5 5 0 9) was texted to him, he must change it at first use.\n- Queries: expenses@fieldco.example.com, not to Sunita's personal address (sunita.whitcombe@example.org).",
+  "mask": [
+   [
+    "FT-0192",
+    0,
+    "ID"
+   ],
+   [
+    "Laila Haddad-Stone",
+    0,
+    "PERSON"
+   ],
+   [
+    "07700 900 145",
+    0,
+    "PHONE"
+   ],
+   [
+    "4092 7731",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "J. Abara",
+    0,
+    "PERSON"
+   ],
+   [
+    "06/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "FT-0207",
+    0,
+    "ID"
+   ],
+   [
+    "Björn Åkesson",
+    0,
+    "PERSON"
+   ],
+   [
+    "07700 900 388",
+    0,
+    "PHONE"
+   ],
+   [
+    "7718 0042",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "FT-0233",
+    0,
+    "ID"
+   ],
+   [
+    "Chanel Okoro",
+    0,
+    "PERSON"
+   ],
+   [
+    "07700 900 902",
+    0,
+    "PHONE"
+   ],
+   [
+    "0356 6190",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "S. Whitcombe",
+    0,
+    "PERSON"
+   ],
+   [
+    "FT-0241",
+    0,
+    "ID"
+   ],
+   [
+    "Hamish MacRae",
+    0,
+    "PERSON"
+   ],
+   [
+    "07700 900 671",
+    0,
+    "PHONE"
+   ],
+   [
+    "6621 4875",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "09/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Okoro",
+    0,
+    "PERSON"
+   ],
+   [
+    "Jide",
+    0,
+    "PERSON"
+   ],
+   [
+    "Abara",
+    0,
+    "PERSON"
+   ],
+   [
+    "Hamish",
+    0,
+    "PERSON"
+   ],
+   [
+    "Björn",
+    0,
+    "PERSON"
+   ],
+   [
+    "5 5 0 9",
+    0,
+    "SECRET"
+   ],
+   [
+    "Sunita",
+    0,
+    "PERSON"
+   ],
+   [
+    "sunita.whitcombe@example.org",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "Q4_field_team_expenses",
+    0
+   ],
+   [
+    "Excel",
+    0
+   ],
+   [
+    "Leeds",
+    0
+   ],
+   [
+    "Aberdeen",
+    0
+   ],
+   [
+    "Chester",
+    0
+   ],
+   [
+    "EXP-22104",
+    0
+   ],
+   [
+    "EXP-22109",
+    0
+   ],
+   [
+    "£412.80",
+    0
+   ],
+   [
+    "£1,771.35",
+    0
+   ],
+   [
+    "20-11-04",
+    0
+   ],
+   [
+    "83-21-17",
+    0
+   ],
+   [
+    "pending",
+    0
+   ],
+   [
+    "Chanel counter display",
+    0
+   ],
+   [
+    "Harvey Nichols",
+    0
+   ],
+   [
+    "£1,000",
+    0
+   ],
+   [
+    "Hamilton, Ontario",
+    0
+   ],
+   [
+    "45p",
+    0
+   ],
+   [
+    "expenses@fieldco.example.com",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "b3-40",
+  "domain": "support_ticket_encoded",
+  "text": "Zendesk-style ticket export — ID 5512093 — channel: web widget — tags: login, sso, vip\n\nRequester: Tomás Echeverría-Lund (tomas.el@example.com), org: Pinecrest Veterinary Group\nAssignee: support agent \"Jordan\" (jordan.k), group T2-Identity\n\nDescription:\nCustomer cannot complete SSO. He pasted the failing redirect URL:\nhttps://login.example.com/callback?email=tomas.el%40example.com&name=Tom%C3%A1s%20Echeverr%C3%ADa&state=af3c9e12&code=4%2F0AfakeQw8ZxLr2TnY6vKb0pSm5dHc&session_hint=VG9tw6FzIEVjaGV2ZXJyw61hLCArMSA1MDMgNTU1IDAxNjI%3D\n\nInternal note (Jordan): the session_hint decodes to his name and phone, so treat this ticket as containing PII. The `code` param is a live OAuth authorisation code — it expired after 10 minutes but redact anyway. `state` is just a nonce.\n\nCustomer follow-up: \"Still broken. Call me, Tom, on +1 503 555 0162 before 5 PM Pacific. If it helps, my backup login is the clinic's shared one: frontdesk@pinecrest.example.com with the password Paws&Claws_2024 — I know, I know.\"\n\nInternal note (Priscilla Ng, T3): root cause is clock skew on idp-02 (NTP offset 312 s). Fix shipped in build 2026.46.1, commit d41c07ab. Customer confirmed OK on 13 Nov 2026 14:20. CSAT 5/5. Related: JIRA IDN-4471, KB article #2207.",
+  "mask": [
+   [
+    "Tomás Echeverría-Lund",
+    0,
+    "PERSON"
+   ],
+   [
+    "tomas.el@example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Jordan",
+    0,
+    "PERSON"
+   ],
+   [
+    "jordan.k",
+    0,
+    "USERNAME"
+   ],
+   [
+    "tomas.el%40example.com",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Tom%C3%A1s%20Echeverr%C3%ADa",
+    0,
+    "PERSON"
+   ],
+   [
+    "4%2F0AfakeQw8ZxLr2TnY6vKb0pSm5dHc",
+    0,
+    "SECRET"
+   ],
+   [
+    "VG9tw6FzIEVjaGV2ZXJyw61hLCArMSA1MDMgNTU1IDAxNjI%3D",
+    0,
+    "PERSON"
+   ],
+   [
+    "Tom",
+    0,
+    "PERSON"
+   ],
+   [
+    "+1 503 555 0162",
+    0,
+    "PHONE"
+   ],
+   [
+    "Paws&Claws_2024",
+    0,
+    "SECRET"
+   ],
+   [
+    "Priscilla Ng",
+    0,
+    "PERSON"
+   ],
+   [
+    "13 Nov 2026",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "5512093",
+    0
+   ],
+   [
+    "vip",
+    0
+   ],
+   [
+    "Pinecrest Veterinary Group",
+    0
+   ],
+   [
+    "T2-Identity",
+    0
+   ],
+   [
+    "https://login.example.com/callback",
+    0
+   ],
+   [
+    "af3c9e12",
+    0
+   ],
+   [
+    "10 minutes",
+    0
+   ],
+   [
+    "5 PM Pacific",
+    0
+   ],
+   [
+    "frontdesk@pinecrest.example.com",
+    0
+   ],
+   [
+    "idp-02",
+    0
+   ],
+   [
+    "312 s",
+    0
+   ],
+   [
+    "2026.46.1",
+    0
+   ],
+   [
+    "d41c07ab",
+    0
+   ],
+   [
+    "14:20",
+    0
+   ],
+   [
+    "5/5",
+    0
+   ],
+   [
+    "IDN-4471",
+    0
+   ],
+   [
+    "#2207",
+    0
+   ]
+  ]
+ }
+]

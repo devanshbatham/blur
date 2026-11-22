@@ -1,0 +1,5015 @@
+[
+ {
+  "id": "td-01",
+  "domain": "http1_login",
+  "text": "POST /v2/session HTTP/1.1\nHost: auth.lumenpay.example\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15\nAccept: application/json\nAccept-Language: en-GB,en;q=0.8\nContent-Type: application/x-www-form-urlencoded; charset=utf-8\nContent-Length: 87\nOrigin: https://app.lumenpay.example\nReferer: https://app.lumenpay.example/login?next=%2Fdashboard\nX-Forwarded-For: 198.51.100.23, 10.12.0.4\nX-Request-Id: 7c1e0f4a-58b2-4d0e-9a51-2f3c8e6b1d90\nCookie: lp_locale=en-GB; lp_theme=dark; lp_csrf=Qm9vdHN0cmFwLWNzcmYtNzc0MQ\nConnection: keep-alive\n\nusername=hkowalczyk&password=Tr4mline%21Gdansk92&remember_me=true&tz=Europe%2FWarsaw\n\nHTTP/1.1 200 OK\nDate: Tue, 17 Nov 2026 08:41:07 GMT\nServer: envoy\nContent-Type: application/json; charset=utf-8\nContent-Length: 412\nCache-Control: no-store\nPragma: no-cache\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\nSet-Cookie: lp_sid=s%3A9fK2mQx7LwZ0bV4nR8tY1cE6uH3jP5aD.Wq0Zt8XvC2nB7mL4kJ1hG9fD; Path=/; Domain=lumenpay.example; Secure; HttpOnly; SameSite=Lax; Expires=Wed, 17 Nov 2027 08:41:07 GMT\nSet-Cookie: lp_csrf=Zx81Lr0QpTe5WvNa3YbK7cMd; Path=/; Secure; SameSite=Strict\nX-Envoy-Upstream-Service-Time: 38\nETag: W/\"19c-5b8d1f0e\"\nVary: Accept-Encoding, Origin\n\n{\"user\":{\"id\":\"usr_51GkqT8vXe\",\"username\":\"hkowalczyk\",\"display_name\":\"Henryk Kowalczyk\",\"email\":\"henryk.kowalczyk@lumenpay.example\",\"mfa\":\"totp\"},\"session\":{\"expires_in\":1209600,\"remember\":true},\"flags\":{\"new_nav\":\"variant_b\"}}",
+  "mask": [
+   [
+    "198.51.100.23",
+    0,
+    "IP"
+   ],
+   [
+    "Qm9vdHN0cmFwLWNzcmYtNzc0MQ",
+    0,
+    "SECRET"
+   ],
+   [
+    "hkowalczyk",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Tr4mline%21Gdansk92",
+    0,
+    "SECRET"
+   ],
+   [
+    "Tue, 17 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "s%3A9fK2mQx7LwZ0bV4nR8tY1cE6uH3jP5aD.Wq0Zt8XvC2nB7mL4kJ1hG9fD",
+    0,
+    "SECRET"
+   ],
+   [
+    "Wed, 17 Nov 2027",
+    0,
+    "DATE"
+   ],
+   [
+    "Zx81Lr0QpTe5WvNa3YbK7cMd",
+    0,
+    "SECRET"
+   ],
+   [
+    "usr_51GkqT8vXe",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Henryk Kowalczyk",
+    0,
+    "PERSON"
+   ],
+   [
+    "henryk.kowalczyk@lumenpay.example",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "POST /v2/session HTTP/1.1",
+    0
+   ],
+   [
+    "auth.lumenpay.example",
+    0
+   ],
+   [
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15",
+    0
+   ],
+   [
+    "application/x-www-form-urlencoded; charset=utf-8",
+    0
+   ],
+   [
+    "en-GB,en;q=0.8",
+    0
+   ],
+   [
+    "https://app.lumenpay.example/login?next=%2Fdashboard",
+    0
+   ],
+   [
+    "10.12.0.4",
+    0
+   ],
+   [
+    "7c1e0f4a-58b2-4d0e-9a51-2f3c8e6b1d90",
+    0
+   ],
+   [
+    "lp_theme=dark",
+    0
+   ],
+   [
+    "remember_me=true",
+    0
+   ],
+   [
+    "Europe%2FWarsaw",
+    0
+   ],
+   [
+    "HTTP/1.1 200 OK",
+    0
+   ],
+   [
+    "envoy",
+    0
+   ],
+   [
+    "max-age=63072000; includeSubDomains; preload",
+    0
+   ],
+   [
+    "Path=/; Domain=lumenpay.example; Secure; HttpOnly; SameSite=Lax",
+    0
+   ],
+   [
+    "SameSite=Strict",
+    0
+   ],
+   [
+    "W/\"19c-5b8d1f0e\"",
+    0
+   ],
+   [
+    "X-Envoy-Upstream-Service-Time",
+    0
+   ],
+   [
+    "\"mfa\":\"totp\"",
+    0
+   ],
+   [
+    "1209600",
+    0
+   ],
+   [
+    "variant_b",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-02",
+  "domain": "http2_frames",
+  "text": "$ nghttp -nv -H 'authorization: Bearer ya29.FAKE-a0Lq9xRz3WmP7tNcV2bKs8YdJ4hEoU1iGfT6' https://people.orbitcrm.example/api/v3/contacts/ct_8812Hq?expand=owner\n[  0.031] Connected\n[  0.058][NEGOTIATED] h2\n[  0.058] send SETTINGS frame <length=12, flags=0x00, stream_id=0>\n          (niv=2)\n          [SETTINGS_MAX_CONCURRENT_STREAMS(0x03):100]\n          [SETTINGS_INITIAL_WINDOW_SIZE(0x04):65535]\n[  0.059] send HEADERS frame <length=96, flags=0x25, stream_id=13>\n          ; END_STREAM | END_HEADERS | PRIORITY\n          :method: GET\n          :path: /api/v3/contacts/ct_8812Hq?expand=owner\n          :scheme: https\n          :authority: people.orbitcrm.example\n          accept: */*\n          accept-encoding: gzip, deflate\n          user-agent: nghttp2/1.64.0\n          authorization: Bearer ya29.FAKE-a0Lq9xRz3WmP7tNcV2bKs8YdJ4hEoU1iGfT6\n          x-orbit-tenant: tn_eu_west_04\n[  0.112] recv (stream_id=13) :status: 200\n[  0.112] recv (stream_id=13) content-type: application/json\n[  0.112] recv (stream_id=13) date: Mon, 16 Nov 2026 17:22:51 GMT\n[  0.112] recv (stream_id=13) x-ratelimit-remaining: 4987\n[  0.112] recv (stream_id=13) x-amzn-trace-id: Root=1-6739c2eb-4f1a2b3c4d5e6f7081920a1b\n[  0.112] recv (stream_id=13) alt-svc: h3=\":443\"; ma=86400\n[  0.112] recv HEADERS frame <length=211, flags=0x04, stream_id=13>\n[  0.113] recv DATA frame <length=388, flags=0x01, stream_id=13>\n{\n  \"id\": \"ct_8812Hq\",\n  \"object\": \"contact\",\n  \"first_name\": \"Soraya\",\n  \"last_name\": \"Delacroix-Ng\",\n  \"phone\": \"+1 415-555-0187\",\n  \"email\": \"soraya.dng@mailbox.example\",\n  \"company\": \"Fernhill Logistics\",\n  \"owner\": {\"id\": \"usr_0Q7mLk2\", \"name\": \"Tobias Wren\", \"email\": \"t.wren@orbitcrm.example\"},\n  \"created_at\": \"2025-08-04T10:11:12Z\",\n  \"lifecycle_stage\": \"opportunity\",\n  \"tags\": [\"q4-renewal\", \"emea\"]\n}\n[  0.113] send GOAWAY frame <length=8, flags=0x00, stream_id=0>\n          (last_stream_id=0, error_code=NO_ERROR(0x00), opaque_data(0)=[])",
+  "mask": [
+   [
+    "ya29.FAKE-a0Lq9xRz3WmP7tNcV2bKs8YdJ4hEoU1iGfT6",
+    0,
+    "SECRET"
+   ],
+   [
+    "Mon, 16 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Soraya",
+    0,
+    "PERSON"
+   ],
+   [
+    "Delacroix-Ng",
+    0,
+    "PERSON"
+   ],
+   [
+    "+1 415-555-0187",
+    0,
+    "PHONE"
+   ],
+   [
+    "soraya.dng@mailbox.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "usr_0Q7mLk2",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Tobias Wren",
+    0,
+    "PERSON"
+   ],
+   [
+    "t.wren@orbitcrm.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2025-08-04",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "nghttp -nv",
+    0
+   ],
+   [
+    "people.orbitcrm.example",
+    0
+   ],
+   [
+    "/api/v3/contacts/ct_8812Hq?expand=owner",
+    0
+   ],
+   [
+    "[NEGOTIATED] h2",
+    0
+   ],
+   [
+    "SETTINGS_MAX_CONCURRENT_STREAMS(0x03):100",
+    0
+   ],
+   [
+    "SETTINGS_INITIAL_WINDOW_SIZE(0x04):65535",
+    0
+   ],
+   [
+    "END_STREAM | END_HEADERS | PRIORITY",
+    0
+   ],
+   [
+    ":method: GET",
+    0
+   ],
+   [
+    ":scheme: https",
+    0
+   ],
+   [
+    "gzip, deflate",
+    0
+   ],
+   [
+    "nghttp2/1.64.0",
+    0
+   ],
+   [
+    "tn_eu_west_04",
+    0
+   ],
+   [
+    ":status: 200",
+    0
+   ],
+   [
+    "x-ratelimit-remaining: 4987",
+    0
+   ],
+   [
+    "Root=1-6739c2eb-4f1a2b3c4d5e6f7081920a1b",
+    0
+   ],
+   [
+    "h3=\":443\"; ma=86400",
+    0
+   ],
+   [
+    "\"object\": \"contact\"",
+    0
+   ],
+   [
+    "Fernhill Logistics",
+    0
+   ],
+   [
+    "opportunity",
+    0
+   ],
+   [
+    "q4-renewal",
+    0
+   ],
+   [
+    "NO_ERROR(0x00)",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-03",
+  "domain": "curl_mail_api",
+  "text": "# Reproduce the bounce for ticket SUP-4471 (reported by Marisol Ibarra, ext. 3318)\n# Staging key lives in 1Password under \"postline staging\"; the one below is the\n# rotated-out one Marisol pasted in Slack, revoke it after this test.\n\ncurl -sS --fail-with-body \\\n  -u 'api:key-FAKE7f3c9a1e5b2d8f04c6a7e9b1d3f5a2c8' \\\n  -H 'Accept: application/json' \\\n  -H 'X-Postline-Region: eu' \\\n  -H 'User-Agent: postline-cli/2.8.1 (linux; x64)' \\\n  https://api.postline.example/v3/mg.fernhill.example/messages \\\n  -F from='Fernhill Billing <billing@mg.fernhill.example>' \\\n  -F to='Dominik Achterberg <d.achterberg@posteo.example>' \\\n  -F subject='Your invoice INV-2026-00917 is ready' \\\n  -F o:tag='invoice' \\\n  -F o:tracking-clicks='htmlonly' \\\n  -F h:X-Fernhill-Customer='CUST-0048213' \\\n  --data-urlencode 'text=Hi Dominik Achterberg, your invoice is attached. Questions? Call us on +49 30 5550 1942.'\n\n{\n  \"id\": \"<20261117093344.4b7c1a9e2d0f5c63@mg.fernhill.example>\",\n  \"message\": \"Queued. Thank you.\"\n}\n\n# second attempt with the account password flow (legacy endpoint, still enabled!)\ncurl -X POST https://api.postline.example/v2/login \\\n  -d 'user=marisol.ibarra' -d 'pass=Gr@nada!1993' -d 'otp=' \\\n  -w '\\n%{http_code} %{time_total}s\\n'\n{\"error\":\"otp_required\",\"retry_after\":30}\n401 0.214s",
+  "mask": [
+   [
+    "Marisol Ibarra",
+    0,
+    "PERSON"
+   ],
+   [
+    "key-FAKE7f3c9a1e5b2d8f04c6a7e9b1d3f5a2c8",
+    0,
+    "SECRET"
+   ],
+   [
+    "Dominik Achterberg",
+    0,
+    "PERSON"
+   ],
+   [
+    "d.achterberg@posteo.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "CUST-0048213",
+    0,
+    "ID"
+   ],
+   [
+    "+49 30 5550 1942",
+    0,
+    "PHONE"
+   ],
+   [
+    "20261117",
+    0,
+    "DATE"
+   ],
+   [
+    "marisol.ibarra",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Gr@nada!1993",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "SUP-4471",
+    0
+   ],
+   [
+    "ext. 3318",
+    0
+   ],
+   [
+    "curl -sS --fail-with-body",
+    0
+   ],
+   [
+    "Accept: application/json",
+    0
+   ],
+   [
+    "X-Postline-Region: eu",
+    0
+   ],
+   [
+    "postline-cli/2.8.1 (linux; x64)",
+    0
+   ],
+   [
+    "https://api.postline.example/v3/mg.fernhill.example/messages",
+    0
+   ],
+   [
+    "Fernhill Billing <billing@mg.fernhill.example>",
+    0
+   ],
+   [
+    "INV-2026-00917",
+    0
+   ],
+   [
+    "o:tag='invoice'",
+    0
+   ],
+   [
+    "o:tracking-clicks='htmlonly'",
+    0
+   ],
+   [
+    "X-Fernhill-Customer",
+    0
+   ],
+   [
+    "--data-urlencode",
+    0
+   ],
+   [
+    "Queued. Thank you.",
+    0
+   ],
+   [
+    "https://api.postline.example/v2/login",
+    0
+   ],
+   [
+    "otp_required",
+    0
+   ],
+   [
+    "retry_after",
+    0
+   ],
+   [
+    "%{http_code} %{time_total}s",
+    0
+   ],
+   [
+    "401 0.214s",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-04",
+  "domain": "har_entry",
+  "text": "{\n  \"log\": {\n    \"version\": \"1.2\",\n    \"creator\": {\"name\": \"WebInspector\", \"version\": \"537.36\"},\n    \"pages\": [{\"startedDateTime\": \"2026-11-15T19:03:27.114Z\", \"id\": \"page_3\", \"title\": \"https://shop.tealbird.example/checkout\"}],\n    \"entries\": [{\n      \"pageref\": \"page_3\",\n      \"startedDateTime\": \"2026-11-15T19:03:28.902Z\",\n      \"time\": 184.27,\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"https://shop.tealbird.example/api/cart/cart_7Hd2kQp9/shipping\",\n        \"httpVersion\": \"http/2.0\",\n        \"headers\": [\n          {\"name\": \":authority\", \"value\": \"shop.tealbird.example\"},\n          {\"name\": \"content-type\", \"value\": \"application/json\"},\n          {\"name\": \"x-csrf-token\", \"value\": \"c1d8F2kLw9Rt0YbQ5vNx3MzA7eHg\"},\n          {\"name\": \"user-agent\", \"value\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\"}\n        ],\n        \"cookies\": [\n          {\"name\": \"tb_session\", \"value\": \"eyJzaWQiOiJGQUtFLTkxYjJjM2Q0In0.ZxQ1aA.k8Vt2rLqM0nWc7YpE3sJ\", \"httpOnly\": true, \"secure\": true},\n          {\"name\": \"tb_ab\", \"value\": \"checkout_v2_control\", \"httpOnly\": false, \"secure\": false},\n          {\"name\": \"tb_currency\", \"value\": \"EUR\", \"httpOnly\": false, \"secure\": false}\n        ],\n        \"postData\": {\n          \"mimeType\": \"application/json\",\n          \"text\": \"{\\\"name\\\":\\\"Ilse van Doorn\\\",\\\"line1\\\":\\\"Prinsengracht 412-3\\\",\\\"city\\\":\\\"Amsterdam\\\",\\\"postal_code\\\":\\\"1016 HK\\\",\\\"country\\\":\\\"NL\\\",\\\"phone\\\":\\\"+31 6 5550 2718\\\"}\"\n        },\n        \"headersSize\": -1,\n        \"bodySize\": 142\n      },\n      \"response\": {\n        \"status\": 200,\n        \"statusText\": \"\",\n        \"httpVersion\": \"http/2.0\",\n        \"headers\": [\n          {\"name\": \"etag\", \"value\": \"\\\"a41f9c7e2b\\\"\"},\n          {\"name\": \"x-request-id\", \"value\": \"req_01JCQ7ZPM3X4Y5V6T8R9S0N1B2\"}\n        ],\n        \"content\": {\"size\": 96, \"mimeType\": \"application/json; charset=utf-8\", \"text\": \"{\\\"cart\\\":\\\"cart_7Hd2kQp9\\\",\\\"shipping\\\":\\\"dhl_express\\\",\\\"total\\\":\\\"84.90\\\"}\"}\n      },\n      \"serverIPAddress\": \"10.40.3.17\",\n      \"connection\": \"443\",\n      \"timings\": {\"blocked\": 1.2, \"dns\": -1, \"ssl\": -1, \"send\": 0.3, \"wait\": 179.9, \"receive\": 2.87}\n    }]\n  }\n}",
+  "mask": [
+   [
+    "2026-11-15",
+    0,
+    "DATE"
+   ],
+   [
+    "c1d8F2kLw9Rt0YbQ5vNx3MzA7eHg",
+    0,
+    "SECRET"
+   ],
+   [
+    "eyJzaWQiOiJGQUtFLTkxYjJjM2Q0In0.ZxQ1aA.k8Vt2rLqM0nWc7YpE3sJ",
+    0,
+    "SECRET"
+   ],
+   [
+    "Ilse van Doorn",
+    0,
+    "PERSON"
+   ],
+   [
+    "Prinsengracht 412-3",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "+31 6 5550 2718",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "\"version\": \"1.2\"",
+    0
+   ],
+   [
+    "WebInspector",
+    0
+   ],
+   [
+    "https://shop.tealbird.example/checkout",
+    0
+   ],
+   [
+    "https://shop.tealbird.example/api/cart/cart_7Hd2kQp9/shipping",
+    0
+   ],
+   [
+    "http/2.0",
+    0
+   ],
+   [
+    ":authority",
+    0
+   ],
+   [
+    "x-csrf-token",
+    0
+   ],
+   [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    0
+   ],
+   [
+    "tb_session",
+    0
+   ],
+   [
+    "checkout_v2_control",
+    0
+   ],
+   [
+    "\"EUR\"",
+    0
+   ],
+   [
+    "Amsterdam",
+    0
+   ],
+   [
+    "1016 HK",
+    0
+   ],
+   [
+    "a41f9c7e2b",
+    0
+   ],
+   [
+    "req_01JCQ7ZPM3X4Y5V6T8R9S0N1B2",
+    0
+   ],
+   [
+    "dhl_express",
+    0
+   ],
+   [
+    "10.40.3.17",
+    0
+   ],
+   [
+    "\"wait\": 179.9",
+    0
+   ],
+   [
+    "application/json; charset=utf-8",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-05",
+  "domain": "nginx_logs",
+  "text": "==> /var/log/nginx/access.log <==\n203.0.113.54 - - [17/Nov/2026:06:12:09 +0000] \"GET /healthz HTTP/1.1\" 200 2 \"-\" \"kube-probe/1.31\" rt=0.001 uct=0.000 rid=6f2c9e1d0b8a47e3a5d4c3b2a1f0e9d8\n198.51.100.201 - jkariuki [17/Nov/2026:06:12:14 +0000] \"GET /reports/2026/q3.pdf HTTP/1.1\" 200 482113 \"https://intranet.kestrel.example/reports\" \"Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0\" rt=0.084 uct=0.002 rid=0a1b2c3d4e5f60718293a4b5c6d7e8f9\n198.51.100.201 - - [17/Nov/2026:06:12:15 +0000] \"POST /api/login?redirect=/home&password=Kiboko2026! HTTP/1.1\" 302 0 \"-\" \"Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0\" rt=0.212 uct=0.001 rid=9988aa77bb66cc55dd44ee33ff221100\n192.0.2.77 - - [17/Nov/2026:06:13:40 +0000] \"GET /api/v1/export?token=tok_FAKE_9cV2nX8qL4mZ7rT1wK5j HTTP/2.0\" 403 153 \"-\" \"python-requests/2.32.3\" rt=0.006 uct=0.000 rid=13579bdf2468ace013579bdf2468ace0\n10.20.0.9 - - [17/Nov/2026:06:14:02 +0000] \"GET /metrics HTTP/1.1\" 200 18233 \"-\" \"Prometheus/2.54.1\" rt=0.010 uct=0.000 rid=fedcba9876543210fedcba9876543210\n\n==> /var/log/nginx/error.log <==\n2026/11/17 06:12:15 [warn] 2211#2211: *88412 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/4/02/0000000024 while reading upstream, client: 198.51.100.201, server: intranet.kestrel.example, request: \"GET /reports/2026/q3.pdf HTTP/1.1\", upstream: \"http://10.20.4.11:8080/reports/2026/q3.pdf\", host: \"intranet.kestrel.example\"\n2026/11/17 06:13:40 [error] 2211#2211: *88470 access forbidden by rule, client: 192.0.2.77, server: intranet.kestrel.example, request: \"GET /api/v1/export?token=tok_FAKE_9cV2nX8qL4mZ7rT1wK5j HTTP/2.0\", host: \"intranet.kestrel.example\"\n2026/11/17 06:15:31 [crit] 2212#2212: *88501 SSL_do_handshake() failed (SSL: error:0A000126:SSL routines::unexpected eof while reading) while SSL handshaking, client: 203.0.113.54, server: 0.0.0.0:443\n\n# note from on-call (Joseph Kariuki): the password in the query string above is mine, I already\n# changed it. Please scrub this file before attaching it to INC-7730.\n# Reach me on +254 20 555 0193 if the WAF rule needs another look.",
+  "mask": [
+   [
+    "203.0.113.54",
+    0,
+    "IP"
+   ],
+   [
+    "17/Nov/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "198.51.100.201",
+    0,
+    "IP"
+   ],
+   [
+    "jkariuki",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Kiboko2026!",
+    0,
+    "SECRET"
+   ],
+   [
+    "192.0.2.77",
+    0,
+    "IP"
+   ],
+   [
+    "tok_FAKE_9cV2nX8qL4mZ7rT1wK5j",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026/11/17",
+    0,
+    "DATE"
+   ],
+   [
+    "Joseph Kariuki",
+    0,
+    "PERSON"
+   ],
+   [
+    "+254 20 555 0193",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "/var/log/nginx/access.log",
+    0
+   ],
+   [
+    "\"GET /healthz HTTP/1.1\" 200 2",
+    0
+   ],
+   [
+    "kube-probe/1.31",
+    0
+   ],
+   [
+    "rid=6f2c9e1d0b8a47e3a5d4c3b2a1f0e9d8",
+    0
+   ],
+   [
+    "/reports/2026/q3.pdf",
+    0
+   ],
+   [
+    "https://intranet.kestrel.example/reports",
+    0
+   ],
+   [
+    "Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0",
+    0
+   ],
+   [
+    "python-requests/2.32.3",
+    0
+   ],
+   [
+    "10.20.0.9",
+    0
+   ],
+   [
+    "Prometheus/2.54.1",
+    0
+   ],
+   [
+    "[warn] 2211#2211",
+    0
+   ],
+   [
+    "/var/cache/nginx/proxy_temp/4/02/0000000024",
+    0
+   ],
+   [
+    "http://10.20.4.11:8080",
+    0
+   ],
+   [
+    "access forbidden by rule",
+    0
+   ],
+   [
+    "error:0A000126:SSL routines::unexpected eof while reading",
+    0
+   ],
+   [
+    "0.0.0.0:443",
+    0
+   ],
+   [
+    "INC-7730",
+    0
+   ],
+   [
+    "rt=0.084 uct=0.002",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-06",
+  "domain": "app_json_logs",
+  "text": "{\"level\":30,\"time\":\"2026-11-16T22:47:01.884Z\",\"pid\":4127,\"hostname\":\"orders-api-7d9f8c6b5-x2kqp\",\"svc\":\"orders-api\",\"version\":\"3.18.2\",\"msg\":\"server listening\",\"port\":8443}\n{\"level\":30,\"time\":\"2026-11-16T22:47:13.002Z\",\"reqId\":\"req-4kq9\",\"traceId\":\"4bf92f3577b34da6a3ce929d0e0e4736\",\"spanId\":\"00f067aa0ba902b7\",\"msg\":\"incoming request\",\"method\":\"POST\",\"url\":\"/v1/orders\",\"remoteAddress\":\"192.0.2.148\",\"userAgent\":\"TealbirdApp/5.2.0 (iPhone; iOS 18.1; Scale/3.00)\"}\n{\"level\":20,\"time\":\"2026-11-16T22:47:13.010Z\",\"reqId\":\"req-4kq9\",\"msg\":\"auth ok\",\"user\":{\"id\":\"usr_9fT3xQ\",\"email\":\"ana.lucia.ferreira@inbox.example\",\"plan\":\"pro\"},\"scopes\":[\"orders:write\",\"profile:read\"]}\n{\"level\":40,\"time\":\"2026-11-16T22:47:13.044Z\",\"reqId\":\"req-4kq9\",\"msg\":\"address validation fallback\",\"order\":\"ord_2Gx7Lm4Pq\",\"ship_to\":\"Rua das Flores 88, 2º Esq, 4050-262 Porto, Portugal\",\"provider\":\"geoverify\",\"attempt\":2}\n{\"level\":50,\"time\":\"2026-11-16T22:47:13.391Z\",\"reqId\":\"req-4kq9\",\"msg\":\"payment provider error\",\"order\":\"ord_2Gx7Lm4Pq\",\"err\":{\"type\":\"ProviderError\",\"code\":\"card_declined\",\"decline_code\":\"insufficient_funds\",\"charge\":\"ch_3QdF8k2eZvKYlo2C0x1y2z3a\"},\"headers\":{\"authorization\":\"Bearer sk_test_FAKE51HqTmW2eZvKYlo2CwXyZ0aBcDeFgHiJ\",\"idempotency-key\":\"7e3f1a2b-6c4d-4e5f-8a9b-0c1d2e3f4a5b\"}}\n{\"level\":30,\"time\":\"2026-11-16T22:47:13.402Z\",\"reqId\":\"req-4kq9\",\"res\":{\"statusCode\":402},\"responseTime\":400.12,\"msg\":\"request completed\"}\n{\"level\":30,\"time\":\"2026-11-16T22:51:40.117Z\",\"reqId\":\"req-4kr2\",\"msg\":\"incoming request\",\"method\":\"GET\",\"url\":\"/v1/orders?customer=CUS-00918377&status=open\",\"remoteAddress\":\"192.0.2.148\"}\n{\"level\":30,\"time\":\"2026-11-16T22:51:40.140Z\",\"reqId\":\"req-4kr2\",\"res\":{\"statusCode\":200},\"responseTime\":23.4,\"msg\":\"request completed\",\"count\":3}\n{\"level\":30,\"time\":\"2026-11-16T23:05:12.550Z\",\"reqId\":\"req-4ks0\",\"msg\":\"incoming request\",\"method\":\"GET\",\"url\":\"/v1/catalog/sku/TB-HOODIE-NAVY-L\",\"remoteAddress\":\"10.40.1.22\",\"userAgent\":\"k6/0.54.0 (https://k6.io/)\"}\n{\"level\":30,\"time\":\"2026-11-16T23:05:12.561Z\",\"reqId\":\"req-4ks0\",\"res\":{\"statusCode\":200},\"responseTime\":11.0,\"msg\":\"request completed\",\"cache\":\"HIT\"}\n{\"level\":40,\"time\":\"2026-11-16T23:12:48.903Z\",\"msg\":\"slow query\",\"db\":\"orders_primary\",\"durationMs\":1844,\"sql\":\"SELECT * FROM orders WHERE customer_id = $1 AND status = $2\"}\n{\"level\":30,\"time\":\"2026-11-16T23:30:00.000Z\",\"msg\":\"cron: retry_failed_webhooks\",\"processed\":14,\"failed\":0}\n{\"level\":30,\"time\":\"2026-11-16T23:41:27.310Z\",\"reqId\":\"req-4kt7\",\"msg\":\"support override\",\"agent\":\"support-bot\",\"note\":\"address corrected per call with customer Chidi Okonkwo\"}\n{\"level\":20,\"time\":\"2026-11-16T23:41:27.322Z\",\"reqId\":\"req-4kt7\",\"msg\":\"cache invalidated\",\"keys\":[\"order:ord_2Gx7Lm4Pq\",\"customer:summary\"]}\n{\"level\":30,\"time\":\"2026-11-16T23:55:03.770Z\",\"msg\":\"healthcheck\",\"db\":\"ok\",\"redis\":\"ok\",\"queue_depth\":3}\n{\"level\":30,\"time\":\"2026-11-17T00:00:00.001Z\",\"pid\":4127,\"msg\":\"rotating log file\",\"path\":\"/var/log/orders/orders-api.log\",\"feature_flags\":{\"split_shipments\":true,\"new_tax_engine\":false}}",
+  "mask": [
+   [
+    "2026-11-16",
+    0,
+    "DATE"
+   ],
+   [
+    "192.0.2.148",
+    0,
+    "IP"
+   ],
+   [
+    "usr_9fT3xQ",
+    0,
+    "USERNAME"
+   ],
+   [
+    "ana.lucia.ferreira@inbox.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Rua das Flores 88, 2º Esq, 4050-262 Porto, Portugal",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "sk_test_FAKE51HqTmW2eZvKYlo2CwXyZ0aBcDeFgHiJ",
+    0,
+    "SECRET"
+   ],
+   [
+    "CUS-00918377",
+    0,
+    "ID"
+   ],
+   [
+    "2026-11-17",
+    0,
+    "DATE"
+   ],
+   [
+    "Chidi Okonkwo",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "orders-api-7d9f8c6b5-x2kqp",
+    0
+   ],
+   [
+    "\"version\":\"3.18.2\"",
+    0
+   ],
+   [
+    "\"port\":8443",
+    0
+   ],
+   [
+    "req-4kq9",
+    0
+   ],
+   [
+    "4bf92f3577b34da6a3ce929d0e0e4736",
+    0
+   ],
+   [
+    "00f067aa0ba902b7",
+    0
+   ],
+   [
+    "/v1/orders",
+    0
+   ],
+   [
+    "TealbirdApp/5.2.0 (iPhone; iOS 18.1; Scale/3.00)",
+    0
+   ],
+   [
+    "orders:write",
+    0
+   ],
+   [
+    "\"plan\":\"pro\"",
+    0
+   ],
+   [
+    "ord_2Gx7Lm4Pq",
+    0
+   ],
+   [
+    "geoverify",
+    0
+   ],
+   [
+    "card_declined",
+    0
+   ],
+   [
+    "insufficient_funds",
+    0
+   ],
+   [
+    "ch_3QdF8k2eZvKYlo2C0x1y2z3a",
+    0
+   ],
+   [
+    "7e3f1a2b-6c4d-4e5f-8a9b-0c1d2e3f4a5b",
+    0
+   ],
+   [
+    "\"statusCode\":402",
+    0
+   ],
+   [
+    "/var/log/orders/orders-api.log",
+    0
+   ],
+   [
+    "\"split_shipments\":true",
+    0
+   ],
+   [
+    "TB-HOODIE-NAVY-L",
+    0
+   ],
+   [
+    "k6/0.54.0 (https://k6.io/)",
+    0
+   ],
+   [
+    "orders_primary",
+    0
+   ],
+   [
+    "retry_failed_webhooks",
+    0
+   ],
+   [
+    "\"queue_depth\":3",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-07",
+  "domain": "oauth_pkce_flow",
+  "text": "## Debug notes - PKCE login loop on the desktop client (Rahel Tesfaye, 17 Nov)\n\n1) Authorize redirect generated by the app:\n\nGET https://id.quillworks.example/oauth2/authorize?response_type=code\n    &client_id=qw-desktop-4f8a2c\n    &redirect_uri=http%3A%2F%2F127.0.0.1%3A53682%2Fcallback\n    &scope=openid%20profile%20email%20offline_access\n    &state=st_Hk29xLq0pVz\n    &nonce=n-8Fq2Lx0Wv7\n    &code_challenge=Yp3cWb7nM0qL2rT8vX4zK6dF1hJ9sA5eG3uB0oN7iE\n    &code_challenge_method=S256\n    &login_hint=rahel.tesfaye%40quillworks.example\n    &ui_locales=en-US\n\n2) Browser lands on the loopback listener:\n\nGET /callback?code=ac_FAKE_Z3xN8qW1rT6yU0iO4pL7kJ2h&state=st_Hk29xLq0pVz&iss=https%3A%2F%2Fid.quillworks.example HTTP/1.1\nHost: 127.0.0.1:53682\n\n3) Code exchange (this is where it fails):\n\nPOST /oauth2/token HTTP/1.1\nHost: id.quillworks.example\nContent-Type: application/x-www-form-urlencoded\nAccept: application/json\n\ngrant_type=authorization_code&code=ac_FAKE_Z3xN8qW1rT6yU0iO4pL7kJ2h&redirect_uri=http%3A%2F%2F127.0.0.1%3A53682%2Fcallback&client_id=qw-desktop-4f8a2c&code_verifier=Rk2mX9qLw0Pz7Tn3Vb8Yc4Jd1Hs6Ga5Fe2Ku0Oi9Nl7Mx3\n\nHTTP/1.1 400 Bad Request\nContent-Type: application/json\nCache-Control: no-store\n\n{\"error\":\"invalid_grant\",\"error_description\":\"PKCE verification failed\",\"error_uri\":\"https://id.quillworks.example/docs/errors#invalid_grant\"}\n\nRoot cause: the app regenerated the verifier after a sleep/resume, so the challenge\nno longer matched. Fix is in commit 3e9d0b71c2a4f8e65d1b0c9a7e3f2d4c1b0a9e8f.",
+  "mask": [
+   [
+    "Rahel Tesfaye",
+    0,
+    "PERSON"
+   ],
+   [
+    "17 Nov",
+    0,
+    "DATE"
+   ],
+   [
+    "rahel.tesfaye%40quillworks.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "ac_FAKE_Z3xN8qW1rT6yU0iO4pL7kJ2h",
+    0,
+    "SECRET"
+   ],
+   [
+    "Rk2mX9qLw0Pz7Tn3Vb8Yc4Jd1Hs6Ga5Fe2Ku0Oi9Nl7Mx3",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "https://id.quillworks.example/oauth2/authorize?response_type=code",
+    0
+   ],
+   [
+    "client_id=qw-desktop-4f8a2c",
+    0
+   ],
+   [
+    "http%3A%2F%2F127.0.0.1%3A53682%2Fcallback",
+    0
+   ],
+   [
+    "openid%20profile%20email%20offline_access",
+    0
+   ],
+   [
+    "st_Hk29xLq0pVz",
+    0
+   ],
+   [
+    "n-8Fq2Lx0Wv7",
+    0
+   ],
+   [
+    "Yp3cWb7nM0qL2rT8vX4zK6dF1hJ9sA5eG3uB0oN7iE",
+    0
+   ],
+   [
+    "code_challenge_method=S256",
+    0
+   ],
+   [
+    "ui_locales=en-US",
+    0
+   ],
+   [
+    "Host: 127.0.0.1:53682",
+    0
+   ],
+   [
+    "POST /oauth2/token HTTP/1.1",
+    0
+   ],
+   [
+    "grant_type=authorization_code",
+    0
+   ],
+   [
+    "HTTP/1.1 400 Bad Request",
+    0
+   ],
+   [
+    "invalid_grant",
+    0
+   ],
+   [
+    "PKCE verification failed",
+    0
+   ],
+   [
+    "https://id.quillworks.example/docs/errors#invalid_grant",
+    0
+   ],
+   [
+    "3e9d0b71c2a4f8e65d1b0c9a7e3f2d4c1b0a9e8f",
+    0
+   ],
+   [
+    "Cache-Control: no-store",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-08",
+  "domain": "oidc_tokens_jwks",
+  "text": "$ http POST https://login.harborview.example/realms/staff/protocol/openid-connect/token \\\n    grant_type=password client_id=hv-portal client_secret=FAKEcs_8b1e4d7a0c3f6e9b2d5a8c1f4e7b0d3a \\\n    username=wojtek.malinowski password='Bursztyn#77'\nHTTP/1.1 200 OK\nContent-Type: application/json\nDate: Sun, 15 Nov 2026 14:02:44 GMT\n\n{\n  \"access_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Imh2LTIwMjYtMTEifQ.eyJGQUtFIjoidG9rZW4iLCJ4IjoiOGQyZjFhIn0.Tm9wZV9ub3RfYV9yZWFsX3NpZ25hdHVyZV9qdXN0X25vaXNl\",\n  \"expires_in\": 300,\n  \"refresh_expires_in\": 1800,\n  \"refresh_token\": \"eyJhbGciOiJIUzI1NiJ9.eyJGQUtFIjoicmVmcmVzaCJ9.cmFuZG9tX2dhcmJhZ2VfcmVmcmVzaF9zaWc\",\n  \"token_type\": \"Bearer\",\n  \"id_token\": \"eyJhbGciOiJSUzI1NiJ9.eyJGQUtFIjoiaWQiLCJuIjoxfQ.aWRfdG9rZW5fc2lnbmF0dXJlX2lzX2Zha2U\",\n  \"not-before-policy\": 0,\n  \"session_state\": \"c5d1a7e2-9b3f-4c8d-a6e0-1f2b3c4d5e6f\",\n  \"scope\": \"openid email profile\"\n}\n\n$ curl -s https://login.harborview.example/realms/staff/protocol/openid-connect/certs | jq '.keys[0]'\n{\n  \"kid\": \"hv-2026-11\",\n  \"kty\": \"RSA\",\n  \"alg\": \"RS256\",\n  \"use\": \"sig\",\n  \"n\": \"0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMstn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbISD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqbw0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw\",\n  \"e\": \"AQAB\",\n  \"x5t#S256\": \"q7Zt0nB2mR8vK4xL1cW9yP3jH6sF0dG5aE2uN8oI7kM\"\n}\n\n$ curl -s -H 'Authorization: Bearer <ACCESS_TOKEN>' https://login.harborview.example/realms/staff/protocol/openid-connect/userinfo\n{\"sub\":\"f3a9c2d1-7b4e-4f0a-9c8d-2e1b0a9f8e7d\",\"email_verified\":true,\"name\":\"Wojciech Malinowski\",\"preferred_username\":\"wojtek.malinowski\",\"email\":\"w.malinowski@harborview.example\",\"locale\":\"pl\"}",
+  "mask": [
+   [
+    "FAKEcs_8b1e4d7a0c3f6e9b2d5a8c1f4e7b0d3a",
+    0,
+    "SECRET"
+   ],
+   [
+    "wojtek.malinowski",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Bursztyn#77",
+    0,
+    "SECRET"
+   ],
+   [
+    "Sun, 15 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Imh2LTIwMjYtMTEifQ.eyJGQUtFIjoidG9rZW4iLCJ4IjoiOGQyZjFhIn0.Tm9wZV9ub3RfYV9yZWFsX3NpZ25hdHVyZV9qdXN0X25vaXNl",
+    0,
+    "SECRET"
+   ],
+   [
+    "eyJhbGciOiJIUzI1NiJ9.eyJGQUtFIjoicmVmcmVzaCJ9.cmFuZG9tX2dhcmJhZ2VfcmVmcmVzaF9zaWc",
+    0,
+    "SECRET"
+   ],
+   [
+    "eyJhbGciOiJSUzI1NiJ9.eyJGQUtFIjoiaWQiLCJuIjoxfQ.aWRfdG9rZW5fc2lnbmF0dXJlX2lzX2Zha2U",
+    0,
+    "SECRET"
+   ],
+   [
+    "f3a9c2d1-7b4e-4f0a-9c8d-2e1b0a9f8e7d",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Wojciech Malinowski",
+    0,
+    "PERSON"
+   ],
+   [
+    "w.malinowski@harborview.example",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "https://login.harborview.example/realms/staff/protocol/openid-connect/token",
+    0
+   ],
+   [
+    "grant_type=password",
+    0
+   ],
+   [
+    "client_id=hv-portal",
+    0
+   ],
+   [
+    "\"expires_in\": 300",
+    0
+   ],
+   [
+    "\"refresh_expires_in\": 1800",
+    0
+   ],
+   [
+    "\"token_type\": \"Bearer\"",
+    0
+   ],
+   [
+    "c5d1a7e2-9b3f-4c8d-a6e0-1f2b3c4d5e6f",
+    0
+   ],
+   [
+    "\"scope\": \"openid email profile\"",
+    0
+   ],
+   [
+    "\"kid\": \"hv-2026-11\"",
+    0
+   ],
+   [
+    "\"kty\": \"RSA\"",
+    0
+   ],
+   [
+    "RS256",
+    0
+   ],
+   [
+    "\"use\": \"sig\"",
+    0
+   ],
+   [
+    "0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMstn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbISD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqbw0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw",
+    0
+   ],
+   [
+    "\"e\": \"AQAB\"",
+    0
+   ],
+   [
+    "q7Zt0nB2mR8vK4xL1cW9yP3jH6sF0dG5aE2uN8oI7kM",
+    0
+   ],
+   [
+    "<ACCESS_TOKEN>",
+    0
+   ],
+   [
+    "\"email_verified\":true",
+    0
+   ],
+   [
+    "\"locale\":\"pl\"",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-09",
+  "domain": "token_introspection",
+  "text": "POST /oauth/introspect HTTP/1.1\nHost: as.ledgerline.example\nAuthorization: Basic cmVzb3VyY2Utc2VydmVyLTA3OkZBS0Utc2VjcmV0LTdjM2U5YTFiNWQ=\nContent-Type: application/x-www-form-urlencoded\nAccept: application/json\nX-Correlation-ID: corr-20b7e5c1-3f9a-4d62-8e11-a0c4b7d2f913\n\ntoken=at_FAKE.mQ7xL2pV9nR4wK8zT1cY6bH3jD0sF5gA&token_type_hint=access_token\n\nHTTP/1.1 200 OK\nContent-Type: application/json\nDate: Sat, 14 Nov 2026 03:15:59 GMT\nCache-Control: no-store\nX-Correlation-ID: corr-20b7e5c1-3f9a-4d62-8e11-a0c4b7d2f913\n\n{\n  \"active\": true,\n  \"client_id\": \"ledgerline-mobile\",\n  \"username\": \"kofi.mensah\",\n  \"scope\": \"accounts:read payments:create\",\n  \"sub\": \"acct-user-77310492\",\n  \"aud\": \"https://api.ledgerline.example\",\n  \"iss\": \"https://as.ledgerline.example/\",\n  \"token_type\": \"Bearer\",\n  \"exp\": 1794886559,\n  \"iat\": 1794884759,\n  \"cnf\": {\"x5t#S256\": \"bwcK0esc3ACC3DB2Y5_lESsXE8o9ltc05O89jdN-dg2\"},\n  \"ext\": {\"member_no\": \"LL-M-0442981\", \"acr\": \"urn:ledgerline:loa:2\", \"amr\": [\"pwd\", \"otp\"]}\n}\n\n# Resource server log (rs-payments-2):\n2026-11-14 03:15:59,412 INFO  [introspect] active=true sub=acct-user-77310492 client=ledgerline-mobile scopes=2 cache=MISS took=38ms\n2026-11-14 03:15:59,415 DEBUG [introspect] caching result for 300s key=sha256:9b74c9897bac770ffc029102a200c5de",
+  "mask": [
+   [
+    "cmVzb3VyY2Utc2VydmVyLTA3OkZBS0Utc2VjcmV0LTdjM2U5YTFiNWQ=",
+    0,
+    "SECRET"
+   ],
+   [
+    "at_FAKE.mQ7xL2pV9nR4wK8zT1cY6bH3jD0sF5gA",
+    0,
+    "SECRET"
+   ],
+   [
+    "Sat, 14 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "kofi.mensah",
+    0,
+    "USERNAME"
+   ],
+   [
+    "acct-user-77310492",
+    0,
+    "USERNAME"
+   ],
+   [
+    "LL-M-0442981",
+    0,
+    "ID"
+   ],
+   [
+    "2026-11-14",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "POST /oauth/introspect HTTP/1.1",
+    0
+   ],
+   [
+    "as.ledgerline.example",
+    0
+   ],
+   [
+    "corr-20b7e5c1-3f9a-4d62-8e11-a0c4b7d2f913",
+    0
+   ],
+   [
+    "token_type_hint=access_token",
+    0
+   ],
+   [
+    "\"active\": true",
+    0
+   ],
+   [
+    "ledgerline-mobile",
+    0
+   ],
+   [
+    "accounts:read payments:create",
+    0
+   ],
+   [
+    "https://api.ledgerline.example",
+    0
+   ],
+   [
+    "\"exp\": 1794886559",
+    0
+   ],
+   [
+    "bwcK0esc3ACC3DB2Y5_lESsXE8o9ltc05O89jdN-dg2",
+    0
+   ],
+   [
+    "urn:ledgerline:loa:2",
+    0
+   ],
+   [
+    "[\"pwd\", \"otp\"]",
+    0
+   ],
+   [
+    "rs-payments-2",
+    0
+   ],
+   [
+    "cache=MISS took=38ms",
+    0
+   ],
+   [
+    "sha256:9b74c9897bac770ffc029102a200c5de",
+    0
+   ],
+   [
+    "Cache-Control: no-store",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-10",
+  "domain": "cors_cookies",
+  "text": "OPTIONS /graphql HTTP/1.1\nHost: api.brightnest.example\nOrigin: https://studio.brightnest.example\nAccess-Control-Request-Method: POST\nAccess-Control-Request-Headers: content-type,x-bn-client,authorization\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.6668.89 Safari/537.36\n\nHTTP/1.1 204 No Content\nAccess-Control-Allow-Origin: https://studio.brightnest.example\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\nAccess-Control-Allow-Headers: content-type, x-bn-client, authorization\nAccess-Control-Allow-Credentials: true\nAccess-Control-Max-Age: 7200\nVary: Origin, Access-Control-Request-Headers\nDate: Thu, 12 Nov 2026 11:30:00 GMT\n\nPOST /graphql HTTP/1.1\nHost: api.brightnest.example\nOrigin: https://studio.brightnest.example\nCookie: bn_sess=Fe26.2**FAKE7d1c**k3Pz9QwL0mN5xV8b**Ab4Cd6Ef8Gh0; bn_consent=analytics:0|ads:0; bn_uid_hint=lucia.romero; _bn_exp=hero_b\nX-BN-Client: studio-web/2026.11.3\n\nHTTP/1.1 200 OK\nSet-Cookie: bn_sess=Fe26.2**FAKE9e2a**t7Yu1IoP3aS5dF7g**Hj2Kl4Zx6Cv8; Path=/; Secure; HttpOnly; SameSite=None; Partitioned; Max-Age=86400\nSet-Cookie: bn_refresh=rt.FAKE.Qw3Er5Ty7Ui9Op1As3Df5Gh7Jk; Path=/auth/refresh; Secure; HttpOnly; SameSite=Strict; Expires=Fri, 11 Dec 2026 11:30:01 GMT\nSet-Cookie: bn_theme=solarized; Path=/; Max-Age=31536000\nAccess-Control-Allow-Origin: https://studio.brightnest.example\nAccess-Control-Expose-Headers: x-bn-request-id, x-bn-cost\nX-BN-Request-Id: bnr_5c7e9a1b3d5f\nX-BN-Cost: 12\n\nSupport thread: Lucia Romero (lucia.romero@brightnest.example, +34 655 501 832) asked\nwhy her session dropped after 24h. Answer: bn_sess has Max-Age=86400 by design;\nthe refresh cookie extends it.",
+  "mask": [
+   [
+    "Thu, 12 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Fe26.2**FAKE7d1c**k3Pz9QwL0mN5xV8b**Ab4Cd6Ef8Gh0",
+    0,
+    "SECRET"
+   ],
+   [
+    "lucia.romero",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Fe26.2**FAKE9e2a**t7Yu1IoP3aS5dF7g**Hj2Kl4Zx6Cv8",
+    0,
+    "SECRET"
+   ],
+   [
+    "rt.FAKE.Qw3Er5Ty7Ui9Op1As3Df5Gh7Jk",
+    0,
+    "SECRET"
+   ],
+   [
+    "Fri, 11 Dec 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Lucia Romero",
+    0,
+    "PERSON"
+   ],
+   [
+    "lucia.romero@brightnest.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+34 655 501 832",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "OPTIONS /graphql HTTP/1.1",
+    0
+   ],
+   [
+    "api.brightnest.example",
+    0
+   ],
+   [
+    "https://studio.brightnest.example",
+    0
+   ],
+   [
+    "Access-Control-Request-Method: POST",
+    0
+   ],
+   [
+    "content-type,x-bn-client,authorization",
+    0
+   ],
+   [
+    "Chrome/129.0.6668.89",
+    0
+   ],
+   [
+    "HTTP/1.1 204 No Content",
+    0
+   ],
+   [
+    "GET, POST, OPTIONS",
+    0
+   ],
+   [
+    "Access-Control-Allow-Credentials: true",
+    0
+   ],
+   [
+    "Access-Control-Max-Age: 7200",
+    0
+   ],
+   [
+    "Vary: Origin, Access-Control-Request-Headers",
+    0
+   ],
+   [
+    "analytics:0|ads:0",
+    0
+   ],
+   [
+    "_bn_exp=hero_b",
+    0
+   ],
+   [
+    "studio-web/2026.11.3",
+    0
+   ],
+   [
+    "SameSite=None; Partitioned; Max-Age=86400",
+    0
+   ],
+   [
+    "Path=/auth/refresh",
+    0
+   ],
+   [
+    "bn_theme=solarized",
+    0
+   ],
+   [
+    "x-bn-request-id, x-bn-cost",
+    0
+   ],
+   [
+    "bnr_5c7e9a1b3d5f",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-11",
+  "domain": "csp_report",
+  "text": "HTTP/2 200\ncontent-type: text/html; charset=utf-8\ncontent-security-policy: default-src 'self'; script-src 'self' 'nonce-r4nd0mN0nc3Xq7Lp2Zv' 'strict-dynamic' https://cdn.palette.example; style-src 'self' 'nonce-r4nd0mN0nc3Xq7Lp2Zv'; img-src 'self' data: https://img.palette.example; connect-src 'self' https://api.palette.example wss://rt.palette.example; frame-ancestors 'none'; base-uri 'none'; report-uri https://csp.palette.example/r/7f2a; report-to csp-endpoint\nreporting-endpoints: csp-endpoint=\"https://csp.palette.example/r/7f2a\"\nx-content-type-options: nosniff\nreferrer-policy: strict-origin-when-cross-origin\npermissions-policy: camera=(), microphone=(), geolocation=(self)\ncross-origin-opener-policy: same-origin\netag: \"6d1b-18f2c9a0e44\"\ndate: Tue, 10 Nov 2026 09:00:12 GMT\n\nPOST /r/7f2a HTTP/1.1\nHost: csp.palette.example\nContent-Type: application/csp-report\nX-Forwarded-For: 192.0.2.211\n\n{\n  \"csp-report\": {\n    \"document-uri\": \"https://app.palette.example/account/settings?tab=billing\",\n    \"referrer\": \"https://mail.webpost.example/\",\n    \"violated-directive\": \"script-src-elem\",\n    \"effective-directive\": \"script-src-elem\",\n    \"original-policy\": \"default-src 'self'; script-src 'self' 'nonce-r4nd0mN0nc3Xq7Lp2Zv' 'strict-dynamic'; report-uri https://csp.palette.example/r/7f2a\",\n    \"disposition\": \"enforce\",\n    \"blocked-uri\": \"https://cdn.trackr.example/t.js?uid=greta.lindqvist%40webpost.example\",\n    \"line-number\": 14,\n    \"column-number\": 2207,\n    \"source-file\": \"https://app.palette.example/static/js/settings.4f9e1c.js\",\n    \"status-code\": 200,\n    \"script-sample\": \"\"\n  }\n}\n\n# triage (Oskar Nyberg): the blocked script came from a browser extension injecting a\n# tracker; the uid param leaks the customer's address. Nothing to fix on our side.",
+  "mask": [
+   [
+    "Tue, 10 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "192.0.2.211",
+    0,
+    "IP"
+   ],
+   [
+    "greta.lindqvist%40webpost.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Oskar Nyberg",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "text/html; charset=utf-8",
+    0
+   ],
+   [
+    "'nonce-r4nd0mN0nc3Xq7Lp2Zv'",
+    0
+   ],
+   [
+    "'strict-dynamic'",
+    0
+   ],
+   [
+    "https://cdn.palette.example",
+    0
+   ],
+   [
+    "frame-ancestors 'none'",
+    0
+   ],
+   [
+    "base-uri 'none'",
+    0
+   ],
+   [
+    "wss://rt.palette.example",
+    0
+   ],
+   [
+    "report-to csp-endpoint",
+    0
+   ],
+   [
+    "x-content-type-options: nosniff",
+    0
+   ],
+   [
+    "strict-origin-when-cross-origin",
+    0
+   ],
+   [
+    "camera=(), microphone=(), geolocation=(self)",
+    0
+   ],
+   [
+    "\"6d1b-18f2c9a0e44\"",
+    0
+   ],
+   [
+    "application/csp-report",
+    0
+   ],
+   [
+    "https://app.palette.example/account/settings?tab=billing",
+    0
+   ],
+   [
+    "script-src-elem",
+    0
+   ],
+   [
+    "\"disposition\": \"enforce\"",
+    0
+   ],
+   [
+    "https://app.palette.example/static/js/settings.4f9e1c.js",
+    0
+   ],
+   [
+    "\"column-number\": 2207",
+    0
+   ],
+   [
+    "same-origin",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-12",
+  "domain": "payment_webhook_stripe_style",
+  "text": "POST /hooks/payments HTTP/1.1\nHost: hooks.canopyfit.example\nUser-Agent: Stripe/1.0 (+https://stripe.com/docs/webhooks)\nContent-Type: application/json; charset=utf-8\nStripe-Signature: t=1795248113,v1=5257a869e7ecebeda32affa62cdca3fa51cad7e77a0e56ff536d0ce8e108d8bd,v0=6ffbb59b2300aae63f272406069a9788598b792a944a07aba816edb039989a39\nContent-Length: 1187\n\n{\n  \"id\": \"evt_1QdZ9xFAKE2eZvKYlo2C7Hkm\",\n  \"object\": \"event\",\n  \"api_version\": \"2024-06-20\",\n  \"created\": 1795248112,\n  \"type\": \"invoice.payment_failed\",\n  \"livemode\": false,\n  \"data\": {\n    \"object\": {\n      \"id\": \"in_1QdZ9wFAKE2eZvKYlo2CqLm3\",\n      \"object\": \"invoice\",\n      \"customer\": \"cus_RfakeT8x2LmQ0p\",\n      \"customer_email\": \"beatriz.salgado@correo.example\",\n      \"customer_name\": \"Beatriz Salgado\",\n      \"customer_phone\": \"+52 55 5550 4821\",\n      \"customer_address\": {\"line1\": \"Calle Durango 214, Int. 6\", \"city\": \"Ciudad de México\", \"postal_code\": \"06700\", \"country\": \"MX\"},\n      \"amount_due\": 89900,\n      \"currency\": \"mxn\",\n      \"status\": \"open\",\n      \"billing_reason\": \"subscription_cycle\",\n      \"subscription\": \"sub_1QdFAKE9xLmN2oPq\",\n      \"charge\": \"ch_3QdZ9xFAKE2eZvKY0rTq8Ui1\",\n      \"last_finalization_error\": null,\n      \"payment_settings\": {\"payment_method_types\": [\"card\", \"oxxo\"]},\n      \"lines\": {\"data\": [{\"price\": \"price_1PFAKEgold12m\", \"description\": \"1 x CanopyFit Gold (at $899.00 / year)\"}]}\n    }\n  },\n  \"request\": {\"id\": \"req_FAKEa1B2c3D4e5\", \"idempotency_key\": \"9f8e7d6c-5b4a-3210-fedc-ba9876543210\"}\n}\n\n# handler config (do not commit): STRIPE_WEBHOOK_SECRET=whsec_FAKE4k9Lm2Qx7Rt0Vz3Wb6Yc8Jd1Hs5Ga\n# publishable key for the checkout page is fine to ship: pk_test_FAKE51HqTmW2eZvKYlo2C9pubKEYxyz",
+  "mask": [
+   [
+    "t=1795248113,v1=5257a869e7ecebeda32affa62cdca3fa51cad7e77a0e56ff536d0ce8e108d8bd,v0=6ffbb59b2300aae63f272406069a9788598b792a944a07aba816edb039989a39",
+    0,
+    "SECRET"
+   ],
+   [
+    "beatriz.salgado@correo.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Beatriz Salgado",
+    0,
+    "PERSON"
+   ],
+   [
+    "+52 55 5550 4821",
+    0,
+    "PHONE"
+   ],
+   [
+    "Calle Durango 214, Int. 6",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "whsec_FAKE4k9Lm2Qx7Rt0Vz3Wb6Yc8Jd1Hs5Ga",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "POST /hooks/payments HTTP/1.1",
+    0
+   ],
+   [
+    "hooks.canopyfit.example",
+    0
+   ],
+   [
+    "Stripe/1.0 (+https://stripe.com/docs/webhooks)",
+    0
+   ],
+   [
+    "application/json; charset=utf-8",
+    0
+   ],
+   [
+    "evt_1QdZ9xFAKE2eZvKYlo2C7Hkm",
+    0
+   ],
+   [
+    "\"api_version\": \"2024-06-20\"",
+    0
+   ],
+   [
+    "invoice.payment_failed",
+    0
+   ],
+   [
+    "\"livemode\": false",
+    0
+   ],
+   [
+    "in_1QdZ9wFAKE2eZvKYlo2CqLm3",
+    0
+   ],
+   [
+    "Ciudad de México",
+    0
+   ],
+   [
+    "\"postal_code\": \"06700\"",
+    0
+   ],
+   [
+    "\"currency\": \"mxn\"",
+    0
+   ],
+   [
+    "subscription_cycle",
+    0
+   ],
+   [
+    "sub_1QdFAKE9xLmN2oPq",
+    0
+   ],
+   [
+    "ch_3QdZ9xFAKE2eZvKY0rTq8Ui1",
+    0
+   ],
+   [
+    "price_1PFAKEgold12m",
+    0
+   ],
+   [
+    "req_FAKEa1B2c3D4e5",
+    0
+   ],
+   [
+    "9f8e7d6c-5b4a-3210-fedc-ba9876543210",
+    0
+   ],
+   [
+    "pk_test_FAKE51HqTmW2eZvKYlo2C9pubKEYxyz",
+    0
+   ],
+   [
+    "STRIPE_WEBHOOK_SECRET",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-13",
+  "domain": "github_webhook_push",
+  "text": "Request URL: https://ci.marrowbone.example/github/webhook\nRequest method: POST\nAccept: */*\nContent-Type: application/json\nUser-Agent: GitHub-Hookshot/7a4c3e1\nX-GitHub-Delivery: 5d3f9a20-a4c1-11ef-8e1b-0f6a2b9c7d34\nX-GitHub-Event: push\nX-GitHub-Hook-ID: 501873994\nX-GitHub-Hook-Installation-Target-ID: 812345670\nX-GitHub-Hook-Installation-Target-Type: repository\nX-Hub-Signature: sha1=FAKEc1b9e0f2a3d4c5b6a7e8f9d0c1b2a3e4f5d6\nX-Hub-Signature-256: sha256=FAKE0d9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f10\n\n{\n  \"ref\": \"refs/heads/main\",\n  \"before\": \"a1b2c3d4e5f60718293a4b5c6d7e8f9012345678\",\n  \"after\": \"e83c5163316f89bfbde7d9ab23ca2e25604af290\",\n  \"repository\": {\"id\": 734019226, \"full_name\": \"marrowbone/ledger-sync\", \"private\": true, \"default_branch\": \"main\"},\n  \"pusher\": {\"name\": \"nkhumalo-dev\", \"email\": \"nandi.khumalo@marrowbone.example\"},\n  \"sender\": {\"login\": \"nkhumalo-dev\", \"id\": 90817265, \"type\": \"User\", \"site_admin\": false},\n  \"head_commit\": {\n    \"id\": \"e83c5163316f89bfbde7d9ab23ca2e25604af290\",\n    \"message\": \"fix(sync): retry on 429 from ledger API\\n\\nReported-by: Pieter de Klerk <pieter.deklerk@marrowbone.example>\",\n    \"timestamp\": \"2026-11-13T16:48:05+02:00\",\n    \"author\": {\"name\": \"Nandi Khumalo\", \"email\": \"nandi.khumalo@marrowbone.example\", \"username\": \"nkhumalo-dev\"},\n    \"committer\": {\"name\": \"GitHub\", \"email\": \"noreply@github.com\", \"username\": \"web-flow\"},\n    \"added\": [], \"removed\": [],\n    \"modified\": [\"src/sync/retry.ts\", \"src/sync/retry.test.ts\", \"CHANGELOG.md\"]\n  },\n  \"installation\": {\"id\": 41890231, \"node_id\": \"MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uNDE4OTAyMzE=\"}\n}\n\nResponse: 202 Accepted  (completed in 0.31 seconds)",
+  "mask": [
+   [
+    "sha1=FAKEc1b9e0f2a3d4c5b6a7e8f9d0c1b2a3e4f5d6",
+    0,
+    "SECRET"
+   ],
+   [
+    "sha256=FAKE0d9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f10",
+    0,
+    "SECRET"
+   ],
+   [
+    "nkhumalo-dev",
+    0,
+    "USERNAME"
+   ],
+   [
+    "nandi.khumalo@marrowbone.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "90817265",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Pieter de Klerk",
+    0,
+    "PERSON"
+   ],
+   [
+    "pieter.deklerk@marrowbone.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2026-11-13",
+    0,
+    "DATE"
+   ],
+   [
+    "Nandi Khumalo",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "https://ci.marrowbone.example/github/webhook",
+    0
+   ],
+   [
+    "GitHub-Hookshot/7a4c3e1",
+    0
+   ],
+   [
+    "5d3f9a20-a4c1-11ef-8e1b-0f6a2b9c7d34",
+    0
+   ],
+   [
+    "X-GitHub-Event: push",
+    0
+   ],
+   [
+    "501873994",
+    0
+   ],
+   [
+    "X-GitHub-Hook-Installation-Target-Type: repository",
+    0
+   ],
+   [
+    "refs/heads/main",
+    0
+   ],
+   [
+    "a1b2c3d4e5f60718293a4b5c6d7e8f9012345678",
+    0
+   ],
+   [
+    "e83c5163316f89bfbde7d9ab23ca2e25604af290",
+    0
+   ],
+   [
+    "marrowbone/ledger-sync",
+    0
+   ],
+   [
+    "\"private\": true",
+    0
+   ],
+   [
+    "fix(sync): retry on 429 from ledger API",
+    0
+   ],
+   [
+    "noreply@github.com",
+    0
+   ],
+   [
+    "web-flow",
+    0
+   ],
+   [
+    "src/sync/retry.ts",
+    0
+   ],
+   [
+    "MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uNDE4OTAyMzE=",
+    0
+   ],
+   [
+    "202 Accepted",
+    0
+   ],
+   [
+    "\"site_admin\": false",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-14",
+  "domain": "aws_sigv4_s3",
+  "text": "$ aws s3 cp ./exports/patient-intake-batch-0441.csv s3://halyard-clinic-exports-prod/intake/ --debug 2>&1 | grep -A22 'Sending http request'\n2026-11-09 10:22:31,804 - MainThread - botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://halyard-clinic-exports-prod.s3.eu-central-1.amazonaws.com/intake/patient-intake-batch-0441.csv,\nheaders={\n 'User-Agent': b'aws-cli/2.18.4 md/awscrt#0.22.0 ua/2.0 os/linux#6.8.0 md/arch#x86_64 lang/python#3.12.6 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe',\n 'Content-MD5': b'1B2M2Y8AsgTpgAmY7PhCfg==',\n 'Expect': b'100-continue',\n 'X-Amz-Date': b'20261109T102231Z',\n 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD',\n 'X-Amz-Security-Token': b'IQoJb3JpZ2luX2VjEFAKEaDGV1LWNlbnRyYWwtMSJHMEUCIQDf4kL9xVw2Qz7Tn0Rb8Yc3Jd5Hs1GaFe6Ku2Oi8Nl4Mx0Pz9AiB7Ub3Vy5Wt1Xs9Zr7Yq5Wp3Vo1Un9Tm7Sl5Rk3Qj1PiOgEFAKE',\n 'Authorization': b'AWS4-HMAC-SHA256 Credential=ASIAQX7FAKE4LMN2OPQR/20261109/eu-central-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date;x-amz-security-token, Signature=8f1d2c3b4a59687706f5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3',\n 'Content-Length': '48213'\n}>\n2026-11-09 10:22:31,991 - MainThread - botocore.parsers - DEBUG - Response headers: {'x-amz-id-2': 'Zm9vYmFyYmF6cXV4cXV1eDEyMzQ1Njc4OTBhYmNkZWZnaGlqa2xtbm9w', 'x-amz-request-id': 'KX4T9W2B7Q1M8Z3C', 'Date': 'Mon, 09 Nov 2026 10:22:32 GMT', 'x-amz-server-side-encryption': 'aws:kms', 'x-amz-server-side-encryption-aws-kms-key-id': 'arn:aws:kms:eu-central-1:111122223333:key/0a1b2c3d-4e5f-6789-abcd-ef0123456789', 'ETag': '\"d41d8cd98f00b204e9800998ecf8427e\"', 'Server': 'AmazonS3'}\nupload: exports/patient-intake-batch-0441.csv to s3://halyard-clinic-exports-prod/intake/patient-intake-batch-0441.csv\n\n# ~/.aws/credentials  (profile halyard-ops; copied into the ticket by Ruth Abernathy, rotate!)\n[halyard-ops]\naws_access_key_id = AKIAZ3FAKEQ7NX2LKW9D\naws_secret_access_key = FAKEw9Lk2Qz7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7\nregion = eu-central-1\n\n# Docs example for comparison (from the AWS CLI guide, not a real key):\n# aws_access_key_id = AKIAIOSFODNN7EXAMPLE",
+  "mask": [
+   [
+    "2026-11-09",
+    0,
+    "DATE"
+   ],
+   [
+    "20261109",
+    0,
+    "DATE"
+   ],
+   [
+    "IQoJb3JpZ2luX2VjEFAKEaDGV1LWNlbnRyYWwtMSJHMEUCIQDf4kL9xVw2Qz7Tn0Rb8Yc3Jd5Hs1GaFe6Ku2Oi8Nl4Mx0Pz9AiB7Ub3Vy5Wt1Xs9Zr7Yq5Wp3Vo1Un9Tm7Sl5Rk3Qj1PiOgEFAKE",
+    0,
+    "SECRET"
+   ],
+   [
+    "ASIAQX7FAKE4LMN2OPQR",
+    0,
+    "SECRET"
+   ],
+   [
+    "8f1d2c3b4a59687706f5e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3",
+    0,
+    "SECRET"
+   ],
+   [
+    "Mon, 09 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Ruth Abernathy",
+    0,
+    "PERSON"
+   ],
+   [
+    "AKIAZ3FAKEQ7NX2LKW9D",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEw9Lk2Qz7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "patient-intake-batch-0441.csv",
+    0
+   ],
+   [
+    "halyard-clinic-exports-prod",
+    0
+   ],
+   [
+    "botocore.endpoint",
+    0
+   ],
+   [
+    "method=PUT",
+    0
+   ],
+   [
+    "aws-cli/2.18.4 md/awscrt#0.22.0 ua/2.0 os/linux#6.8.0 md/arch#x86_64 lang/python#3.12.6 md/pyimpl#CPython cfg/retry-mode#standard md/installer#exe",
+    0
+   ],
+   [
+    "1B2M2Y8AsgTpgAmY7PhCfg==",
+    0
+   ],
+   [
+    "100-continue",
+    0
+   ],
+   [
+    "UNSIGNED-PAYLOAD",
+    0
+   ],
+   [
+    "AWS4-HMAC-SHA256",
+    0
+   ],
+   [
+    "eu-central-1",
+    0
+   ],
+   [
+    "aws4_request",
+    0
+   ],
+   [
+    "content-md5;host;x-amz-content-sha256;x-amz-date;x-amz-security-token",
+    0
+   ],
+   [
+    "Zm9vYmFyYmF6cXV4cXV1eDEyMzQ1Njc4OTBhYmNkZWZnaGlqa2xtbm9w",
+    0
+   ],
+   [
+    "KX4T9W2B7Q1M8Z3C",
+    0
+   ],
+   [
+    "aws:kms",
+    0
+   ],
+   [
+    "arn:aws:kms:eu-central-1:111122223333:key/0a1b2c3d-4e5f-6789-abcd-ef0123456789",
+    0
+   ],
+   [
+    "\"d41d8cd98f00b204e9800998ecf8427e\"",
+    0
+   ],
+   [
+    "AmazonS3",
+    0
+   ],
+   [
+    "[halyard-ops]",
+    0
+   ],
+   [
+    "AKIAIOSFODNN7EXAMPLE",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-15",
+  "domain": "s3_presigned_chat",
+  "text": "[09:14] Priyanka Raghavan: here's the link to Mr. Elgin's signed lease, valid 1h:\n[09:14] Priyanka Raghavan: https://docvault-tenants.s3.us-east-2.amazonaws.com/leases/2026/Theodore_Elgin_lease_signed.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4FAKEX2M7QPLZ8RT%2F20261116%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20261116T091402Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=c0ffee1234abcd5678ef90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5\n[09:16] Callum Fraser: thanks. fyi I can't open it from the VPN, getting this:\n[09:16] Callum Fraser:\n```\n$ curl -sI 'https://docvault-tenants.s3.us-east-2.amazonaws.com/leases/2026/...&X-Amz-Signature=<sig>'\nHTTP/1.1 403 Forbidden\nx-amz-request-id: 7QH2N9XK4B1M0Z8C\nx-amz-id-2: aGVsbG8td29ybGQtdGhpcy1pcy1ub3QtcmVhbC0xMjM0NTY3ODkw\nContent-Type: application/xml\nTransfer-Encoding: chunked\nDate: Mon, 16 Nov 2026 09:16:40 GMT\nServer: AmazonS3\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>IP address not in allowed range</Message><RequestId>7QH2N9XK4B1M0Z8C</RequestId></Error>\n```\n[09:17] Priyanka Raghavan: bucket policy has aws:SourceIp for the office range only. use the office wifi or I can email it to theo.elgin@tenantmail.example directly\n[09:18] Callum Fraser: email is fine. his phone is (617) 555-0142 if he has questions\n[09:19] Priyanka Raghavan: 👍 also reminder the bucket is versioned, retention 7 years, KMS key alias/docvault-leases",
+  "mask": [
+   [
+    "Priyanka Raghavan",
+    0,
+    "PERSON"
+   ],
+   [
+    "Elgin",
+    0,
+    "PERSON"
+   ],
+   [
+    "Theodore_Elgin",
+    0,
+    "PERSON"
+   ],
+   [
+    "AKIA4FAKEX2M7QPLZ8RT",
+    0,
+    "SECRET"
+   ],
+   [
+    "20261116",
+    0,
+    "DATE"
+   ],
+   [
+    "c0ffee1234abcd5678ef90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5",
+    0,
+    "SECRET"
+   ],
+   [
+    "Callum Fraser",
+    0,
+    "PERSON"
+   ],
+   [
+    "Mon, 16 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "theo.elgin@tenantmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "(617) 555-0142",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "docvault-tenants",
+    0
+   ],
+   [
+    "us-east-2",
+    0
+   ],
+   [
+    "<sig>",
+    0
+   ],
+   [
+    "X-Amz-Algorithm=AWS4-HMAC-SHA256",
+    0
+   ],
+   [
+    "aws4_request",
+    0
+   ],
+   [
+    "X-Amz-Expires=3600",
+    0
+   ],
+   [
+    "X-Amz-SignedHeaders=host",
+    0
+   ],
+   [
+    "curl -sI",
+    0
+   ],
+   [
+    "HTTP/1.1 403 Forbidden",
+    0
+   ],
+   [
+    "7QH2N9XK4B1M0Z8C",
+    0
+   ],
+   [
+    "aGVsbG8td29ybGQtdGhpcy1pcy1ub3QtcmVhbC0xMjM0NTY3ODkw",
+    0
+   ],
+   [
+    "application/xml",
+    0
+   ],
+   [
+    "Transfer-Encoding: chunked",
+    0
+   ],
+   [
+    "AmazonS3",
+    0
+   ],
+   [
+    "<Code>AccessDenied</Code>",
+    0
+   ],
+   [
+    "IP address not in allowed range",
+    0
+   ],
+   [
+    "aws:SourceIp",
+    0
+   ],
+   [
+    "retention 7 years",
+    0
+   ],
+   [
+    "alias/docvault-leases",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-16",
+  "domain": "azure_sas",
+  "text": "$ az storage blob generate-sas --account-name stmeridianlabs01 --container-name results \\\n    --name \"2026/11/genomics/run-8812/sample-HG-0071.vcf.gz\" --permissions r --expiry 2026-11-18T00:00Z --https-only --full-uri -o tsv\nhttps://stmeridianlabs01.blob.core.windows.net/results/2026/11/genomics/run-8812/sample-HG-0071.vcf.gz?se=2026-11-18T00%3A00Z&sp=r&spr=https&sv=2025-05-05&sr=b&skoid=FAKE0000-1111-2222-3333-444455556666&sktid=FAKE7777-8888-9999-aaaa-bbbbccccdddd&skt=2026-11-17T08%3A55%3A03Z&ske=2026-11-18T00%3A00%3A00Z&sks=b&skv=2025-05-05&sig=FAKEq8Lm2Zx7Rt0Vb3Yc4Jd1Hs6Ga5Fe9Ku0Oi2Nl7Mx%3D\n\n$ az storage account show-connection-string -n stmeridianlabs01 -g rg-meridian-research -o tsv\nDefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=stmeridianlabs01;AccountKey=FAKEk3Lm9Qx2Rt7Vb0Yc5Jd8Hs1Ga4Fe6Ku3Oi0Nl9Mx2Pz7Tn4Wq1Er8Ty5Ui2Op0As3Df6Gh9Jk==;BlobEndpoint=https://stmeridianlabs01.blob.core.windows.net/\n\n$ az role assignment list --assignee dr.amara.oyelaran@meridianlabs.example --scope /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg-meridian-research -o table\nPrincipal                                 Role                          Scope\n----------------------------------------  ----------------------------  -----------------------------------------------------------------------------------\ndr.amara.oyelaran@meridianlabs.example    Storage Blob Data Reader      /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg-meridian-research\n\nNote for Dr. Amara Oyelaran: the link above expires at midnight UTC. Participant\nHG-0071's consent form lists DOB 1979-02-14 and MRN 448-21-7730; those stay in REDCap only.\n\n$ az storage blob list --account-name stmeridianlabs01 -c results --prefix 2026/11/genomics/run-8812/ --query \"[].{name:name,size:properties.contentLength,md5:properties.contentSettings.contentMd5}\" -o table\nName                                                  Size        Md5\n----------------------------------------------------  ----------  ------------------------\n2026/11/genomics/run-8812/sample-HG-0071.vcf.gz       184227731   q3Lp0Zx9Vb2Nc7Md4Ke1Jf==\n2026/11/genomics/run-8812/sample-HG-0072.vcf.gz       179004112   Ab8Cd2Ef6Gh0Ij4Kl8Mn2O==",
+  "mask": [
+   [
+    "2026-11-18",
+    0,
+    "DATE"
+   ],
+   [
+    "2026-11-17",
+    0,
+    "DATE"
+   ],
+   [
+    "FAKEq8Lm2Zx7Rt0Vb3Yc4Jd1Hs6Ga5Fe9Ku0Oi2Nl7Mx%3D",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEk3Lm9Qx2Rt7Vb0Yc5Jd8Hs1Ga4Fe6Ku3Oi0Nl9Mx2Pz7Tn4Wq1Er8Ty5Ui2Op0As3Df6Gh9Jk==",
+    0,
+    "SECRET"
+   ],
+   [
+    "dr.amara.oyelaran@meridianlabs.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Amara Oyelaran",
+    0,
+    "PERSON"
+   ],
+   [
+    "1979-02-14",
+    0,
+    "DOB"
+   ],
+   [
+    "448-21-7730",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "az storage blob generate-sas",
+    0
+   ],
+   [
+    "stmeridianlabs01",
+    0
+   ],
+   [
+    "--permissions r",
+    0
+   ],
+   [
+    "--https-only",
+    0
+   ],
+   [
+    "https://stmeridianlabs01.blob.core.windows.net/results/",
+    0
+   ],
+   [
+    "sp=r&spr=https",
+    0
+   ],
+   [
+    "sv=2025-05-05",
+    0
+   ],
+   [
+    "sr=b",
+    0
+   ],
+   [
+    "FAKE0000-1111-2222-3333-444455556666",
+    0
+   ],
+   [
+    "DefaultEndpointsProtocol=https",
+    0
+   ],
+   [
+    "EndpointSuffix=core.windows.net",
+    0
+   ],
+   [
+    "rg-meridian-research",
+    0
+   ],
+   [
+    "/subscriptions/00000000-1111-2222-3333-444444444444",
+    0
+   ],
+   [
+    "Storage Blob Data Reader",
+    0
+   ],
+   [
+    "run-8812",
+    0
+   ],
+   [
+    "properties.contentLength",
+    0
+   ],
+   [
+    "184227731",
+    0
+   ],
+   [
+    "q3Lp0Zx9Vb2Nc7Md4Ke1Jf==",
+    0
+   ],
+   [
+    "REDCap",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-17",
+  "domain": "graphql",
+  "text": "POST /graphql HTTP/1.1\nHost: api.quaywise.example\nAuthorization: Bearer qw_pat_FAKE_Lm7Zx2Rt9Vb4Yc1Jd8Hs3Ga6Fe0Ku5Oi\nContent-Type: application/json\nApollo-Require-Preflight: true\nX-Apollo-Operation-Name: UpdateShipmentContact\napollographql-client-name: quaywise-ops-console\napollographql-client-version: 4.31.0\n\n{\n  \"operationName\": \"UpdateShipmentContact\",\n  \"query\": \"mutation UpdateShipmentContact($id: ID!, $input: ContactInput!) { updateShipmentContact(id: $id, input: $input) { shipment { id status eta consignee { name phone email } } errors { field message } } }\",\n  \"variables\": {\n    \"id\": \"shp_01JD3K8QZ7M2\",\n    \"input\": {\n      \"name\": \"Mehmet Yıldırım\",\n      \"phone\": \"+90 212 555 01 77\",\n      \"email\": \"mehmet.yildirim@posta.example\",\n      \"deliveryAddress\": \"Bağdat Caddesi No: 301 D: 5, 34728 Kadıköy/İstanbul\",\n      \"notes\": \"Ring twice, gate code 4417\"\n    }\n  },\n  \"extensions\": {\"persistedQuery\": {\"version\": 1, \"sha256Hash\": \"ecf4edb46db40b5132295c0291d62fb65d6759a9eedfa4d5d612dd5ec54a6b38\"}}\n}\n\nHTTP/1.1 200 OK\nContent-Type: application/graphql-response+json; charset=utf-8\nX-Request-ID: 3a7c1f0e-9b2d-4e8a-b6c5-d4e3f2a1b0c9\nServer-Timing: gql;dur=41.7, db;dur=12.3\n\n{\n  \"data\": {\n    \"updateShipmentContact\": {\n      \"shipment\": {\"id\": \"shp_01JD3K8QZ7M2\", \"status\": \"IN_TRANSIT\", \"eta\": \"2026-11-20\", \"consignee\": {\"name\": \"Mehmet Yıldırım\", \"phone\": \"+90 212 555 01 77\", \"email\": \"mehmet.yildirim@posta.example\"}},\n      \"errors\": []\n    }\n  },\n  \"extensions\": {\"cost\": {\"requestedQueryCost\": 14, \"maximumAvailable\": 50000}}\n}",
+  "mask": [
+   [
+    "qw_pat_FAKE_Lm7Zx2Rt9Vb4Yc1Jd8Hs3Ga6Fe0Ku5Oi",
+    0,
+    "SECRET"
+   ],
+   [
+    "Mehmet Yıldırım",
+    0,
+    "PERSON"
+   ],
+   [
+    "+90 212 555 01 77",
+    0,
+    "PHONE"
+   ],
+   [
+    "mehmet.yildirim@posta.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Bağdat Caddesi No: 301 D: 5, 34728 Kadıköy/İstanbul",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "4417",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026-11-20",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "POST /graphql HTTP/1.1",
+    0
+   ],
+   [
+    "api.quaywise.example",
+    0
+   ],
+   [
+    "Apollo-Require-Preflight: true",
+    0
+   ],
+   [
+    "UpdateShipmentContact",
+    0
+   ],
+   [
+    "quaywise-ops-console",
+    0
+   ],
+   [
+    "apollographql-client-version: 4.31.0",
+    0
+   ],
+   [
+    "mutation UpdateShipmentContact($id: ID!, $input: ContactInput!)",
+    0
+   ],
+   [
+    "shp_01JD3K8QZ7M2",
+    0
+   ],
+   [
+    "\"persistedQuery\"",
+    0
+   ],
+   [
+    "ecf4edb46db40b5132295c0291d62fb65d6759a9eedfa4d5d612dd5ec54a6b38",
+    0
+   ],
+   [
+    "application/graphql-response+json; charset=utf-8",
+    0
+   ],
+   [
+    "3a7c1f0e-9b2d-4e8a-b6c5-d4e3f2a1b0c9",
+    0
+   ],
+   [
+    "gql;dur=41.7, db;dur=12.3",
+    0
+   ],
+   [
+    "IN_TRANSIT",
+    0
+   ],
+   [
+    "\"requestedQueryCost\": 14",
+    0
+   ],
+   [
+    "\"maximumAvailable\": 50000",
+    0
+   ],
+   [
+    "Ring twice",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-18",
+  "domain": "grpc_metadata",
+  "text": "$ grpcurl -v -H 'authorization: Bearer gtk_FAKE.Qp4Lm8Zx1Rt6Vb9Yc2Jd5Hs0Ga3Fe7Ku' -H 'x-tenant: acme-eu' \\\n    -d '{\"member_id\": \"MBR-2208-5531\", \"include_claims\": true}' \\\n    claims.svc.vitalis.internal:443 vitalis.claims.v2.ClaimsService/ListClaims\n\nResolved method descriptor:\n// Lists claims for a member, newest first.\nrpc ListClaims ( .vitalis.claims.v2.ListClaimsRequest ) returns ( .vitalis.claims.v2.ListClaimsResponse );\n\nRequest metadata to send:\nauthorization: Bearer gtk_FAKE.Qp4Lm8Zx1Rt6Vb9Yc2Jd5Hs0Ga3Fe7Ku\nx-tenant: acme-eu\n\nResponse headers received:\ncontent-type: application/grpc\ndate: Wed, 11 Nov 2026 13:44:09 GMT\ngrpc-accept-encoding: gzip\nserver: envoy\nx-envoy-upstream-service-time: 57\nx-request-id: 1f5e2d8c-7a3b-4c6d-9e0f-a1b2c3d4e5f6\ntraceparent: 00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01\n\nResponse contents:\n{\n  \"claims\": [\n    {\n      \"claimId\": \"CLM-77120934\",\n      \"member\": {\"memberId\": \"MBR-2208-5531\", \"fullName\": \"Esperanza Quintero\", \"dateOfBirth\": \"1964-07-30\"},\n      \"provider\": {\"npi\": \"1234567893\", \"name\": \"Lakeside Orthopedics\"},\n      \"serviceDate\": \"2026-10-02\",\n      \"status\": \"CLAIM_STATUS_ADJUDICATED\",\n      \"billedCents\": \"184500\",\n      \"allowedCents\": \"97250\"\n    }\n  ],\n  \"nextPageToken\": \"cGFnZToyO3NvcnQ6ZGVzYw\"\n}\n\nResponse trailers received:\ngrpc-status: 0\ngrpc-message:\nSent 1 request and received 1 response",
+  "mask": [
+   [
+    "gtk_FAKE.Qp4Lm8Zx1Rt6Vb9Yc2Jd5Hs0Ga3Fe7Ku",
+    0,
+    "SECRET"
+   ],
+   [
+    "MBR-2208-5531",
+    0,
+    "ID"
+   ],
+   [
+    "Wed, 11 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Esperanza Quintero",
+    0,
+    "PERSON"
+   ],
+   [
+    "1964-07-30",
+    0,
+    "DOB"
+   ],
+   [
+    "2026-10-02",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "grpcurl -v",
+    0
+   ],
+   [
+    "x-tenant: acme-eu",
+    0
+   ],
+   [
+    "claims.svc.vitalis.internal:443",
+    0
+   ],
+   [
+    "vitalis.claims.v2.ClaimsService/ListClaims",
+    0
+   ],
+   [
+    ".vitalis.claims.v2.ListClaimsRequest",
+    0
+   ],
+   [
+    "content-type: application/grpc",
+    0
+   ],
+   [
+    "grpc-accept-encoding: gzip",
+    0
+   ],
+   [
+    "x-envoy-upstream-service-time: 57",
+    0
+   ],
+   [
+    "1f5e2d8c-7a3b-4c6d-9e0f-a1b2c3d4e5f6",
+    0
+   ],
+   [
+    "00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01",
+    0
+   ],
+   [
+    "CLM-77120934",
+    0
+   ],
+   [
+    "1234567893",
+    0
+   ],
+   [
+    "Lakeside Orthopedics",
+    0
+   ],
+   [
+    "CLAIM_STATUS_ADJUDICATED",
+    0
+   ],
+   [
+    "\"billedCents\": \"184500\"",
+    0
+   ],
+   [
+    "cGFnZToyO3NvcnQ6ZGVzYw",
+    0
+   ],
+   [
+    "grpc-status: 0",
+    0
+   ],
+   [
+    "\"include_claims\": true",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-19",
+  "domain": "smtp_transcript",
+  "text": "$ swaks --to f.okafor@gmail.example --from alerts@notify.cobaltdesk.example --server smtp.relay.cobaltdesk.example:587 --tls --auth LOGIN --auth-user relay-alerts --auth-password 'FAKE-Smtp!9xQ2' --header 'Subject: [cobaltdesk] Ticket #58812 updated'\n=== Trying smtp.relay.cobaltdesk.example:587...\n=== Connected to smtp.relay.cobaltdesk.example.\n<-  220 smtp.relay.cobaltdesk.example ESMTP Postfix (Debian/GNU)\n -> EHLO build-07.ci.cobaltdesk.internal\n<-  250-smtp.relay.cobaltdesk.example\n<-  250-PIPELINING\n<-  250-SIZE 52428800\n<-  250-STARTTLS\n<-  250-ENHANCEDSTATUSCODES\n<-  250 SMTPUTF8\n -> STARTTLS\n<-  220 2.0.0 Ready to start TLS\n=== TLS started with cipher TLSv1.3:TLS_AES_256_GCM_SHA384:256\n ~> EHLO build-07.ci.cobaltdesk.internal\n<~  250-AUTH PLAIN LOGIN\n<~  250 8BITMIME\n ~> AUTH LOGIN\n<~  334 VXNlcm5hbWU6\n ~> cmVsYXktYWxlcnRz\n<~  334 UGFzc3dvcmQ6\n ~> RkFLRS1TbXRwITl4UTI=\n<~  235 2.7.0 Authentication successful\n ~> MAIL FROM:<alerts@notify.cobaltdesk.example>\n<~  250 2.1.0 Ok\n ~> RCPT TO:<f.okafor@gmail.example>\n<~  250 2.1.5 Ok\n ~> DATA\n<~  354 End data with <CR><LF>.<CR><LF>\n ~> Date: Fri, 13 Nov 2026 07:58:21 +0000\n ~> To: f.okafor@gmail.example\n ~> From: alerts@notify.cobaltdesk.example\n ~> Subject: [cobaltdesk] Ticket #58812 updated\n ~> Message-Id: <20261113075821.031822@build-07.ci.cobaltdesk.internal>\n ~> X-Mailer: swaks v20240103.0 jetmore.org/john/code/swaks/\n ~>\n ~> Hi Femi Okafor, agent Hannelore Brandt replied to your ticket. Your callback\n ~> number on file is +44 20 7946 0321.\n ~> .\n<~  250 2.0.0 Ok: queued as 4XbQ2k1Lz9zG7\n ~> QUIT\n<~  221 2.0.0 Bye\n=== Connection closed with remote host.",
+  "mask": [
+   [
+    "f.okafor@gmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "FAKE-Smtp!9xQ2",
+    0,
+    "SECRET"
+   ],
+   [
+    "RkFLRS1TbXRwITl4UTI=",
+    0,
+    "SECRET"
+   ],
+   [
+    "Fri, 13 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "20261113",
+    0,
+    "DATE"
+   ],
+   [
+    "Femi Okafor",
+    0,
+    "PERSON"
+   ],
+   [
+    "Hannelore Brandt",
+    0,
+    "PERSON"
+   ],
+   [
+    "+44 20 7946 0321",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "alerts@notify.cobaltdesk.example",
+    0
+   ],
+   [
+    "smtp.relay.cobaltdesk.example:587",
+    0
+   ],
+   [
+    "--auth LOGIN",
+    0
+   ],
+   [
+    "relay-alerts",
+    0
+   ],
+   [
+    "ESMTP Postfix (Debian/GNU)",
+    0
+   ],
+   [
+    "build-07.ci.cobaltdesk.internal",
+    0
+   ],
+   [
+    "250-PIPELINING",
+    0
+   ],
+   [
+    "250-SIZE 52428800",
+    0
+   ],
+   [
+    "TLSv1.3:TLS_AES_256_GCM_SHA384:256",
+    0
+   ],
+   [
+    "250-AUTH PLAIN LOGIN",
+    0
+   ],
+   [
+    "VXNlcm5hbWU6",
+    0
+   ],
+   [
+    "cmVsYXktYWxlcnRz",
+    0
+   ],
+   [
+    "UGFzc3dvcmQ6",
+    0
+   ],
+   [
+    "235 2.7.0 Authentication successful",
+    0
+   ],
+   [
+    "354 End data with <CR><LF>.<CR><LF>",
+    0
+   ],
+   [
+    "Ticket #58812",
+    0
+   ],
+   [
+    "swaks v20240103.0",
+    0
+   ],
+   [
+    "4XbQ2k1Lz9zG7",
+    0
+   ],
+   [
+    "221 2.0.0 Bye",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-20",
+  "domain": "email_headers",
+  "text": "Return-Path: <bounces+2219041-7c1e@em.ferrowind.example>\nDelivered-To: lars.eriksen@nordpost.example\nReceived: from mx2.nordpost.example (mx2.nordpost.example [10.66.0.12])\n\tby imap1.nordpost.example (Dovecot) with LMTP id 0kQhM3m8OmcFTgAAuTlTmg\n\tfor <lars.eriksen@nordpost.example>; Thu, 05 Nov 2026 21:04:18 +0100\nReceived: from o7.em.ferrowind.example (o7.em.ferrowind.example [172.20.14.7])\n\tby mx2.nordpost.example (Postfix) with ESMTPS id 4Xb7Rk0zqVz9sWm\n\tfor <lars.eriksen@nordpost.example>; Thu, 05 Nov 2026 21:04:17 +0100 (CET)\nARC-Seal: i=1; a=rsa-sha256; t=1793995457; cv=none; d=nordpost.example; s=arc-2026;\n\tb=FAKEr7Lm2Zx9Rt4Vb1Yc6Jd3Hs8Ga0Fe5Ku2Oi7Nl4Mx9Pz6Tn1Wq8Er5Ty2Ui9Op6As3Df0Gh7Jk4==\nARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=nordpost.example; s=arc-2026;\n\th=from:to:subject:date:message-id; bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;\n\tb=FAKEq1Az2Sx3Dc4Fv5Gb6Hn7Jm8Kl9Po0Iu1Yt2Re3Wq4Ea5Sd6Fg7Hj8Kl9Zx0Cv1Bn2==\nARC-Authentication-Results: i=1; mx2.nordpost.example; dkim=pass header.d=ferrowind.example header.s=s1; spf=pass smtp.mailfrom=em.ferrowind.example; dmarc=pass (p=quarantine) header.from=ferrowind.example\nAuthentication-Results: mx2.nordpost.example; dkim=pass (2048-bit key) header.d=ferrowind.example header.i=@ferrowind.example header.b=\"FAKEb3Qx\"\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ferrowind.example; h=content-type:from:mime-version:subject:to:cc;\n\ts=s1; bh=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN/XKdLCPjaYaY=;\n\tb=FAKEm0Np9Ob8Iv7Uc6Yx5Tz4Rw3Ea2Sd1Qf0Pg9Oh8Ni7Mj6Lk5Kl4Jm3Hn2Gb1Fv0Cd==\nMessage-ID: <a3f9c2e1-77b0-4d1e-9c5a-0b8e6d4f2a1c@ferrowind.example>\nDate: Thu, 05 Nov 2026 20:04:15 +0000\nFrom: \"Ferrowind Energy Billing\" <billing@ferrowind.example>\nTo: \"Lars Eriksen\" <lars.eriksen@nordpost.example>\nCc: Ingrid Solberg <ingrid.solberg@nordpost.example>\nSubject: =?UTF-8?Q?Din_str=C3=B8mregning_for_oktober?=\nMIME-Version: 1.0\nContent-Type: multipart/alternative; boundary=\"----=_Part_88412_1977245180.1793995455102\"\nList-Unsubscribe: <https://em.ferrowind.example/u/2219041/7c1e9a?l=no>, <mailto:unsub-2219041@em.ferrowind.example>\nList-Unsubscribe-Post: List-Unsubscribe=One-Click\nX-Ferrowind-Customer: 7004-221-893\n\n------=_Part_88412_1977245180.1793995455102\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: quoted-printable\n\nHei Lars Eriksen, regningen for Storgata 17B, 0184 Oslo er klar. Kontonummer for betaling: 1503.22.48871.",
+  "mask": [
+   [
+    "lars.eriksen@nordpost.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Thu, 05 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Lars Eriksen",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ingrid Solberg",
+    0,
+    "PERSON"
+   ],
+   [
+    "ingrid.solberg@nordpost.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "7004-221-893",
+    0,
+    "ID"
+   ],
+   [
+    "Storgata 17B, 0184 Oslo",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "1503.22.48871",
+    0,
+    "ACCOUNT"
+   ]
+  ],
+  "keep": [
+   [
+    "bounces+2219041-7c1e@em.ferrowind.example",
+    0
+   ],
+   [
+    "mx2.nordpost.example",
+    0
+   ],
+   [
+    "10.66.0.12",
+    0
+   ],
+   [
+    "imap1.nordpost.example (Dovecot)",
+    0
+   ],
+   [
+    "0kQhM3m8OmcFTgAAuTlTmg",
+    0
+   ],
+   [
+    "172.20.14.7",
+    0
+   ],
+   [
+    "4Xb7Rk0zqVz9sWm",
+    0
+   ],
+   [
+    "a=rsa-sha256",
+    0
+   ],
+   [
+    "cv=none",
+    0
+   ],
+   [
+    "s=arc-2026",
+    0
+   ],
+   [
+    "c=relaxed/relaxed",
+    0
+   ],
+   [
+    "bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+    0
+   ],
+   [
+    "dmarc=pass (p=quarantine)",
+    0
+   ],
+   [
+    "bh=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN/XKdLCPjaYaY=",
+    0
+   ],
+   [
+    "<a3f9c2e1-77b0-4d1e-9c5a-0b8e6d4f2a1c@ferrowind.example>",
+    0
+   ],
+   [
+    "billing@ferrowind.example",
+    0
+   ],
+   [
+    "=?UTF-8?Q?Din_str=C3=B8mregning_for_oktober?=",
+    0
+   ],
+   [
+    "----=_Part_88412_1977245180.1793995455102",
+    0
+   ],
+   [
+    "List-Unsubscribe=One-Click",
+    0
+   ],
+   [
+    "quoted-printable",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-21",
+  "domain": "k8s_manifests",
+  "text": "# k8s/overlays/prod/billing-worker.yaml\n# owner: platform-team (contact Yusuf Demirci, yusuf.demirci@tallowpeak.example)\napiVersion: v1\nkind: Secret\nmetadata:\n  name: billing-worker-env\n  namespace: billing\n  labels:\n    app.kubernetes.io/name: billing-worker\n    app.kubernetes.io/part-of: payments\ntype: Opaque\ndata:\n  DATABASE_PASSWORD: RkFLRS1wZ1Bhc3MtN3FMMng5\n  PAYPROC_API_KEY: c2tfbGl2ZV9GQUtFX25vdF9hX3JlYWxfa2V5XzEyMzQ=\nstringData:\n  REDIS_URL: redis://:FAKEr3d1sPw0rd@redis-master.billing.svc.cluster.local:6379/2\n  LOG_LEVEL: info\n---\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: billing-worker\n  namespace: billing\n  annotations:\n    deployment.kubernetes.io/revision: \"41\"\n    kubectl.kubernetes.io/last-applied-by: ydemirci\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app.kubernetes.io/name: billing-worker\n  template:\n    spec:\n      serviceAccountName: billing-worker\n      containers:\n        - name: worker\n          image: registry.tallowpeak.example/billing/worker@sha256:3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c\n          args: [\"--queue=invoices\", \"--concurrency=8\"]\n          env:\n            - name: DB_HOST\n              value: pg-billing-rw.billing.svc\n            - name: DB_USER\n              value: billing_worker\n            - name: DB_PASSWORD\n              valueFrom:\n                secretKeyRef: {name: billing-worker-env, key: DATABASE_PASSWORD}\n            - name: OTEL_EXPORTER_OTLP_ENDPOINT\n              value: http://otel-collector.observability:4317\n          resources:\n            requests: {cpu: 250m, memory: 512Mi}\n            limits: {memory: 1Gi}\n          ports:\n            - containerPort: 9102\n              name: metrics\n      nodeSelector:\n        topology.kubernetes.io/zone: eu-west-1b",
+  "mask": [
+   [
+    "Yusuf Demirci",
+    0,
+    "PERSON"
+   ],
+   [
+    "yusuf.demirci@tallowpeak.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "RkFLRS1wZ1Bhc3MtN3FMMng5",
+    0,
+    "SECRET"
+   ],
+   [
+    "c2tfbGl2ZV9GQUtFX25vdF9hX3JlYWxfa2V5XzEyMzQ=",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEr3d1sPw0rd",
+    0,
+    "SECRET"
+   ],
+   [
+    "ydemirci",
+    0,
+    "USERNAME"
+   ]
+  ],
+  "keep": [
+   [
+    "k8s/overlays/prod/billing-worker.yaml",
+    0
+   ],
+   [
+    "platform-team",
+    0
+   ],
+   [
+    "billing-worker-env",
+    0
+   ],
+   [
+    "app.kubernetes.io/part-of: payments",
+    0
+   ],
+   [
+    "type: Opaque",
+    0
+   ],
+   [
+    "DATABASE_PASSWORD",
+    0
+   ],
+   [
+    "PAYPROC_API_KEY",
+    0
+   ],
+   [
+    "redis-master.billing.svc.cluster.local:6379",
+    0
+   ],
+   [
+    "LOG_LEVEL: info",
+    0
+   ],
+   [
+    "deployment.kubernetes.io/revision: \"41\"",
+    0
+   ],
+   [
+    "replicas: 3",
+    0
+   ],
+   [
+    "registry.tallowpeak.example/billing/worker@sha256:3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4a3b2c",
+    0
+   ],
+   [
+    "--concurrency=8",
+    0
+   ],
+   [
+    "pg-billing-rw.billing.svc",
+    0
+   ],
+   [
+    "billing_worker",
+    0
+   ],
+   [
+    "http://otel-collector.observability:4317",
+    0
+   ],
+   [
+    "cpu: 250m, memory: 512Mi",
+    0
+   ],
+   [
+    "containerPort: 9102",
+    0
+   ],
+   [
+    "eu-west-1b",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-22",
+  "domain": "docker_compose",
+  "text": "# docker-compose.yml for local dev of the \"fieldnotes\" app\n# Maintainer: Agnieszka Wróbel <agnieszka.wrobel@fieldnotes.example>  (last edited 2026-11-02)\nservices:\n  db:\n    image: postgres:16.4-alpine\n    environment:\n      POSTGRES_USER: fieldnotes\n      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}\n      POSTGRES_DB: fieldnotes_dev\n    ports: [\"127.0.0.1:5432:5432\"]\n    volumes: [\"pgdata:/var/lib/postgresql/data\"]\n    healthcheck:\n      test: [\"CMD-SHELL\", \"pg_isready -U fieldnotes\"]\n      interval: 5s\n      retries: 10\n  minio:\n    image: quay.io/minio/minio:RELEASE.2024-10-13T13-34-11Z\n    command: server /data --console-address \":9001\"\n    environment:\n      MINIO_ROOT_USER: minioadmin\n      MINIO_ROOT_PASSWORD: FAKE-m1n10-Qx7Lp2Zv9R\n  api:\n    build:\n      context: ./api\n      args:\n        NODE_VERSION: \"22.11.0\"\n    depends_on: {db: {condition: service_healthy}}\n    environment:\n      DATABASE_URL: postgres://fieldnotes:${POSTGRES_PASSWORD:-changeme}@db:5432/fieldnotes_dev?sslmode=disable\n      S3_ENDPOINT: http://minio:9000\n      MAPTILES_TOKEN: mt.FAKE.eyJ1IjoiYWdhIn0.Zx8Lq2Wv7Rt0Yb3Nc\n      SEED_ADMIN_EMAIL: agnieszka.wrobel@fieldnotes.example\n      SEED_ADMIN_PASSWORD: Pierogi!Krakow2026\n      SENTRY_DSN: https://FAKEa1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6@o450123.ingest.sentry.example/5523110\n    ports: [\"3000:3000\"]\n  mailhog:\n    image: mailhog/mailhog:v1.0.1\n    ports: [\"8025:8025\", \"1025:1025\"]\nvolumes:\n  pgdata: {}",
+  "mask": [
+   [
+    "Agnieszka Wróbel",
+    0,
+    "PERSON"
+   ],
+   [
+    "agnieszka.wrobel@fieldnotes.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2026-11-02",
+    0,
+    "DATE"
+   ],
+   [
+    "FAKE-m1n10-Qx7Lp2Zv9R",
+    0,
+    "SECRET"
+   ],
+   [
+    "mt.FAKE.eyJ1IjoiYWdhIn0.Zx8Lq2Wv7Rt0Yb3Nc",
+    0,
+    "SECRET"
+   ],
+   [
+    "Pierogi!Krakow2026",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEa1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "postgres:16.4-alpine",
+    0
+   ],
+   [
+    "POSTGRES_USER: fieldnotes",
+    0
+   ],
+   [
+    "${POSTGRES_PASSWORD:-changeme}",
+    0
+   ],
+   [
+    "fieldnotes_dev",
+    0
+   ],
+   [
+    "127.0.0.1:5432:5432",
+    0
+   ],
+   [
+    "pg_isready -U fieldnotes",
+    0
+   ],
+   [
+    "quay.io/minio/minio:RELEASE.2024-10-13T13-34-11Z",
+    0
+   ],
+   [
+    "--console-address \":9001\"",
+    0
+   ],
+   [
+    "minioadmin",
+    0
+   ],
+   [
+    "NODE_VERSION: \"22.11.0\"",
+    0
+   ],
+   [
+    "service_healthy",
+    0
+   ],
+   [
+    "sslmode=disable",
+    0
+   ],
+   [
+    "http://minio:9000",
+    0
+   ],
+   [
+    "o450123.ingest.sentry.example/5523110",
+    0
+   ],
+   [
+    "mailhog/mailhog:v1.0.1",
+    0
+   ],
+   [
+    "\"8025:8025\", \"1025:1025\"",
+    0
+   ],
+   [
+    "interval: 5s",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-23",
+  "domain": "dotenv",
+  "text": "# .env.production  -- DO NOT COMMIT (committed by mistake in 9c4e2f1, see SEC-311)\n# Rotated by Kwame Asante on 2026-11-16; values below are the OLD ones.\nNODE_ENV=production\nPORT=8080\nAPP_URL=https://app.grainline.example\nTRUST_PROXY=10.0.0.0/8\n\n# Database\nDB_HOST=grainline-prod.cluster-c8fakexyz.eu-west-2.rds.amazonaws.com\nDB_PORT=5432\nDB_NAME=grainline\nDB_USER=grainline_app\nDB_PASSWORD=FAKE_pg_7hQ2xL9mRv4Tz\nDB_POOL_MAX=20\n\n# Auth\nJWT_SIGNING_KEY=FAKEhs256_9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b\nSESSION_SECRET=\"FAKE sess secret with spaces 41!\"\nGOOGLE_OAUTH_CLIENT_ID=123456789012-fakeabcdefghijklmnopqrstuv.apps.googleusercontent.com\nGOOGLE_OAUTH_CLIENT_SECRET=GOCSPX-FAKE_Qx7Lp2Zv9Rt4Wm1Nc8Yb\n\n# Third parties\nSENDGRID_API_KEY=SG.FAKEaBcDeFgHiJkLmNoP.qRsTuVwXyZ0123456789FAKEabcdefghijklmn\nTWILIO_ACCOUNT_SID=ACfake00000000000000000000000000ff\nTWILIO_AUTH_TOKEN=FAKE5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c\nSLACK_WEBHOOK_URL=https://hooks.slack.example/services/T0FAKE123/B0FAKE456/FAKEx9Lm2Qp7Rt0Vz3Wb6Yc8\nSTRIPE_PUBLISHABLE_KEY=pk_live_FAKE51HqTmW2eZvKYlo2CpubLiveKey00\nOPS_ONCALL_PHONE=+1-202-555-0119\nOPS_ONCALL_NAME=\"Kwame Asante\"\n\n# Feature flags\nFF_NEW_CHECKOUT=true\nFF_DARK_MODE=false\nDEFAULT_LOCALE=en-GB\nDEFAULT_CURRENCY=GBP",
+  "mask": [
+   [
+    "Kwame Asante",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-11-16",
+    0,
+    "DATE"
+   ],
+   [
+    "FAKE_pg_7hQ2xL9mRv4Tz",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEhs256_9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE sess secret with spaces 41!",
+    0,
+    "SECRET"
+   ],
+   [
+    "GOCSPX-FAKE_Qx7Lp2Zv9Rt4Wm1Nc8Yb",
+    0,
+    "SECRET"
+   ],
+   [
+    "SG.FAKEaBcDeFgHiJkLmNoP.qRsTuVwXyZ0123456789FAKEabcdefghijklmn",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEx9Lm2Qp7Rt0Vz3Wb6Yc8",
+    0,
+    "SECRET"
+   ],
+   [
+    "+1-202-555-0119",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "9c4e2f1",
+    0
+   ],
+   [
+    "SEC-311",
+    0
+   ],
+   [
+    "NODE_ENV=production",
+    0
+   ],
+   [
+    "PORT=8080",
+    0
+   ],
+   [
+    "https://app.grainline.example",
+    0
+   ],
+   [
+    "TRUST_PROXY=10.0.0.0/8",
+    0
+   ],
+   [
+    "grainline-prod.cluster-c8fakexyz.eu-west-2.rds.amazonaws.com",
+    0
+   ],
+   [
+    "DB_USER=grainline_app",
+    0
+   ],
+   [
+    "DB_POOL_MAX=20",
+    0
+   ],
+   [
+    "JWT_SIGNING_KEY",
+    0
+   ],
+   [
+    "123456789012-fakeabcdefghijklmnopqrstuv.apps.googleusercontent.com",
+    0
+   ],
+   [
+    "TWILIO_ACCOUNT_SID",
+    0
+   ],
+   [
+    "pk_live_FAKE51HqTmW2eZvKYlo2CpubLiveKey00",
+    0
+   ],
+   [
+    "FF_NEW_CHECKOUT=true",
+    0
+   ],
+   [
+    "FF_DARK_MODE=false",
+    0
+   ],
+   [
+    "DEFAULT_LOCALE=en-GB",
+    0
+   ],
+   [
+    "DEFAULT_CURRENCY=GBP",
+    0
+   ],
+   [
+    "T0FAKE123/B0FAKE456",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-24",
+  "domain": "github_actions_log",
+  "text": "2026-11-12T18:20:01.4415720Z ##[group]Run actions/checkout@v4\n2026-11-12T18:20:01.4416502Z with:\n2026-11-12T18:20:01.4416988Z   repository: tidewater/route-planner\n2026-11-12T18:20:01.4417811Z   token: ***\n2026-11-12T18:20:01.4418340Z   ssh-strict: true\n2026-11-12T18:20:01.4418914Z   fetch-depth: 1\n2026-11-12T18:20:01.4419920Z ##[endgroup]\n2026-11-12T18:20:02.0012003Z Syncing repository: tidewater/route-planner\n2026-11-12T18:20:03.8820410Z HEAD is now at 4d1e9c7 Merge pull request #2291 from mfonseca-tw/feat/eta-cache\n2026-11-12T18:20:04.1100231Z ##[group]Run docker/login-action@v3\n2026-11-12T18:20:04.1101102Z   registry: ghcr.io\n2026-11-12T18:20:04.1101877Z   username: tidewater-bot\n2026-11-12T18:20:04.1102554Z   password: ***\n2026-11-12T18:20:04.9930125Z Login Succeeded!\n2026-11-12T18:20:05.2210441Z ##[group]Run ./scripts/smoke.sh\n2026-11-12T18:20:05.2211010Z env:\n2026-11-12T18:20:05.2211523Z   MAPS_API_KEY: ***\n2026-11-12T18:20:05.2212002Z   GITHUB_ACTOR: mfonseca-tw\n2026-11-12T18:20:05.2212601Z   RUNNER_OS: Linux\n2026-11-12T18:20:05.2213330Z ##[endgroup]\n2026-11-12T18:20:05.4410023Z + curl -fsS -H 'X-Api-Key: tw_live_FAKE_b64Lq9Zx2Rt7Vb4Yc1Jd8Hs' https://api.tidewater.example/v1/health\n2026-11-12T18:20:05.6120871Z {\"status\":\"ok\",\"build\":\"2026.11.12-r3\",\"commit\":\"4d1e9c7a0b3f6e2d5c8b1a4f7e0d3c6b9a2f5e8d\"}\n2026-11-12T18:20:05.6201145Z + echo \"debug: DB url is postgres://ci_runner:FAKEciPw-44zq@10.30.2.15:5432/routes_test\"\n2026-11-12T18:20:05.6201988Z debug: DB url is postgres://ci_runner:FAKEciPw-44zq@10.30.2.15:5432/routes_test\n2026-11-12T18:20:05.7700012Z + npm test -- --reporter=dot\n2026-11-12T18:20:19.3021457Z   212 passing (13s)\n2026-11-12T18:20:19.3022013Z   3 pending\n2026-11-12T18:20:19.4400871Z ##[warning]Node.js 16 actions are deprecated. Please update the following actions to use Node.js 20: actions/cache@v2\n2026-11-12T18:20:19.9910200Z ##[notice]Notify: deploy approval requested from Marta Fonseca (marta.fonseca@tidewater.example)\n2026-11-12T18:20:20.0011784Z Post job cleanup.\n2026-11-12T18:20:20.1102230Z Cleaning up orphan processes",
+  "mask": [
+   [
+    "2026-11-12",
+    0,
+    "DATE"
+   ],
+   [
+    "mfonseca-tw",
+    0,
+    "USERNAME"
+   ],
+   [
+    "tw_live_FAKE_b64Lq9Zx2Rt7Vb4Yc1Jd8Hs",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEciPw-44zq",
+    0,
+    "SECRET"
+   ],
+   [
+    "Marta Fonseca",
+    0,
+    "PERSON"
+   ],
+   [
+    "marta.fonseca@tidewater.example",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "##[group]Run actions/checkout@v4",
+    0
+   ],
+   [
+    "tidewater/route-planner",
+    0
+   ],
+   [
+    "token: ***",
+    0
+   ],
+   [
+    "ssh-strict: true",
+    0
+   ],
+   [
+    "fetch-depth: 1",
+    0
+   ],
+   [
+    "4d1e9c7",
+    0
+   ],
+   [
+    "Merge pull request #2291",
+    0
+   ],
+   [
+    "docker/login-action@v3",
+    0
+   ],
+   [
+    "ghcr.io",
+    0
+   ],
+   [
+    "tidewater-bot",
+    0
+   ],
+   [
+    "Login Succeeded!",
+    0
+   ],
+   [
+    "MAPS_API_KEY: ***",
+    0
+   ],
+   [
+    "RUNNER_OS: Linux",
+    0
+   ],
+   [
+    "https://api.tidewater.example/v1/health",
+    0
+   ],
+   [
+    "2026.11.12-r3",
+    0
+   ],
+   [
+    "4d1e9c7a0b3f6e2d5c8b1a4f7e0d3c6b9a2f5e8d",
+    0
+   ],
+   [
+    "10.30.2.15:5432/routes_test",
+    0
+   ],
+   [
+    "ci_runner",
+    0
+   ],
+   [
+    "212 passing (13s)",
+    0
+   ],
+   [
+    "actions/cache@v2",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-25",
+  "domain": "db_conn_strings",
+  "text": "# config/datasources.toml -- shared by the reporting jobs\n# Questions: Siddharth Venkataraman (ext 4471) or #data-platform\n\n[postgres.primary]\nurl = \"postgresql://reporting:FAKEpgR3port!ng@pg-primary.data.internal:5432/warehouse?sslmode=verify-full&application_name=nightly-rollup\"\npool_size = 12\n\n[postgres.readonly_personal]\n# personal read-only login, remove after the migration\nurl = \"postgresql://svenkataraman:Chennai%40Monsoon88@pg-replica-2.data.internal:5432/warehouse\"\n\n[mysql.legacy_crm]\ndsn = \"crm_ro:FAKE_my5ql_9Lq@tcp(10.8.4.20:3306)/crm?parseTime=true&loc=UTC&tls=preferred\"\n\n[sqlserver.finance]\nconnection_string = \"Server=tcp:sql-fin-01.data.internal,1433;Database=Ledger;User ID=fin_etl;Password=FAKE{Mssql}#2026;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;\"\n\n[oracle.hr]\nurl = \"jdbc:oracle:thin:hr_sync/FAKEora_HR_77@//ora-hr.data.internal:1521/HRPDB1\"\n\n[mongodb.events]\nuri = \"mongodb+srv://events_writer:FAKEm0ng0-Zq2x@events-cluster.abc12.mongodb.example/events?retryWrites=true&w=majority&appName=rollup\"\n\n[redis.cache]\nurl = \"rediss://default:FAKEredisTLS_8Kw@cache-01.data.internal:6380/0\"\n\n[clickhouse.analytics]\nurl = \"clickhouse://analytics_ro:${CLICKHOUSE_PASSWORD}@ch-01.data.internal:9440/analytics?secure=true\"\n\n[snowflake]\naccount = \"xy12345.eu-central-1\"\nuser = \"ROLLUP_SVC\"\nprivate_key_path = \"/run/secrets/snowflake_rollup.p8\"\nwarehouse = \"REPORTING_WH\"\nrole = \"REPORTING_RO\"",
+  "mask": [
+   [
+    "Siddharth Venkataraman",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKEpgR3port!ng",
+    0,
+    "SECRET"
+   ],
+   [
+    "svenkataraman",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Chennai%40Monsoon88",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE_my5ql_9Lq",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE{Mssql}#2026",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEora_HR_77",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEm0ng0-Zq2x",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEredisTLS_8Kw",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "config/datasources.toml",
+    0
+   ],
+   [
+    "ext 4471",
+    0
+   ],
+   [
+    "#data-platform",
+    0
+   ],
+   [
+    "pg-primary.data.internal:5432/warehouse",
+    0
+   ],
+   [
+    "sslmode=verify-full",
+    0
+   ],
+   [
+    "application_name=nightly-rollup",
+    0
+   ],
+   [
+    "pool_size = 12",
+    0
+   ],
+   [
+    "crm_ro",
+    0
+   ],
+   [
+    "tcp(10.8.4.20:3306)",
+    0
+   ],
+   [
+    "parseTime=true&loc=UTC&tls=preferred",
+    0
+   ],
+   [
+    "sql-fin-01.data.internal,1433",
+    0
+   ],
+   [
+    "User ID=fin_etl",
+    0
+   ],
+   [
+    "TrustServerCertificate=False",
+    0
+   ],
+   [
+    "ora-hr.data.internal:1521/HRPDB1",
+    0
+   ],
+   [
+    "events_writer",
+    0
+   ],
+   [
+    "retryWrites=true&w=majority",
+    0
+   ],
+   [
+    "${CLICKHOUSE_PASSWORD}",
+    0
+   ],
+   [
+    "xy12345.eu-central-1",
+    0
+   ],
+   [
+    "/run/secrets/snowflake_rollup.p8",
+    0
+   ],
+   [
+    "REPORTING_WH",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-26",
+  "domain": "python_traceback",
+  "text": "[2026-11-08 02:17:44,118] ERROR in app: Exception on /api/v2/members/enroll [POST]\nTraceback (most recent call last):\n  File \"/srv/app/.venv/lib/python3.12/site-packages/flask/app.py\", line 1473, in wsgi_app\n    response = self.full_dispatch_request()\n  File \"/srv/app/.venv/lib/python3.12/site-packages/flask/app.py\", line 882, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n  File \"/srv/app/members/views.py\", line 214, in enroll\n    result = gateway.verify_identity(payload)\n      payload = {'first_name': 'Gwendolyn', 'last_name': 'Achebe-Price', 'dob': '1991-12-03',\n                 'ssn': '078-05-1120', 'email': 'gwen.ap@fastmail.example', 'plan': 'family-plus'}\n  File \"/srv/app/members/gateway.py\", line 88, in verify_identity\n    resp = self.session.post(self.url, json=body, headers=self._headers(), timeout=8)\n      self.url = 'https://kyc.verisure-sandbox.example/v1/checks'\n      self._headers() = {'Authorization': 'Token FAKEkyc_4c2e8a0b6d9f1e3a5c7b', 'X-Client': 'members-api/7.4.1'}\n  File \"/srv/app/.venv/lib/python3.12/site-packages/requests/sessions.py\", line 637, in post\n    return self.request(\"POST\", url, data=data, json=json, **kwargs)\n  File \"/srv/app/.venv/lib/python3.12/site-packages/requests/adapters.py\", line 713, in send\n    raise ReadTimeout(e, request=request)\nrequests.exceptions.ReadTimeout: HTTPSConnectionPool(host='kyc.verisure-sandbox.example', port=443): Read timed out. (read timeout=8)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/srv/app/members/views.py\", line 219, in enroll\n    audit.log(\"enroll_failed\", member_no=\"MEM-30017755\", remote_ip=\"203.0.113.89\")\n  File \"/srv/app/common/audit.py\", line 41, in log\n    raise AuditSinkUnavailable(\"kafka broker 10.2.7.31:9092 not reachable\")\ncommon.audit.AuditSinkUnavailable: kafka broker 10.2.7.31:9092 not reachable\n\nSentry event 6a1f0e3d9c8b4a7e2d5f1c0b3a6e9d8c | release members-api@7.4.1+b3191 | environment=production | server_name=members-api-3",
+  "mask": [
+   [
+    "2026-11-08",
+    0,
+    "DATE"
+   ],
+   [
+    "Gwendolyn",
+    0,
+    "PERSON"
+   ],
+   [
+    "Achebe-Price",
+    0,
+    "PERSON"
+   ],
+   [
+    "1991-12-03",
+    0,
+    "DOB"
+   ],
+   [
+    "078-05-1120",
+    0,
+    "ID"
+   ],
+   [
+    "gwen.ap@fastmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "FAKEkyc_4c2e8a0b6d9f1e3a5c7b",
+    0,
+    "SECRET"
+   ],
+   [
+    "MEM-30017755",
+    0,
+    "ID"
+   ],
+   [
+    "203.0.113.89",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "/api/v2/members/enroll [POST]",
+    0
+   ],
+   [
+    "Traceback (most recent call last):",
+    0
+   ],
+   [
+    "/srv/app/.venv/lib/python3.12/site-packages/flask/app.py",
+    0
+   ],
+   [
+    "line 1473, in wsgi_app",
+    0
+   ],
+   [
+    "/srv/app/members/views.py",
+    0
+   ],
+   [
+    "family-plus",
+    0
+   ],
+   [
+    "https://kyc.verisure-sandbox.example/v1/checks",
+    0
+   ],
+   [
+    "members-api/7.4.1",
+    0
+   ],
+   [
+    "requests.exceptions.ReadTimeout",
+    0
+   ],
+   [
+    "port=443",
+    0
+   ],
+   [
+    "(read timeout=8)",
+    0
+   ],
+   [
+    "enroll_failed",
+    0
+   ],
+   [
+    "10.2.7.31:9092",
+    0
+   ],
+   [
+    "common.audit.AuditSinkUnavailable",
+    0
+   ],
+   [
+    "6a1f0e3d9c8b4a7e2d5f1c0b3a6e9d8c",
+    0
+   ],
+   [
+    "members-api@7.4.1+b3191",
+    0
+   ],
+   [
+    "environment=production",
+    0
+   ],
+   [
+    "server_name=members-api-3",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-27",
+  "domain": "android_telemetry",
+  "text": "11-14 08:02:11.403  4412  4498 I TrailMate/Boot: app=com.trailmate.android versionName=6.3.0 versionCode=60300 build=release flavor=play\n11-14 08:02:11.410  4412  4498 I TrailMate/Boot: device model=Pixel 8 Pro sdk=35 abi=arm64-v8a locale=de_DE tz=Europe/Berlin\n11-14 08:02:11.522  4412  4501 D TrailMate/Ids: androidId=9f2c4e1a7b3d6c85\n11-14 08:02:11.523  4412  4501 D TrailMate/Ids: gaid=3f6a2c91-8e4d-4b7a-a1c5-0d9e8f7b6a54 lat=false\n11-14 08:02:11.524  4412  4501 D TrailMate/Ids: installationId=fid-c7Zx2Lq9Rt4W\n11-14 08:02:11.880  4412  4510 I FirebaseMessaging: token refreshed: dGhpc2lzRkFLRS1mY20:APA91bFAKE_q9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui\n11-14 08:02:12.004  4412  4520 I TrailMate/Auth: restored session for user=u_48810273 (hannes.vogt@post.example)\n11-14 08:02:12.006  4412  4520 V TrailMate/Auth: refresh_token=rt_FAKE_2Wq8Er5Ty1Ui7Op3As9Df\n11-14 08:02:12.371  4412  4533 I TrailMate/Net: GET https://api.trailmate.example/v4/routes?bbox=11.48,48.06,11.72,48.25 -> 200 (184 ms, 22.4 KB)\n11-14 08:02:12.372  4412  4533 D OkHttp: x-request-id: 8b0d3e7f-2c1a-4f6e-9d5b-7a3c1e0f8d2b\n11-14 08:02:12.372  4412  4533 D OkHttp: user-agent: TrailMate/6.3.0 (Android 15; Pixel 8 Pro) okhttp/4.12.0\n11-14 08:02:14.090  4412  4498 I TrailMate/Wifi: connected ssid=Vogt_Home_5G bssid=02:1a:7f:3c:9e:44 rssi=-52\n11-14 08:02:14.120  4412  4540 I TrailMate/Telemetry: event=app_open session=ses_91Fq2 ab=onboarding_v3_B ip=192.0.2.64 battery=81 network=wifi\n11-14 08:02:15.661  4412  4540 I TrailMate/Telemetry: event=route_start route=rt_88213 distance_m=12840 sport=hike\n11-14 08:02:15.662  4412  4540 I TrailMate/Telemetry: emergency_contact name=\"Hannes Vogt\" phone=\"+49 1512 5550 847\" (shared with Emergency SOS feature)\n11-14 08:02:16.010  4412  4498 W TrailMate/Perf: frame drop 34ms on MapFragment, gpu=Mali-G715\n11-14 08:02:17.211  4412  4498 I TrailMate/Crashlytics: uploading 0 reports, collection=enabled",
+  "mask": [
+   [
+    "11-14",
+    0,
+    "DATE"
+   ],
+   [
+    "9f2c4e1a7b3d6c85",
+    0,
+    "DEVICE"
+   ],
+   [
+    "3f6a2c91-8e4d-4b7a-a1c5-0d9e8f7b6a54",
+    0,
+    "DEVICE"
+   ],
+   [
+    "fid-c7Zx2Lq9Rt4W",
+    0,
+    "DEVICE"
+   ],
+   [
+    "dGhpc2lzRkFLRS1mY20:APA91bFAKE_q9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui",
+    0,
+    "SECRET"
+   ],
+   [
+    "u_48810273",
+    0,
+    "USERNAME"
+   ],
+   [
+    "hannes.vogt@post.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "rt_FAKE_2Wq8Er5Ty1Ui7Op3As9Df",
+    0,
+    "SECRET"
+   ],
+   [
+    "Vogt",
+    0,
+    "PERSON"
+   ],
+   [
+    "02:1a:7f:3c:9e:44",
+    0,
+    "DEVICE"
+   ],
+   [
+    "192.0.2.64",
+    0,
+    "IP"
+   ],
+   [
+    "Hannes Vogt",
+    0,
+    "PERSON"
+   ],
+   [
+    "+49 1512 5550 847",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "com.trailmate.android",
+    0
+   ],
+   [
+    "versionName=6.3.0",
+    0
+   ],
+   [
+    "versionCode=60300",
+    0
+   ],
+   [
+    "flavor=play",
+    0
+   ],
+   [
+    "Pixel 8 Pro",
+    0
+   ],
+   [
+    "sdk=35",
+    0
+   ],
+   [
+    "arm64-v8a",
+    0
+   ],
+   [
+    "locale=de_DE",
+    0
+   ],
+   [
+    "tz=Europe/Berlin",
+    0
+   ],
+   [
+    "lat=false",
+    0
+   ],
+   [
+    "FirebaseMessaging",
+    0
+   ],
+   [
+    "https://api.trailmate.example/v4/routes",
+    0
+   ],
+   [
+    "8b0d3e7f-2c1a-4f6e-9d5b-7a3c1e0f8d2b",
+    0
+   ],
+   [
+    "TrailMate/6.3.0 (Android 15; Pixel 8 Pro) okhttp/4.12.0",
+    0
+   ],
+   [
+    "rssi=-52",
+    0
+   ],
+   [
+    "onboarding_v3_B",
+    0
+   ],
+   [
+    "event=route_start",
+    0
+   ],
+   [
+    "rt_88213",
+    0
+   ],
+   [
+    "Mali-G715",
+    0
+   ],
+   [
+    "collection=enabled",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-28",
+  "domain": "ga4_beacon",
+  "text": "POST https://region1.analytics.example/g/collect?v=2&tid=G-FAKE7Q2LXZ&gtm=45je4bc0v9&_p=1731828194221&gcd=13l3l3l3l1&npa=0&dma=1&cid=1785523907.1793261847&ul=fr-fr&sr=1920x1080&uaa=x86&uab=64&uafvl=Chromium%3B130.0.6723.92&uamb=0&uap=Windows&uapv=15.0.0&_s=3&sid=1795249301&sct=12&seg=1&dl=https%3A%2F%2Fwww.atelier-sorel.example%2Fcheckout%2Fmerci%3Forder%3DORD-55120%26email%3Dclaire.dubois%2540orange.example&dr=https%3A%2F%2Fwww.atelier-sorel.example%2Fpanier&dt=Merci%20pour%20votre%20commande&en=purchase&_c=1&ep.transaction_id=ORD-55120&epn.value=129.00&cu=EUR&pr1=idSKU-LIN-TOTE-NAT~nmSac%20en%20lin~pr129.00~qt1&tfd=8812 HTTP/2\nHost: region1.analytics.example\nContent-Length: 0\nOrigin: https://www.atelier-sorel.example\nReferer: https://www.atelier-sorel.example/\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.2849.68\nCookie: _ga=GA1.1.1785523907.1793261847; _ga_FAKE7Q2LXZ=GS1.1.1795249301.12.1.1795249388.0.0.0; _gcl_au=1.1.904417221.1793261847\n\nLanding URL from the campaign mail:\nhttps://www.atelier-sorel.example/collection/lin?utm_source=newsletter&utm_medium=email&utm_campaign=hiver_2026&utm_content=hero_cta&mc_eid=FAKE9a8b7c6d\n\nNote from Claire Dubois's complaint (ticket FR-2231, phoned in from +33 6 12 55 50 49):\nher e-mail address shows up in our analytics property via the dl parameter above.\nFix: strip the email query param from the thank-you page URL before the GA tag fires\n(redirect to /checkout/merci?order=ORD-55120 only). Data deletion request filed for\nclient id 1785523907.1793261847 on 16/11/2026.\n\nOther hits from the same session (abridged):\nen=page_view  dl=/panier                   sid=1795249301 _s=1\nen=begin_checkout ep.coupon=HIVER10        sid=1795249301 _s=2\nen=purchase   ep.transaction_id=ORD-55120  sid=1795249301 _s=3\nConsent mode: ad_storage=denied analytics_storage=granted (gcd=13l3l3l3l1)",
+  "mask": [
+   [
+    "1785523907.1793261847",
+    0,
+    "DEVICE"
+   ],
+   [
+    "claire.dubois%2540orange.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "GA1.1.1785523907.1793261847",
+    0,
+    "DEVICE"
+   ],
+   [
+    "Claire Dubois",
+    0,
+    "PERSON"
+   ],
+   [
+    "+33 6 12 55 50 49",
+    0,
+    "PHONE"
+   ],
+   [
+    "16/11/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "FAKE9a8b7c6d",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "https://region1.analytics.example/g/collect",
+    0
+   ],
+   [
+    "tid=G-FAKE7Q2LXZ",
+    0
+   ],
+   [
+    "gtm=45je4bc0v9",
+    0
+   ],
+   [
+    "ul=fr-fr",
+    0
+   ],
+   [
+    "sr=1920x1080",
+    0
+   ],
+   [
+    "uafvl=Chromium%3B130.0.6723.92",
+    0
+   ],
+   [
+    "en=purchase",
+    0
+   ],
+   [
+    "ORD-55120",
+    0
+   ],
+   [
+    "epn.value=129.00",
+    0
+   ],
+   [
+    "cu=EUR",
+    0
+   ],
+   [
+    "idSKU-LIN-TOTE-NAT",
+    0
+   ],
+   [
+    "Edg/130.0.2849.68",
+    0
+   ],
+   [
+    "utm_source=newsletter",
+    0
+   ],
+   [
+    "utm_medium=email",
+    0
+   ],
+   [
+    "utm_campaign=hiver_2026",
+    0
+   ],
+   [
+    "utm_content=hero_cta",
+    0
+   ],
+   [
+    "FR-2231",
+    0
+   ],
+   [
+    "ep.coupon=HIVER10",
+    0
+   ],
+   [
+    "ad_storage=denied analytics_storage=granted",
+    0
+   ],
+   [
+    "gcd=13l3l3l3l1",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-29",
+  "domain": "payment_api_charge",
+  "text": "POST /v1/payments HTTP/1.1\nHost: api.sandbox.paywell.example\nAuthorization: Basic RkFLRV9tZXJjaGFudF9rZXlfOTlhYmNkOg==\nIdempotency-Key: pay-2026-11-17-ord_8HqL2xZ9-attempt1\nContent-Type: application/json\nPaywell-Version: 2025-03-01\nX-Merchant-Ref: shop-lisbon-04\n\n{\n  \"amount\": {\"value\": 24750, \"currency\": \"EUR\"},\n  \"reference\": \"ord_8HqL2xZ9\",\n  \"payment_method\": {\n    \"type\": \"scheme\",\n    \"number\": \"4111 1111 1111 1111\",\n    \"expiry_month\": \"03\",\n    \"expiry_year\": \"2030\",\n    \"cvc\": \"737\",\n    \"holder_name\": \"Joana Matos Carvalho\"\n  },\n  \"shopper\": {\n    \"reference\": \"SHOPPER-5521907\",\n    \"email\": \"joana.mcarvalho@sapo.example\",\n    \"telephone\": \"+351 912 555 018\",\n    \"date_of_birth\": \"1988-05-19\",\n    \"ip\": \"198.51.100.140\",\n    \"locale\": \"pt-PT\"\n  },\n  \"billing_address\": {\"street\": \"Avenida da Liberdade 245, 3º Dto\", \"city\": \"Lisboa\", \"postal_code\": \"1250-143\", \"country\": \"PT\"},\n  \"browser_info\": {\"user_agent\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1\", \"accept_header\": \"text/html\", \"color_depth\": 24, \"java_enabled\": false},\n  \"three_ds\": {\"challenge_indicator\": \"no_preference\"},\n  \"metadata\": {\"cart_id\": \"cart_0Kp4Wz\", \"campaign\": \"black_friday_2026\"}\n}\n\nHTTP/1.1 201 Created\nContent-Type: application/json\nPaywell-Request-Id: pw_req_7b3e1c9a5d\n\n{\"id\":\"pay_9Zx2Lq7Rt4\",\"status\":\"authorised\",\"result_code\":\"Authorised\",\"psp_reference\":\"FAKE8823410071562\",\"card\":{\"brand\":\"visa\",\"last4\":\"1111\",\"bin\":\"411111\",\"funding\":\"credit\"},\"risk\":{\"score\":12,\"level\":\"low\"}}",
+  "mask": [
+   [
+    "RkFLRV9tZXJjaGFudF9rZXlfOTlhYmNkOg==",
+    0,
+    "SECRET"
+   ],
+   [
+    "4111 1111 1111 1111",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "737",
+    0,
+    "SECRET"
+   ],
+   [
+    "Joana Matos Carvalho",
+    0,
+    "PERSON"
+   ],
+   [
+    "SHOPPER-5521907",
+    0,
+    "ID"
+   ],
+   [
+    "joana.mcarvalho@sapo.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+351 912 555 018",
+    0,
+    "PHONE"
+   ],
+   [
+    "1988-05-19",
+    0,
+    "DOB"
+   ],
+   [
+    "198.51.100.140",
+    0,
+    "IP"
+   ],
+   [
+    "Avenida da Liberdade 245, 3º Dto",
+    0,
+    "ADDRESS"
+   ]
+  ],
+  "keep": [
+   [
+    "POST /v1/payments HTTP/1.1",
+    0
+   ],
+   [
+    "api.sandbox.paywell.example",
+    0
+   ],
+   [
+    "pay-2026-11-17-ord_8HqL2xZ9-attempt1",
+    0
+   ],
+   [
+    "Paywell-Version: 2025-03-01",
+    0
+   ],
+   [
+    "shop-lisbon-04",
+    0
+   ],
+   [
+    "\"currency\": \"EUR\"",
+    0
+   ],
+   [
+    "\"type\": \"scheme\"",
+    0
+   ],
+   [
+    "\"locale\": \"pt-PT\"",
+    0
+   ],
+   [
+    "\"city\": \"Lisboa\"",
+    0
+   ],
+   [
+    "\"postal_code\": \"1250-143\"",
+    0
+   ],
+   [
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1",
+    0
+   ],
+   [
+    "\"java_enabled\": false",
+    0
+   ],
+   [
+    "no_preference",
+    0
+   ],
+   [
+    "cart_0Kp4Wz",
+    0
+   ],
+   [
+    "black_friday_2026",
+    0
+   ],
+   [
+    "HTTP/1.1 201 Created",
+    0
+   ],
+   [
+    "pw_req_7b3e1c9a5d",
+    0
+   ],
+   [
+    "pay_9Zx2Lq7Rt4",
+    0
+   ],
+   [
+    "\"result_code\":\"Authorised\"",
+    0
+   ],
+   [
+    "FAKE8823410071562",
+    0
+   ],
+   [
+    "\"funding\":\"credit\"",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-30",
+  "domain": "saml_assertion",
+  "text": "<saml2p:Response xmlns:saml2p=\"urn:oasis:names:tc:SAML:2.0:protocol\" ID=\"_c4f1a2e9b7d3\" InResponseTo=\"_req8812af90\" Version=\"2.0\" IssueInstant=\"2026-11-10T14:05:33.218Z\" Destination=\"https://sso.quarrytech.example/saml/acs\">\n  <saml2:Issuer xmlns:saml2=\"urn:oasis:names:tc:SAML:2.0:assertion\">https://idp.okra-id.example/app/quarrytech/exk1fake0abc/sso/saml</saml2:Issuer>\n  <saml2p:Status><saml2p:StatusCode Value=\"urn:oasis:names:tc:SAML:2.0:status:Success\"/></saml2p:Status>\n  <saml2:Assertion ID=\"_a9e0b3c7d1f5\" IssueInstant=\"2026-11-10T14:05:33.218Z\" Version=\"2.0\" xmlns:saml2=\"urn:oasis:names:tc:SAML:2.0:assertion\">\n    <saml2:Issuer>https://idp.okra-id.example/app/quarrytech/exk1fake0abc/sso/saml</saml2:Issuer>\n    <ds:Signature xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">\n      <ds:SignedInfo>\n        <ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/>\n        <ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"/>\n        <ds:Reference URI=\"#_a9e0b3c7d1f5\"><ds:DigestValue>p6Tq0Wz3Lm8Rv1Xc5Nb9Ky2Hj4Gf7Ds0Ea3Uo6Ii9Pp=</ds:DigestValue></ds:Reference>\n      </ds:SignedInfo>\n      <ds:SignatureValue>FAKEsigQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui==</ds:SignatureValue>\n      <ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIDpDCCAoygAwIBAgIGAZFAKEcert0wDQYJKoZIhvcNAQELBQAwgZIxCzAJBgNVBAYTAlVT</ds:X509Certificate></ds:X509Data></ds:KeyInfo>\n    </ds:Signature>\n    <saml2:Subject>\n      <saml2:NameID Format=\"urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress\">rosalind.achterberg@quarrytech.example</saml2:NameID>\n      <saml2:SubjectConfirmation Method=\"urn:oasis:names:tc:SAML:2.0:cm:bearer\">\n        <saml2:SubjectConfirmationData InResponseTo=\"_req8812af90\" NotOnOrAfter=\"2026-11-10T14:10:33.218Z\" Recipient=\"https://sso.quarrytech.example/saml/acs\" Address=\"203.0.113.205\"/>\n      </saml2:SubjectConfirmation>\n    </saml2:Subject>\n    <saml2:Conditions NotBefore=\"2026-11-10T14:00:33.218Z\" NotOnOrAfter=\"2026-11-10T14:10:33.218Z\">\n      <saml2:AudienceRestriction><saml2:Audience>https://sso.quarrytech.example/saml/metadata</saml2:Audience></saml2:AudienceRestriction>\n    </saml2:Conditions>\n    <saml2:AuthnStatement AuthnInstant=\"2026-11-10T14:05:31.004Z\" SessionIndex=\"_sess_77ab31c0\">\n      <saml2:AuthnContext><saml2:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</saml2:AuthnContextClassRef></saml2:AuthnContext>\n    </saml2:AuthnStatement>\n    <saml2:AttributeStatement>\n      <saml2:Attribute Name=\"firstName\"><saml2:AttributeValue>Rosalind</saml2:AttributeValue></saml2:Attribute>\n      <saml2:Attribute Name=\"lastName\"><saml2:AttributeValue>Achterberg</saml2:AttributeValue></saml2:Attribute>\n      <saml2:Attribute Name=\"employeeNumber\"><saml2:AttributeValue>QT-004127</saml2:AttributeValue></saml2:Attribute>\n      <saml2:Attribute Name=\"department\"><saml2:AttributeValue>Geotechnical Engineering</saml2:AttributeValue></saml2:Attribute>\n      <saml2:Attribute Name=\"groups\"><saml2:AttributeValue>eng-staff</saml2:AttributeValue><saml2:AttributeValue>vpn-users</saml2:AttributeValue></saml2:Attribute>\n    </saml2:AttributeStatement>\n  </saml2:Assertion>\n</saml2p:Response>",
+  "mask": [
+   [
+    "2026-11-10",
+    0,
+    "DATE"
+   ],
+   [
+    "rosalind.achterberg@quarrytech.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "203.0.113.205",
+    0,
+    "IP"
+   ],
+   [
+    "Rosalind",
+    0,
+    "PERSON"
+   ],
+   [
+    "Achterberg",
+    0,
+    "PERSON"
+   ],
+   [
+    "QT-004127",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "urn:oasis:names:tc:SAML:2.0:protocol",
+    0
+   ],
+   [
+    "_c4f1a2e9b7d3",
+    0
+   ],
+   [
+    "_req8812af90",
+    0
+   ],
+   [
+    "https://sso.quarrytech.example/saml/acs",
+    0
+   ],
+   [
+    "https://idp.okra-id.example/app/quarrytech/exk1fake0abc/sso/saml",
+    0
+   ],
+   [
+    "urn:oasis:names:tc:SAML:2.0:status:Success",
+    0
+   ],
+   [
+    "http://www.w3.org/2001/10/xml-exc-c14n#",
+    0
+   ],
+   [
+    "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+    0
+   ],
+   [
+    "p6Tq0Wz3Lm8Rv1Xc5Nb9Ky2Hj4Gf7Ds0Ea3Uo6Ii9Pp=",
+    0
+   ],
+   [
+    "MIIDpDCCAoygAwIBAgIGAZFAKEcert0wDQYJKoZIhvcNAQELBQAwgZIxCzAJBgNVBAYTAlVT",
+    0
+   ],
+   [
+    "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+    0
+   ],
+   [
+    "urn:oasis:names:tc:SAML:2.0:cm:bearer",
+    0
+   ],
+   [
+    "https://sso.quarrytech.example/saml/metadata",
+    0
+   ],
+   [
+    "_sess_77ab31c0",
+    0
+   ],
+   [
+    "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+    0
+   ],
+   [
+    "Geotechnical Engineering",
+    0
+   ],
+   [
+    "eng-staff",
+    0
+   ],
+   [
+    "vpn-users",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-31",
+  "domain": "ldap_ldif",
+  "text": "$ ldapsearch -H ldaps://ldap.corvid.internal:636 -D \"cn=svc-ldapread,ou=service,dc=corvid,dc=example\" -w 'FAKE-ldapR3ad!' \\\n    -b \"ou=people,dc=corvid,dc=example\" \"(uid=tnakamura)\" cn mail uid telephoneNumber employeeNumber memberOf pwdChangedTime sshPublicKey\n# extended LDIF\n#\n# LDAPv3\n# base <ou=people,dc=corvid,dc=example> with scope subtree\n# filter: (uid=tnakamura)\n# requesting: cn mail uid telephoneNumber employeeNumber memberOf pwdChangedTime sshPublicKey\n#\n\n# tnakamura, people, corvid.example\ndn: uid=tnakamura,ou=people,dc=corvid,dc=example\ncn: Takeshi Nakamura\nuid: tnakamura\nmail: takeshi.nakamura@corvid.example\ntelephoneNumber: +81 3 5550 7712\nemployeeNumber: E-118204\nmemberOf: cn=sre,ou=groups,dc=corvid,dc=example\nmemberOf: cn=vpn-users,ou=groups,dc=corvid,dc=example\npwdChangedTime: 20261021083015Z\nsshPublicKey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAKEq9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7 tnakamura@tn-mbp\n\n# search result\nsearch: 2\nresult: 0 Success\n\n# numResponses: 2\n# numEntries: 1\n\n$ ldapwhoami -H ldaps://ldap.corvid.internal:636 -D \"uid=tnakamura,ou=people,dc=corvid,dc=example\" -W\nEnter LDAP Password:\ndn:uid=tnakamura,ou=people,dc=corvid,dc=example",
+  "mask": [
+   [
+    "FAKE-ldapR3ad!",
+    0,
+    "SECRET"
+   ],
+   [
+    "tnakamura",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Takeshi Nakamura",
+    0,
+    "PERSON"
+   ],
+   [
+    "takeshi.nakamura@corvid.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+81 3 5550 7712",
+    0,
+    "PHONE"
+   ],
+   [
+    "E-118204",
+    0,
+    "ID"
+   ],
+   [
+    "20261021",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "ldaps://ldap.corvid.internal:636",
+    0
+   ],
+   [
+    "cn=svc-ldapread,ou=service,dc=corvid,dc=example",
+    0
+   ],
+   [
+    "ou=people,dc=corvid,dc=example",
+    0
+   ],
+   [
+    "LDAPv3",
+    0
+   ],
+   [
+    "scope subtree",
+    0
+   ],
+   [
+    "requesting: cn mail uid telephoneNumber employeeNumber memberOf pwdChangedTime sshPublicKey",
+    0
+   ],
+   [
+    "cn=sre,ou=groups,dc=corvid,dc=example",
+    0
+   ],
+   [
+    "cn=vpn-users,ou=groups,dc=corvid,dc=example",
+    0
+   ],
+   [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAKEq9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7",
+    0
+   ],
+   [
+    "tn-mbp",
+    0
+   ],
+   [
+    "result: 0 Success",
+    0
+   ],
+   [
+    "# numResponses: 2",
+    0
+   ],
+   [
+    "# numEntries: 1",
+    0
+   ],
+   [
+    "Enter LDAP Password:",
+    0
+   ],
+   [
+    "extended LDIF",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-32",
+  "domain": "ssh_verbose",
+  "text": "$ ssh -v -i ~/.ssh/id_ed25519 obrennan@bastion.fenmoor.example\nOpenSSH_9.6p1 Ubuntu-3ubuntu13.5, OpenSSL 3.0.13 30 Jan 2024\ndebug1: Reading configuration data /home/obrennan/.ssh/config\ndebug1: Connecting to bastion.fenmoor.example [10.90.0.5] port 22.\ndebug1: Connection established.\ndebug1: Local version string SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.5\ndebug1: Remote protocol version 2.0, remote software version OpenSSH_9.2p1 Debian-2+deb12u3\ndebug1: kex: algorithm: sntrup761x25519-sha512@openssh.com\ndebug1: kex: host key algorithm: ssh-ed25519\ndebug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none\ndebug1: Server host key: ssh-ed25519 SHA256:Xq7Lp2Zv9Rt4Wm1Nc8Yb3Kd6Hs0Ga5Fe2Ju9Oi4Pl7M\ndebug1: Host 'bastion.fenmoor.example' is known and matches the ED25519 host key.\ndebug1: Found key in /home/obrennan/.ssh/known_hosts:14\ndebug1: Will attempt key: /home/obrennan/.ssh/id_ed25519 ED25519 SHA256:aB3cD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5a6Bc explicit\ndebug1: Authentications that can continue: publickey,keyboard-interactive\ndebug1: Offering public key: /home/obrennan/.ssh/id_ed25519 ED25519 SHA256:aB3cD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5a6Bc explicit\ndebug1: Server accepts key: /home/obrennan/.ssh/id_ed25519 ED25519 SHA256:aB3cD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5a6Bc explicit\nAuthenticated to bastion.fenmoor.example ([10.90.0.5]:22) using \"publickey\".\nLast login: Sat Nov 14 22:41:09 2026 from 198.51.100.66\n\nobrennan@bastion:~$ cat ~/.ssh/authorized_keys\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK7mFAKEpubkeyQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe owen.brennan@fenmoor.example\nfrom=\"10.90.0.0/16\",no-agent-forwarding ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDFAKErsa0pubKeyMaterial7Lp2Zv9Rt4Wm1Nc8Yb3Kd6Hs0Ga5Fe2Ju9 deploy@ci-runner-07\n\nobrennan@bastion:~$ head -3 ~/notes/break-glass.txt\n# break-glass root for db-01, rotate after use -- Owen Brennan\nroot / FAKE-Gl4ss!Br3ak-0n1y\nrecovery codes: 4F7K-9Q2L-XM3Z  8RT1-WV6B-NC0P",
+  "mask": [
+   [
+    "obrennan",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Sat Nov 14",
+    0,
+    "DATE"
+   ],
+   [
+    "198.51.100.66",
+    0,
+    "IP"
+   ],
+   [
+    "owen.brennan@fenmoor.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Owen Brennan",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKE-Gl4ss!Br3ak-0n1y",
+    0,
+    "SECRET"
+   ],
+   [
+    "4F7K-9Q2L-XM3Z",
+    0,
+    "SECRET"
+   ],
+   [
+    "8RT1-WV6B-NC0P",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "bastion.fenmoor.example",
+    0
+   ],
+   [
+    "OpenSSH_9.6p1 Ubuntu-3ubuntu13.5",
+    0
+   ],
+   [
+    "OpenSSL 3.0.13",
+    0
+   ],
+   [
+    "[10.90.0.5] port 22",
+    0
+   ],
+   [
+    "SSH-2.0-OpenSSH_9.6p1",
+    0
+   ],
+   [
+    "OpenSSH_9.2p1 Debian-2+deb12u3",
+    0
+   ],
+   [
+    "sntrup761x25519-sha512@openssh.com",
+    0
+   ],
+   [
+    "chacha20-poly1305@openssh.com",
+    0
+   ],
+   [
+    "SHA256:Xq7Lp2Zv9Rt4Wm1Nc8Yb3Kd6Hs0Ga5Fe2Ju9Oi4Pl7M",
+    0
+   ],
+   [
+    "known_hosts:14",
+    0
+   ],
+   [
+    "SHA256:aB3cD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5a6Bc",
+    0
+   ],
+   [
+    "publickey,keyboard-interactive",
+    0
+   ],
+   [
+    "AAAAC3NzaC1lZDI1NTE5AAAAIK7mFAKEpubkeyQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe",
+    0
+   ],
+   [
+    "from=\"10.90.0.0/16\",no-agent-forwarding",
+    0
+   ],
+   [
+    "AAAAB3NzaC1yc2EAAAADAQABAAABgQDFAKErsa0pubKeyMaterial7Lp2Zv9Rt4Wm1Nc8Yb3Kd6Hs0Ga5Fe2Ju9",
+    0
+   ],
+   [
+    "deploy@ci-runner-07",
+    0
+   ],
+   [
+    "~/notes/break-glass.txt",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-33",
+  "domain": "tls_s_client",
+  "text": "$ openssl s_client -connect portal.wexford-health.example:443 -servername portal.wexford-health.example -showcerts </dev/null 2>/dev/null | openssl x509 -noout -text | head -40\nCertificate:\n    Data:\n        Version: 3 (0x2)\n        Serial Number:\n            04:a7:3f:91:0c:e2:5b:88:d1:6e:7f:20:39:44:ab:c1\n        Signature Algorithm: sha256WithRSAEncryption\n        Issuer: C=US, O=Example Trust Services, CN=Example TLS RSA CA G2\n        Validity\n            Not Before: Sep  1 00:00:00 2026 GMT\n            Not After : Sep 30 23:59:59 2027 GMT\n        Subject: C=IE, L=Wexford, O=Wexford Health Partners, CN=portal.wexford-health.example\n        Subject Public Key Info:\n            Public Key Algorithm: rsaEncryption\n                Public-Key: (2048 bit)\n                Exponent: 65537 (0x10001)\n        X509v3 extensions:\n            X509v3 Subject Alternative Name:\n                DNS:portal.wexford-health.example, DNS:www.wexford-health.example\n            X509v3 Key Usage: critical\n                Digital Signature, Key Encipherment\n            X509v3 Extended Key Usage:\n                TLS Web Server Authentication\n            Authority Information Access:\n                OCSP - URI:http://ocsp.trust.example\n            CT Precertificate SCTs:\n                Signed Certificate Timestamp:\n                    Log ID    : 48:B0:E3:6B:DA:A6:47:34:0F:E5:6A:02:FA:9D:30:EB:1C:52:01:CB:56:DD:2C:81:D9:BB:BF:AB:39:D8:84:73\n\n$ openssl x509 -in client-cert.pem -noout -subject -issuer -fingerprint -sha256 -dates\nsubject=C=IE, O=Wexford Health Partners, OU=Clinicians, CN=Dr. Siobhan Kavanagh, emailAddress=s.kavanagh@wexford-health.example, serialNumber=IMC-402917\nissuer=C=IE, O=Wexford Health Partners, CN=Wexford Internal Client CA\nsha256 Fingerprint=3E:1A:9C:F0:44:7B:D2:85:6E:0A:C3:91:5F:28:B7:4D:E6:19:A0:3C:72:8F:D5:4B:1E:93:06:CA:BD:57:F2:68\nnotBefore=Mar  3 09:00:00 2026 GMT\nnotAfter=Mar  3 09:00:00 2027 GMT\n\n# mTLS rollout note: Dr. S. Kavanagh reported the cert prompts twice in Edge on Windows 11;\n# her workstation is WXH-WS-0193 (10.14.2.93). Ticket raised by Ciarán Moloney.",
+  "mask": [
+   [
+    "Sep  1",
+    0,
+    "DATE"
+   ],
+   [
+    "Sep 30",
+    0,
+    "DATE"
+   ],
+   [
+    "Siobhan Kavanagh",
+    0,
+    "PERSON"
+   ],
+   [
+    "s.kavanagh@wexford-health.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "IMC-402917",
+    0,
+    "ID"
+   ],
+   [
+    "Mar  3",
+    0,
+    "DATE"
+   ],
+   [
+    "S. Kavanagh",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ciarán Moloney",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "portal.wexford-health.example:443",
+    0
+   ],
+   [
+    "Version: 3 (0x2)",
+    0
+   ],
+   [
+    "04:a7:3f:91:0c:e2:5b:88:d1:6e:7f:20:39:44:ab:c1",
+    0
+   ],
+   [
+    "sha256WithRSAEncryption",
+    0
+   ],
+   [
+    "C=US, O=Example Trust Services, CN=Example TLS RSA CA G2",
+    0
+   ],
+   [
+    "C=IE, L=Wexford, O=Wexford Health Partners, CN=portal.wexford-health.example",
+    0
+   ],
+   [
+    "Public-Key: (2048 bit)",
+    0
+   ],
+   [
+    "Exponent: 65537 (0x10001)",
+    0
+   ],
+   [
+    "DNS:www.wexford-health.example",
+    0
+   ],
+   [
+    "Digital Signature, Key Encipherment",
+    0
+   ],
+   [
+    "TLS Web Server Authentication",
+    0
+   ],
+   [
+    "http://ocsp.trust.example",
+    0
+   ],
+   [
+    "48:B0:E3:6B:DA:A6:47:34:0F:E5:6A:02:FA:9D:30:EB:1C:52:01:CB:56:DD:2C:81:D9:BB:BF:AB:39:D8:84:73",
+    0
+   ],
+   [
+    "OU=Clinicians",
+    0
+   ],
+   [
+    "Wexford Internal Client CA",
+    0
+   ],
+   [
+    "3E:1A:9C:F0:44:7B:D2:85:6E:0A:C3:91:5F:28:B7:4D:E6:19:A0:3C:72:8F:D5:4B:1E:93:06:CA:BD:57:F2:68",
+    0
+   ],
+   [
+    "WXH-WS-0193",
+    0
+   ],
+   [
+    "10.14.2.93",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-34",
+  "domain": "npm_pip_build",
+  "text": "$ cat .npmrc\n@lattice:registry=https://npm.pkg.lattice.example/\n//npm.pkg.lattice.example/:_authToken=npm_FAKEq9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi\nalways-auth=true\nengine-strict=true\n\n$ npm ci --no-audit --loglevel=http\nnpm http fetch GET 200 https://npm.pkg.lattice.example/@lattice%2fui-kit 211ms (cache revalidated)\nnpm http fetch GET 200 https://registry.npmjs.example/react/-/react-18.3.1.tgz 34ms (cache hit)\nnpm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory.\nadded 1184 packages in 41s\n\n$ grep -A3 '\"node_modules/@lattice/ui-kit\"' package-lock.json\n    \"node_modules/@lattice/ui-kit\": {\n      \"version\": \"3.9.2\",\n      \"resolved\": \"https://npm.pkg.lattice.example/@lattice/ui-kit/-/ui-kit-3.9.2.tgz\",\n      \"integrity\": \"sha512-k3Vb9Yc2Jd5Hs0Ga3Fe7Ku1Oi8Nl4Mx6Pz2Tn9Wq0Er3Ty6Ui1Op4As7Df0Gh3Jk6Lz9Xc2Vb5Nm8Qw1Er4Ty7Ui0Op3As6Df9Gh2Jk5Lz8Xc==\",\n\n$ pip install -r requirements.txt --index-url https://ci-reader:FAKEpypiTok_77Lq@pypi.lattice.example/simple\nLooking in indexes: https://ci-reader:****@pypi.lattice.example/simple\nCollecting httpx==0.27.2 (from -r requirements.txt (line 4))\n  Downloading httpx-0.27.2-py3-none-any.whl (76 kB)\nCollecting lattice-telemetry==1.4.0\n  Downloading https://pypi.lattice.example/packages/lattice_telemetry-1.4.0-py3-none-any.whl#sha256=9e0d4c1a7b3f62e85d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e\nSuccessfully installed httpx-0.27.2 lattice-telemetry-1.4.0 sniffio-1.3.1\n\n$ git log -1 --format='%H %an <%ae> %ad' --date=iso\nb7e4f19c2d0a6835e1f7c9d2b4a6083e5c1f7d9a Lindiwe Dube <lindiwe.dube@lattice.example> 2026-11-11 15:32:08 +0200\n$ docker build -t registry.lattice.example/web:3.9.2 .\n => [internal] load build definition from Dockerfile                                0.0s\n => [build 1/6] FROM docker.io/library/node:22.11-alpine@sha256:b64ced2e7cd0a4816699fe308ce6e8a08ccba463c757c00c14cd372e3d2c763e  2.1s\n => exporting to image                                                              1.4s\n => => writing image sha256:5d1e8f2a3b4c6d7e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e  0.0s",
+  "mask": [
+   [
+    "npm_FAKEq9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEpypiTok_77Lq",
+    0,
+    "SECRET"
+   ],
+   [
+    "Lindiwe Dube",
+    0,
+    "PERSON"
+   ],
+   [
+    "lindiwe.dube@lattice.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2026-11-11",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "@lattice:registry=https://npm.pkg.lattice.example/",
+    0
+   ],
+   [
+    "always-auth=true",
+    0
+   ],
+   [
+    "engine-strict=true",
+    0
+   ],
+   [
+    "npm ci --no-audit --loglevel=http",
+    0
+   ],
+   [
+    "https://registry.npmjs.example/react/-/react-18.3.1.tgz",
+    0
+   ],
+   [
+    "inflight@1.0.6",
+    0
+   ],
+   [
+    "added 1184 packages in 41s",
+    0
+   ],
+   [
+    "\"version\": \"3.9.2\"",
+    0
+   ],
+   [
+    "sha512-k3Vb9Yc2Jd5Hs0Ga3Fe7Ku1Oi8Nl4Mx6Pz2Tn9Wq0Er3Ty6Ui1Op4As7Df0Gh3Jk6Lz9Xc2Vb5Nm8Qw1Er4Ty7Ui0Op3As6Df9Gh2Jk5Lz8Xc==",
+    0
+   ],
+   [
+    "ci-reader",
+    0
+   ],
+   [
+    "httpx==0.27.2",
+    0
+   ],
+   [
+    "sha256=9e0d4c1a7b3f62e85d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e",
+    0
+   ],
+   [
+    "sniffio-1.3.1",
+    0
+   ],
+   [
+    "b7e4f19c2d0a6835e1f7c9d2b4a6083e5c1f7d9a",
+    0
+   ],
+   [
+    "registry.lattice.example/web:3.9.2",
+    0
+   ],
+   [
+    "node:22.11-alpine@sha256:b64ced2e7cd0a4816699fe308ce6e8a08ccba463c757c00c14cd372e3d2c763e",
+    0
+   ],
+   [
+    "sha256:5d1e8f2a3b4c6d7e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-35",
+  "domain": "http_digest_auth",
+  "text": "GET /cgi-bin/admin/config.cgi?section=network HTTP/1.1\nHost: cam-lobby-02.site.internal\nUser-Agent: Wget/1.21.4\nAccept: */*\n\nHTTP/1.1 401 Unauthorized\nWWW-Authenticate: Digest realm=\"IPCAM-7F21\", qop=\"auth\", nonce=\"5f2c9e1d0b8a47e3a5d4c3b2a1f0e9d8\", opaque=\"9a8b7c6d5e4f30211a2b3c4d5e6f7081\", algorithm=SHA-256, stale=FALSE\nContent-Type: text/html\nContent-Length: 0\n\nGET /cgi-bin/admin/config.cgi?section=network HTTP/1.1\nHost: cam-lobby-02.site.internal\nUser-Agent: Wget/1.21.4\nAuthorization: Digest username=\"rmacallister\", realm=\"IPCAM-7F21\", nonce=\"5f2c9e1d0b8a47e3a5d4c3b2a1f0e9d8\", uri=\"/cgi-bin/admin/config.cgi?section=network\", algorithm=SHA-256, response=\"FAKE7c3e1a9b5d2f80641e3c5a7b9d1f0e2c4a6b8d0f1e3c5a7b9d2f4e6a8c0b1d\", opaque=\"9a8b7c6d5e4f30211a2b3c4d5e6f7081\", qop=auth, nc=00000001, cnonce=\"b4e1f9a2c7d3\"\n\nHTTP/1.1 200 OK\nServer: lighttpd/1.4.76\nDate: Wed, 04 Nov 2026 06:30:12 GMT\nContent-Type: text/plain; charset=iso-8859-1\nCache-Control: no-cache\n\n[network]\ndhcp=off\nipaddr=10.60.3.42\nnetmask=255.255.255.0\ngateway=10.60.3.1\ndns1=10.60.0.53\nmac=00:1A:2B:3C:4D:5E\nntp_server=ntp.site.internal\nrtsp_port=554\nrtsp_auth=FAKErtspPw#31\nonvif_user=onvif\nfw_version=V5.7.3 build 241018\n\n# Facilities: camera installed by Rory MacAllister, mobile 07700 900461.",
+  "mask": [
+   [
+    "rmacallister",
+    0,
+    "USERNAME"
+   ],
+   [
+    "FAKE7c3e1a9b5d2f80641e3c5a7b9d1f0e2c4a6b8d0f1e3c5a7b9d2f4e6a8c0b1d",
+    0,
+    "SECRET"
+   ],
+   [
+    "Wed, 04 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "FAKErtspPw#31",
+    0,
+    "SECRET"
+   ],
+   [
+    "Rory MacAllister",
+    0,
+    "PERSON"
+   ],
+   [
+    "07700 900461",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "/cgi-bin/admin/config.cgi?section=network",
+    0
+   ],
+   [
+    "cam-lobby-02.site.internal",
+    0
+   ],
+   [
+    "Wget/1.21.4",
+    0
+   ],
+   [
+    "HTTP/1.1 401 Unauthorized",
+    0
+   ],
+   [
+    "realm=\"IPCAM-7F21\"",
+    0
+   ],
+   [
+    "qop=\"auth\"",
+    0
+   ],
+   [
+    "nonce=\"5f2c9e1d0b8a47e3a5d4c3b2a1f0e9d8\"",
+    0
+   ],
+   [
+    "opaque=\"9a8b7c6d5e4f30211a2b3c4d5e6f7081\"",
+    0
+   ],
+   [
+    "algorithm=SHA-256",
+    0
+   ],
+   [
+    "stale=FALSE",
+    0
+   ],
+   [
+    "nc=00000001",
+    0
+   ],
+   [
+    "cnonce=\"b4e1f9a2c7d3\"",
+    0
+   ],
+   [
+    "lighttpd/1.4.76",
+    0
+   ],
+   [
+    "text/plain; charset=iso-8859-1",
+    0
+   ],
+   [
+    "ipaddr=10.60.3.42",
+    0
+   ],
+   [
+    "netmask=255.255.255.0",
+    0
+   ],
+   [
+    "mac=00:1A:2B:3C:4D:5E",
+    0
+   ],
+   [
+    "rtsp_port=554",
+    0
+   ],
+   [
+    "onvif_user=onvif",
+    0
+   ],
+   [
+    "V5.7.3 build 241018",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-36",
+  "domain": "apache_modsec",
+  "text": "[Tue Nov 03 23:18:44.120391 2026] [ssl:info] [pid 18834:tid 140211] [client 192.0.2.19:51544] AH01964: Connection to child 12 established (server www.oakhollow.example:443)\n[Tue Nov 03 23:18:44.302117 2026] [security2:error] [pid 18834:tid 140211] [client 192.0.2.19:51544] [client 192.0.2.19] ModSecurity: Access denied with code 403 (phase 2). Matched \"Operator `Ge' with parameter `5' against variable `TX:ANOMALY_SCORE' (Value: `10' )\" [file \"/etc/modsecurity/crs/rules/REQUEST-949-BLOCKING-EVALUATION.conf\"] [line \"94\"] [id \"949110\"] [msg \"Inbound Anomaly Score Exceeded (Total Score: 10)\"] [tag \"OWASP_CRS\"] [ver \"OWASP_CRS/4.8.0\"] [hostname \"www.oakhollow.example\"] [uri \"/account/recover\"] [unique_id \"ZyfK1FAKEq9Lm2Zx7Rt0VbAAAAQ\"]\n[Tue Nov 03 23:18:44.302455 2026] [security2:error] [pid 18834:tid 140211] [client 192.0.2.19:51544] ModSecurity: Warning. Matched phrase \"union select\" at ARGS:email. [id \"942100\"] [data \"Matched Data: union select found within ARGS:email: derek.holloway@webmail.example' union select password from users--\"] [severity \"CRITICAL\"]\n[Tue Nov 03 23:18:51.007733 2026] [php:error] [pid 18901:tid 140219] [client 198.51.100.7:40122] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'oak_web'@'10.5.0.21' (using password: YES) in /var/www/oakhollow/lib/Db.php:27\n[Tue Nov 03 23:18:51.007790 2026] [php:error] [pid 18901:tid 140219] [client 198.51.100.7:40122] Stack trace:\\n#0 /var/www/oakhollow/lib/Db.php(27): PDO->__construct('mysql:host=10.5...', 'oak_web', 'FAKE_0akH0llow!')\\n#1 /var/www/oakhollow/public/index.php(12): Db::connect()\\n#2 {main}\n[Tue Nov 03 23:19:02.551004 2026] [auth_basic:error] [pid 18905:tid 140221] [client 198.51.100.7:40130] AH01618: user mhalvorsen not found: /admin/\n[Tue Nov 03 23:19:30.884120 2026] [core:notice] [pid 1:tid 140001] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'\n\n==> /var/log/apache2/oakhollow_access.log <==\n192.0.2.19 - - [03/Nov/2026:23:18:44 +0000] \"POST /account/recover HTTP/1.1\" 403 199 \"https://www.oakhollow.example/account/recover\" \"sqlmap/1.8.10#stable (https://sqlmap.org)\"\n198.51.100.7 - - [03/Nov/2026:23:18:51 +0000] \"GET / HTTP/1.1\" 500 612 \"-\" \"Mozilla/5.0 (Linux; Android 14; SM-S921B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36\"\n198.51.100.7 - mhalvorsen [03/Nov/2026:23:19:02 +0000] \"GET /admin/ HTTP/1.1\" 401 381 \"-\" \"Mozilla/5.0 (Linux; Android 14; SM-S921B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.6723.102 Mobile Safari/537.36\"\n10.5.0.2 - - [03/Nov/2026:23:19:10 +0000] \"GET /server-status?auto HTTP/1.1\" 200 811 \"-\" \"check_http/v2.4.6 (nagios-plugins 2.4.6)\"\n\n# Magnus Halvorsen says the 401 was him on his phone; his htpasswd entry was removed in the\n# Oct cleanup. Re-add after he confirms on +47 41 55 50 88.\n# The sqlmap run targeted Derek Holloway's address, which we notified.",
+  "mask": [
+   [
+    "Tue Nov 03",
+    0,
+    "DATE"
+   ],
+   [
+    "192.0.2.19",
+    0,
+    "IP"
+   ],
+   [
+    "derek.holloway@webmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "198.51.100.7",
+    0,
+    "IP"
+   ],
+   [
+    "FAKE_0akH0llow!",
+    0,
+    "SECRET"
+   ],
+   [
+    "mhalvorsen",
+    0,
+    "USERNAME"
+   ],
+   [
+    "03/Nov/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Magnus Halvorsen",
+    0,
+    "PERSON"
+   ],
+   [
+    "+47 41 55 50 88",
+    0,
+    "PHONE"
+   ],
+   [
+    "Derek Holloway",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "[ssl:info]",
+    0
+   ],
+   [
+    "AH01964: Connection to child 12 established",
+    0
+   ],
+   [
+    "www.oakhollow.example:443",
+    0
+   ],
+   [
+    "ModSecurity: Access denied with code 403 (phase 2)",
+    0
+   ],
+   [
+    "TX:ANOMALY_SCORE",
+    0
+   ],
+   [
+    "/etc/modsecurity/crs/rules/REQUEST-949-BLOCKING-EVALUATION.conf",
+    0
+   ],
+   [
+    "[id \"949110\"]",
+    0
+   ],
+   [
+    "OWASP_CRS/4.8.0",
+    0
+   ],
+   [
+    "ZyfK1FAKEq9Lm2Zx7Rt0VbAAAAQ",
+    0
+   ],
+   [
+    "[id \"942100\"]",
+    0
+   ],
+   [
+    "SQLSTATE[HY000] [1045]",
+    0
+   ],
+   [
+    "oak_web",
+    0
+   ],
+   [
+    "10.5.0.21",
+    0
+   ],
+   [
+    "/var/www/oakhollow/lib/Db.php:27",
+    0
+   ],
+   [
+    "AH01618",
+    0
+   ],
+   [
+    "/usr/sbin/apache2 -D FOREGROUND",
+    0
+   ],
+   [
+    "sqlmap/1.8.10#stable (https://sqlmap.org)",
+    0
+   ],
+   [
+    "SM-S921B",
+    0
+   ],
+   [
+    "10.5.0.2",
+    0
+   ],
+   [
+    "check_http/v2.4.6 (nagios-plugins 2.4.6)",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-37",
+  "domain": "java_stacktrace",
+  "text": "2026-11-06 11:47:03.512 ERROR 1 --- [nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataAccessResourceFailureException: Unable to acquire JDBC Connection] with root cause\n\norg.postgresql.util.PSQLException: FATAL: password authentication failed for user \"loyalty_app\"\n\tat org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.7.4.jar!/:42.7.4]\n\tat org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.7.4.jar!/:42.7.4]\n\tat com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-5.1.0.jar!/:na]\n\tat com.saltmarsh.loyalty.points.PointsService.redeem(PointsService.java:142) ~[classes!/:2.14.0]\n\tat com.saltmarsh.loyalty.points.PointsController.redeem(PointsController.java:58) ~[classes!/:2.14.0]\n\tat java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]\n\n2026-11-06 11:47:03.514  WARN 1 --- [nio-8080-exec-7] c.s.l.web.RequestLoggingFilter          : failed request POST /api/points/redeem member=LOY-88120473 email=yasmin.haddad@mailroom.example ip=203.0.113.172 ua=\"Saltmarsh/9.1.2 (iOS 18.1.1; iPhone15,3)\" x-request-id=b2c4e6f8-1a3c-4e5d-8f9a-0b1c2d3e4f50\n2026-11-06 11:47:03.515 DEBUG 1 --- [nio-8080-exec-7] c.s.l.config.DataSourceConfig           : effective datasource url=jdbc:postgresql://pg-loyalty.prod.internal:5432/loyalty?user=loyalty_app&password=FAKE-L0yalty-Pg-2026&ssl=true&sslmode=require\n2026-11-06 11:47:03.516  INFO 1 --- [nio-8080-exec-7] c.s.l.points.PointsService              : rollback redeem txn=rdm_6Gq2Lx9 points=2500 reward=SKU-GIFT-25-EUR\n\nSpring Boot :: (v3.3.5)  JVM: OpenJDK 64-Bit Server VM 21.0.5+11-LTS  Hikari pool: loyalty-pool (max=10)\n\nJira LOY-4402 comment from Benedikt Auer: the password was rotated in Vault on\nNov 5 but the pod kept the old value from application-prod.yml; Yasmin Haddad's\nredemption needs to be replayed manually (she called from 0151 555 0172).",
+  "mask": [
+   [
+    "2026-11-06",
+    0,
+    "DATE"
+   ],
+   [
+    "LOY-88120473",
+    0,
+    "ID"
+   ],
+   [
+    "yasmin.haddad@mailroom.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "203.0.113.172",
+    0,
+    "IP"
+   ],
+   [
+    "FAKE-L0yalty-Pg-2026",
+    0,
+    "SECRET"
+   ],
+   [
+    "Benedikt Auer",
+    0,
+    "PERSON"
+   ],
+   [
+    "Nov 5",
+    0,
+    "DATE"
+   ],
+   [
+    "Yasmin Haddad",
+    0,
+    "PERSON"
+   ],
+   [
+    "0151 555 0172",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "nio-8080-exec-7",
+    0
+   ],
+   [
+    "dispatcherServlet",
+    0
+   ],
+   [
+    "org.springframework.dao.DataAccessResourceFailureException",
+    0
+   ],
+   [
+    "loyalty_app",
+    0
+   ],
+   [
+    "ConnectionFactoryImpl.java:693",
+    0
+   ],
+   [
+    "postgresql-42.7.4.jar!/:42.7.4",
+    0
+   ],
+   [
+    "HikariCP-5.1.0.jar",
+    0
+   ],
+   [
+    "PointsService.java:142",
+    0
+   ],
+   [
+    "Thread.java:1583",
+    0
+   ],
+   [
+    "/api/points/redeem",
+    0
+   ],
+   [
+    "Saltmarsh/9.1.2 (iOS 18.1.1; iPhone15,3)",
+    0
+   ],
+   [
+    "b2c4e6f8-1a3c-4e5d-8f9a-0b1c2d3e4f50",
+    0
+   ],
+   [
+    "pg-loyalty.prod.internal:5432",
+    0
+   ],
+   [
+    "sslmode=require",
+    0
+   ],
+   [
+    "rdm_6Gq2Lx9",
+    0
+   ],
+   [
+    "SKU-GIFT-25-EUR",
+    0
+   ],
+   [
+    "(v3.3.5)",
+    0
+   ],
+   [
+    "21.0.5+11-LTS",
+    0
+   ],
+   [
+    "LOY-4402",
+    0
+   ],
+   [
+    "application-prod.yml",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-38",
+  "domain": "otel_trace_export",
+  "text": "GET /api/itinerary/IT-7731 HTTP/1.1\nHost: gateway.skylark-travel.example\ntraceparent: 00-5b8efff798038103d269b633813fc60c-eee19b7ec3c1b174-01\ntracestate: sk=t61rcWkgMzE,dd=s:1;o:rum\nbaggage: tenant=skylark-uk,deployment.environment=prod,user.id=usr_7Lq2Zx\nX-B3-TraceId: 5b8efff798038103d269b633813fc60c\nX-B3-SpanId: eee19b7ec3c1b174\nX-B3-ParentSpanId: 0000000000000000\nX-B3-Sampled: 1\nX-Request-Id: req-01JCZ4M8Q7X2\n\n{\"resourceSpans\":[{\"resource\":{\"attributes\":[\n  {\"key\":\"service.name\",\"value\":{\"stringValue\":\"itinerary-svc\"}},\n  {\"key\":\"service.version\",\"value\":{\"stringValue\":\"1.42.0\"}},\n  {\"key\":\"k8s.pod.name\",\"value\":{\"stringValue\":\"itinerary-svc-6c9d7f5b8-q4wzt\"}},\n  {\"key\":\"cloud.region\",\"value\":{\"stringValue\":\"eu-west-2\"}}]},\n \"scopeSpans\":[{\"scope\":{\"name\":\"io.opentelemetry.http\",\"version\":\"2.9.0\"},\"spans\":[{\n  \"traceId\":\"5b8efff798038103d269b633813fc60c\",\"spanId\":\"a1b2c3d4e5f60718\",\"parentSpanId\":\"eee19b7ec3c1b174\",\n  \"name\":\"GET /api/itinerary/{id}\",\"kind\":2,\n  \"startTimeUnixNano\":\"1794830512004000000\",\"endTimeUnixNano\":\"1794830512187000000\",\n  \"attributes\":[\n   {\"key\":\"http.request.method\",\"value\":{\"stringValue\":\"GET\"}},\n   {\"key\":\"url.path\",\"value\":{\"stringValue\":\"/api/itinerary/IT-7731\"}},\n   {\"key\":\"client.address\",\"value\":{\"stringValue\":\"198.51.100.233\"}},\n   {\"key\":\"enduser.id\",\"value\":{\"stringValue\":\"usr_7Lq2Zx\"}},\n   {\"key\":\"app.passenger.name\",\"value\":{\"stringValue\":\"Olumide Adeyemi-Clarke\"}},\n   {\"key\":\"app.passenger.passport\",\"value\":{\"stringValue\":\"P8831047X\"}},\n   {\"key\":\"app.passenger.dob\",\"value\":{\"stringValue\":\"1983-09-27\"}},\n   {\"key\":\"app.flight.departure\",\"value\":{\"stringValue\":\"2026-12-19\"}},\n   {\"key\":\"http.response.status_code\",\"value\":{\"intValue\":\"200\"}}],\n  \"status\":{\"code\":1}}]}]}]}\n\n# PR review comment (Fenella Marsh): we must not put passenger name, passport or DOB on spans;\n# move them behind the attribute redaction processor before this ships.",
+  "mask": [
+   [
+    "usr_7Lq2Zx",
+    0,
+    "USERNAME"
+   ],
+   [
+    "198.51.100.233",
+    0,
+    "IP"
+   ],
+   [
+    "Olumide Adeyemi-Clarke",
+    0,
+    "PERSON"
+   ],
+   [
+    "P8831047X",
+    0,
+    "ID"
+   ],
+   [
+    "1983-09-27",
+    0,
+    "DOB"
+   ],
+   [
+    "2026-12-19",
+    0,
+    "DATE"
+   ],
+   [
+    "Fenella Marsh",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "/api/itinerary/IT-7731",
+    0
+   ],
+   [
+    "gateway.skylark-travel.example",
+    0
+   ],
+   [
+    "00-5b8efff798038103d269b633813fc60c-eee19b7ec3c1b174-01",
+    0
+   ],
+   [
+    "sk=t61rcWkgMzE,dd=s:1;o:rum",
+    0
+   ],
+   [
+    "tenant=skylark-uk",
+    0
+   ],
+   [
+    "deployment.environment=prod",
+    0
+   ],
+   [
+    "X-B3-ParentSpanId: 0000000000000000",
+    0
+   ],
+   [
+    "X-B3-Sampled: 1",
+    0
+   ],
+   [
+    "req-01JCZ4M8Q7X2",
+    0
+   ],
+   [
+    "itinerary-svc-6c9d7f5b8-q4wzt",
+    0
+   ],
+   [
+    "\"eu-west-2\"",
+    0
+   ],
+   [
+    "io.opentelemetry.http",
+    0
+   ],
+   [
+    "a1b2c3d4e5f60718",
+    0
+   ],
+   [
+    "GET /api/itinerary/{id}",
+    0
+   ],
+   [
+    "1794830512004000000",
+    0
+   ],
+   [
+    "http.request.method",
+    0
+   ],
+   [
+    "client.address",
+    0
+   ],
+   [
+    "enduser.id",
+    0
+   ],
+   [
+    "\"intValue\":\"200\"",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-39",
+  "domain": "sms_webhook_twilio_style",
+  "text": "POST /sms/inbound HTTP/1.1\nHost: hooks.mendwell-clinic.example\nUser-Agent: TwilioProxy/1.1\nContent-Type: application/x-www-form-urlencoded\nX-Twilio-Signature: FAKEb64Sig+Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs=\nX-Home-Region: us1\nI-Twilio-Idempotency-Token: 3f8e2c1a-7b9d-4e6f-a5c4-b3d2e1f0a9b8\nContent-Length: 512\n\nToCountry=US&ToState=OR&SmsMessageSid=SMfake4c1e9a7b3d5f2e8c0a6b4d2f1e3c5a7&NumMedia=0&ToCity=PORTLAND&FromZip=97214&SmsSid=SMfake4c1e9a7b3d5f2e8c0a6b4d2f1e3c5a7&FromState=OR&SmsStatus=received&FromCity=PORTLAND&Body=Hi+this+is+Delphine+Arceneaux%2C+need+to+move+my+appt+on+11%2F24+DOB+04%2F02%2F1990&FromCountry=US&To=%2B15035550100&MessagingServiceSid=MGfake0000000000000000000000000001&ToZip=97201&NumSegments=1&MessageSid=SMfake4c1e9a7b3d5f2e8c0a6b4d2f1e3c5a7&AccountSid=ACfake00000000000000000000000000ab&From=%2B15035550163&ApiVersion=2010-04-01\n\nHTTP/1.1 200 OK\nContent-Type: text/xml; charset=utf-8\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response>\n  <Message>Thanks, Delphine Arceneaux. Reply 1 to confirm Tue Nov 24 at 9:40am with Dr. Lowell or 2 for a callback.</Message>\n</Response>\n\n# app log\n2026-11-17T15:02:44Z sms.inbound from=+15035550163 patient=PT-0091827 matched=true intent=reschedule confidence=0.93\n2026-11-17T15:02:44Z sms.inbound verified signature using auth token from AUTH_TOKEN env (len=32) -> ok\n2026-11-17T15:02:45Z sms.outbound to=+15035550163 template=reschedule_offer_v2 segments=1 status=queued",
+  "mask": [
+   [
+    "FAKEb64Sig+Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs=",
+    0,
+    "SECRET"
+   ],
+   [
+    "Delphine+Arceneaux",
+    0,
+    "PERSON"
+   ],
+   [
+    "11%2F24",
+    0,
+    "DATE"
+   ],
+   [
+    "04%2F02%2F1990",
+    0,
+    "DOB"
+   ],
+   [
+    "%2B15035550163",
+    0,
+    "PHONE"
+   ],
+   [
+    "Delphine Arceneaux",
+    0,
+    "PERSON"
+   ],
+   [
+    "Tue Nov 24",
+    0,
+    "DATE"
+   ],
+   [
+    "Lowell",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-11-17",
+    0,
+    "DATE"
+   ],
+   [
+    "+15035550163",
+    0,
+    "PHONE"
+   ],
+   [
+    "PT-0091827",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "POST /sms/inbound HTTP/1.1",
+    0
+   ],
+   [
+    "hooks.mendwell-clinic.example",
+    0
+   ],
+   [
+    "TwilioProxy/1.1",
+    0
+   ],
+   [
+    "X-Home-Region: us1",
+    0
+   ],
+   [
+    "3f8e2c1a-7b9d-4e6f-a5c4-b3d2e1f0a9b8",
+    0
+   ],
+   [
+    "ToCountry=US",
+    0
+   ],
+   [
+    "ToState=OR",
+    0
+   ],
+   [
+    "SMfake4c1e9a7b3d5f2e8c0a6b4d2f1e3c5a7",
+    0
+   ],
+   [
+    "NumMedia=0",
+    0
+   ],
+   [
+    "FromZip=97214",
+    0
+   ],
+   [
+    "SmsStatus=received",
+    0
+   ],
+   [
+    "%2B15035550100",
+    0
+   ],
+   [
+    "MGfake0000000000000000000000000001",
+    0
+   ],
+   [
+    "ACfake00000000000000000000000000ab",
+    0
+   ],
+   [
+    "ApiVersion=2010-04-01",
+    0
+   ],
+   [
+    "text/xml; charset=utf-8",
+    0
+   ],
+   [
+    "intent=reschedule",
+    0
+   ],
+   [
+    "template=reschedule_offer_v2",
+    0
+   ],
+   [
+    "AUTH_TOKEN",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "td-40",
+  "domain": "ini_configs",
+  "text": "; ~/.my.cnf on reporting box rpt-02 (belongs to Ingeborg Lindahl, DBA)\n[client]\nuser = ilindahl\npassword = \"FAKE_Fjord#Mysql_19\"\nhost = mysql-rpt.dw.internal\nport = 3306\nssl-mode = VERIFY_IDENTITY\nssl-ca = /etc/ssl/certs/dw-ca.pem\ndefault-character-set = utf8mb4\n\n[mysqldump]\nsingle-transaction\nmax_allowed_packet = 512M\n\n; /etc/odbc.ini\n[DW_PROD]\nDriver      = /opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.4.so.1.1\nServer      = tcp:mssql-dw.dw.internal,1433\nDatabase    = Warehouse\nUID         = odbc_reader\nPWD         = FAKE_odbc_R3ader!\nEncrypt     = yes\nTrustServerCertificate = no\n\n; php.ini overrides for the HR portal\n[PHP]\nmemory_limit = 256M\nupload_max_filesize = 20M\nsession.cookie_secure = 1\nsession.cookie_httponly = 1\nsession.cookie_samesite = \"Strict\"\ndate.timezone = \"Europe/Stockholm\"\nsendmail_from = hr-portal@noreply.lindvik.example\nsmtp_password = FAKE-smtp-HrP0rtal\n\n; NOTE (I. Lindahl, 2026-11-15): HR asked that test records stop using real people.\n; Use the fixture \"Test Testsson, 19800101-0000\" only. Escalation contact for the\n; portal: Anders Fältskog, anders.faltskog@lindvik.example, 08-555 012 34.",
+  "mask": [
+   [
+    "Ingeborg Lindahl",
+    0,
+    "PERSON"
+   ],
+   [
+    "ilindahl",
+    0,
+    "USERNAME"
+   ],
+   [
+    "FAKE_Fjord#Mysql_19",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE_odbc_R3ader!",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE-smtp-HrP0rtal",
+    0,
+    "SECRET"
+   ],
+   [
+    "I. Lindahl",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-11-15",
+    0,
+    "DATE"
+   ],
+   [
+    "Anders Fältskog",
+    0,
+    "PERSON"
+   ],
+   [
+    "anders.faltskog@lindvik.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "08-555 012 34",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "rpt-02",
+    0
+   ],
+   [
+    "mysql-rpt.dw.internal",
+    0
+   ],
+   [
+    "port = 3306",
+    0
+   ],
+   [
+    "ssl-mode = VERIFY_IDENTITY",
+    0
+   ],
+   [
+    "/etc/ssl/certs/dw-ca.pem",
+    0
+   ],
+   [
+    "utf8mb4",
+    0
+   ],
+   [
+    "single-transaction",
+    0
+   ],
+   [
+    "max_allowed_packet = 512M",
+    0
+   ],
+   [
+    "[DW_PROD]",
+    0
+   ],
+   [
+    "/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.4.so.1.1",
+    0
+   ],
+   [
+    "tcp:mssql-dw.dw.internal,1433",
+    0
+   ],
+   [
+    "odbc_reader",
+    0
+   ],
+   [
+    "TrustServerCertificate = no",
+    0
+   ],
+   [
+    "memory_limit = 256M",
+    0
+   ],
+   [
+    "session.cookie_secure = 1",
+    0
+   ],
+   [
+    "session.cookie_samesite = \"Strict\"",
+    0
+   ],
+   [
+    "Europe/Stockholm",
+    0
+   ],
+   [
+    "hr-portal@noreply.lindvik.example",
+    0
+   ],
+   [
+    "Test Testsson, 19800101-0000",
+    0
+   ]
+  ]
+ }
+]

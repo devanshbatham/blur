@@ -1,0 +1,3954 @@
+[
+ {
+  "id": "tb-01",
+  "domain": "curl_http2_verbose",
+  "text": "$ curl -v --http2 -H \"X-Api-Key: ak_prod_FAKE_8sJ2nQ5wE1rT9yU4iO7pA3dF6gH\" -H \"Accept: application/vnd.kitebox.v5+json\" \\\n       \"https://edge.kitebox.example/v5/accounts/acc_4401/members?filter[email]=r.okonjo%40kitebox-mail.example\"\n*   Trying 10.250.8.14:443...\n* Connected to edge.kitebox.example (10.250.8.14) port 443\n* ALPN: curl offers h2,http/1.1\n* SSL connection using TLSv1.3 / TLS_CHACHA20_POLY1305_SHA256 / x25519 / id-ecPublicKey\n* Server certificate:\n*  subject: CN=*.kitebox.example\n*  start date: Aug 12 00:00:00 2026 GMT\n*  expire date: Nov 10 23:59:59 2026 GMT\n*  issuer: C=US; O=Example Issuing Authority; CN=EIA ECC DV R4\n* using HTTP/2\n* [HTTP/2] [1] OPENED stream for https://edge.kitebox.example/v5/accounts/acc_4401/members\n> GET /v5/accounts/acc_4401/members?filter[email]=r.okonjo%40kitebox-mail.example HTTP/2\n> Host: edge.kitebox.example\n> User-Agent: curl/8.10.1\n> X-Api-Key: ak_prod_FAKE_8sJ2nQ5wE1rT9yU4iO7pA3dF6gH\n> Accept: application/vnd.kitebox.v5+json\n>\n< HTTP/2 200\n< content-type: application/vnd.kitebox.v5+json; charset=UTF-8\n< age: 0\n< cache-control: private, max-age=0\n< cf-cache-status: DYNAMIC\n< server-timing: cdn-cache;desc=MISS, edge;dur=4, origin;dur=61\n< alt-svc: h3=\":443\"; ma=2592000\n< x-kitebox-trace: kb-7Hq2-91Lm-ZZ04\n< last-modified: Sat, 07 Nov 2026 19:12:55 GMT\n<\n{\"data\":[{\"type\":\"member\",\"id\":\"mem_0088aZ\",\"attributes\":{\"display_name\":\"Rukayat Okonjo\",\"email\":\"r.okonjo@kitebox-mail.example\",\"mobile\":\"+234 803 555 0129\",\"role\":\"billing_admin\",\"last_seen_ip\":\"203.0.113.41\",\"2fa\":\"webauthn\"}}],\"meta\":{\"page\":1,\"per_page\":25,\"total\":1}}\n* Connection #0 to host edge.kitebox.example left intact",
+  "mask": [
+   [
+    "ak_prod_FAKE_8sJ2nQ5wE1rT9yU4iO7pA3dF6gH",
+    0,
+    "SECRET"
+   ],
+   [
+    "r.okonjo%40kitebox-mail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Aug 12",
+    0,
+    "DATE"
+   ],
+   [
+    "Nov 10",
+    0,
+    "DATE"
+   ],
+   [
+    "Sat, 07 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "mem_0088aZ",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Rukayat Okonjo",
+    0,
+    "PERSON"
+   ],
+   [
+    "r.okonjo@kitebox-mail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+234 803 555 0129",
+    0,
+    "PHONE"
+   ],
+   [
+    "203.0.113.41",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "application/vnd.kitebox.v5+json",
+    0
+   ],
+   [
+    "edge.kitebox.example",
+    0
+   ],
+   [
+    "10.250.8.14:443",
+    0
+   ],
+   [
+    "ALPN: curl offers h2,http/1.1",
+    0
+   ],
+   [
+    "TLSv1.3 / TLS_CHACHA20_POLY1305_SHA256 / x25519",
+    0
+   ],
+   [
+    "CN=*.kitebox.example",
+    0
+   ],
+   [
+    "C=US; O=Example Issuing Authority; CN=EIA ECC DV R4",
+    0
+   ],
+   [
+    "[HTTP/2] [1] OPENED stream",
+    0
+   ],
+   [
+    "curl/8.10.1",
+    0
+   ],
+   [
+    "< HTTP/2 200",
+    0
+   ],
+   [
+    "charset=UTF-8",
+    0
+   ],
+   [
+    "cache-control: private, max-age=0",
+    0
+   ],
+   [
+    "cf-cache-status: DYNAMIC",
+    0
+   ],
+   [
+    "cdn-cache;desc=MISS, edge;dur=4, origin;dur=61",
+    0
+   ],
+   [
+    "h3=\":443\"; ma=2592000",
+    0
+   ],
+   [
+    "kb-7Hq2-91Lm-ZZ04",
+    0
+   ],
+   [
+    "\"role\":\"billing_admin\"",
+    0
+   ],
+   [
+    "\"2fa\":\"webauthn\"",
+    0
+   ],
+   [
+    "\"per_page\":25",
+    0
+   ],
+   [
+    "Connection #0 to host edge.kitebox.example left intact",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-02",
+  "domain": "httpie_wget",
+  "text": "# Repro steps from Zainab Al-Rashid's bug report (BUG-9921), cleaned up a bit.\n\n$ http --verify=no --auth zrashid:'Dune$ea-Palm07' --auth-type=basic \\\n       PATCH https://hr.saltire-group.example/api/employees/EMP-55021 \\\n       X-Saltire-Org:org_west Prefer:return=representation \\\n       phone_work='+971 4 555 0186' emergency_contact:='{\"name\":\"Karim Al-Rashid\",\"relation\":\"spouse\",\"phone\":\"+971 50 555 0147\"}'\n\nHTTP/1.1 422 Unprocessable Entity\nConnection: close\nContent-Type: application/problem+json\nDate: Fri, 06 Nov 2026 05:44:20 GMT\nServer: gunicorn\nX-Frame-Options: DENY\nX-Saltire-Request: 01JC8Z4F2R7QX0M5T9K3HPDV6E\n\n{\n    \"type\": \"https://hr.saltire-group.example/problems/validation\",\n    \"title\": \"Validation failed\",\n    \"status\": 422,\n    \"detail\": \"national_id is required when updating emergency_contact\",\n    \"instance\": \"/api/employees/EMP-55021\",\n    \"employee\": {\"id\": \"EMP-55021\", \"name\": \"Zainab Al-Rashid\", \"national_id\": \"784-1987-4410392-6\", \"hired\": \"14.03.2019\"}\n}\n\n$ wget --header='Authorization: Token tkn_FAKE_d93Kq0Lz7Wm2Xp5Rv8' --save-headers -O report.json \\\n       'https://hr.saltire-group.example/api/reports/headcount?quarter=2026Q4&format=json'\n--2026-11-06 09:46:02--  https://hr.saltire-group.example/api/reports/headcount?quarter=2026Q4&format=json\nResolving hr.saltire-group.example (hr.saltire-group.example)... 172.22.10.4\nConnecting to hr.saltire-group.example (hr.saltire-group.example)|172.22.10.4|:443... connected.\nHTTP request sent, awaiting response... 200 OK\nLength: 18342 (18K) [application/json]\nSaving to: 'report.json'\nreport.json         100%[===================>]  17.91K  --.-KB/s    in 0.002s",
+  "mask": [
+   [
+    "Zainab Al-Rashid",
+    0,
+    "PERSON"
+   ],
+   [
+    "zrashid",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Dune$ea-Palm07",
+    0,
+    "SECRET"
+   ],
+   [
+    "EMP-55021",
+    0,
+    "ID"
+   ],
+   [
+    "+971 4 555 0186",
+    0,
+    "PHONE"
+   ],
+   [
+    "Karim Al-Rashid",
+    0,
+    "PERSON"
+   ],
+   [
+    "+971 50 555 0147",
+    0,
+    "PHONE"
+   ],
+   [
+    "Fri, 06 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "784-1987-4410392-6",
+    0,
+    "ID"
+   ],
+   [
+    "14.03.2019",
+    0,
+    "DATE"
+   ],
+   [
+    "tkn_FAKE_d93Kq0Lz7Wm2Xp5Rv8",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026-11-06",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "BUG-9921",
+    0
+   ],
+   [
+    "--verify=no",
+    0
+   ],
+   [
+    "--auth-type=basic",
+    0
+   ],
+   [
+    "X-Saltire-Org:org_west",
+    0
+   ],
+   [
+    "Prefer:return=representation",
+    0
+   ],
+   [
+    "\"relation\":\"spouse\"",
+    0
+   ],
+   [
+    "HTTP/1.1 422 Unprocessable Entity",
+    0
+   ],
+   [
+    "application/problem+json",
+    0
+   ],
+   [
+    "gunicorn",
+    0
+   ],
+   [
+    "X-Frame-Options: DENY",
+    0
+   ],
+   [
+    "01JC8Z4F2R7QX0M5T9K3HPDV6E",
+    0
+   ],
+   [
+    "https://hr.saltire-group.example/problems/validation",
+    0
+   ],
+   [
+    "Validation failed",
+    0
+   ],
+   [
+    "national_id is required when updating emergency_contact",
+    0
+   ],
+   [
+    "--save-headers",
+    0
+   ],
+   [
+    "quarter=2026Q4&format=json",
+    0
+   ],
+   [
+    "172.22.10.4",
+    0
+   ],
+   [
+    "Length: 18342 (18K) [application/json]",
+    0
+   ],
+   [
+    "17.91K",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-03",
+  "domain": "caddy_json_log",
+  "text": "{\"level\":\"info\",\"ts\":1794210061.553,\"logger\":\"http.log.access.log0\",\"msg\":\"handled request\",\"request\":{\"remote_ip\":\"198.51.100.92\",\"remote_port\":\"60311\",\"client_ip\":\"198.51.100.92\",\"proto\":\"HTTP/3.0\",\"method\":\"GET\",\"host\":\"files.pinecone-studio.example\",\"uri\":\"/share/f_91Kz/Portfolio_Mireille_Castagnet_2026.pdf\",\"headers\":{\"User-Agent\":[\"Mozilla/5.0 (iPad; CPU OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.7 Mobile/15E148 Safari/604.1\"],\"Accept-Language\":[\"fr-CA,fr;q=0.9\"],\"Cookie\":[\"pcs_auth=FAKEpcs.9QxLm2Zv7Rt0Wb3Yc; pcs_lang=fr\"]},\"tls\":{\"resumed\":true,\"version\":772,\"cipher_suite\":4865,\"proto\":\"h3\",\"server_name\":\"files.pinecone-studio.example\"}},\"bytes_read\":0,\"user_id\":\"mcastagnet\",\"duration\":0.0412,\"size\":2210334,\"status\":200,\"resp_headers\":{\"Server\":[\"Caddy\"],\"Etag\":[\"\\\"sbg3k91c4zq\\\"\"],\"Content-Type\":[\"application/pdf\"]}}\n{\"level\":\"info\",\"ts\":1794210075.902,\"logger\":\"http.log.access.log0\",\"msg\":\"handled request\",\"request\":{\"remote_ip\":\"10.4.0.6\",\"remote_port\":\"41220\",\"client_ip\":\"10.4.0.6\",\"proto\":\"HTTP/1.1\",\"method\":\"GET\",\"host\":\"files.pinecone-studio.example\",\"uri\":\"/healthz\",\"headers\":{\"User-Agent\":[\"Go-http-client/1.1\"]}},\"duration\":0.0001,\"size\":2,\"status\":200}\n{\"level\":\"error\",\"ts\":1794210102.117,\"logger\":\"http.log.error.log0\",\"msg\":\"upload rejected: file too large\",\"request\":{\"remote_ip\":\"198.51.100.92\",\"method\":\"POST\",\"host\":\"files.pinecone-studio.example\",\"uri\":\"/api/upload?folder=clients%2Ftheo-brandvold\"},\"duration\":0.0031,\"status\":413,\"err_id\":\"7xq2mzk4p\",\"err_trace\":\"caddyhttp.(*Server).ServeHTTP (server.go:340)\"}\n{\"level\":\"warn\",\"ts\":1794210140.004,\"logger\":\"tls.issuance.acme\",\"msg\":\"certificate expires soon; renewing\",\"identifiers\":[\"files.pinecone-studio.example\"],\"remaining\":\"719h59m\"}\n{\"level\":\"info\",\"ts\":1794210140.880,\"logger\":\"tls.obtain\",\"msg\":\"certificate obtained successfully\",\"identifier\":\"files.pinecone-studio.example\",\"issuer\":\"acme-v02.api.letsencrypt.example-directory\"}\n\n# Caddyfile excerpt\nfiles.pinecone-studio.example {\n\tencode zstd gzip\n\tbasicauth /admin/* {\n\t\tmireille $2a$14$FAKEbcryptHashQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2\n\t}\n\treverse_proxy 10.4.0.11:8080\n\tlog {\n\t\toutput file /var/log/caddy/files.log\n\t\tformat json\n\t}\n}\n# Studio contact: Mireille Castagnet, 514-555-0176, studio@pinecone-studio.example",
+  "mask": [
+   [
+    "198.51.100.92",
+    0,
+    "IP"
+   ],
+   [
+    "Mireille_Castagnet",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKEpcs.9QxLm2Zv7Rt0Wb3Yc",
+    0,
+    "SECRET"
+   ],
+   [
+    "mcastagnet",
+    0,
+    "USERNAME"
+   ],
+   [
+    "theo-brandvold",
+    0,
+    "PERSON"
+   ],
+   [
+    "mireille",
+    0,
+    "USERNAME"
+   ],
+   [
+    "$2a$14$FAKEbcryptHashQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2",
+    0,
+    "SECRET"
+   ],
+   [
+    "Mireille Castagnet",
+    0,
+    "PERSON"
+   ],
+   [
+    "514-555-0176",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "http.log.access.log0",
+    0
+   ],
+   [
+    "handled request",
+    0
+   ],
+   [
+    "\"remote_port\":\"60311\"",
+    0
+   ],
+   [
+    "HTTP/3.0",
+    0
+   ],
+   [
+    "files.pinecone-studio.example",
+    0
+   ],
+   [
+    "/share/f_91Kz/",
+    0
+   ],
+   [
+    "Mozilla/5.0 (iPad; CPU OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.7 Mobile/15E148 Safari/604.1",
+    0
+   ],
+   [
+    "fr-CA,fr;q=0.9",
+    0
+   ],
+   [
+    "pcs_lang=fr",
+    0
+   ],
+   [
+    "\"cipher_suite\":4865",
+    0
+   ],
+   [
+    "10.4.0.6",
+    0
+   ],
+   [
+    "Go-http-client/1.1",
+    0
+   ],
+   [
+    "upload rejected: file too large",
+    0
+   ],
+   [
+    "7xq2mzk4p",
+    0
+   ],
+   [
+    "caddyhttp.(*Server).ServeHTTP (server.go:340)",
+    0
+   ],
+   [
+    "\"remaining\":\"719h59m\"",
+    0
+   ],
+   [
+    "encode zstd gzip",
+    0
+   ],
+   [
+    "reverse_proxy 10.4.0.11:8080",
+    0
+   ],
+   [
+    "/var/log/caddy/files.log",
+    0
+   ],
+   [
+    "studio@pinecone-studio.example",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-04",
+  "domain": "haproxy_log",
+  "text": "Nov 17 03:12:44 lb-ams-1 haproxy[2231]: 192.0.2.233:48122 [17/Nov/2026:03:12:44.019] fe_https~ be_portal/portal-03 0/0/1/48/49 200 5120 - - --NI 312/298/14/5/0 0/0 {portal.verdant-energy.example|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36} {sid=FAKEhxs_k39Lq2Zv7Rt0} \"GET /my-account/bills?acct=VE-2209-77410 HTTP/1.1\"\nNov 17 03:12:51 lb-ams-1 haproxy[2231]: 192.0.2.233:48122 [17/Nov/2026:03:12:51.300] fe_https~ be_portal/portal-01 0/0/0/212/212 302 410 - - --VN 309/296/12/4/0 0/0 {portal.verdant-energy.example|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36} {sid=FAKEhxs_k39Lq2Zv7Rt0} \"POST /my-account/direct-debit HTTP/1.1\"\nNov 17 03:13:02 lb-ams-1 haproxy[2231]: 10.11.0.40:39910 [17/Nov/2026:03:13:02.004] fe_internal be_metrics/<NOSRV> -1/-1/-1/-1/0 503 217 - - SC-- 3/1/0/0/0 0/0 \"GET /stats HTTP/1.1\"\nNov 17 03:13:09 lb-ams-1 haproxy[2231]: Server be_portal/portal-02 is DOWN, reason: Layer7 wrong status, code: 500, info: \"Internal Server Error\", check duration: 31ms. 2 active and 0 backup servers left.\n\n# captured body of the POST above (debug mirror, must be disabled!):\naccount_holder=Willemijn+Brouwer&iban=NL91+ABNA+0417+1643+00&bic=ABNANL2A&mandate_date=17-11-2026&street=Keizersgracht+188-II&zip=1016+DW&city=Amsterdam&_csrf=FAKEcsrf_Vb3Yc8Jd1Hs5\n\n# haproxy.cfg (excerpt)\nfrontend fe_https\n    bind :443 ssl crt /etc/haproxy/certs/verdant.pem alpn h2,http/1.1\n    http-request capture req.cook(sid) len 40\n    http-request set-header X-Forwarded-Proto https\n    default_backend be_portal\nbackend be_portal\n    balance roundrobin\n    option httpchk GET /health\n    server portal-01 10.11.2.11:8443 check ssl verify none\n    server portal-02 10.11.2.12:8443 check ssl verify none\nuserlist stats_users\n    user lbadmin password $6$FAKEsalt$Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui\n\n# Opened by Pim Verbeek (NOC): mirror disabled at 03:20, customer W. Brouwer informed by phone (06-55501928).",
+  "mask": [
+   [
+    "192.0.2.233",
+    0,
+    "IP"
+   ],
+   [
+    "17/Nov/2026",
+    0,
+    "DATE"
+   ],
+   [
+    "FAKEhxs_k39Lq2Zv7Rt0",
+    0,
+    "SECRET"
+   ],
+   [
+    "Willemijn+Brouwer",
+    0,
+    "PERSON"
+   ],
+   [
+    "NL91+ABNA+0417+1643+00",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "17-11-2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Keizersgracht+188-II",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "FAKEcsrf_Vb3Yc8Jd1Hs5",
+    0,
+    "SECRET"
+   ],
+   [
+    "$6$FAKEsalt$Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui",
+    0,
+    "SECRET"
+   ],
+   [
+    "Pim Verbeek",
+    0,
+    "PERSON"
+   ],
+   [
+    "W. Brouwer",
+    0,
+    "PERSON"
+   ],
+   [
+    "06-55501928",
+    0,
+    "PHONE"
+   ],
+   [
+    "Nov 17",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "lb-ams-1",
+    0
+   ],
+   [
+    "haproxy[2231]",
+    0
+   ],
+   [
+    "fe_https~",
+    0
+   ],
+   [
+    "be_portal/portal-03",
+    0
+   ],
+   [
+    "0/0/1/48/49",
+    0
+   ],
+   [
+    "--NI",
+    0
+   ],
+   [
+    "312/298/14/5/0",
+    0
+   ],
+   [
+    "portal.verdant-energy.example",
+    0
+   ],
+   [
+    "Chrome/131.0.0.0",
+    0
+   ],
+   [
+    "VE-2209-77410",
+    0
+   ],
+   [
+    "/my-account/direct-debit",
+    0
+   ],
+   [
+    "be_metrics/<NOSRV>",
+    0
+   ],
+   [
+    "SC--",
+    0
+   ],
+   [
+    "Layer7 wrong status",
+    0
+   ],
+   [
+    "bic=ABNANL2A",
+    0
+   ],
+   [
+    "zip=1016+DW",
+    0
+   ],
+   [
+    "city=Amsterdam",
+    0
+   ],
+   [
+    "alpn h2,http/1.1",
+    0
+   ],
+   [
+    "req.cook(sid) len 40",
+    0
+   ],
+   [
+    "balance roundrobin",
+    0
+   ],
+   [
+    "10.11.2.11:8443",
+    0
+   ],
+   [
+    "lbadmin",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-05",
+  "domain": "envoy_istio_access",
+  "text": "[2026-11-16T12:00:03.118Z] \"POST /payments.v1.Refunds/Create HTTP/2\" 200 - via_upstream - \"-\" 214 96 38 37 \"203.0.113.150,10.244.3.1\" \"grpc-node-js/1.12.2\" \"c9d1e3f5-a7b9-4c1d-8e2f-3a4b5c6d7e8f\" \"refunds.payments.svc.cluster.local:50051\" \"10.244.5.17:50051\" outbound|50051||refunds.payments.svc.cluster.local 10.244.3.22:43122 10.96.14.20:50051 10.244.3.22:51010 - default\n[2026-11-16T12:00:04.502Z] \"GET /v2/customers/cust_Hq81Pz/statements?year=2026 HTTP/1.1\" 403 - rbac_access_denied_matched_policy[ns[billing]-policy[deny-external]-rule[0]] - \"-\" 0 19 0 - \"192.0.2.58\" \"Insomnia/2023.5.8\" \"0f9e8d7c-6b5a-4f3e-2d1c-0b9a8f7e6d5c\" \"billing-api.billing:8080\" \"-\" - - 10.244.1.9:8080 192.0.2.58:52144 - -\n[2026-11-16T12:00:09.990Z] \"GET /healthz/ready HTTP/1.1\" 200 - via_upstream - \"-\" 0 2 1 1 \"-\" \"Go-http-client/1.1\" \"5e6f7a8b-9c0d-4e1f-a2b3-c4d5e6f7a8b9\" \"localhost:15021\" \"127.0.0.1:15020\" inbound|15021|| 127.0.0.1:47712 10.244.1.9:15021 10.244.1.1:39220 - -\n\n$ istioctl proxy-config secret deploy/billing-api -n billing -o json | jq '.dynamicActiveSecrets[0].secret.tlsCertificate.certificateChain.inlineBytes' | head -c 80\n\"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM4ekNDQWR1Z0F3SUJBZ0lSQVA...\"\n\n$ kubectl -n billing logs deploy/billing-api -c billing-api --since=5m | grep -i denied\n2026-11-16 12:00:04.503 WARN  authz denied caller=192.0.2.58 sub=ops.eloise.martel jwt_iss=https://sso.fernway.example aud=billing-api reason=\"external caller to internal route\"\n2026-11-16 12:00:04.503 DEBUG authz header Authorization=\"Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImZ3LTEifQ.eyJGQUtFIjoiaXN0aW8ifQ.c2lnbmF0dXJlX2lzX25vdF9yZWFs\"\n\n$ kubectl get authorizationpolicy -n billing\nNAME              ACTION   AGE\ndeny-external     DENY     41d\nallow-gateway     ALLOW    41d\n\n# Slack #sre (Hamid Sorkhabi): Eloise Martel was testing from home with Insomnia; that's the 403.\n# She now has a jump-host account, request ACC-1188 approved.",
+  "mask": [
+   [
+    "2026-11-16",
+    0,
+    "DATE"
+   ],
+   [
+    "203.0.113.150",
+    0,
+    "IP"
+   ],
+   [
+    "192.0.2.58",
+    0,
+    "IP"
+   ],
+   [
+    "ops.eloise.martel",
+    0,
+    "USERNAME"
+   ],
+   [
+    "eyJhbGciOiJFUzI1NiIsImtpZCI6ImZ3LTEifQ.eyJGQUtFIjoiaXN0aW8ifQ.c2lnbmF0dXJlX2lzX25vdF9yZWFs",
+    0,
+    "SECRET"
+   ],
+   [
+    "Hamid Sorkhabi",
+    0,
+    "PERSON"
+   ],
+   [
+    "Eloise Martel",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "/payments.v1.Refunds/Create",
+    0
+   ],
+   [
+    "via_upstream",
+    0
+   ],
+   [
+    "10.244.3.1",
+    0
+   ],
+   [
+    "grpc-node-js/1.12.2",
+    0
+   ],
+   [
+    "c9d1e3f5-a7b9-4c1d-8e2f-3a4b5c6d7e8f",
+    0
+   ],
+   [
+    "refunds.payments.svc.cluster.local:50051",
+    0
+   ],
+   [
+    "outbound|50051||refunds.payments.svc.cluster.local",
+    0
+   ],
+   [
+    "cust_Hq81Pz",
+    0
+   ],
+   [
+    "rbac_access_denied_matched_policy[ns[billing]-policy[deny-external]-rule[0]]",
+    0
+   ],
+   [
+    "Insomnia/2023.5.8",
+    0
+   ],
+   [
+    "billing-api.billing:8080",
+    0
+   ],
+   [
+    "localhost:15021",
+    0
+   ],
+   [
+    "127.0.0.1:15020",
+    0
+   ],
+   [
+    "istioctl proxy-config secret",
+    0
+   ],
+   [
+    "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM4ekNDQWR1Z0F3SUJBZ0lSQVA...",
+    0
+   ],
+   [
+    "https://sso.fernway.example",
+    0
+   ],
+   [
+    "external caller to internal route",
+    0
+   ],
+   [
+    "deny-external     DENY     41d",
+    0
+   ],
+   [
+    "ACC-1188",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-06",
+  "domain": "oauth_device_flow",
+  "text": "$ ./tvctl login --verbose\n-> POST https://auth.streamhaven.example/oauth/device/code\n   client_id=sh-tv-androidtv&scope=openid%20profile%20playback%20offline_access&audience=https%3A%2F%2Fapi.streamhaven.example\n<- 200 OK\n   {\n     \"device_code\": \"dc_FAKE_Mq8xT2vL9pR4wZ7nB1cK6yH3jD0sF5gA\",\n     \"user_code\": \"WDJB-MJHT\",\n     \"verification_uri\": \"https://streamhaven.example/activate\",\n     \"verification_uri_complete\": \"https://streamhaven.example/activate?user_code=WDJB-MJHT\",\n     \"expires_in\": 900,\n     \"interval\": 5\n   }\n\nTo sign in, visit https://streamhaven.example/activate and enter WDJB-MJHT\n\n-> POST https://auth.streamhaven.example/oauth/token  (attempt 1)\n   grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Adevice_code&device_code=dc_FAKE_Mq8xT2vL9pR4wZ7nB1cK6yH3jD0sF5gA&client_id=sh-tv-androidtv\n<- 403 {\"error\":\"authorization_pending\",\"error_description\":\"User has yet to authorize device code.\"}\n-> POST https://auth.streamhaven.example/oauth/token  (attempt 4)\n<- 429 {\"error\":\"slow_down\"}\n-> POST https://auth.streamhaven.example/oauth/token  (attempt 7)\n<- 200 OK\n   {\n     \"access_token\": \"sh_at.FAKE.R7pL2xQ9mV4tZ8wN1bK5cJ3hY6dF0gS\",\n     \"refresh_token\": \"sh_rt.FAKE.v0R9tZ8wN7bK6cJ5hY4dF3gS2aQ1eW\",\n     \"id_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJGQUtFIjoiZGV2aWNlLWZsb3cifQ.ZmFrZV9pZF90b2tlbl9zaWduYXR1cmU\",\n     \"scope\": \"openid profile playback offline_access\",\n     \"expires_in\": 86400,\n     \"token_type\": \"Bearer\"\n   }\nLogged in as Ngozi Eze-Bamgbose (ngozi.eb@streamhaven-user.example), household HH-0091442, profile \"Kids\", device AndroidTV serial 0A1B2C3D4E5F6071, android_id 7c3e9a1b5d2f4086\nToken cached at ~/.config/tvctl/credentials.json (mode 0600)",
+  "mask": [
+   [
+    "dc_FAKE_Mq8xT2vL9pR4wZ7nB1cK6yH3jD0sF5gA",
+    0,
+    "SECRET"
+   ],
+   [
+    "sh_at.FAKE.R7pL2xQ9mV4tZ8wN1bK5cJ3hY6dF0gS",
+    0,
+    "SECRET"
+   ],
+   [
+    "sh_rt.FAKE.v0R9tZ8wN7bK6cJ5hY4dF3gS2aQ1eW",
+    0,
+    "SECRET"
+   ],
+   [
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJGQUtFIjoiZGV2aWNlLWZsb3cifQ.ZmFrZV9pZF90b2tlbl9zaWduYXR1cmU",
+    0,
+    "SECRET"
+   ],
+   [
+    "Ngozi Eze-Bamgbose",
+    0,
+    "PERSON"
+   ],
+   [
+    "ngozi.eb@streamhaven-user.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "HH-0091442",
+    0,
+    "ID"
+   ],
+   [
+    "0A1B2C3D4E5F6071",
+    0,
+    "DEVICE"
+   ],
+   [
+    "7c3e9a1b5d2f4086",
+    0,
+    "DEVICE"
+   ]
+  ],
+  "keep": [
+   [
+    "./tvctl login --verbose",
+    0
+   ],
+   [
+    "https://auth.streamhaven.example/oauth/device/code",
+    0
+   ],
+   [
+    "client_id=sh-tv-androidtv",
+    0
+   ],
+   [
+    "openid%20profile%20playback%20offline_access",
+    0
+   ],
+   [
+    "https%3A%2F%2Fapi.streamhaven.example",
+    0
+   ],
+   [
+    "Token cached at",
+    0
+   ],
+   [
+    "https://streamhaven.example/activate",
+    0
+   ],
+   [
+    "\"expires_in\": 900",
+    0
+   ],
+   [
+    "\"interval\": 5",
+    0
+   ],
+   [
+    "urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Adevice_code",
+    0
+   ],
+   [
+    "authorization_pending",
+    0
+   ],
+   [
+    "User has yet to authorize device code.",
+    0
+   ],
+   [
+    "slow_down",
+    0
+   ],
+   [
+    "\"scope\": \"openid profile playback offline_access\"",
+    0
+   ],
+   [
+    "\"expires_in\": 86400",
+    0
+   ],
+   [
+    "profile \"Kids\"",
+    0
+   ],
+   [
+    "~/.config/tvctl/credentials.json",
+    0
+   ],
+   [
+    "(mode 0600)",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-07",
+  "domain": "client_credentials_refresh",
+  "text": ">>> import logging, http.client; http.client.HTTPConnection.debuglevel = 1\n>>> r = sess.post(TOKEN_URL, auth=(CLIENT_ID, CLIENT_SECRET), data={\"grant_type\": \"client_credentials\", \"scope\": \"ledger.read ledger.write\"})\nsend: b'POST /connect/token HTTP/1.1\\r\\nHost: identity.ambergate.example\\r\\nUser-Agent: python-requests/2.32.3\\r\\nAccept-Encoding: gzip, deflate, zstd\\r\\nAccept: */*\\r\\nConnection: keep-alive\\r\\nContent-Length: 64\\r\\nContent-Type: application/x-www-form-urlencoded\\r\\nAuthorization: Basic YW1iZXJnYXRlLWJhdGNoLXN5bmM6RkFLRS1jY1NlY3JldC1aOXFMMnhWN20=\\r\\n\\r\\n'\nsend: b'grant_type=client_credentials&scope=ledger.read+ledger.write'\nreply: 'HTTP/1.1 200 OK\\r\\n'\nheader: Content-Type: application/json; charset=UTF-8\nheader: Cache-Control: no-store, no-cache, max-age=0\nheader: X-Correlation-Id: 6e0c2a4f-81b3-4d95-a7c6-e8f0a1b2c3d4\n>>> r.json()\n{'access_token': 'agt_FAKE_cc_8Lq2Zx7Rt0Vb3Yc9Jd1Hs5Ga4Fe', 'expires_in': 3599, 'token_type': 'Bearer', 'scope': 'ledger.read ledger.write'}\n\n>>> # second app: authorization_code client with rotating refresh tokens\n>>> rr = sess.post(TOKEN_URL, data={\"grant_type\": \"refresh_token\", \"refresh_token\": \"agr_FAKE_old_Qp4Lm8Zx1Rt6Vb9Yc2Jd\", \"client_id\": \"ambergate-web\", \"client_secret\": \"FAKE-webSecret-77fQx2\"})\n>>> rr.status_code, rr.json()\n(200, {'access_token': 'agt_FAKE_web_Wq1Er5Ty7Ui9Op3As6Df', 'refresh_token': 'agr_FAKE_new_Zx0Cv2Bn4Mm6Kl8Jh1Gf', 'expires_in': 900, 'token_type': 'Bearer', 'scope': 'openid ledger.read'})\n>>> rr.headers['Date']\n'Thu, 29 Oct 2026 16:20:11 GMT'\n\n>>> sess.get(f\"{API}/v1/journals?owner=hgunnarsdottir&from=2026-10-01&to=2026-10-29\", headers={\"Authorization\": \"Bearer agt_FAKE_web_Wq1Er5Ty7Ui9Op3As6Df\"}).json()[\"items\"][0]\n{'journal_id': 'jrnl_7C2qXz', 'owner': 'hgunnarsdottir', 'owner_name': 'Hrafnhildur Gunnarsdóttir', 'cost_center': 'CC-4410', 'currency': 'ISK', 'lines': 14, 'status': 'posted'}\n\n# NB: the client secret printed above is the sandbox one; prod uses private_key_jwt (kid ag-prod-2026-q4).",
+  "mask": [
+   [
+    "YW1iZXJnYXRlLWJhdGNoLXN5bmM6RkFLRS1jY1NlY3JldC1aOXFMMnhWN20=",
+    0,
+    "SECRET"
+   ],
+   [
+    "agt_FAKE_cc_8Lq2Zx7Rt0Vb3Yc9Jd1Hs5Ga4Fe",
+    0,
+    "SECRET"
+   ],
+   [
+    "agr_FAKE_old_Qp4Lm8Zx1Rt6Vb9Yc2Jd",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE-webSecret-77fQx2",
+    0,
+    "SECRET"
+   ],
+   [
+    "agt_FAKE_web_Wq1Er5Ty7Ui9Op3As6Df",
+    0,
+    "SECRET"
+   ],
+   [
+    "agr_FAKE_new_Zx0Cv2Bn4Mm6Kl8Jh1Gf",
+    0,
+    "SECRET"
+   ],
+   [
+    "Thu, 29 Oct 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "hgunnarsdottir",
+    0,
+    "USERNAME"
+   ],
+   [
+    "2026-10-01",
+    0,
+    "DATE"
+   ],
+   [
+    "2026-10-29",
+    0,
+    "DATE"
+   ],
+   [
+    "Hrafnhildur Gunnarsdóttir",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "http.client.HTTPConnection.debuglevel = 1",
+    0
+   ],
+   [
+    "POST /connect/token HTTP/1.1",
+    0
+   ],
+   [
+    "identity.ambergate.example",
+    0
+   ],
+   [
+    "python-requests/2.32.3",
+    0
+   ],
+   [
+    "gzip, deflate, zstd",
+    0
+   ],
+   [
+    "application/x-www-form-urlencoded",
+    0
+   ],
+   [
+    "grant_type=client_credentials&scope=ledger.read+ledger.write",
+    0
+   ],
+   [
+    "application/json; charset=UTF-8",
+    0
+   ],
+   [
+    "no-store, no-cache, max-age=0",
+    0
+   ],
+   [
+    "6e0c2a4f-81b3-4d95-a7c6-e8f0a1b2c3d4",
+    0
+   ],
+   [
+    "'expires_in': 3599",
+    0
+   ],
+   [
+    "\"client_id\": \"ambergate-web\"",
+    0
+   ],
+   [
+    "'expires_in': 900",
+    0
+   ],
+   [
+    "jrnl_7C2qXz",
+    0
+   ],
+   [
+    "CC-4410",
+    0
+   ],
+   [
+    "'currency': 'ISK'",
+    0
+   ],
+   [
+    "'status': 'posted'",
+    0
+   ],
+   [
+    "private_key_jwt",
+    0
+   ],
+   [
+    "ag-prod-2026-q4",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-08",
+  "domain": "websocket_upgrade",
+  "text": "GET /realtime/v2?access_token=eyJhbGciOiJIUzUxMiJ9.eyJGQUtFIjoid3MifQ.d3Nfc2lnbmF0dXJlX2Zha2VfMTIzNDU2Nzg5MA&room=support-desk-7&client=web HTTP/1.1\nHost: rt.helpwise-chat.example\nConnection: Upgrade\nUpgrade: websocket\nOrigin: https://agents.helpwise-chat.example\nSec-WebSocket-Version: 13\nSec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==\nSec-WebSocket-Extensions: permessage-deflate; client_max_window_bits\nSec-WebSocket-Protocol: hw.v2.json\nUser-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0\nX-Real-IP: 198.51.100.17\n\nHTTP/1.1 101 Switching Protocols\nUpgrade: websocket\nConnection: Upgrade\nSec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=\nSec-WebSocket-Protocol: hw.v2.json\n\n--> {\"op\":\"hello\",\"seq\":1,\"agent\":{\"id\":\"agt_00412\",\"handle\":\"@tamsin.k\",\"name\":\"Tamsin Kerrow\"},\"heartbeat_ms\":25000}\n<-- {\"op\":\"ready\",\"seq\":1,\"session\":\"wss_9Fq2Lx\",\"shard\":3,\"server\":\"rt-eu-07\"}\n<-- {\"op\":\"msg\",\"seq\":2,\"conv\":\"conv_88Zq1\",\"from\":{\"type\":\"visitor\",\"name\":\"Bartholomew Ince\",\"email\":\"bart.ince@quickmail.example\"},\"text\":\"hi, my order #HW-30021 never arrived, I'm at 22 Rosemount Terrace, Bath BA2 4EX, phone 01225 555 019\",\"ts\":\"2026-11-15T10:41:52.006Z\"}\n--> {\"op\":\"typing\",\"seq\":2,\"conv\":\"conv_88Zq1\"}\n--> {\"op\":\"msg\",\"seq\":3,\"conv\":\"conv_88Zq1\",\"text\":\"Sorry about that, Bartholomew Ince! I've re-sent it, tracking ref RM-7781-0044-GB.\",\"ts\":\"2026-11-15T10:42:30.118Z\"}\n<-- {\"op\":\"ack\",\"seq\":3,\"id\":\"msg_01JCX9\"}\n<-- {\"op\":\"ping\",\"seq\":4}\n--> {\"op\":\"pong\",\"seq\":4}\n<-- {\"op\":\"close\",\"code\":1000,\"reason\":\"normal\"}",
+  "mask": [
+   [
+    "eyJhbGciOiJIUzUxMiJ9.eyJGQUtFIjoid3MifQ.d3Nfc2lnbmF0dXJlX2Zha2VfMTIzNDU2Nzg5MA",
+    0,
+    "SECRET"
+   ],
+   [
+    "198.51.100.17",
+    0,
+    "IP"
+   ],
+   [
+    "agt_00412",
+    0,
+    "USERNAME"
+   ],
+   [
+    "@tamsin.k",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Tamsin Kerrow",
+    0,
+    "PERSON"
+   ],
+   [
+    "Bartholomew Ince",
+    0,
+    "PERSON"
+   ],
+   [
+    "bart.ince@quickmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "22 Rosemount Terrace, Bath BA2 4EX",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "01225 555 019",
+    0,
+    "PHONE"
+   ],
+   [
+    "2026-11-15",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "/realtime/v2",
+    0
+   ],
+   [
+    "room=support-desk-7",
+    0
+   ],
+   [
+    "rt.helpwise-chat.example",
+    0
+   ],
+   [
+    "Upgrade: websocket",
+    0
+   ],
+   [
+    "https://agents.helpwise-chat.example",
+    0
+   ],
+   [
+    "Sec-WebSocket-Version: 13",
+    0
+   ],
+   [
+    "dGhlIHNhbXBsZSBub25jZQ==",
+    0
+   ],
+   [
+    "permessage-deflate; client_max_window_bits",
+    0
+   ],
+   [
+    "hw.v2.json",
+    0
+   ],
+   [
+    "Firefox/133.0",
+    0
+   ],
+   [
+    "HTTP/1.1 101 Switching Protocols",
+    0
+   ],
+   [
+    "s3pPLMBiTxaQ9kYGzzhZRbK+xOo=",
+    0
+   ],
+   [
+    "\"heartbeat_ms\":25000",
+    0
+   ],
+   [
+    "wss_9Fq2Lx",
+    0
+   ],
+   [
+    "rt-eu-07",
+    0
+   ],
+   [
+    "conv_88Zq1",
+    0
+   ],
+   [
+    "#HW-30021",
+    0
+   ],
+   [
+    "RM-7781-0044-GB",
+    0
+   ],
+   [
+    "msg_01JCX9",
+    0
+   ],
+   [
+    "\"code\":1000",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-09",
+  "domain": "shopify_style_webhook",
+  "text": "POST /webhooks/orders-create HTTP/1.1\nHost: fulfil.copperkettle.example\nX-Shopify-Topic: orders/create\nX-Shopify-Hmac-Sha256: FAKEhmacXp9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku=\nX-Shopify-Shop-Domain: copper-kettle-tea.myshop.example\nX-Shopify-API-Version: 2024-10\nX-Shopify-Webhook-Id: b54557e4-bdd9-4b37-8a5f-bf7d70bcd043\nX-Shopify-Triggered-At: 2026-11-14T21:37:09.114Z\nContent-Type: application/json\n\n{\n  \"id\": 820982911946154508,\n  \"admin_graphql_api_id\": \"gid://shop/Order/820982911946154508\",\n  \"name\": \"#CK1093\",\n  \"contact_email\": \"aoife.donnelly@eiremail.example\",\n  \"browser_ip\": \"192.0.2.199\",\n  \"currency\": \"EUR\",\n  \"total_price\": \"46.50\",\n  \"financial_status\": \"paid\",\n  \"fulfillment_status\": null,\n  \"customer\": {\"id\": 115310627314723954, \"first_name\": \"Aoife\", \"last_name\": \"Donnelly\", \"phone\": \"+353 87 555 0614\", \"tags\": \"wholesale-no, vip\"},\n  \"shipping_address\": {\"first_name\": \"Aoife\", \"last_name\": \"Donnelly\", \"address1\": \"Apartment 4, 19 Wolfe Tone Street\", \"city\": \"Galway\", \"zip\": \"H91 X2C8\", \"country_code\": \"IE\"},\n  \"line_items\": [\n    {\"id\": 866550311766439020, \"sku\": \"CK-ASSAM-250G\", \"title\": \"Assam Breakfast 250g\", \"quantity\": 2, \"price\": \"12.00\"},\n    {\"id\": 141249953214522974, \"sku\": \"CK-GIFT-TIN\", \"title\": \"Gift tin\", \"quantity\": 1, \"price\": \"22.50\"}\n  ],\n  \"payment_details\": {\"credit_card_bin\": \"424242\", \"credit_card_company\": \"Visa\", \"credit_card_number\": \"•••• •••• •••• 4242\"},\n  \"note_attributes\": [{\"name\": \"gift_message\", \"value\": \"Happy birthday Mam, love Ciara\"}],\n  \"client_details\": {\"user_agent\": \"Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.6778.39 Mobile Safari/537.36\", \"accept_language\": \"en-IE\"}\n}\n\n# app secret used to verify: SHOP_APP_SECRET=shpss_FAKE0a1b2c3d4e5f60718293a4b5c6d7e8",
+  "mask": [
+   [
+    "FAKEhmacXp9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku=",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026-11-14",
+    0,
+    "DATE"
+   ],
+   [
+    "aoife.donnelly@eiremail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "192.0.2.199",
+    0,
+    "IP"
+   ],
+   [
+    "115310627314723954",
+    0,
+    "ID"
+   ],
+   [
+    "Aoife",
+    0,
+    "PERSON"
+   ],
+   [
+    "Donnelly",
+    0,
+    "PERSON"
+   ],
+   [
+    "+353 87 555 0614",
+    0,
+    "PHONE"
+   ],
+   [
+    "Apartment 4, 19 Wolfe Tone Street",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "Ciara",
+    0,
+    "PERSON"
+   ],
+   [
+    "shpss_FAKE0a1b2c3d4e5f60718293a4b5c6d7e8",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "fulfil.copperkettle.example",
+    0
+   ],
+   [
+    "X-Shopify-Topic: orders/create",
+    0
+   ],
+   [
+    "copper-kettle-tea.myshop.example",
+    0
+   ],
+   [
+    "X-Shopify-API-Version: 2024-10",
+    0
+   ],
+   [
+    "b54557e4-bdd9-4b37-8a5f-bf7d70bcd043",
+    0
+   ],
+   [
+    "820982911946154508",
+    0
+   ],
+   [
+    "#CK1093",
+    0
+   ],
+   [
+    "\"total_price\": \"46.50\"",
+    0
+   ],
+   [
+    "\"financial_status\": \"paid\"",
+    0
+   ],
+   [
+    "\"city\": \"Galway\"",
+    0
+   ],
+   [
+    "\"zip\": \"H91 X2C8\"",
+    0
+   ],
+   [
+    "CK-ASSAM-250G",
+    0
+   ],
+   [
+    "Assam Breakfast 250g",
+    0
+   ],
+   [
+    "CK-GIFT-TIN",
+    0
+   ],
+   [
+    "\"credit_card_company\": \"Visa\"",
+    0
+   ],
+   [
+    "gift_message",
+    0
+   ],
+   [
+    "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.6778.39 Mobile Safari/537.36",
+    0
+   ],
+   [
+    "\"accept_language\": \"en-IE\"",
+    0
+   ],
+   [
+    "SHOP_APP_SECRET",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-10",
+  "domain": "slack_style_events",
+  "text": "POST /slack/events HTTP/1.1\nHost: bots.northfield-ops.example\nUser-Agent: Slackbot 1.0 (+https://api.slack.com/robots)\nContent-Type: application/json\nX-Slack-Request-Timestamp: 1795001224\nX-Slack-Signature: v0=FAKEa2e7f0c1b9d8e3f4a5b6c7d8e9f0a1b2c3d4e5f60718293a4b5c6d7e8f9a\nX-Slack-Retry-Num: 1\nX-Slack-Retry-Reason: http_timeout\n\n{\n  \"token\": \"FAKEverifTok9xQ2Lm7Zv\",\n  \"team_id\": \"T0FAKE9QX\",\n  \"api_app_id\": \"A07FAKE22L\",\n  \"event\": {\n    \"type\": \"message\",\n    \"channel\": \"C05FAKEOPS\",\n    \"user\": \"U04FAKEJMK\",\n    \"text\": \"<@U07BOTFAKE> rotate db creds for orders-prod please. current pw is `FAKE-Ord3rs-Pg!x` (yes I know). cc Jomo Mwangi +254 722 555 091\",\n    \"ts\": \"1795001223.004900\",\n    \"event_ts\": \"1795001223.004900\",\n    \"channel_type\": \"channel\",\n    \"blocks\": [{\"type\": \"rich_text\", \"block_id\": \"Hk2Lq\", \"elements\": []}]\n  },\n  \"type\": \"event_callback\",\n  \"event_id\": \"Ev07FAKE81QZ\",\n  \"event_time\": 1795001223,\n  \"authorizations\": [{\"team_id\": \"T0FAKE9QX\", \"user_id\": \"U07BOTFAKE\", \"is_bot\": true}],\n  \"is_ext_shared_channel\": false\n}\n\n-- bot reply (chat.postMessage, Authorization: Bearer xoxb-FAKE-000000000000-000000000000-q9Lm2Zx7Rt0Vb3Yc8Jd1Hs5G)\n{\"ok\":true,\"channel\":\"C05FAKEOPS\",\"ts\":\"1795001226.101200\",\"message\":{\"text\":\"Rotation queued as job rot-5521; the password you pasted has been flagged for revocation, U04FAKEJMK.\"}}\n\n# signing secret lives in SSM: /bots/northfield/slack_signing_secret (value FAKEss_0f1e2d3c4b5a69788796a5b4c3d2e1f0)",
+  "mask": [
+   [
+    "v0=FAKEa2e7f0c1b9d8e3f4a5b6c7d8e9f0a1b2c3d4e5f60718293a4b5c6d7e8f9a",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEverifTok9xQ2Lm7Zv",
+    0,
+    "SECRET"
+   ],
+   [
+    "U04FAKEJMK",
+    0,
+    "USERNAME"
+   ],
+   [
+    "FAKE-Ord3rs-Pg!x",
+    0,
+    "SECRET"
+   ],
+   [
+    "Jomo Mwangi",
+    0,
+    "PERSON"
+   ],
+   [
+    "+254 722 555 091",
+    0,
+    "PHONE"
+   ],
+   [
+    "xoxb-FAKE-000000000000-000000000000-q9Lm2Zx7Rt0Vb3Yc8Jd1Hs5G",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEss_0f1e2d3c4b5a69788796a5b4c3d2e1f0",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "bots.northfield-ops.example",
+    0
+   ],
+   [
+    "Slackbot 1.0 (+https://api.slack.com/robots)",
+    0
+   ],
+   [
+    "X-Slack-Request-Timestamp",
+    0
+   ],
+   [
+    "X-Slack-Retry-Num: 1",
+    0
+   ],
+   [
+    "http_timeout",
+    0
+   ],
+   [
+    "T0FAKE9QX",
+    0
+   ],
+   [
+    "A07FAKE22L",
+    0
+   ],
+   [
+    "C05FAKEOPS",
+    0
+   ],
+   [
+    "U07BOTFAKE",
+    0
+   ],
+   [
+    "1795001223.004900",
+    0
+   ],
+   [
+    "\"channel_type\": \"channel\"",
+    0
+   ],
+   [
+    "rich_text",
+    0
+   ],
+   [
+    "event_callback",
+    0
+   ],
+   [
+    "Ev07FAKE81QZ",
+    0
+   ],
+   [
+    "\"is_bot\": true",
+    0
+   ],
+   [
+    "\"is_ext_shared_channel\": false",
+    0
+   ],
+   [
+    "chat.postMessage",
+    0
+   ],
+   [
+    "rot-5521",
+    0
+   ],
+   [
+    "/bots/northfield/slack_signing_secret",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-11",
+  "domain": "gcs_signed_url",
+  "text": "$ gcloud storage sign-url gs://orchid-hr-onboarding/contracts/2026/Emeka_Nwosu_offer_letter.pdf \\\n    --private-key-file=signer-sa.json --duration=30m --region=europe-west4\n---\nexpiration: '2026-11-03 16:45:12'\nhttp_verb: GET\nsigned_url: https://storage.googleapis.example/orchid-hr-onboarding/contracts/2026/Emeka_Nwosu_offer_letter.pdf?x-goog-signature=FAKE7a1c3e5f9b2d4f6a8c0e1b3d5f7a9c2e4b6d8f0a1c3e5b7d9f2a4c6e8b0d1f3a5c7e9b2d4f6a8c0e1b3d5f7a9c2e4&x-goog-algorithm=GOOG4-RSA-SHA256&x-goog-credential=doc-signer%40orchid-people-prod.iam.gserviceaccount.example%2F20261103%2Feurope-west4%2Fstorage%2Fgoog4_request&x-goog-date=20261103T161512Z&x-goog-expires=1800&x-goog-signedheaders=host\n\n$ gsutil ls -L gs://orchid-hr-onboarding/contracts/2026/Emeka_Nwosu_offer_letter.pdf\ngs://orchid-hr-onboarding/contracts/2026/Emeka_Nwosu_offer_letter.pdf:\n    Creation time:          Tue, 03 Nov 2026 15:58:40 GMT\n    Update time:            Tue, 03 Nov 2026 15:58:40 GMT\n    Storage class:          STANDARD\n    Content-Length:         91844\n    Content-Type:           application/pdf\n    Metadata:\n        uploaded-by:        talent.ops@orchid-people.example\n        candidate-email:    emeka.nwosu1990@inboxly.example\n        candidate-phone:    +44 7700 900 382\n    Hash (crc32c):          kq1zQA==\n    Hash (md5):             3Cz9pFj0w0K7mM5aN3VvXw==\n    ETag:                   CKj7w9yS3YkDEAE=\n    Generation:             1793721520114508\n    Metageneration:         1\n\n# signer-sa.json (do NOT paste this in tickets -- pasted by Folasade Adebayo in HRIT-207)\n{\n  \"type\": \"service_account\",\n  \"project_id\": \"orchid-people-prod\",\n  \"private_key_id\": \"FAKE3e7c1a9b5d2f80641e3c5a7b9d1f0e2c4a6b8d\",\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvFAKEgIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC7FAKEkeyMaterialQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2==\\n-----END PRIVATE KEY-----\\n\",\n  \"client_email\": \"doc-signer@orchid-people-prod.iam.gserviceaccount.example\",\n  \"client_id\": \"104857600000000000001\",\n  \"token_uri\": \"https://oauth2.googleapis.example/token\"\n}",
+  "mask": [
+   [
+    "Emeka_Nwosu",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-11-03",
+    0,
+    "DATE"
+   ],
+   [
+    "FAKE7a1c3e5f9b2d4f6a8c0e1b3d5f7a9c2e4b6d8f0a1c3e5b7d9f2a4c6e8b0d1f3a5c7e9b2d4f6a8c0e1b3d5f7a9c2e4",
+    0,
+    "SECRET"
+   ],
+   [
+    "20261103",
+    0,
+    "DATE"
+   ],
+   [
+    "Tue, 03 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "emeka.nwosu1990@inboxly.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+44 7700 900 382",
+    0,
+    "PHONE"
+   ],
+   [
+    "Folasade Adebayo",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKE3e7c1a9b5d2f80641e3c5a7b9d1f0e2c4a6b8d",
+    0,
+    "SECRET"
+   ],
+   [
+    "-----BEGIN PRIVATE KEY-----\\nMIIEvFAKEgIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC7FAKEkeyMaterialQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2==\\n-----END PRIVATE KEY-----",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "gcloud storage sign-url",
+    0
+   ],
+   [
+    "orchid-hr-onboarding",
+    0
+   ],
+   [
+    "--duration=30m",
+    0
+   ],
+   [
+    "--region=europe-west4",
+    0
+   ],
+   [
+    "http_verb: GET",
+    0
+   ],
+   [
+    "x-goog-algorithm=GOOG4-RSA-SHA256",
+    0
+   ],
+   [
+    "doc-signer%40orchid-people-prod.iam.gserviceaccount.example",
+    0
+   ],
+   [
+    "goog4_request",
+    0
+   ],
+   [
+    "x-goog-expires=1800",
+    0
+   ],
+   [
+    "x-goog-signedheaders=host",
+    0
+   ],
+   [
+    "Storage class:          STANDARD",
+    0
+   ],
+   [
+    "Content-Length:         91844",
+    0
+   ],
+   [
+    "talent.ops@orchid-people.example",
+    0
+   ],
+   [
+    "kq1zQA==",
+    0
+   ],
+   [
+    "3Cz9pFj0w0K7mM5aN3VvXw==",
+    0
+   ],
+   [
+    "CKj7w9yS3YkDEAE=",
+    0
+   ],
+   [
+    "1793721520114508",
+    0
+   ],
+   [
+    "HRIT-207",
+    0
+   ],
+   [
+    "\"type\": \"service_account\"",
+    0
+   ],
+   [
+    "doc-signer@orchid-people-prod.iam.gserviceaccount.example",
+    0
+   ],
+   [
+    "https://oauth2.googleapis.example/token",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-12",
+  "domain": "aws_sts_boto",
+  "text": "$ aws sts assume-role --role-arn arn:aws:iam::444455556666:role/DataScienceReadOnly --role-session-name kpetrov-notebook --duration-seconds 3600\n{\n    \"Credentials\": {\n        \"AccessKeyId\": \"ASIAFAKE5WQ2LM7XZ9RT\",\n        \"SecretAccessKey\": \"FAKEsts/Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi\",\n        \"SessionToken\": \"FwoGZXIvYXdzEFAKE//////////wEaDFAKEsessiontokenQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk\",\n        \"Expiration\": \"2026-10-27T13:05:51+00:00\"\n    },\n    \"AssumedRoleUser\": {\n        \"AssumedRoleId\": \"AROAFAKEROLEID0000001:kpetrov-notebook\",\n        \"Arn\": \"arn:aws:sts::444455556666:assumed-role/DataScienceReadOnly/kpetrov-notebook\"\n    },\n    \"PackedPolicySize\": 6\n}\n\n>>> s3 = boto3.client(\"s3\", region_name=\"ap-southeast-2\", config=Config(signature_version=\"s3v4\"))\n>>> s3.generate_presigned_url(\"get_object\", Params={\"Bucket\": \"telemetry-raw-apse2\", \"Key\": \"exports/cohort_a/part-00007.parquet\"}, ExpiresIn=600)\n'https://telemetry-raw-apse2.s3.ap-southeast-2.amazonaws.com/exports/cohort_a/part-00007.parquet?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAFAKE5WQ2LM7XZ9RT%2F20261027%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20261027T120612Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=FwoGZXIvYXdzEFAKE%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFAKEsessiontokenQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk&X-Amz-Signature=FAKE91e3c5a7b9d1f0e2c4a6b8d0f1e3c5a7b9d2f4e6a8c0b1d3e5f7a9c2e4b6d8'\n\n# ~/.aws/config (Kirill Petrov's laptop)\n[profile ds-sandbox]\nsso_session = corp\nsso_account_id = 444455556666\nsso_role_name = DataScienceReadOnly\nregion = ap-southeast-2\noutput = json\n\n[sso-session corp]\nsso_start_url = https://corp-sso.awsapps.example/start\nsso_region = ap-southeast-2\nsso_registration_scopes = sso:account:access\n\n# Note: K. Petrov (kirill.petrov@datacove.example) asked why his session dies after an hour:\n# that's --duration-seconds 3600 above; role max session is 4h.",
+  "mask": [
+   [
+    "kpetrov-notebook",
+    0,
+    "USERNAME"
+   ],
+   [
+    "ASIAFAKE5WQ2LM7XZ9RT",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEsts/Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi",
+    0,
+    "SECRET"
+   ],
+   [
+    "FwoGZXIvYXdzEFAKE//////////wEaDFAKEsessiontokenQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk",
+    0,
+    "SECRET"
+   ],
+   [
+    "2026-10-27",
+    0,
+    "DATE"
+   ],
+   [
+    "20261027",
+    0,
+    "DATE"
+   ],
+   [
+    "FwoGZXIvYXdzEFAKE%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDFAKEsessiontokenQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE91e3c5a7b9d1f0e2c4a6b8d0f1e3c5a7b9d2f4e6a8c0b1d3e5f7a9c2e4b6d8",
+    0,
+    "SECRET"
+   ],
+   [
+    "Kirill Petrov",
+    0,
+    "PERSON"
+   ],
+   [
+    "K. Petrov",
+    0,
+    "PERSON"
+   ],
+   [
+    "kirill.petrov@datacove.example",
+    0,
+    "EMAIL"
+   ]
+  ],
+  "keep": [
+   [
+    "arn:aws:iam::444455556666:role/DataScienceReadOnly",
+    0
+   ],
+   [
+    "--duration-seconds 3600",
+    0
+   ],
+   [
+    "AROAFAKEROLEID0000001",
+    0
+   ],
+   [
+    "\"PackedPolicySize\": 6",
+    0
+   ],
+   [
+    "ap-southeast-2",
+    0
+   ],
+   [
+    "signature_version=\"s3v4\"",
+    0
+   ],
+   [
+    "telemetry-raw-apse2",
+    0
+   ],
+   [
+    "exports/cohort_a/part-00007.parquet",
+    0
+   ],
+   [
+    "ExpiresIn=600",
+    0
+   ],
+   [
+    "X-Amz-Algorithm=AWS4-HMAC-SHA256",
+    0
+   ],
+   [
+    "aws4_request",
+    0
+   ],
+   [
+    "X-Amz-SignedHeaders=host",
+    0
+   ],
+   [
+    "[profile ds-sandbox]",
+    0
+   ],
+   [
+    "sso_session = corp",
+    0
+   ],
+   [
+    "https://corp-sso.awsapps.example/start",
+    0
+   ],
+   [
+    "sso:account:access",
+    0
+   ],
+   [
+    "output = json",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-13",
+  "domain": "imap_transcript",
+  "text": "$ openssl s_client -quiet -crlf -connect imap.harbourmail.example:993\ndepth=2 C = US, O = Example Root Authority, CN = Example Root X2\nverify return:1\ndepth=0 CN = imap.harbourmail.example\nverify return:1\n* OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=XOAUTH2] Dovecot ready.\na1 LOGIN valentina.greco@harbourmail.example \"Gelato&Vespa_44\"\na1 OK [CAPABILITY IMAP4rev1 SASL-IR SORT THREAD=REFERENCES MULTIAPPEND UIDPLUS CONDSTORE QRESYNC MOVE SPECIAL-USE QUOTA] Logged in\na2 SELECT INBOX\n* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft $Forwarded $Junk)\n* 2214 EXISTS\n* 0 RECENT\n* OK [UIDVALIDITY 1691020044] UIDs valid\n* OK [UIDNEXT 58123] Predicted next UID\na2 OK [READ-WRITE] Select completed (0.004 + 0.000 secs).\na3 UID FETCH 58122 (BODY.PEEK[HEADER.FIELDS (FROM TO SUBJECT DATE MESSAGE-ID)])\n* 2214 FETCH (UID 58122 BODY[HEADER.FIELDS (FROM TO SUBJECT DATE MESSAGE-ID)] {243}\nFrom: Studio Dentistico Ferraro <appuntamenti@ferraro-dent.example>\nTo: Valentina Greco <valentina.greco@harbourmail.example>\nSubject: Promemoria appuntamento 19/11 ore 15:30\nDate: Mon, 16 Nov 2026 08:01:12 +0100\nMessage-ID: <CAFAKE+q9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe@mail.ferraro-dent.example>\n\n)\na3 OK Fetch completed (0.001 + 0.000 secs).\na4 AUTHENTICATE XOAUTH2 dXNlcj12YWxlbnRpbmEuZ3JlY29AaGFyYm91cm1haWwuZXhhbXBsZQFhdXRoPUJlYXJlciBGQUtFLXlhMjkuUXg5TG0yWnY3UnQwV2IzAQE=\na4 NO [ALREADYAUTHENTICATED] Already authenticated\na5 GETQUOTAROOT INBOX\n* QUOTAROOT INBOX User quota\n* QUOTA \"User quota\" (STORAGE 1843210 5242880)\na5 OK Getquotaroot completed (0.001 + 0.000 secs).\na6 LOGOUT\n* BYE Logging out\na6 OK Logout completed (0.001 + 0.000 secs).",
+  "mask": [
+   [
+    "valentina.greco@harbourmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Gelato&Vespa_44",
+    0,
+    "SECRET"
+   ],
+   [
+    "Valentina Greco",
+    0,
+    "PERSON"
+   ],
+   [
+    "19/11",
+    0,
+    "DATE"
+   ],
+   [
+    "Mon, 16 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "dXNlcj12YWxlbnRpbmEuZ3JlY29AaGFyYm91cm1haWwuZXhhbXBsZQFhdXRoPUJlYXJlciBGQUtFLXlhMjkuUXg5TG0yWnY3UnQwV2IzAQE=",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "imap.harbourmail.example:993",
+    0
+   ],
+   [
+    "C = US, O = Example Root Authority, CN = Example Root X2",
+    0
+   ],
+   [
+    "verify return:1",
+    0
+   ],
+   [
+    "IMAP4rev1",
+    0
+   ],
+   [
+    "AUTH=XOAUTH2",
+    0
+   ],
+   [
+    "Dovecot ready.",
+    0
+   ],
+   [
+    "THREAD=REFERENCES",
+    0
+   ],
+   [
+    "a2 SELECT INBOX",
+    0
+   ],
+   [
+    "\\Answered \\Flagged \\Deleted \\Seen \\Draft $Forwarded $Junk",
+    0
+   ],
+   [
+    "* 2214 EXISTS",
+    0
+   ],
+   [
+    "UIDVALIDITY 1691020044",
+    0
+   ],
+   [
+    "UIDNEXT 58123",
+    0
+   ],
+   [
+    "[READ-WRITE] Select completed",
+    0
+   ],
+   [
+    "BODY.PEEK[HEADER.FIELDS (FROM TO SUBJECT DATE MESSAGE-ID)]",
+    0
+   ],
+   [
+    "Studio Dentistico Ferraro",
+    0
+   ],
+   [
+    "appuntamenti@ferraro-dent.example",
+    0
+   ],
+   [
+    "<CAFAKE+q9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe@mail.ferraro-dent.example>",
+    0
+   ],
+   [
+    "[ALREADYAUTHENTICATED]",
+    0
+   ],
+   [
+    "(STORAGE 1843210 5242880)",
+    0
+   ],
+   [
+    "* BYE Logging out",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-14",
+  "domain": "dsn_bounce_arc",
+  "text": "Return-Path: <>\nReceived: from mta-out-3.parcelpost.example (mta-out-3.parcelpost.example [172.30.9.3])\n        by mx.lindenhall.example (8.18.1/8.18.1) with ESMTPS id 5AH9K2xT019844\n        (version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=OK)\n        for <noreply@lindenhall.example>; Tue, 17 Nov 2026 09:20:44 +1100\nARC-Seal: i=2; a=rsa-sha256; d=lindenhall.example; s=arc2026; t=1795386044; cv=pass;\n        b=FAKEsealQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er==\nARC-Authentication-Results: i=2; mx.lindenhall.example; arc=pass (i=1 spf=pass spfdomain=parcelpost.example dkim=pass dkdomain=parcelpost.example dmarc=pass fromdomain=parcelpost.example)\nX-Original-Authentication-Results: mx.lindenhall.example; dkim=pass header.i=@parcelpost.example header.s=pp2025\nFrom: Mail Delivery Subsystem <MAILER-DAEMON@parcelpost.example>\nTo: noreply@lindenhall.example\nSubject: Returned mail: see transcript for details\nAuto-Submitted: auto-generated (failure)\nMessage-Id: <202611162220.5AGMKi1Q884410@mta-out-3.parcelpost.example>\nDate: Mon, 16 Nov 2026 22:20:44 GMT\nContent-Type: multipart/report; report-type=delivery-status; boundary=\"5AGMKi1Q884410.1795386044/mta-out-3.parcelpost.example\"\n\n--5AGMKi1Q884410.1795386044/mta-out-3.parcelpost.example\nContent-Type: text/plain\n\n   ----- The following addresses had permanent fatal errors -----\n<harriet.oyelowo-finch@parcelpost.example>\n    (reason: 550 5.1.1 <harriet.oyelowo-finch@parcelpost.example>: Recipient address rejected: User unknown in virtual mailbox table)\n\n--5AGMKi1Q884410.1795386044/mta-out-3.parcelpost.example\nContent-Type: message/delivery-status\n\nReporting-MTA: dns; mta-out-3.parcelpost.example\nArrival-Date: Mon, 16 Nov 2026 22:20:43 GMT\nFinal-Recipient: RFC822; harriet.oyelowo-finch@parcelpost.example\nAction: failed\nStatus: 5.1.1\nDiagnostic-Code: SMTP; 550 5.1.1 User unknown\n\n--5AGMKi1Q884410.1795386044/mta-out-3.parcelpost.example\nContent-Type: text/rfc822-headers\n\nFrom: Lindenhall Lettings <noreply@lindenhall.example>\nTo: Harriet Oyelowo-Finch <harriet.oyelowo-finch@parcelpost.example>\nSubject: Tenancy renewal for Flat 2, 41 Gleeson Road, Fitzroy VIC 3065\nX-Lindenhall-Tenant: TEN-2024-00817\n--5AGMKi1Q884410.1795386044/mta-out-3.parcelpost.example--",
+  "mask": [
+   [
+    "Tue, 17 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Mon, 16 Nov 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "20261116",
+    0,
+    "DATE"
+   ],
+   [
+    "harriet.oyelowo-finch@parcelpost.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Harriet Oyelowo-Finch",
+    0,
+    "PERSON"
+   ],
+   [
+    "Flat 2, 41 Gleeson Road, Fitzroy VIC 3065",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "TEN-2024-00817",
+    0,
+    "ID"
+   ]
+  ],
+  "keep": [
+   [
+    "mta-out-3.parcelpost.example",
+    0
+   ],
+   [
+    "172.30.9.3",
+    0
+   ],
+   [
+    "mx.lindenhall.example (8.18.1/8.18.1)",
+    0
+   ],
+   [
+    "5AH9K2xT019844",
+    0
+   ],
+   [
+    "TLS_AES_256_GCM_SHA384",
+    0
+   ],
+   [
+    "noreply@lindenhall.example",
+    0
+   ],
+   [
+    "s=arc2026",
+    0
+   ],
+   [
+    "cv=pass",
+    0
+   ],
+   [
+    "arc=pass",
+    0
+   ],
+   [
+    "header.s=pp2025",
+    0
+   ],
+   [
+    "MAILER-DAEMON@parcelpost.example",
+    0
+   ],
+   [
+    "Returned mail: see transcript for details",
+    0
+   ],
+   [
+    "auto-generated (failure)",
+    0
+   ],
+   [
+    "report-type=delivery-status",
+    0
+   ],
+   [
+    "Reporting-MTA: dns; mta-out-3.parcelpost.example",
+    0
+   ],
+   [
+    "Action: failed",
+    0
+   ],
+   [
+    "Status: 5.1.1",
+    0
+   ],
+   [
+    "550 5.1.1 User unknown",
+    0
+   ],
+   [
+    "text/rfc822-headers",
+    0
+   ],
+   [
+    "Lindenhall Lettings",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-15",
+  "domain": "helm_kubectl_describe",
+  "text": "# charts/claims-portal/values-prod.yaml (rendered with --set overrides by Rasmus Kjeldsen)\nimage:\n  repository: harbor.mosswood.example/claims/portal\n  tag: \"2.31.0\"\n  digest: sha256:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08\nreplicaCount: 4\ningress:\n  enabled: true\n  className: nginx\n  hosts: [claims.mosswood.example]\n  annotations:\n    nginx.ingress.kubernetes.io/proxy-body-size: 25m\n    cert-manager.io/cluster-issuer: internal-ca\npostgresql:\n  auth:\n    username: claims\n    password: FAKE-claimsPg-h3lm-v4lu3s\n    database: claims\nsmtp:\n  host: smtp.mosswood.internal\n  user: claims-notify\n  password: FAKE_smtpCl41ms\noidc:\n  issuer: https://sso.mosswood.example/realms/claims\n  clientId: claims-portal\n  clientSecret: FAKEoidcSecret0a9b8c7d6e5f\nresources:\n  limits: {cpu: \"1\", memory: 1536Mi}\n\n$ kubectl -n claims describe pod claims-portal-5d8f7c9b6-hx2lq | sed -n '1,22p'\nName:             claims-portal-5d8f7c9b6-hx2lq\nNamespace:        claims\nPriority:         0\nService Account:  claims-portal\nNode:             aks-userpool-31415926-vmss00000c/10.224.0.37\nStart Time:       Sun, 08 Nov 2026 02:14:09 +0000\nLabels:           app.kubernetes.io/instance=claims-portal\n                  pod-template-hash=5d8f7c9b6\nAnnotations:      checksum/config: 4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a\nStatus:           Running\nIP:               10.244.7.19\nContainers:\n  portal:\n    Image:          harbor.mosswood.example/claims/portal:2.31.0\n    Port:           8080/TCP\n    State:          Running\n    Ready:          True\n    Restart Count:  3\n    Last State:     Terminated  Reason: OOMKilled  Exit Code: 137\nEvents:\n  Warning  BackOff  12m (x4 over 2h)  kubelet  Back-off restarting failed container portal",
+  "mask": [
+   [
+    "Rasmus Kjeldsen",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKE-claimsPg-h3lm-v4lu3s",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKE_smtpCl41ms",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEoidcSecret0a9b8c7d6e5f",
+    0,
+    "SECRET"
+   ],
+   [
+    "Sun, 08 Nov 2026",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "harbor.mosswood.example/claims/portal",
+    0
+   ],
+   [
+    "tag: \"2.31.0\"",
+    0
+   ],
+   [
+    "sha256:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+    0
+   ],
+   [
+    "replicaCount: 4",
+    0
+   ],
+   [
+    "className: nginx",
+    0
+   ],
+   [
+    "proxy-body-size: 25m",
+    0
+   ],
+   [
+    "cert-manager.io/cluster-issuer: internal-ca",
+    0
+   ],
+   [
+    "smtp.mosswood.internal",
+    0
+   ],
+   [
+    "claims-notify",
+    0
+   ],
+   [
+    "https://sso.mosswood.example/realms/claims",
+    0
+   ],
+   [
+    "clientId: claims-portal",
+    0
+   ],
+   [
+    "memory: 1536Mi",
+    0
+   ],
+   [
+    "aks-userpool-31415926-vmss00000c/10.224.0.37",
+    0
+   ],
+   [
+    "pod-template-hash=5d8f7c9b6",
+    0
+   ],
+   [
+    "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    0
+   ],
+   [
+    "10.244.7.19",
+    0
+   ],
+   [
+    "8080/TCP",
+    0
+   ],
+   [
+    "Reason: OOMKilled  Exit Code: 137",
+    0
+   ],
+   [
+    "Back-off restarting failed container",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-16",
+  "domain": "terraform_plan",
+  "text": "$ terraform plan -var-file=prod.tfvars -out=tf.plan\nmodule.vpc.aws_vpc.main: Refreshing state... [id=vpc-0a1b2c3d4e5f60718]\nmodule.rds.aws_db_instance.ledger: Refreshing state... [id=ledger-prod]\n\nTerraform will perform the following actions:\n\n  # module.rds.aws_db_instance.ledger will be updated in-place\n  ~ resource \"aws_db_instance\" \"ledger\" {\n        id                      = \"ledger-prod\"\n      ~ engine_version          = \"16.3\" -> \"16.4\"\n      ~ password                = (sensitive value)\n        username                = \"ledger_admin\"\n        instance_class          = \"db.r6g.xlarge\"\n        availability_zone       = \"ca-central-1a\"\n        tags                    = {\n            \"CostCenter\" = \"FIN-220\"\n            \"Owner\"      = \"beatrice.lavoie@quillfeather.example\"\n        }\n    }\n\n  # aws_iam_user_login_profile.oncall_marchand will be created\n  + resource \"aws_iam_user_login_profile\" \"oncall_marchand\" {\n      + user                    = \"jmarchand\"\n      + password_reset_required = true\n      + pgp_key                 = \"keybase:jmarchand_qf\"\n      + id                      = (known after apply)\n    }\n\nPlan: 1 to add, 1 to change, 0 to destroy.\n\n$ cat prod.tfvars\nregion               = \"ca-central-1\"\ndb_master_password   = \"FAKE-tfvars-L3dg3r!Prod\"\ndatadog_api_key      = \"FAKEdd0123456789abcdef0123456789ab\"\ndatadog_app_key      = \"FAKEddapp0123456789abcdef0123456789abcdef01\"\nalert_sms_number     = \"+1 514 555 0133\"\noncall_full_name     = \"Jacques Marchand\"\n\n$ terraform output -json | jq '.ledger_endpoint, .ledger_password'\n\"ledger-prod.c9fakeabc123.ca-central-1.rds.amazonaws.com:5432\"\n\"FAKE-tfvars-L3dg3r!Prod\"\n\n# MR !812 review (Béatrice Lavoie, 2026-11-05): mark ledger_password output as sensitive = true.",
+  "mask": [
+   [
+    "beatrice.lavoie@quillfeather.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "marchand",
+    0,
+    "PERSON"
+   ],
+   [
+    "jmarchand",
+    0,
+    "USERNAME"
+   ],
+   [
+    "FAKE-tfvars-L3dg3r!Prod",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEdd0123456789abcdef0123456789ab",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEddapp0123456789abcdef0123456789abcdef01",
+    0,
+    "SECRET"
+   ],
+   [
+    "+1 514 555 0133",
+    0,
+    "PHONE"
+   ],
+   [
+    "Jacques Marchand",
+    0,
+    "PERSON"
+   ],
+   [
+    "Béatrice Lavoie",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-11-05",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "terraform plan -var-file=prod.tfvars -out=tf.plan",
+    0
+   ],
+   [
+    "vpc-0a1b2c3d4e5f60718",
+    0
+   ],
+   [
+    "ledger-prod",
+    0
+   ],
+   [
+    "\"16.3\" -> \"16.4\"",
+    0
+   ],
+   [
+    "(sensitive value)",
+    0
+   ],
+   [
+    "ledger_admin",
+    0
+   ],
+   [
+    "db.r6g.xlarge",
+    0
+   ],
+   [
+    "ca-central-1a",
+    0
+   ],
+   [
+    "FIN-220",
+    0
+   ],
+   [
+    "aws_iam_user_login_profile",
+    0
+   ],
+   [
+    "password_reset_required = true",
+    0
+   ],
+   [
+    "(known after apply)",
+    0
+   ],
+   [
+    "Plan: 1 to add, 1 to change, 0 to destroy.",
+    0
+   ],
+   [
+    "db_master_password",
+    0
+   ],
+   [
+    "datadog_api_key",
+    0
+   ],
+   [
+    "ledger-prod.c9fakeabc123.ca-central-1.rds.amazonaws.com:5432",
+    0
+   ],
+   [
+    "MR !812",
+    0
+   ],
+   [
+    "sensitive = true",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-17",
+  "domain": "gitlab_ci_log",
+  "text": "Running with gitlab-runner 17.5.2 (c9d1e3f5)\n  on shared-runner-ams-04 Xk2qL9mZ, system ID: s_7f3a9c1e2b4d\nPreparing the \"docker+machine\" executor\nUsing Docker executor with image registry.gitlab.example/brightloom/ci-images/python:3.12-slim ...\nPulling docker image registry.gitlab.example/brightloom/ci-images/python:3.12-slim@sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 ...\nGetting source from Git repository\nFetching changes with git depth set to 20...\nChecking out 7d2f9c41 as detached HEAD (ref is refs/merge-requests/1442/head)...\nExecuting \"step_script\" stage of the job script\n$ echo \"Pipeline $CI_PIPELINE_ID triggered by $GITLAB_USER_LOGIN ($GITLAB_USER_EMAIL)\"\nPipeline 1820044 triggered by eszabo (eszter.szabo@brightloom.example)\n$ pip config set global.index-url \"https://__token__:${PYPI_TOKEN}@gitlab.example/api/v4/projects/311/packages/pypi/simple\"\nWriting to /root/.config/pip/pip.conf\n$ cat /root/.config/pip/pip.conf   # TODO remove, debugging only\n[global]\nindex-url = https://__token__:glpat-FAKEq9Lm2Zx7Rt0Vb3Yc@gitlab.example/api/v4/projects/311/packages/pypi/simple\n$ pytest -q --maxfail=1\n........................................................................ [ 72%]\n............................F\nFAILED tests/test_export.py::test_csv_redaction - AssertionError: 'Dr. Rhys Pemberton, 1975-06-30' found in output row 4\n1 failed, 99 passed in 18.44s\n$ curl --request POST --header \"PRIVATE-TOKEN: [MASKED]\" \"https://gitlab.example/api/v4/projects/311/statuses/7d2f9c41?state=failed\"\n{\"id\":88120,\"sha\":\"7d2f9c41a0b3e6d2c5f8b1a4e7d0c3f6b9a2e5d8\",\"ref\":\"refs/merge-requests/1442/head\",\"status\":\"failed\",\"name\":\"default\",\"created_at\":\"2026-11-10T08:31:12.402Z\"}\nCleaning up project directory and file based variables\nERROR: Job failed: exit code 1",
+  "mask": [
+   [
+    "eszabo",
+    0,
+    "USERNAME"
+   ],
+   [
+    "eszter.szabo@brightloom.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "glpat-FAKEq9Lm2Zx7Rt0Vb3Yc",
+    0,
+    "SECRET"
+   ],
+   [
+    "Rhys Pemberton",
+    0,
+    "PERSON"
+   ],
+   [
+    "1975-06-30",
+    0,
+    "DOB"
+   ],
+   [
+    "2026-11-10",
+    0,
+    "DATE"
+   ]
+  ],
+  "keep": [
+   [
+    "gitlab-runner 17.5.2 (c9d1e3f5)",
+    0
+   ],
+   [
+    "shared-runner-ams-04",
+    0
+   ],
+   [
+    "s_7f3a9c1e2b4d",
+    0
+   ],
+   [
+    "docker+machine",
+    0
+   ],
+   [
+    "python:3.12-slim",
+    0
+   ],
+   [
+    "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    0
+   ],
+   [
+    "git depth set to 20",
+    0
+   ],
+   [
+    "7d2f9c41",
+    0
+   ],
+   [
+    "refs/merge-requests/1442/head",
+    0
+   ],
+   [
+    "$GITLAB_USER_LOGIN",
+    0
+   ],
+   [
+    "Pipeline 1820044",
+    0
+   ],
+   [
+    "${PYPI_TOKEN}",
+    0
+   ],
+   [
+    "__token__",
+    0
+   ],
+   [
+    "pytest -q --maxfail=1",
+    0
+   ],
+   [
+    "tests/test_export.py::test_csv_redaction",
+    0
+   ],
+   [
+    "1 failed, 99 passed in 18.44s",
+    0
+   ],
+   [
+    "PRIVATE-TOKEN: [MASKED]",
+    0
+   ],
+   [
+    "7d2f9c41a0b3e6d2c5f8b1a4e7d0c3f6b9a2e5d8",
+    0
+   ],
+   [
+    "ERROR: Job failed: exit code 1",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-18",
+  "domain": "jenkins_console",
+  "text": "Started by user Darius Farahani\nObtained Jenkinsfile from git https://git.ironbark.example/mobile/ironbark-app.git\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on android-builder-2 in /var/jenkins/workspace/ironbark-app_release_8.4\n[Pipeline] withCredentials\nMasking supported pattern matches of $KEYSTORE_PASS or $PLAY_JSON\n[Pipeline] {\n[Pipeline] sh\n+ ./gradlew --no-daemon :app:bundleRelease -Pandroid.injected.signing.store.password=**** -PversionCode=80412\n> Task :app:compileReleaseKotlin\n> Task :app:bundleRelease\nBUILD SUCCESSFUL in 4m 12s\n[Pipeline] sh\n+ echo signing alias=ironbark-upload keypass=FAKE-k3yP4ss-Upl0ad\nsigning alias=ironbark-upload keypass=FAKE-k3yP4ss-Upl0ad\n[Pipeline] sh\n+ fastlane supply --aab app/build/outputs/bundle/release/app-release.aab --track internal\n[13:02:41]: Preparing to upload for language 'en-US'...\n[13:02:58]: Uploading AAB 'app-release.aab' (versionCode 80412)...\n[13:03:30]: Successfully finished the upload to Google Play\n[Pipeline] }\n[Pipeline] // withCredentials\n[Pipeline] slackSend\nSlack Send Pipeline step running, values are - baseUrl: <empty>, teamDomain: ironbark, channel: #mobile-releases, color: good, botUser: true, tokenCredentialId: slack-bot, notifyCommitters: false, iconEmoji: <empty>, username: <empty>, timestamp: <empty>\n[Pipeline] mail\nSending e-mail to: darius.farahani@ironbark.example, qa-lead.ming.zhou@ironbark.example\n[Pipeline] End of Pipeline\nFinished: SUCCESS\n\nBuild #612 (Nov 9, 2026, 1:00:17 PM) took 4 min 31 sec\nChanges:\n  1. Fix crash on login when IDFA is unavailable (detail / gitea) -- cfernsby\n  2. Bump okhttp to 4.12.0 (detail / gitea) -- dfarahani",
+  "mask": [
+   [
+    "Darius Farahani",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKE-k3yP4ss-Upl0ad",
+    0,
+    "SECRET"
+   ],
+   [
+    "darius.farahani@ironbark.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "qa-lead.ming.zhou@ironbark.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Nov 9, 2026",
+    0,
+    "DATE"
+   ],
+   [
+    "cfernsby",
+    0,
+    "USERNAME"
+   ],
+   [
+    "dfarahani",
+    0,
+    "USERNAME"
+   ]
+  ],
+  "keep": [
+   [
+    "https://git.ironbark.example/mobile/ironbark-app.git",
+    0
+   ],
+   [
+    "[Pipeline] Start of Pipeline",
+    0
+   ],
+   [
+    "android-builder-2",
+    0
+   ],
+   [
+    "/var/jenkins/workspace/ironbark-app_release_8.4",
+    0
+   ],
+   [
+    "$KEYSTORE_PASS",
+    0
+   ],
+   [
+    "./gradlew --no-daemon :app:bundleRelease",
+    0
+   ],
+   [
+    "signing.store.password=****",
+    0
+   ],
+   [
+    "-PversionCode=80412",
+    0
+   ],
+   [
+    "BUILD SUCCESSFUL in 4m 12s",
+    0
+   ],
+   [
+    "alias=ironbark-upload",
+    0
+   ],
+   [
+    "--track internal",
+    0
+   ],
+   [
+    "app-release.aab",
+    0
+   ],
+   [
+    "teamDomain: ironbark",
+    0
+   ],
+   [
+    "#mobile-releases",
+    0
+   ],
+   [
+    "tokenCredentialId: slack-bot",
+    0
+   ],
+   [
+    "Finished: SUCCESS",
+    0
+   ],
+   [
+    "Build #612",
+    0
+   ],
+   [
+    "okhttp to 4.12.0",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-19",
+  "domain": "conn_strings_misc",
+  "text": "// src/main/resources/application-staging.properties  (copied into wiki page \"Staging access\" by Ilona Wiśniewska)\nspring.rabbitmq.addresses=amqps://orders_pub:FAKEamqp_R4bb1t@mq-staging.saltpan.internal:5671/orders-vhost\nspring.data.cassandra.contact-points=10.17.4.11:9042,10.17.4.12:9042\nspring.data.cassandra.username=cass_app\nspring.data.cassandra.password=FAKEc4ss4ndra#App\nspring.elasticsearch.uris=https://elastic:FAKEel4stic_9Zq@es-staging.saltpan.internal:9200\nspring.neo4j.uri=neo4j+s://graph-staging.saltpan.internal:7687\nspring.neo4j.authentication.username=neo4j\nspring.neo4j.authentication.password=FAKEne04j-Gr4ph\nspring.kafka.properties.sasl.mechanism=SCRAM-SHA-512\nspring.kafka.properties.security.protocol=SASL_SSL\nspring.kafka.properties.sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username=\"iwisniewska\" password=\"FAKEk4fk4-Ilona!\";\nspring.kafka.bootstrap-servers=kafka-0.saltpan.internal:9093,kafka-1.saltpan.internal:9093\ncockroach.url=postgresql://ledger_rw:FAKEr04ch@crdb-staging.saltpan.internal:26257/ledger?sslmode=verify-full&sslrootcert=/certs/ca.crt\nsqlite.local.path=/home/iwisniewska/scratch/ilona_wisniewska_customers_export.db\nmemcached.servers=10.17.6.2:11211\nldap.bind.dn=cn=svc-orders,ou=apps,dc=saltpan,dc=example\nldap.bind.password=${LDAP_BIND_PASSWORD}\nsftp.partner.url=sftp://partner_saltpan@sftp.partner-logistics.example:22/inbound\nsftp.partner.key=/run/secrets/partner_ed25519\nmanagement.endpoints.web.exposure.include=health,info,prometheus\nlogging.level.org.apache.kafka=WARN\n\n// wiki comment by Tomasz Żak: the personal Kafka creds of iwisniewska must not be in the shared config;\n// she can be reached at ilona.wisniewska@saltpan.example or 22 555 01 64 to swap them for a service user.",
+  "mask": [
+   [
+    "Ilona Wiśniewska",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKEamqp_R4bb1t",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEc4ss4ndra#App",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEel4stic_9Zq",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEne04j-Gr4ph",
+    0,
+    "SECRET"
+   ],
+   [
+    "iwisniewska",
+    0,
+    "USERNAME"
+   ],
+   [
+    "FAKEk4fk4-Ilona!",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEr04ch",
+    0,
+    "SECRET"
+   ],
+   [
+    "ilona_wisniewska",
+    0,
+    "PERSON"
+   ],
+   [
+    "Tomasz Żak",
+    0,
+    "PERSON"
+   ],
+   [
+    "ilona.wisniewska@saltpan.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "22 555 01 64",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "application-staging.properties",
+    0
+   ],
+   [
+    "orders_pub",
+    0
+   ],
+   [
+    "mq-staging.saltpan.internal:5671/orders-vhost",
+    0
+   ],
+   [
+    "10.17.4.11:9042,10.17.4.12:9042",
+    0
+   ],
+   [
+    "cass_app",
+    0
+   ],
+   [
+    "es-staging.saltpan.internal:9200",
+    0
+   ],
+   [
+    "neo4j+s://graph-staging.saltpan.internal:7687",
+    0
+   ],
+   [
+    "SCRAM-SHA-512",
+    0
+   ],
+   [
+    "SASL_SSL",
+    0
+   ],
+   [
+    "org.apache.kafka.common.security.scram.ScramLoginModule",
+    0
+   ],
+   [
+    "kafka-0.saltpan.internal:9093",
+    0
+   ],
+   [
+    "ledger_rw",
+    0
+   ],
+   [
+    "sslmode=verify-full&sslrootcert=/certs/ca.crt",
+    0
+   ],
+   [
+    "10.17.6.2:11211",
+    0
+   ],
+   [
+    "cn=svc-orders,ou=apps,dc=saltpan,dc=example",
+    0
+   ],
+   [
+    "${LDAP_BIND_PASSWORD}",
+    0
+   ],
+   [
+    "partner_saltpan",
+    0
+   ],
+   [
+    "/run/secrets/partner_ed25519",
+    0
+   ],
+   [
+    "health,info,prometheus",
+    0
+   ],
+   [
+    "logging.level.org.apache.kafka=WARN",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-20",
+  "domain": "go_panic_node_stack",
+  "text": "time=2026-11-12T04:55:18.201+05:30 level=ERROR msg=\"handler panic\" svc=kyc-gateway version=v0.19.3 req_id=kgw-3c9e1a7b caller=203.0.113.66 user=aadhya.iyer\npanic: runtime error: invalid memory address or nil pointer dereference\n[signal SIGSEGV: segmentation violation code=0x1 addr=0x18 pc=0x9a3f21]\n\ngoroutine 4127 [running]:\ngithub.com/finwharf/kyc-gateway/internal/pan.(*Verifier).Check(0x0, {0xc0004a2f00, 0xa}, {0xc0004a2f10, 0x10})\n\t/src/internal/pan/verifier.go:88 +0x41\ngithub.com/finwharf/kyc-gateway/internal/http.(*Handler).VerifyPAN(0xc000188a20, {0x1b2e4c0, 0xc0003d6380}, 0xc00052a000)\n\t/src/internal/http/handlers.go:212 +0x2f7\nnet/http.HandlerFunc.ServeHTTP(...)\n\t/usr/local/go/src/net/http/server.go:2220\ncreated by net/http.(*Server).Serve in goroutine 1\n\t/usr/local/go/src/net/http/server.go:3360 +0x485\nrequest dump: POST /v1/pan/verify {\"pan\":\"ABCPI1234F\",\"name\":\"Aadhya Iyer\",\"dob\":\"12/08/1996\",\"mobile\":\"+91 98765 55012\",\"consent\":true}\nheaders dump: X-Partner-Key=pk_partner_FAKE_Mq8xT2vL9pR4wZ7n; X-Trace=kgw-3c9e1a7b\n\n---- downstream node service (pan-cache) at the same time ----\nError: connect ECONNREFUSED 10.70.1.8:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)\n    at RedisClient.connect (/app/node_modules/@redis/client/dist/lib/client/index.js:412:19)\n    at async PanCache.get (/app/src/panCache.js:41:5) {\n  errno: -111,\n  code: 'ECONNREFUSED',\n  syscall: 'connect',\n  address: '10.70.1.8',\n  port: 6379,\n  config: { url: 'redis://default:FAKEredisPanCache01@10.70.1.8:6379/4', name: 'pan-cache', pingInterval: 10000 }\n}\nNode.js v22.11.0\n\n# Incident INC-5520 (Arjun Mehta): nil verifier after config reload; PAN + DOB leaked into logs, purge requested.",
+  "mask": [
+   [
+    "2026-11-12",
+    0,
+    "DATE"
+   ],
+   [
+    "203.0.113.66",
+    0,
+    "IP"
+   ],
+   [
+    "aadhya.iyer",
+    0,
+    "USERNAME"
+   ],
+   [
+    "ABCPI1234F",
+    0,
+    "ID"
+   ],
+   [
+    "Aadhya Iyer",
+    0,
+    "PERSON"
+   ],
+   [
+    "12/08/1996",
+    0,
+    "DOB"
+   ],
+   [
+    "+91 98765 55012",
+    0,
+    "PHONE"
+   ],
+   [
+    "pk_partner_FAKE_Mq8xT2vL9pR4wZ7n",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEredisPanCache01",
+    0,
+    "SECRET"
+   ],
+   [
+    "Arjun Mehta",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "level=ERROR",
+    0
+   ],
+   [
+    "svc=kyc-gateway",
+    0
+   ],
+   [
+    "version=v0.19.3",
+    0
+   ],
+   [
+    "kgw-3c9e1a7b",
+    0
+   ],
+   [
+    "invalid memory address or nil pointer dereference",
+    0
+   ],
+   [
+    "SIGSEGV: segmentation violation",
+    0
+   ],
+   [
+    "goroutine 4127 [running]",
+    0
+   ],
+   [
+    "/src/internal/pan/verifier.go:88 +0x41",
+    0
+   ],
+   [
+    "/usr/local/go/src/net/http/server.go:2220",
+    0
+   ],
+   [
+    "POST /v1/pan/verify",
+    0
+   ],
+   [
+    "\"consent\":true",
+    0
+   ],
+   [
+    "ECONNREFUSED 10.70.1.8:6379",
+    0
+   ],
+   [
+    "node:net:1610:16",
+    0
+   ],
+   [
+    "/app/node_modules/@redis/client/dist/lib/client/index.js:412:19",
+    0
+   ],
+   [
+    "errno: -111",
+    0
+   ],
+   [
+    "pingInterval: 10000",
+    0
+   ],
+   [
+    "Node.js v22.11.0",
+    0
+   ],
+   [
+    "INC-5520",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-21",
+  "domain": "ios_crash_telemetry",
+  "text": "Incident Identifier: 5E2B7C1A-9D3F-4A8E-B6C0-1F2E3D4C5B6A\nCrashReporter Key:   a91f3c7e2b5d8f04c6a7e9b1d3f5a2c8e0b4d6f1\nHardware Model:      iPhone16,2\nProcess:             Lumio [3318]\nPath:                /private/var/containers/Bundle/Application/7C4D2E1F-0A9B-4C8D-9E7F-6A5B4C3D2E1F/Lumio.app/Lumio\nIdentifier:          com.lumio.photos\nVersion:             12.6.1 (12601.4)\nCode Type:           ARM-64 (Native)\nDate/Time:           2026-11-08 21:14:52.3310 +1300\nLaunch Time:         2026-11-08 21:14:40.1022 +1300\nOS Version:          iPhone OS 18.1.1 (22B91)\nException Type:  EXC_BAD_ACCESS (SIGSEGV)\nException Codes: KERN_INVALID_ADDRESS at 0x0000000000000010\nTriggered by Thread:  4\n\nThread 4 Crashed:\n0   Lumio            0x0000000102f4a1c8 SyncEngine.upload(album:) + 712 (SyncEngine.swift:233)\n1   Lumio            0x0000000102f49e30 closure #1 in SyncEngine.flush() + 96 (SyncEngine.swift:180)\n2   libdispatch.dylib 0x00000001a1c2e3f8 _dispatch_call_block_and_release + 32\n\nBinary Images:\n0x102d38000 - 0x10363ffff Lumio arm64 <8f3a1c9e2b7d4f05a6c8e1b3d9f7a2c4> /private/var/containers/Bundle/Application/7C4D2E1F-0A9B-4C8D-9E7F-6A5B4C3D2E1F/Lumio.app/Lumio\n\n--- attached app state (Lumio diagnostics, user opted in) ---\nidfv: 3B9F6E21-C47A-4D8B-A1E5-92F0C3D7B864\nidfa: 00000000-0000-0000-0000-000000000000 (ATT denied)\napns_token: 9f8e7d6c5b4a39281706f5e4d3c2b1a0f9e8d7c6b5a4938271605f4e3d2c1b0a\naccount: {\"uid\":\"lum_4471028\",\"name\":\"Kahurangi Te Rangi\",\"email\":\"kahu.terangi@kiwimail.example\",\"plan\":\"family\",\"storage_gb\":200}\nlast_album: \"Kahurangi_and_Mere_wedding_2026\"\nnetwork: wifi, ip 192.0.2.250, carrier \"Spark NZ\", mcc 530 mnc 05\nlocale: en_NZ  timezone: Pacific/Auckland  low_power: false  disk_free_mb: 3311\nbuild_flags: {\"sync_v3\": true, \"heic_transcode\": \"server\"}",
+  "mask": [
+   [
+    "a91f3c7e2b5d8f04c6a7e9b1d3f5a2c8e0b4d6f1",
+    0,
+    "DEVICE"
+   ],
+   [
+    "2026-11-08",
+    0,
+    "DATE"
+   ],
+   [
+    "3B9F6E21-C47A-4D8B-A1E5-92F0C3D7B864",
+    0,
+    "DEVICE"
+   ],
+   [
+    "9f8e7d6c5b4a39281706f5e4d3c2b1a0f9e8d7c6b5a4938271605f4e3d2c1b0a",
+    0,
+    "SECRET"
+   ],
+   [
+    "lum_4471028",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Kahurangi Te Rangi",
+    0,
+    "PERSON"
+   ],
+   [
+    "kahu.terangi@kiwimail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Kahurangi_and_Mere",
+    0,
+    "PERSON"
+   ],
+   [
+    "192.0.2.250",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "5E2B7C1A-9D3F-4A8E-B6C0-1F2E3D4C5B6A",
+    0
+   ],
+   [
+    "iPhone16,2",
+    0
+   ],
+   [
+    "Lumio [3318]",
+    0
+   ],
+   [
+    "com.lumio.photos",
+    0
+   ],
+   [
+    "12.6.1 (12601.4)",
+    0
+   ],
+   [
+    "ARM-64 (Native)",
+    0
+   ],
+   [
+    "iPhone OS 18.1.1 (22B91)",
+    0
+   ],
+   [
+    "EXC_BAD_ACCESS (SIGSEGV)",
+    0
+   ],
+   [
+    "KERN_INVALID_ADDRESS at 0x0000000000000010",
+    0
+   ],
+   [
+    "SyncEngine.swift:233",
+    0
+   ],
+   [
+    "_dispatch_call_block_and_release",
+    0
+   ],
+   [
+    "<8f3a1c9e2b7d4f05a6c8e1b3d9f7a2c4>",
+    0
+   ],
+   [
+    "00000000-0000-0000-0000-000000000000",
+    0
+   ],
+   [
+    "(ATT denied)",
+    0
+   ],
+   [
+    "\"plan\":\"family\"",
+    0
+   ],
+   [
+    "Spark NZ",
+    0
+   ],
+   [
+    "mcc 530 mnc 05",
+    0
+   ],
+   [
+    "Pacific/Auckland",
+    0
+   ],
+   [
+    "\"heic_transcode\": \"server\"",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-22",
+  "domain": "segment_batch",
+  "text": "POST /v1/batch HTTP/1.1\nHost: events.tally-analytics.example\nAuthorization: Basic RkFLRV93cml0ZUtleV9xOUxtMlp4N1J0MFZiOg==\nContent-Type: application/json\nUser-Agent: analytics-node/2.1.2\n\n{\n  \"batch\": [\n    {\n      \"type\": \"identify\",\n      \"messageId\": \"ajs-next-1731822001-7f3e1a9c\",\n      \"userId\": \"u-20441987\",\n      \"anonymousId\": \"c1f0e9d8-b7a6-4f5e-9d3c-2b1a0f9e8d7c\",\n      \"traits\": {\"name\": \"Søren Kierkby\", \"email\": \"soren.kierkby@danmail.example\", \"phone\": \"+45 20 55 50 11\", \"birthday\": \"1992-04-18\", \"company\": {\"id\": \"co_381\", \"plan\": \"growth\"}},\n      \"context\": {\"ip\": \"198.51.100.104\", \"locale\": \"da-DK\", \"library\": {\"name\": \"analytics-node\", \"version\": \"2.1.2\"}},\n      \"timestamp\": \"2026-11-17T06:20:01.004Z\"\n    },\n    {\n      \"type\": \"track\",\n      \"event\": \"Subscription Upgraded\",\n      \"messageId\": \"ajs-next-1731822002-0b2d4f6a\",\n      \"userId\": \"u-20441987\",\n      \"properties\": {\"from_plan\": \"starter\", \"to_plan\": \"growth\", \"mrr_delta\": 49, \"currency\": \"DKK\", \"coupon\": \"AUTUMN15\"},\n      \"context\": {\n        \"campaign\": {\"source\": \"linkedin\", \"medium\": \"paid_social\", \"name\": \"q4_upgrade_push\", \"content\": \"carousel_b\"},\n        \"page\": {\"url\": \"https://app.tally-analytics.example/billing/upgrade?ref=nav\", \"referrer\": \"https://www.linkedin.example/\"},\n        \"device\": {\"type\": \"ios\", \"id\": \"E7D3A9C1-4B2F-4E6A-8C0D-1F9B3A5C7E2D\", \"advertisingId\": \"6D92F4C0-3A1B-4E7F-9C8D-2B5A0E1F3C4D\", \"adTrackingEnabled\": true, \"token\": \"FAKEapnsTok0a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b\"},\n        \"app\": {\"name\": \"Tally\", \"version\": \"4.18.0\", \"build\": \"4180027\"},\n        \"os\": {\"name\": \"iOS\", \"version\": \"18.1\"}\n      },\n      \"timestamp\": \"2026-11-17T06:20:02.311Z\"\n    }\n  ],\n  \"sentAt\": \"2026-11-17T06:20:03.000Z\"\n}\n\nHTTP/1.1 200 OK\nContent-Type: application/json\nX-Tally-Ingest: ing-eu1-04\n\n{\"success\": true}",
+  "mask": [
+   [
+    "RkFLRV93cml0ZUtleV9xOUxtMlp4N1J0MFZiOg==",
+    0,
+    "SECRET"
+   ],
+   [
+    "u-20441987",
+    0,
+    "USERNAME"
+   ],
+   [
+    "c1f0e9d8-b7a6-4f5e-9d3c-2b1a0f9e8d7c",
+    0,
+    "DEVICE"
+   ],
+   [
+    "Søren Kierkby",
+    0,
+    "PERSON"
+   ],
+   [
+    "soren.kierkby@danmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+45 20 55 50 11",
+    0,
+    "PHONE"
+   ],
+   [
+    "1992-04-18",
+    0,
+    "DOB"
+   ],
+   [
+    "198.51.100.104",
+    0,
+    "IP"
+   ],
+   [
+    "2026-11-17",
+    0,
+    "DATE"
+   ],
+   [
+    "E7D3A9C1-4B2F-4E6A-8C0D-1F9B3A5C7E2D",
+    0,
+    "DEVICE"
+   ],
+   [
+    "6D92F4C0-3A1B-4E7F-9C8D-2B5A0E1F3C4D",
+    0,
+    "DEVICE"
+   ],
+   [
+    "FAKEapnsTok0a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "POST /v1/batch HTTP/1.1",
+    0
+   ],
+   [
+    "events.tally-analytics.example",
+    0
+   ],
+   [
+    "analytics-node/2.1.2",
+    0
+   ],
+   [
+    "\"type\": \"identify\"",
+    0
+   ],
+   [
+    "ajs-next-1731822001-7f3e1a9c",
+    0
+   ],
+   [
+    "co_381",
+    0
+   ],
+   [
+    "\"locale\": \"da-DK\"",
+    0
+   ],
+   [
+    "Subscription Upgraded",
+    0
+   ],
+   [
+    "\"currency\": \"DKK\"",
+    0
+   ],
+   [
+    "AUTUMN15",
+    0
+   ],
+   [
+    "\"medium\": \"paid_social\"",
+    0
+   ],
+   [
+    "q4_upgrade_push",
+    0
+   ],
+   [
+    "carousel_b",
+    0
+   ],
+   [
+    "https://app.tally-analytics.example/billing/upgrade?ref=nav",
+    0
+   ],
+   [
+    "\"adTrackingEnabled\": true",
+    0
+   ],
+   [
+    "\"build\": \"4180027\"",
+    0
+   ],
+   [
+    "ing-eu1-04",
+    0
+   ],
+   [
+    "{\"success\": true}",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-23",
+  "domain": "iso20022_payout",
+  "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- payout batch generated by marketplace-payouts v3.2.0 for seller settlements, run PO-RUN-20261116-02 -->\n<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pain.001.001.09\">\n  <CstmrCdtTrfInitn>\n    <GrpHdr>\n      <MsgId>MKT-PAYOUT-7781204</MsgId>\n      <CreDtTm>2026-11-16T18:00:04</CreDtTm>\n      <NbOfTxs>2</NbOfTxs>\n      <CtrlSum>2391.75</CtrlSum>\n      <InitgPty><Nm>Craftnest Marketplace GmbH</Nm></InitgPty>\n    </GrpHdr>\n    <PmtInf>\n      <PmtInfId>PMT-INF-0091</PmtInfId>\n      <PmtMtd>TRF</PmtMtd>\n      <ReqdExctnDt><Dt>2026-11-18</Dt></ReqdExctnDt>\n      <Dbtr><Nm>Craftnest Marketplace GmbH</Nm></Dbtr>\n      <DbtrAcct><Id><IBAN>DE02100100109307118603</IBAN></Id></DbtrAcct>\n      <DbtrAgt><FinInstnId><BICFI>PBNKDEFFXXX</BICFI></FinInstnId></DbtrAgt>\n      <CdtTrfTxInf>\n        <PmtId><EndToEndId>E2E-SELLER-55102-NOV</EndToEndId></PmtId>\n        <Amt><InstdAmt Ccy=\"EUR\">1640.00</InstdAmt></Amt>\n        <Cdtr>\n          <Nm>Friederike Ostermann-Kühn</Nm>\n          <PstlAdr><AdrLine>Lindenstraße 27a</AdrLine><PstCd>04109</PstCd><TwnNm>Leipzig</TwnNm><Ctry>DE</Ctry></PstlAdr>\n        </Cdtr>\n        <CdtrAcct><Id><IBAN>DE75512108001245126199</IBAN></Id></CdtrAcct>\n        <RmtInf><Ustrd>Craftnest payout seller S-55102 period 2026-11-01..2026-11-15</Ustrd></RmtInf>\n      </CdtTrfTxInf>\n      <CdtTrfTxInf>\n        <PmtId><EndToEndId>E2E-SELLER-60871-NOV</EndToEndId></PmtId>\n        <Amt><InstdAmt Ccy=\"EUR\">751.75</InstdAmt></Amt>\n        <Cdtr><Nm>Matteo Bianchi-Rossetti</Nm></Cdtr>\n        <CdtrAcct><Id><IBAN>IT60X0542811101000000123456</IBAN></Id></CdtrAcct>\n        <RmtInf><Ustrd>Craftnest payout seller S-60871 period 2026-11-01..2026-11-15</Ustrd></RmtInf>\n      </CdtTrfTxInf>\n    </PmtInf>\n  </CstmrCdtTrfInitn>\n</Document>\n<!-- ops: seller S-60871 changed bank details by phone (+39 06 5550 2231) on 12.11.2026; verified by Lea Hoffmann -->",
+  "mask": [
+   [
+    "2026-11-16",
+    0,
+    "DATE"
+   ],
+   [
+    "20261116",
+    0,
+    "DATE"
+   ],
+   [
+    "2026-11-18",
+    0,
+    "DATE"
+   ],
+   [
+    "Friederike Ostermann-Kühn",
+    0,
+    "PERSON"
+   ],
+   [
+    "Lindenstraße 27a",
+    0,
+    "ADDRESS"
+   ],
+   [
+    "DE75512108001245126199",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "S-55102",
+    0,
+    "ID"
+   ],
+   [
+    "2026-11-01",
+    0,
+    "DATE"
+   ],
+   [
+    "2026-11-15",
+    0,
+    "DATE"
+   ],
+   [
+    "Matteo Bianchi-Rossetti",
+    0,
+    "PERSON"
+   ],
+   [
+    "IT60X0542811101000000123456",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "S-60871",
+    0,
+    "ID"
+   ],
+   [
+    "+39 06 5550 2231",
+    0,
+    "PHONE"
+   ],
+   [
+    "12.11.2026",
+    0,
+    "DATE"
+   ],
+   [
+    "Lea Hoffmann",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "marketplace-payouts v3.2.0",
+    0
+   ],
+   [
+    "urn:iso:std:iso:20022:tech:xsd:pain.001.001.09",
+    0
+   ],
+   [
+    "MKT-PAYOUT-7781204",
+    0
+   ],
+   [
+    "<NbOfTxs>2</NbOfTxs>",
+    0
+   ],
+   [
+    "<CtrlSum>2391.75</CtrlSum>",
+    0
+   ],
+   [
+    "Craftnest Marketplace GmbH",
+    0
+   ],
+   [
+    "PMT-INF-0091",
+    0
+   ],
+   [
+    "<PmtMtd>TRF</PmtMtd>",
+    0
+   ],
+   [
+    "DE02100100109307118603",
+    0
+   ],
+   [
+    "PBNKDEFFXXX",
+    0
+   ],
+   [
+    "E2E-SELLER-55102-NOV",
+    0
+   ],
+   [
+    "<InstdAmt Ccy=\"EUR\">1640.00</InstdAmt>",
+    0
+   ],
+   [
+    "<PstCd>04109</PstCd>",
+    0
+   ],
+   [
+    "<TwnNm>Leipzig</TwnNm>",
+    0
+   ],
+   [
+    "<Ctry>DE</Ctry>",
+    0
+   ],
+   [
+    "E2E-SELLER-60871-NOV",
+    0
+   ],
+   [
+    "751.75",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-24",
+  "domain": "idp_system_log",
+  "text": "[\n  {\n    \"uuid\": \"7f1c9e2a-4b3d-11ef-9a5c-0e8d7c6b5a49\",\n    \"published\": \"2026-11-13T23:58:41.207Z\",\n    \"eventType\": \"user.session.start\",\n    \"version\": \"0\",\n    \"severity\": \"INFO\",\n    \"displayMessage\": \"User login to Okra ID\",\n    \"actor\": {\"id\": \"00uFAKE7x2Lq9Wm4Rz5d7\", \"type\": \"User\", \"alternateId\": \"imogen.blackwood@thistledown.example\", \"displayName\": \"Imogen Blackwood\"},\n    \"client\": {\n      \"userAgent\": {\"rawUserAgent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0\", \"os\": \"Windows 10\", \"browser\": \"FIREFOX\"},\n      \"zone\": \"null\",\n      \"device\": \"Computer\",\n      \"ipAddress\": \"203.0.113.118\",\n      \"geographicalContext\": {\"city\": \"Edinburgh\", \"state\": \"Scotland\", \"country\": \"United Kingdom\", \"postalCode\": \"EH3\", \"geolocation\": {\"lat\": 55.9533, \"lon\": -3.1883}}\n    },\n    \"authenticationContext\": {\"authenticationProvider\": \"OKTA_AUTHENTICATION_PROVIDER\", \"credentialType\": \"PASSWORD\", \"externalSessionId\": \"102FAKEsessQx9Lm2Zv7Rt0Wb\"},\n    \"outcome\": {\"result\": \"FAILURE\", \"reason\": \"INVALID_CREDENTIALS\"},\n    \"securityContext\": {\"asNumber\": 64496, \"asOrg\": \"example isp\", \"isProxy\": false},\n    \"debugContext\": {\"debugData\": {\"requestId\": \"ZzVFAKE9kL2qXmN4AAAD1c\", \"requestUri\": \"/api/v1/authn\", \"threatSuspected\": \"false\", \"loginAttempt\": \"imogen.blackwood@thistledown.example / pw: Thistle&Heather1\"}},\n    \"transaction\": {\"type\": \"WEB\", \"id\": \"ZzVFAKE9kL2qXmN4AAAD1c\"},\n    \"target\": null\n  },\n  {\n    \"uuid\": \"8a2d0f3b-4b3d-11ef-9a5c-0e8d7c6b5a49\",\n    \"published\": \"2026-11-13T23:59:02.881Z\",\n    \"eventType\": \"user.mfa.factor.activate\",\n    \"severity\": \"INFO\",\n    \"actor\": {\"id\": \"00uFAKE7x2Lq9Wm4Rz5d7\", \"type\": \"User\", \"displayName\": \"Imogen Blackwood\"},\n    \"target\": [{\"id\": \"sms7FAKE0abc\", \"type\": \"Factor\", \"displayName\": \"SMS Factor\", \"detailEntry\": {\"phoneNumber\": \"+44 131 496 0587\"}}],\n    \"outcome\": {\"result\": \"SUCCESS\"}\n  }\n]",
+  "mask": [
+   [
+    "2026-11-13",
+    0,
+    "DATE"
+   ],
+   [
+    "00uFAKE7x2Lq9Wm4Rz5d7",
+    0,
+    "USERNAME"
+   ],
+   [
+    "imogen.blackwood@thistledown.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Imogen Blackwood",
+    0,
+    "PERSON"
+   ],
+   [
+    "203.0.113.118",
+    0,
+    "IP"
+   ],
+   [
+    "102FAKEsessQx9Lm2Zv7Rt0Wb",
+    0,
+    "SECRET"
+   ],
+   [
+    "Thistle&Heather1",
+    0,
+    "SECRET"
+   ],
+   [
+    "+44 131 496 0587",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "7f1c9e2a-4b3d-11ef-9a5c-0e8d7c6b5a49",
+    0
+   ],
+   [
+    "user.session.start",
+    0
+   ],
+   [
+    "\"severity\": \"INFO\"",
+    0
+   ],
+   [
+    "User login to Okra ID",
+    0
+   ],
+   [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0",
+    0
+   ],
+   [
+    "\"browser\": \"FIREFOX\"",
+    0
+   ],
+   [
+    "\"city\": \"Edinburgh\"",
+    0
+   ],
+   [
+    "\"country\": \"United Kingdom\"",
+    0
+   ],
+   [
+    "\"postalCode\": \"EH3\"",
+    0
+   ],
+   [
+    "OKTA_AUTHENTICATION_PROVIDER",
+    0
+   ],
+   [
+    "\"credentialType\": \"PASSWORD\"",
+    0
+   ],
+   [
+    "INVALID_CREDENTIALS",
+    0
+   ],
+   [
+    "\"asNumber\": 64496",
+    0
+   ],
+   [
+    "ZzVFAKE9kL2qXmN4AAAD1c",
+    0
+   ],
+   [
+    "/api/v1/authn",
+    0
+   ],
+   [
+    "user.mfa.factor.activate",
+    0
+   ],
+   [
+    "sms7FAKE0abc",
+    0
+   ],
+   [
+    "SMS Factor",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-25",
+  "domain": "ad_ldif_modify",
+  "text": "# onboarding.ldif -- applied with: ldapmodify -H ldaps://dc01.corp.birchwood.example -D \"CN=svc-onboard,OU=Service Accounts,DC=corp,DC=birchwood,DC=example\" -y /etc/onboard/bind.pw -f onboarding.ldif\ndn: CN=lferreirasantos,OU=Finance,OU=Users,DC=corp,DC=birchwood,DC=example\nchangetype: add\nobjectClass: top\nobjectClass: person\nobjectClass: organizationalPerson\nobjectClass: user\ngivenName: Leocadia\nsn: Ferreira-Santos\ndisplayName: Leocadia Ferreira-Santos\nsAMAccountName: lferreirasantos\nuserPrincipalName: lferreirasantos@corp.birchwood.example\nmail: leocadia.fs@birchwood.example\nemployeeID: 0044917\nmobile: +55 11 95555-0138\ntitle: Senior Accountant\ndepartment: Finance\nphysicalDeliveryOfficeName: São Paulo - Av. Paulista\nunicodePwd:: IgBGAEEASwBFAC0AVwBlAGwAYwBvAG0AZQAhADIAMAAyADYAIgA=\nuserAccountControl: 512\npwdLastSet: 0\nmanager: CN=Gustavo Albuquerque,OU=Finance,OU=Users,DC=corp,DC=birchwood,DC=example\n\ndn: CN=FIN-Payables-RW,OU=Groups,DC=corp,DC=birchwood,DC=example\nchangetype: modify\nadd: member\nmember: CN=lferreirasantos,OU=Finance,OU=Users,DC=corp,DC=birchwood,DC=example\n-\n\n# result\nadding new entry \"CN=lferreirasantos,OU=Finance,OU=Users,DC=corp,DC=birchwood,DC=example\"\nmodifying entry \"CN=FIN-Payables-RW,OU=Groups,DC=corp,DC=birchwood,DC=example\"\n# Initial password told to her manager by phone; she must change it at first logon (pwdLastSet: 0).",
+  "mask": [
+   [
+    "Leocadia Ferreira-Santos",
+    0,
+    "PERSON"
+   ],
+   [
+    "Leocadia",
+    0,
+    "PERSON"
+   ],
+   [
+    "Ferreira-Santos",
+    0,
+    "PERSON"
+   ],
+   [
+    "lferreirasantos",
+    0,
+    "USERNAME"
+   ],
+   [
+    "leocadia.fs@birchwood.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "0044917",
+    0,
+    "ID"
+   ],
+   [
+    "+55 11 95555-0138",
+    0,
+    "PHONE"
+   ],
+   [
+    "IgBGAEEASwBFAC0AVwBlAGwAYwBvAG0AZQAhADIAMAAyADYAIgA=",
+    0,
+    "SECRET"
+   ],
+   [
+    "Gustavo Albuquerque",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "ldaps://dc01.corp.birchwood.example",
+    0
+   ],
+   [
+    "CN=svc-onboard,OU=Service Accounts,DC=corp,DC=birchwood,DC=example",
+    0
+   ],
+   [
+    "/etc/onboard/bind.pw",
+    0
+   ],
+   [
+    "OU=Finance,OU=Users,DC=corp,DC=birchwood,DC=example",
+    0
+   ],
+   [
+    "changetype: add",
+    0
+   ],
+   [
+    "objectClass: organizationalPerson",
+    0
+   ],
+   [
+    "title: Senior Accountant",
+    0
+   ],
+   [
+    "department: Finance",
+    0
+   ],
+   [
+    "São Paulo - Av. Paulista",
+    0
+   ],
+   [
+    "userAccountControl: 512",
+    0
+   ],
+   [
+    "pwdLastSet: 0",
+    0
+   ],
+   [
+    "CN=FIN-Payables-RW,OU=Groups,DC=corp,DC=birchwood,DC=example",
+    0
+   ],
+   [
+    "add: member",
+    0
+   ],
+   [
+    "changetype: modify",
+    0
+   ],
+   [
+    "objectClass: user",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-26",
+  "domain": "sshd_authlog_keys",
+  "text": "$ sudo grep -E 'sshd\\[' /var/log/auth.log | tail -n 9\n2026-11-15T02:11:40.118502+00:00 git-mirror-1 sshd[90112]: Invalid user admin from 192.0.2.140 port 50214\n2026-11-15T02:11:41.661030+00:00 git-mirror-1 sshd[90112]: Connection closed by invalid user admin 192.0.2.140 port 50214 [preauth]\n2026-11-15T07:48:03.554210+00:00 git-mirror-1 sshd[91877]: Accepted publickey for ahmadi.parisa from 198.51.100.48 port 61022 ssh2: ED25519 SHA256:pR8vT2xL9qW4mN7bK1cZ5yH3jD0sF6gA2eU8iO4lP0k\n2026-11-15T07:48:03.561877+00:00 git-mirror-1 sshd[91877]: pam_unix(sshd:session): session opened for user ahmadi.parisa(uid=1007) by ahmadi.parisa(uid=0)\n2026-11-15T07:52:19.300441+00:00 git-mirror-1 sshd[91901]: Failed password for ahmadi.parisa from 198.51.100.48 port 61040 ssh2\n2026-11-15T07:52:22.004130+00:00 git-mirror-1 sshd[91901]: Accepted password for ahmadi.parisa from 198.51.100.48 port 61040 ssh2\n2026-11-15T07:58:00.000913+00:00 git-mirror-1 sshd[91877]: pam_unix(sshd:session): session closed for user ahmadi.parisa\n2026-11-15T08:00:01.221445+00:00 git-mirror-1 sshd[92010]: Accepted publickey for git from 10.3.0.21 port 40122 ssh2: RSA SHA256:Zz4kQ8mL1xV7nR3tW9bY2cH6jF0dS5gA8eU1iO7lP3q\n2026-11-15T08:00:03.912800+00:00 git-mirror-1 sshd[92010]: Received disconnect from 10.3.0.21 port 40122:11: disconnected by user\n\n$ ssh-keygen -lf ~/.ssh/id_ed25519.pub\n256 SHA256:pR8vT2xL9qW4mN7bK1cZ5yH3jD0sF6gA2eU8iO4lP0k parisa.ahmadi@stonecrest.example (ED25519)\n\n$ cat ~/.ssh/known_hosts | head -2\ngit-mirror-1.stonecrest.internal,10.3.0.9 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFAKEhostkeyQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8=\n|1|FAKEhashedhost0aBcDeFgHiJk=|FAKEhmacLmNoPqRsTuVwXyZ01= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFAKEhostEd25519Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5\n\n$ head -4 ~/.ssh/id_ed25519\n-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACFAKEprivQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2\nFAKEprivatekeybodyAAAAECq9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk5Lz8==\n-----END OPENSSH PRIVATE KEY-----\n# ^ pasted by Parisa Ahmadi into ticket SEC-902 by mistake; key revoked, new one issued.",
+  "mask": [
+   [
+    "2026-11-15",
+    0,
+    "DATE"
+   ],
+   [
+    "192.0.2.140",
+    0,
+    "IP"
+   ],
+   [
+    "ahmadi.parisa",
+    0,
+    "USERNAME"
+   ],
+   [
+    "198.51.100.48",
+    0,
+    "IP"
+   ],
+   [
+    "parisa.ahmadi@stonecrest.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACFAKEprivQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2\nFAKEprivatekeybodyAAAAECq9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk5Lz8==",
+    0,
+    "SECRET"
+   ],
+   [
+    "Parisa Ahmadi",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "/var/log/auth.log",
+    0
+   ],
+   [
+    "git-mirror-1",
+    0
+   ],
+   [
+    "Invalid user admin",
+    0
+   ],
+   [
+    "port 50214",
+    0
+   ],
+   [
+    "[preauth]",
+    0
+   ],
+   [
+    "SHA256:pR8vT2xL9qW4mN7bK1cZ5yH3jD0sF6gA2eU8iO4lP0k",
+    0
+   ],
+   [
+    "pam_unix(sshd:session)",
+    0
+   ],
+   [
+    "(uid=1007)",
+    0
+   ],
+   [
+    "Accepted publickey for git from 10.3.0.21",
+    0
+   ],
+   [
+    "SHA256:Zz4kQ8mL1xV7nR3tW9bY2cH6jF0dS5gA8eU1iO7lP3q",
+    0
+   ],
+   [
+    "disconnected by user",
+    0
+   ],
+   [
+    "(ED25519)",
+    0
+   ],
+   [
+    "git-mirror-1.stonecrest.internal,10.3.0.9",
+    0
+   ],
+   [
+    "ecdsa-sha2-nistp256",
+    0
+   ],
+   [
+    "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFAKEhostkeyQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8=",
+    0
+   ],
+   [
+    "-----BEGIN OPENSSH PRIVATE KEY-----",
+    0
+   ],
+   [
+    "SEC-902",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-27",
+  "domain": "certbot_csr",
+  "text": "$ sudo certbot certonly --nginx -d booking.marigold-vet.example -d www.marigold-vet.example -m dr.kowalewski@marigold-vet.example --agree-tos --no-eff-email\nSaving debug log to /var/log/letsencrypt/letsencrypt.log\nRequesting a certificate for booking.marigold-vet.example and www.marigold-vet.example\n\nSuccessfully received certificate.\nCertificate is saved at: /etc/letsencrypt/live/booking.marigold-vet.example/fullchain.pem\nKey is saved at:         /etc/letsencrypt/live/booking.marigold-vet.example/privkey.pem\nThis certificate expires on 2027-02-14.\nThese files will be updated when the certificate renews.\nCertbot has set up a scheduled task to automatically renew this certificate in the background.\n\n$ sudo cat /etc/letsencrypt/accounts/acme-v02.api.letsencrypt.example/directory/2f1c9e7a3b5d4f60818293a4b5c6d7e8/regr.json\n{\"body\": {\"contact\": [\"mailto:dr.kowalewski@marigold-vet.example\"], \"termsOfServiceAgreed\": true, \"key\": {\"kty\": \"RSA\", \"n\": \"uFAKEmodulusQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk5Lz8\", \"e\": \"AQAB\"}, \"status\": \"valid\"}, \"uri\": \"https://acme-v02.api.letsencrypt.example/acme/acct/1849920331\"}\n\n$ openssl req -new -key client.key -subj \"/C=PL/ST=Mazowieckie/L=Warszawa/O=Marigold Veterinary/OU=Reception/CN=Halina Kowalewska/emailAddress=h.kowalewska@marigold-vet.example\" -out halina-client.csr\n$ openssl req -in halina-client.csr -noout -text | grep -E 'Subject:|Public-Key|Signature Algorithm'\n        Subject: C = PL, ST = Mazowieckie, L = Warszawa, O = Marigold Veterinary, OU = Reception, CN = Halina Kowalewska, emailAddress = h.kowalewska@marigold-vet.example\n            Public-Key: (3072 bit)\n    Signature Algorithm: sha384WithRSAEncryption\n\n$ openssl pkcs12 -export -in halina-client.crt -inkey client.key -out halina-client.p12 -passout pass:FAKE-p12-Kl1n1ka\n$ sha256sum halina-client.p12\n4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce  halina-client.p12\n\n# Delivered to reception PC REC-PC-03 (MAC 3c:22:fb:91:0e:5d, user hkowalewska). p12 password sent by SMS to 601 555 274.",
+  "mask": [
+   [
+    "dr.kowalewski@marigold-vet.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2027-02-14",
+    0,
+    "DATE"
+   ],
+   [
+    "Halina Kowalewska",
+    0,
+    "PERSON"
+   ],
+   [
+    "h.kowalewska@marigold-vet.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "halina",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKE-p12-Kl1n1ka",
+    0,
+    "SECRET"
+   ],
+   [
+    "3c:22:fb:91:0e:5d",
+    0,
+    "DEVICE"
+   ],
+   [
+    "hkowalewska",
+    0,
+    "USERNAME"
+   ],
+   [
+    "601 555 274",
+    0,
+    "PHONE"
+   ]
+  ],
+  "keep": [
+   [
+    "certbot certonly --nginx",
+    0
+   ],
+   [
+    "booking.marigold-vet.example",
+    0
+   ],
+   [
+    "www.marigold-vet.example",
+    0
+   ],
+   [
+    "--agree-tos --no-eff-email",
+    0
+   ],
+   [
+    "/var/log/letsencrypt/letsencrypt.log",
+    0
+   ],
+   [
+    "Successfully received certificate.",
+    0
+   ],
+   [
+    "/etc/letsencrypt/live/booking.marigold-vet.example/fullchain.pem",
+    0
+   ],
+   [
+    "2f1c9e7a3b5d4f60818293a4b5c6d7e8",
+    0
+   ],
+   [
+    "\"termsOfServiceAgreed\": true",
+    0
+   ],
+   [
+    "uFAKEmodulusQx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga4Fe6Ku0Oi9Nl7Mx2Pz3Tn8Wq1Er5Ty7Ui9Op3As6Df0Gh2Jk5Lz8",
+    0
+   ],
+   [
+    "https://acme-v02.api.letsencrypt.example/acme/acct/1849920331",
+    0
+   ],
+   [
+    "/C=PL/ST=Mazowieckie/L=Warszawa/O=Marigold Veterinary/OU=Reception",
+    0
+   ],
+   [
+    "Public-Key: (3072 bit)",
+    0
+   ],
+   [
+    "sha384WithRSAEncryption",
+    0
+   ],
+   [
+    "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+    0
+   ],
+   [
+    "REC-PC-03",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-28",
+  "domain": "maven_gradle_cargo",
+  "text": "<!-- ~/.m2/settings.xml on build agent ba-linux-12 -->\n<settings>\n  <servers>\n    <server>\n      <id>nexus-releases</id>\n      <username>deploy-bot</username>\n      <password>{FAKEmvnEnc+Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga=}</password>\n    </server>\n    <server>\n      <id>nexus-snapshots</id>\n      <username>okeeffe.c</username>\n      <password>Shamrock_Rugby#2026</password>\n    </server>\n  </servers>\n  <mirrors><mirror><id>central-proxy</id><url>https://nexus.tollgate.example/repository/maven-public/</url><mirrorOf>*</mirrorOf></mirror></mirrors>\n</settings>\n\n$ ./gradlew publish --info | grep -E 'Uploading|BUILD'\nUploading tollgate-core-5.0.3.jar to https://nexus.tollgate.example/repository/maven-releases/com/tollgate/tollgate-core/5.0.3/tollgate-core-5.0.3.jar\nUploading tollgate-core-5.0.3.jar.sha256 (64 B)\nBUILD SUCCESSFUL in 1m 7s\n\n$ cat ~/.gradle/gradle.properties\norg.gradle.jvmargs=-Xmx4g -Dfile.encoding=UTF-8\nsigning.keyId=FAKE7A3C\nsigning.password=FAKEgpgPassphrase-Tollgate\nsigning.secretKeyRingFile=/home/ci/.gnupg/secring.gpg\nnexusUsername=deploy-bot\n\n$ cargo publish --registry tollgate --token cio_FAKE9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga\n    Updating `tollgate` index\n   Packaging tollgate-proto v0.14.2 (/work/crates/tollgate-proto)\n   Verifying tollgate-proto v0.14.2 (/work/crates/tollgate-proto)\n   Compiling prost v0.13.3\n    Finished `release` profile [optimized] target(s) in 22.81s\n   Uploading tollgate-proto v0.14.2 (/work/crates/tollgate-proto)\n   Published tollgate-proto v0.14.2 at registry `tollgate`\n\n# Cormac O'Keeffe: the snapshot creds are mine from before we had the bot, will delete today.",
+  "mask": [
+   [
+    "okeeffe.c",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Shamrock_Rugby#2026",
+    0,
+    "SECRET"
+   ],
+   [
+    "{FAKEmvnEnc+Qx9Lm2Zv7Rt0Wb3Yc8Jd1Hs5Ga=}",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEgpgPassphrase-Tollgate",
+    0,
+    "SECRET"
+   ],
+   [
+    "cio_FAKE9Lm2Zx7Rt0Vb3Yc8Jd1Hs5Ga",
+    0,
+    "SECRET"
+   ],
+   [
+    "Cormac O'Keeffe",
+    0,
+    "PERSON"
+   ]
+  ],
+  "keep": [
+   [
+    "ba-linux-12",
+    0
+   ],
+   [
+    "nexus-releases",
+    0
+   ],
+   [
+    "deploy-bot",
+    0
+   ],
+   [
+    "nexus-snapshots",
+    0
+   ],
+   [
+    "https://nexus.tollgate.example/repository/maven-public/",
+    0
+   ],
+   [
+    "<mirrorOf>*</mirrorOf>",
+    0
+   ],
+   [
+    "tollgate-core-5.0.3.jar",
+    0
+   ],
+   [
+    "(64 B)",
+    0
+   ],
+   [
+    "BUILD SUCCESSFUL in 1m 7s",
+    0
+   ],
+   [
+    "-Xmx4g -Dfile.encoding=UTF-8",
+    0
+   ],
+   [
+    "signing.keyId=FAKE7A3C",
+    0
+   ],
+   [
+    "/home/ci/.gnupg/secring.gpg",
+    0
+   ],
+   [
+    "--registry tollgate",
+    0
+   ],
+   [
+    "tollgate-proto v0.14.2",
+    0
+   ],
+   [
+    "prost v0.13.3",
+    0
+   ],
+   [
+    "`release` profile [optimized]",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-29",
+  "domain": "redis_kafka_console",
+  "text": "$ redis-cli -h 10.9.2.4 -p 6379 --user ops-ro --pass 'FAKEredisOps-ro!' MONITOR | head -n 9\nOK\n1795400110.004120 [0 10.9.5.17:51230] \"GET\" \"sess:FAKEsid_Lq2Zx7Rt0Vb3Yc8Jd1Hs\"\n1795400110.004410 [0 10.9.5.17:51230] \"EXPIRE\" \"sess:FAKEsid_Lq2Zx7Rt0Vb3Yc8Jd1Hs\" \"1800\"\n1795400110.118733 [0 10.9.5.18:40088] \"HSET\" \"user:profile:u77120\" \"name\" \"Thandiwe Mokoena\" \"email\" \"thandi.m@sunmail.example\" \"phone\" \"+27 82 555 0193\"\n1795400110.119002 [0 10.9.5.18:40088] \"SETEX\" \"otp:u77120\" \"300\" \"481902\"\n1795400110.250117 [0 10.9.5.17:51230] \"INCRBY\" \"ratelimit:login:198.51.100.252\" \"1\"\n1795400110.301445 [0 10.9.5.19:33010] \"PUBLISH\" \"cache-invalidate\" \"catalog:sku:BTL-OAK-750\"\n1795400110.411902 [0 10.9.5.17:51230] \"GET\" \"feature:checkout_v4\"\n1795400110.412001 [0 10.9.5.17:51230] \"ZADD\" \"leaderboard:2026-w46\" \"1420\" \"u77120\"\n\n$ kafka-console-consumer.sh --bootstrap-server kafka.ember.internal:9092 --topic customer.events.v2 --from-beginning --max-messages 2 \\\n    --property print.key=true --property print.headers=true --consumer.config /etc/kafka/ops-ro.properties\ntraceparent:00-1f0e2d3c4b5a69788796a5b4c3d2e1f0-0a1b2c3d4e5f6071-01,source:crm-sync\tcust-41180\t{\"type\":\"customer.updated\",\"id\":\"evt_8812QzLm\",\"customer\":{\"id\":\"cust-41180\",\"name\":\"Pieter-Jan Verhoeven\",\"email\":\"pj.verhoeven@telnet.example\",\"iban\":\"BE71096123456769\",\"birth_date\":\"1979-11-02\"},\"occurred_at\":\"2026-11-17T09:14:19Z\"}\ntraceparent:00-2a3b4c5d6e7f80910a1b2c3d4e5f6a7b-1b2c3d4e5f607182-01,source:crm-sync\tcust-41181\t{\"type\":\"customer.deleted\",\"id\":\"evt_8812QzLn\",\"customer\":{\"id\":\"cust-41181\"},\"occurred_at\":\"2026-11-17T09:14:20Z\"}\nProcessed a total of 2 messages\n\n# /etc/kafka/ops-ro.properties\nsecurity.protocol=SASL_SSL\nsasl.mechanism=PLAIN\nsasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username=\"ops-ro\" password=\"FAKEkafkaOpsRo_33\";",
+  "mask": [
+   [
+    "FAKEredisOps-ro!",
+    0,
+    "SECRET"
+   ],
+   [
+    "FAKEsid_Lq2Zx7Rt0Vb3Yc8Jd1Hs",
+    0,
+    "SECRET"
+   ],
+   [
+    "u77120",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Thandiwe Mokoena",
+    0,
+    "PERSON"
+   ],
+   [
+    "thandi.m@sunmail.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "+27 82 555 0193",
+    0,
+    "PHONE"
+   ],
+   [
+    "481902",
+    0,
+    "SECRET"
+   ],
+   [
+    "198.51.100.252",
+    0,
+    "IP"
+   ],
+   [
+    "cust-41180",
+    0,
+    "ID"
+   ],
+   [
+    "Pieter-Jan Verhoeven",
+    0,
+    "PERSON"
+   ],
+   [
+    "pj.verhoeven@telnet.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "BE71096123456769",
+    0,
+    "ACCOUNT"
+   ],
+   [
+    "1979-11-02",
+    0,
+    "DOB"
+   ],
+   [
+    "2026-11-17",
+    0,
+    "DATE"
+   ],
+   [
+    "cust-41181",
+    0,
+    "ID"
+   ],
+   [
+    "FAKEkafkaOpsRo_33",
+    0,
+    "SECRET"
+   ]
+  ],
+  "keep": [
+   [
+    "10.9.2.4",
+    0
+   ],
+   [
+    "ops-ro",
+    0
+   ],
+   [
+    "10.9.5.17:51230",
+    0
+   ],
+   [
+    "\"EXPIRE\"",
+    0
+   ],
+   [
+    "\"1800\"",
+    0
+   ],
+   [
+    "\"HSET\"",
+    0
+   ],
+   [
+    "\"SETEX\"",
+    0
+   ],
+   [
+    "cache-invalidate",
+    0
+   ],
+   [
+    "catalog:sku:BTL-OAK-750",
+    0
+   ],
+   [
+    "feature:checkout_v4",
+    0
+   ],
+   [
+    "leaderboard:2026-w46",
+    0
+   ],
+   [
+    "kafka.ember.internal:9092",
+    0
+   ],
+   [
+    "customer.events.v2",
+    0
+   ],
+   [
+    "--from-beginning",
+    0
+   ],
+   [
+    "00-1f0e2d3c4b5a69788796a5b4c3d2e1f0-0a1b2c3d4e5f6071-01",
+    0
+   ],
+   [
+    "source:crm-sync",
+    0
+   ],
+   [
+    "customer.updated",
+    0
+   ],
+   [
+    "evt_8812QzLm",
+    0
+   ],
+   [
+    "customer.deleted",
+    0
+   ],
+   [
+    "Processed a total of 2 messages",
+    0
+   ],
+   [
+    "SASL_SSL",
+    0
+   ],
+   [
+    "org.apache.kafka.common.security.plain.PlainLoginModule",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "tb-30",
+  "domain": "postman_env_trace",
+  "text": "{\n  \"id\": \"4d1e7c2a-9b3f-4e8d-a6c5-0f1e2d3c4b5a\",\n  \"name\": \"Wavecrest API - staging (Nuno's copy)\",\n  \"values\": [\n    {\"key\": \"baseUrl\", \"value\": \"https://api.staging.wavecrest.example\", \"type\": \"default\", \"enabled\": true},\n    {\"key\": \"apiVersion\", \"value\": \"2025-09-01\", \"type\": \"default\", \"enabled\": true},\n    {\"key\": \"clientId\", \"value\": \"wc-postman-staging\", \"type\": \"default\", \"enabled\": true},\n    {\"key\": \"clientSecret\", \"value\": \"FAKEpmSecret_9Lm2Zx7Rt0Vb3Yc8\", \"type\": \"secret\", \"enabled\": true},\n    {\"key\": \"username\", \"value\": \"nuno.carvalhais\", \"type\": \"default\", \"enabled\": true},\n    {\"key\": \"password\", \"value\": \"Ondas-do-Mar_1987\", \"type\": \"secret\", \"enabled\": true},\n    {\"key\": \"accessToken\", \"value\": \"wc_at_FAKE_q8Lm2Zx7Rt0Vb3Yc4Jd1Hs6Ga5Fe\", \"type\": \"secret\", \"enabled\": true},\n    {\"key\": \"testCustomerEmail\", \"value\": \"nuno.carvalhais+test1@wavecrest.example\", \"type\": \"default\", \"enabled\": true},\n    {\"key\": \"pageSize\", \"value\": \"50\", \"type\": \"default\", \"enabled\": true},\n    {\"key\": \"region\", \"value\": \"eu-south-2\", \"type\": \"default\", \"enabled\": true}\n  ],\n  \"_postman_variable_scope\": \"environment\",\n  \"_postman_exported_at\": \"2026-11-04T17:22:08.551Z\",\n  \"_postman_exported_using\": \"Postman/11.19.0\"\n}\n\n--- request sent from that environment (Postman console) ---\nGET https://api.staging.wavecrest.example/v1/bookings?guest=nuno.carvalhais%2Btest1%40wavecrest.example\nAuthorization: Bearer wc_at_FAKE_q8Lm2Zx7Rt0Vb3Yc4Jd1Hs6Ga5Fe\nx-datadog-trace-id: 7740389129084415392\nx-datadog-parent-id: 1290112840918822511\nx-datadog-sampling-priority: 1\nx-datadog-origin: synthetics\nX-Wavecrest-Api-Version: 2025-09-01\nPostman-Token: 0f3e5a7c-9b1d-4e2f-8a6c-4b2d0e9f1a3c\n200 OK  142 ms  3.1 KB\n{\"bookings\":[{\"id\":\"bk_77Qz2\",\"guest\":\"Nuno Carvalhais\",\"checkin\":\"2026-12-28\",\"nights\":3,\"room\":\"DLX-SEA\"}]}\n\n--- zipkin span for the same call ---\n{\"traceId\":\"6b6b8f2a1c4e9d30\",\"id\":\"11e7c0a3b5d9f204\",\"name\":\"get /v1/bookings\",\"kind\":\"SERVER\",\"timestamp\":1793812928551000,\"duration\":141220,\"localEndpoint\":{\"serviceName\":\"booking-api\",\"ipv4\":\"10.31.4.12\",\"port\":8080},\"remoteEndpoint\":{\"ipv4\":\"192.0.2.31\"},\"tags\":{\"http.status_code\":\"200\",\"http.route\":\"/v1/bookings\"}}",
+  "mask": [
+   [
+    "Nuno",
+    0,
+    "PERSON"
+   ],
+   [
+    "FAKEpmSecret_9Lm2Zx7Rt0Vb3Yc8",
+    0,
+    "SECRET"
+   ],
+   [
+    "nuno.carvalhais",
+    0,
+    "USERNAME"
+   ],
+   [
+    "Ondas-do-Mar_1987",
+    0,
+    "SECRET"
+   ],
+   [
+    "wc_at_FAKE_q8Lm2Zx7Rt0Vb3Yc4Jd1Hs6Ga5Fe",
+    0,
+    "SECRET"
+   ],
+   [
+    "nuno.carvalhais+test1@wavecrest.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "2026-11-04",
+    0,
+    "DATE"
+   ],
+   [
+    "nuno.carvalhais%2Btest1%40wavecrest.example",
+    0,
+    "EMAIL"
+   ],
+   [
+    "Nuno Carvalhais",
+    0,
+    "PERSON"
+   ],
+   [
+    "2026-12-28",
+    0,
+    "DATE"
+   ],
+   [
+    "192.0.2.31",
+    0,
+    "IP"
+   ]
+  ],
+  "keep": [
+   [
+    "4d1e7c2a-9b3f-4e8d-a6c5-0f1e2d3c4b5a",
+    0
+   ],
+   [
+    "https://api.staging.wavecrest.example",
+    0
+   ],
+   [
+    "\"value\": \"2025-09-01\"",
+    0
+   ],
+   [
+    "wc-postman-staging",
+    0
+   ],
+   [
+    "\"type\": \"secret\"",
+    0
+   ],
+   [
+    "\"pageSize\"",
+    0
+   ],
+   [
+    "eu-south-2",
+    0
+   ],
+   [
+    "_postman_variable_scope",
+    0
+   ],
+   [
+    "Postman/11.19.0",
+    0
+   ],
+   [
+    "x-datadog-trace-id: 7740389129084415392",
+    0
+   ],
+   [
+    "x-datadog-sampling-priority: 1",
+    0
+   ],
+   [
+    "x-datadog-origin: synthetics",
+    0
+   ],
+   [
+    "0f3e5a7c-9b1d-4e2f-8a6c-4b2d0e9f1a3c",
+    0
+   ],
+   [
+    "200 OK  142 ms  3.1 KB",
+    0
+   ],
+   [
+    "bk_77Qz2",
+    0
+   ],
+   [
+    "DLX-SEA",
+    0
+   ],
+   [
+    "6b6b8f2a1c4e9d30",
+    0
+   ],
+   [
+    "11e7c0a3b5d9f204",
+    0
+   ],
+   [
+    "\"serviceName\":\"booking-api\"",
+    0
+   ],
+   [
+    "10.31.4.12",
+    0
+   ]
+  ]
+ }
+]

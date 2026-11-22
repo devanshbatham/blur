@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="112" viewBox="0 0 300 112" role="img" aria-label="blur">
+<style>
+ .ink{fill:#000} .paper{fill:#fff} .fade{stop-color:#000}
+ @media (prefers-color-scheme: dark){ .ink{fill:#fff} .paper{fill:#000} .fade{stop-color:#fff} }
+</style>
+<defs>
+ <linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="128" y1="0" x2="276" y2="0">
+  <stop class="fade" offset="0" stop-opacity="1"/>
+  <stop class="fade" offset="0.45" stop-opacity="1"/>
+  <stop class="fade" offset="1" stop-opacity="0.12"/>
+ </linearGradient>
+</defs>
+<rect class="ink" x="8" y="8" width="96" height="96" rx="24"/>
+<g class="paper">
+ <rect x="28" y="34" width="56" height="8" rx="4"/>
+ <rect x="28" y="52" width="16" height="8" rx="4"/>
+ <circle cx="54" cy="56" r="4"/>
+ <circle cx="65" cy="56" r="4" opacity=".6"/>
+ <circle cx="76" cy="56" r="4" opacity=".3"/>
+ <rect x="28" y="70" width="36" height="8" rx="4"/>
+</g>
+<text x="128" y="78" fill="url(#fade)" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="64" font-weight="600">blur</text>
+</svg>
